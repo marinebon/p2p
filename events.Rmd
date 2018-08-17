@@ -1,0 +1,19 @@
+---
+title: "Events"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Upcoming
+
+- TBD
+
+## Past
+
+- [Marine Biodiversity Workshop: from the Sea to the Cloud](https://marinebon.github.io/p2p-brazil-workshop/)<br>
+  2018-08-06 in São Sebastião, Brazil
+
+
+

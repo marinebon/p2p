@@ -1,30 +1,36 @@
 ---
 title: "MBON Pole to Pole Project"
-author: "Ben Best"
-date: "August 17, 2018"
-output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = F, message = F, warning = F)
 ```
 
-## R Markdown
+Welcome! We're developing a Community of Practice across the Americas to assess marine biodiversity, both in situ and remotely.
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+## Community of Practice across the Americas
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+```{r}
+library(tidyverse)
+library(rnaturalearth) # install.packages("rnaturalearth")
+library(sf)
+library(leaflet)
 
-```{r cars}
-summary(cars)
+countries <- ne_countries(
+  scale = "small", type = "countries", returnclass = "sf",
+  continent= c("North America", "South America")) %>%
+  mutate(
+    mapcolor7 = as.factor(as.character(mapcolor7)))
+
+pal <- colorFactor("Set2", countries$mapcolor7)
+leaflet(countries) %>%
+  addProviderTiles(
+    providers$Esri.OceanBasemap, 
+    options = providerTileOptions(opacity = 0.5)) %>%
+  addPolygons(
+    stroke = FALSE, smoothFactor = 0.2, fillOpacity = 0.8,
+    fillColor = ~pal(mapcolor7),
+    label = ~admin)
 ```
 
-## Including Plots
 
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

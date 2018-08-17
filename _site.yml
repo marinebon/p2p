@@ -1,16 +1,51 @@
-name: "my-website"
+name: "mbon-p2p"
 navbar:
-  title: "My Website"
+  title: "MBON Pole to Pole"
   left:
     - text: "Home"
       href: index.html
     - text: "About"
       href: about.html
+    - text: "Members"
+      icon: ion-person-stalker
+      href: members.html
+    - text: "Data"
+      icon: ion-stats-bars
+      href: data.html
+      menu:
+        - text: "Rocky Shore"
+          href: data_rocky_shore.html
+        - text: "Sandy Beach"
+          href: data_sandy_beach.html
+        - text: "Environmental, Remotely Sensed"
+          href: data_rs.html
+        - text: "Environmental, In Situ"
+          href: data_in_situ.html
+    - text: "Events"
+      icon: ion-calendar
+      href: more.html
+    - text: "Methods"
+      icon: ion-clipboard
+      href: methods.html
+      menu:
+        - text: "Field Protocols"
+          href: methods_field_protocols.html
+        - text: "Data Science"
+          href: methods_data_science.html
+  right:
+#    - icon: fa-newspaper-o
+#      href: news.html
+#    - icon: fa-info
+#      href: about.html
+    - icon: ion-help
+      href: https://marinebon.github.io/help/
+    - icon: ion-email
+      href: contact.html
 output_dir: "docs"
 output:
   html_document:
     theme: cosmo
     highlight: textmate
     include:
-      after_body: footer.html
-    css: styles.css
+      after_body: _includes/footer.html
+    css: _includes/styles.css

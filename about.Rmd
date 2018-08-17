@@ -1,0 +1,17 @@
+---
+title: "About MBON P2P"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## People
+
+
+## Sponsors
+
+<img width="40px" src="images/logo_NASA.svg"/>
+
+<img width="40px" src="images/logo_NOAA.svg"/>
+
