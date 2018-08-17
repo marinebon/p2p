@@ -15,3 +15,5 @@ knitr::opts_chunk$set(echo = TRUE)
 
 <img width="40px" src="images/logo_NOAA.svg"/>
 
+<img width="80px" src="images/logo_AmeriGEOSS.svg"/>
+
