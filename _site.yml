@@ -23,7 +23,7 @@ navbar:
           href: data_in_situ.html
     - text: "Events"
       icon: ion-calendar
-      href: more.html
+      href: events.html
     - text: "Methods"
       icon: ion-clipboard
       menu:
