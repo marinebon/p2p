@@ -48,4 +48,4 @@ output:
     highlight: textmate
     include:
       after_body: _includes/footer.html
-    css: _includes/styles.css
+    css: styles.css

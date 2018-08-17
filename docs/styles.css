@@ -1,0 +1,13 @@
+blockquote {
+  font-style: italic
+}
+
+.footer {
+	background: #EDEFF1;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	align: center;
+	width: 100%;
+	border-bottom: 1px solid #CCCCCC;
+	border-top: 1px solid #DDDDDD;
+}
