@@ -26,7 +26,6 @@ navbar:
       href: more.html
     - text: "Methods"
       icon: ion-clipboard
-      href: methods.html
       menu:
         - text: "Field Protocols"
           href: methods_field_protocols.html
