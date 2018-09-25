@@ -1,4 +1,8 @@
 ##README
 
 To upload imagery:
-1) click on on 
+1) click on "upload file"
+2) drag and drop your file
+3) Click on "Commit changes" (green button at the bottom)
+
+Name your files using the following structure: SITE_LOCALITY_COUNTRY_YYYYMMDD_FILE# (e.g. East-Jetty_StPeteBeach_USA_20181015_Photo-1.jpeg)
