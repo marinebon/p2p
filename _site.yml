@@ -1,6 +1,6 @@
 name: "mbon-p2p"
 navbar:
-  title: "MBON Pole to Pole"
+  title: "MBON Pole to Pole Americas"
   left:
     - text: "Home"
       href: index.html
