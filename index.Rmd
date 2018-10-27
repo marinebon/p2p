@@ -6,7 +6,7 @@ title: "MBON Pole to Pole Project"
 knitr::opts_chunk$set(echo = F, message = F, warning = F)
 ```
 
-Welcome! We're developing a Community of Practice across the Americas to assess marine biodiversity, both in situ and remotely.
+Welcome! We are developing a Community of Practice across the Americas to assess marine biodiversity using field observations and satellite data.
 
 ## Community of Practice across the Americas
 
