@@ -24,8 +24,12 @@ countries <- ne_countries(
   mutate(
     mapcolor7 = as.factor(as.character(mapcolor7)))
 
-sites <- read_csv(here("data/sites.csv")) # View(sites)
+sites_csv <- here("data/sites.csv")
 
+sites <- read_csv(sites_csv) %>% 
+  st_as_sf(coords = c("longitude", "latitude"), crs = 4326)
+
+b <- sf::st_bbox(sites)
 
 pal <- colorFactor("Set2", countries$mapcolor7)
 leaflet(countries) %>%
@@ -38,8 +42,9 @@ leaflet(countries) %>%
     label = ~admin) %>% 
   addMarkers(
     data = sites, 
-    lng = ~longitude, lat = ~latitude, 
-    popup = ~htmlEscape(name), label = ~htmlEscape(name))
+    popup = ~htmlEscape(name), label = ~htmlEscape(name)) %>% 
+  fitBounds(b[['xmin']], b[['ymin']], b[['xmax']], b[['ymax']])
+
 ```
 
 
