@@ -15,12 +15,17 @@ library(tidyverse)
 library(rnaturalearth) # install.packages("rnaturalearth")
 library(sf)
 library(leaflet)
+library(here)
+library(htmltools)
 
 countries <- ne_countries(
   scale = "small", type = "countries", returnclass = "sf",
   continent= c("North America", "South America")) %>%
   mutate(
     mapcolor7 = as.factor(as.character(mapcolor7)))
+
+sites <- read_csv(here("data/sites.csv")) # View(sites)
+
 
 pal <- colorFactor("Set2", countries$mapcolor7)
 leaflet(countries) %>%
@@ -30,7 +35,11 @@ leaflet(countries) %>%
   addPolygons(
     stroke = FALSE, smoothFactor = 0.2, fillOpacity = 0.8,
     fillColor = ~pal(mapcolor7),
-    label = ~admin)
+    label = ~admin) %>% 
+  addMarkers(
+    data = sites, 
+    lng = ~longitude, lat = ~latitude, 
+    popup = ~htmlEscape(name), label = ~htmlEscape(name))
 ```
 
 
