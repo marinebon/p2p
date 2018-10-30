@@ -1,6 +1,7 @@
 name: "mbon-p2p"
+exclude: ["survey imagery", "data"]
 navbar:
-  title: "MBON Pole to Pole"
+  title: "MBON Pole to Pole Americas"
   left:
     - text: "Home"
       href: index.html

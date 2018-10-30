@@ -9,4 +9,9 @@ This website was built as an [R Markdown website](https://bookdown.org/yihui/rma
 
 - **WARNING**: Do _**NOT**_ place any content in the **`docs/`** since it gets wiped clean before rebuilding the website in its place.
 
+## Resources
 
+- [Markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+
+- Jekyll themes:
+  - [Phlow/feeling-responsive](https://github.com/Phlow/feeling-responsive), [demo](http://phlow.github.io/feeling-responsive/)
