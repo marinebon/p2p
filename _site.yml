@@ -49,3 +49,4 @@ output:
     include:
       after_body: _includes/footer.html
     css: styles.css
+include: [".nojekyll"]
