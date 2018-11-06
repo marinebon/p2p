@@ -1,0 +1,5 @@
+Package: placeholder
+Title: Does not matter.
+Version: 0.0.1
+Imports: rmarkdown, ggplot2, htmltools, readr, dplyr, leaflet, vembedr
+Remotes: rstudio/rmarkdown
