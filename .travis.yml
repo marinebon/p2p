@@ -8,8 +8,8 @@ git:
   depth: 3
 script:
 - Rscript -e 'rmarkdown::render_site()'
-- git config --global user.name "Ben Best (Travis-CI)"
-- git config --global user.email "bdbest@gmail.com"
+- git config --global user.name "Enrique Montes (Travis-CI)"
+- git config --global user.email "emontesh@mail.usf.edu"
 - git add -A
 - git commit -a -m "Updating MBON Pole to Pole data portal via travis-ci.org [ci skip]"
 - git push https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git HEAD:${TRAVIS_BRANCH}
