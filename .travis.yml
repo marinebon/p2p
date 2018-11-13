@@ -6,6 +6,10 @@ cache:
   - _cache
 git:
   depth: 3
+before_install:
+  - sudo add-apt-repository -y ppa:ubuntugis/ubuntugis-unstable
+  - sudo apt-get update
+  - sudo apt-get install -y libjq-dev libprotobuf-dev protobuf-compiler libudunits2-dev libv8-3.14-dev libudunits2-dev libgdal-dev libgeos-dev libproj-dev
 script:
 - Rscript -e 'rmarkdown::render_site()'
 - git config --global user.name "Enrique Montes (Travis-CI)"
