@@ -12,10 +12,16 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Sponsors
 
 <img width="200px" src="images/logo_NASA.svg"/>
-
+<br>
+<br>
 <img width="200px" src="images/logo_NOAA.svg"/>
-
+<br>
+<br>
 <img width="200px" src="images/logo_AmeriGEOSS.svg"/>
-
-<img width="200px" src="images/logo_IOOS.jpg"/>
+<br>
+<br>
+<img width="200px" src="images/MBON_logo.jpg"/>
+<br>
+<br>
+<img width="200px" src="images/obis_logo.jpg"/>
 
