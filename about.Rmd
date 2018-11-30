@@ -1,5 +1,5 @@
 ---
-title: "About MBON P2P"
+title: "About MBON Pole to Pole"
 ---
 
 ```{r setup, include=FALSE}
