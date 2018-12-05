@@ -1,13 +1,11 @@
 ---
 title: "About MBON Pole to Pole"
-
+---
 <br>
 <br>
 The MBON Pole to Pole effort seeks to develop a framework for the collection, use and sharing of marine biodiversity data in a coordinated, standardized manner leveraging on existing infrastructure managed by the Global Ocean Observing System ([GOOS](http://www.goosocean.org/); IOC-UNESCO), the GEO Biodiversity Observation Network ([GEO BON](https://geobon.org/)), and the Ocean Biogeographic Information System ([OBIS](http://iobis.org/)). The MBON Pole to Pole aims to become a key resource for decision-making and management of living resource across countries in the Americas for reporting requirements under the Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services (IPBES), Aichi Targets of the Convention of Biological Diversity (CBD), and the UN 2030 Agenda for Sustainable Development Goals (SDGs).
 <br>
 <br>
----
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
