@@ -12,7 +12,7 @@ The MBON Pole to Pole effort seeks to develop a framework for the collection, us
 knitr::opts_chunk$set(echo = TRUE)
 ```
 ## People
-![Participants of the Marine Biodiversity Workshop: from the Sea to the Cloud in São Sebastião, Brazil - August 6-10, 2018](images/P2P_group_CebiMar.jpg)
+![Participants of the Marine Biodiversity Workshop: from the Sea to the Cloud in São Sebastião, Brazil - August 6-10, 2018](images/P2P_group_CebiMar.JPG.jpg)
 
 
 ## Sponsors
