@@ -1,59 +1,59 @@
 latitude,longitude,name
-24.5,-81,florida keys
-36.5,-122,monterey bay
-27.46,-80.31,indian river lagoon
-38.9,-76.54,chesapeake bay
-16.8,-88.08,carrie bow cay (belize)
-9.34,-82.24,bocas del toro
-21.46,-157.8,kaneohe bay
-37.87,-122.46,san francisco bay
-10.5916,-85.6637,costa rica 1
-9.5787,-85.1375,costa rica 2
-9.6399,-82.6481,costa rica 3
-2.9341,-78.2017,colombia 1
-2.9472,-78.1979,colombia 2
-2.9591,-78.1979,colombia 3
--2.1894,-81.0088,guayaquil 1
--2.2042,-80.9961,guayaquil 2
--0.7434,-90.3037,galapagos 1
--0.7619,-90.3304,galapagos 2
--0.752,-90.3094,galapagos 3
--0.7529,-90.3113,galapagos 4
--0.7614,-90.335,galapagos 5
--0.7634,-90.3404,galapagos 6
--53.6125,-70.9284,concepcion 1
--36.5941,-72.9786,concepcion 2
--36.6091,-72.9805,concepcion 3
--36.5408,-72.9346,concepcion 4
--62.1989,-58.9494,antarctica 1
--62.1858,-58.8732,antarctica 2
--32.9587,-71.5492,valparaiso
--42.8,-64.883,pto madryn 1
--42.8,-64.883,pto madryn 2
--38.0203,-57.5653,mar del plata 1
--38.2372,-57.7558,mar del plata 2
-18.39,-64.93,usvi
--19.9663,-40.134,brazil_mazzuco 1
--20.0369,-40.164,brazil_mazzuco 2
--20.138,-40.124,brazil_mazzuco 3
--22.29,-41.67,brazil_barboza
--22.9602,-42.0193,brazil_cordeiro 1
--22.9863,-42.01,brazil_cordeiro 2
--22.9687,-42.015,brazil_cordeiro 3
--0.9169,-29.3458,brazil_barbosa 1
--3.8505,-32.4238,brazil_barbosa 2
--23.8292,-45.4237,brazil_guca 1
--23.8436,-45.4076,brazil_guca 2
--23.8319,-45.4436,brazil_guca 3
--25.573,-48.3098,brazil_maikon 1
--25.5735,-48.3107,brazil_maikon 2
--33.8109,-53.4461,uruguay
-21.2803,-89.7006,yucatan
-44.788076,-67.010388,Hamilton Cove (Lubec ME)
-44.731602,-67.098585,Moose Cove(Lubec ME)
-44.371365,-68.091242,Grindstone (Winter Harbor ME)
-43.884304,-69.47609,Chamberlain (Chamberlain ME)
-43.725666,-69.992283,Giant Stairs (Harpswell ME)
-43.439808,-70.343454,Biddeford (Biddeford ME)
-42.507375,-70.843271,Marblehead (Marblehead MA)
-42.416788,-70.906496,Pumphouse (Nahant MA)
+24.5,-81,Florida Keys National Marine Sanctuary (NOAA)
+36.5,-122,Monterey Bay Marine Sanctuary (NOAA)
+27.46,-80.31,Indian River Lagoon (SI)
+38.9,-76.54,Chesapeake Bay (SI)
+16.8,-88.08,Carrie Bow Cay (SI)
+9.34,-82.24,Bocas del Toro (SI)
+21.46,-157.8,Kaneohe Bay (SI)
+37.87,-122.46,San Francisco Bay (SI)
+10.5916,-85.6637,Esmeralda (CIMAR)
+9.5787,-85.1375,San Miguel (CIMAR)
+9.6399,-82.6481,Punta Mona (CIMAR)
+2.9341,-78.2017,Isla Gorgona - La Ventana (U. del Valle)
+2.9472,-78.1979,Isla Gorgona - Playa Verde (U. del Valle)
+2.9591,-78.1979,Isla Gorgona - La Mancora (U. del Valle)
+-2.1894,-81.0088,Puntilla de Sta Elena - Chocolatera (U. Guayaquil)
+-2.2042,-80.9961,Puntilla de Sta Elena - La Lobería (U. Guayaquil)
+-0.7434,-90.3037,La Ratonera - Galapagos Islands (Charles Darwin F.)
+-0.7619,-90.3304,Tortuga Bay - Galapagos Islands (Charles Darwin F.)
+-0.752,-90.3094,Angermeyer Point - Galapagos Islands (Charles Darwin F.)
+-0.7529,-90.3113,Playa Alemanes - Galapagos Island (Charles Darwin F.)
+-0.7614,-90.335,Playa Brava - Galapagos Islands (Charles Darwin F.)
+-0.7634,-90.3404,Playa Mansa - Galapagos Islands (Charles Darwin F.)
+-53.6125,-70.9284,Punta Arenas - Bahía Mansa (U. Valparaíso)
+-36.5941,-72.9786,Concepción - Cocholgue Norte (U. Valparaíso)
+-36.6091,-72.9805,Concepción - Cocholgue Sur (U. Valparaíso)
+-36.5408,-72.9346,Concepción - Dichato / Coliumo (U. Valparaíso)
+-62.1989,-58.9494,Antarctica - Site 1 (U. Concepción)
+-62.1858,-58.8732,Antarctica - Site 1 (U. Concepción)
+-32.9587,-71.5492,Bahía de Valparaíso - Montemar (U. Concepción)
+-42.8,-64.883,Puerto Madryn 1 (IBIOMAR/CONICET)
+-42.8,-64.883,Puerto Madryn 2 (IBIOMAR/CONICET)
+-38.0203,-57.5653,Mar del Plata - Playa Chica (Museo Argentino de Ciencias Naturales)
+-38.2372,-57.7558,Mar del Plata - San Eduardo Beach (Museo Argentino de Ciencias Naturales)
+18.39,-64.93,USVI
+-19.9663,-40.134,Costa das Algas - Gramuté (U. Federal do Espirito Santo)
+-20.0369,-40.164,Costa das Algas - Enseada das Garças (U. Federal do Espirito Santo)
+-20.138,-40.124,Costa das Algas - Manguinhos (U. Federal do Espirito Santo)
+-22.29,-41.67,Jurubatiba National Park (NUPEM)
+-22.9602,-42.0193,Arraial do Cabo - Prainha (U. Federal Fluminense)
+-22.9863,-42.01,Arraial do Cabo - Atalaia (U. Federal Fluminense)
+-22.9687,-42.015,Arraial do Cabo - Fortaleza (U. Federal Fluminense)
+-0.9169,-29.3458,Saint Peter and Saint Paul Archipelago - Enseada (U. Federal Fluminese)
+-3.8505,-32.4238,Fernando de Noronha - Boldro (U. Federal Fluminese)
+-23.8292,-45.4237,São Sebastião - Baleeiro Head (CEBIMAR / USP)
+-23.8436,-45.4076,São Sebastião - Feiticeira (CEBIMAR / USP)
+-23.8319,-45.4436,São Sebastião - Itassucê Island (CEBIMAR / USP)
+-25.573,-48.3098,Encantadas North (U. Federal do Paraná)
+-25.5735,-48.3107,Encantadas South (U. Federal do Paraná)
+-33.8109,-53.4461,Barra del Chuy (U. de la República)
+21.2803,-89.7006,Yucatán - Marina de Yucalpeten (UNAM)
+44.788076,-67.010388,Hamilton Cove - Lubec ME (NE University)
+44.731602,-67.098585,Moose Cove - Lubec ME (NE University)
+44.371365,-68.091242,Grindstone - Winter Harbor ME (NE University)
+43.884304,-69.47609,Chamberlain - Chamberlain ME (NE University)
+43.725666,-69.992283,Giant Stairs - Harpswell ME (NE University)
+43.439808,-70.343454,Biddeford - Biddeford ME (NE University)
+42.507375,-70.843271,Marblehead - Marblehead MA (NE University)
+42.416788,-70.906496,Pumphouse - Nahant MA (NE University)
