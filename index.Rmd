@@ -1,5 +1,5 @@
 ---
-title: "MBON Pole to Pole Project (under construction)"
+title: "MBON Pole to Pole Project"
 ---
 
 ```{r setup, include=FALSE}
