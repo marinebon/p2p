@@ -19,18 +19,29 @@ knitr::opts_chunk$set(echo = TRUE)
 The MBON Pole to Pole team at the [**Marine Biodiversity Workshop: from the Sea to the Cloud**](https://marinebon.github.io/p2p-brazil-workshop/), in São Sebastião, Brazil, 2018-08-06.
 
 ## Sponsors
-
-<img width="200px" src="images/logo_NASA.svg"/>
-<br>
-<br>
-<img width="200px" src="images/logo_NOAA.svg"/>
 <br>
 <br>
 <img width="200px" src="images/logo_AmeriGEOSS.svg"/>
 <br>
 <br>
+<br>
+<br>
 <img width="200px" src="images/MBON_logo.jpg"/>
 <br>
 <br>
+<img width="200px" src="images/GOOS_Biology-and-Ecosystems_WhiteUNFRAMED2_logo.png"/>
+<br>
+<br>
+<br>
+<br>
 <img width="200px" src="images/obis_logo.jpg"/>
+<br>
+<br>
+<br>
+<br>
+<img width="200px" src="images/logo_NASA.svg"/>
+<br>
+<br>
+<img width="200px" src="images/logo_NOAA.svg"/>
+
 
