@@ -2,12 +2,6 @@
 
 Topic (Rocky shores (RS) / Sandy beaches (SB))
 
-```{r, include=FALSE}
-knitr::opts_chunk$set(echo = F)
-library(tidyverse)
-library(readxl)
-```
-
 ```{r}
 # using xlsx because in csv accent characters getting mangled by Excel
 read_excel("data/P2P-Brazil-workshop_participants.xlsx") %>%
