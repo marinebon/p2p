@@ -2,10 +2,6 @@
 title: "Members"
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 Topic (Rocky shores (RS) / Sandy beaches (SB))
 
 ```{r, include=FALSE}
