@@ -13,9 +13,10 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 ## People
 
-<img width="200px" src="images/P2P_group CebiMar.JPG"/>
+<img width="1000px" src="images/P2P_group CebiMar.JPG"/>
 <br>
 <br>
+The MBON Pole to Pole team at the [**Marine Biodiversity Workshop: from the Sea to the Cloud**](https://marinebon.github.io/p2p-brazil-workshop/), in São Sebastião, Brazil, 2018-08-06.
 
 ## Sponsors
 
