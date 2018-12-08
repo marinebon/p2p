@@ -13,8 +13,9 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 ## People
 
-![Participants of the Marine Biodiversity Workshop: from the Sea to the Cloud in São Sebastião, Brazil - August 6-10, 2018](images/P2P_group CebiMar.jpg)
-
+<img width="200px" src="images/P2P_group CebiMar.JPG"/>
+<br>
+<br>
 
 ## Sponsors
 
