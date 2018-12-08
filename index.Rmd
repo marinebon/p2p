@@ -5,10 +5,13 @@ title: "MBON Pole to Pole Project (under construction)"
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = F, message = F, warning = F)
 ```
+<br>
+<br>
 <font size="5"> 
 Welcome! We are developing a Community of Practice across the Americas to assess marine biodiversity and ecosystem change using field and space observations.
 </font>
-
+<br>
+<br>
 ## Ongoing biodiversity monitoring sites  
 
 ```{r}
