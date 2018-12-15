@@ -1,6 +1,10 @@
 # Members
-
-Topic (Rocky shores (RS) / Sandy beaches (SB))
+<br>
+<br>
+**Topic:** <br>
+Rocky shores = RS <br>
+Sandy beaches = SB <br>
+Data science = DS <br>
 
 ```{r, include=FALSE}
 knitr::opts_chunk$set(echo = F)
