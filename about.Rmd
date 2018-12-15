@@ -21,9 +21,8 @@ The MBON Pole to Pole team at the [**Marine Biodiversity Workshop: from the Sea 
 <br>
 <br>
 <br>
-<font size="6"> 
-Sponsors
-</font>
+
+## Sponsors
 <br>
 <br>
 <img width="200px" src="images/logo_AmeriGEOSS.svg"/>

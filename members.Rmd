@@ -10,6 +10,5 @@ library(readxl)
 
 ```{r}
 # using xlsx because in csv accent characters getting mangled by Excel
-read_excel("data/P2P-Brazil-workshop_participants.xlsx") %>%
-  kable()
+read_excel("data/P2P-Brazil-workshop_participants.xlsx")
 ```
