@@ -9,18 +9,17 @@ This website was built as an [R Markdown website](https://bookdown.org/yihui/rma
 
 - **WARNING**: Do _**NOT**_ place any content in the **`docs/`** since it gets wiped clean before rebuilding the website in its place.
 
-To build from command shell cd to the project & run:
-* R   : `rmarkdown::render_site()`
-* bash: `Rscript -e 'rmarkdown::render_site()'`
+----------------------------------------------------------------------------
 
-### Installing Dependencies
-If you don't have the required packages you will need to install them:
-`cd` into the project directory then execute the following R to install dependencies automatically from the `DESCRIPTION` file.
-
+To install & build from R command shell cd to the project & run:
 ```R
 install.packages('devtools')
-devtools.install('./')
+devtools::install('./')
+rmarkdown::render_site()
 ```
+
+If you are very lucky that will work, but you may need to do some manual dependency resolution.
+Look in the `before_install` section of `.travis.yml` for hints.
 
 ## Resources
 

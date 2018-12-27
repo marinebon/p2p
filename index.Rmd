@@ -7,7 +7,7 @@ knitr::opts_chunk$set(echo = F, message = F, warning = F)
 ```
 <br>
 <br>
-<font size="5"> 
+<font size="5">
 Welcome! We are developing a Community of Practice across the Americas to assess marine biodiversity and ecosystem change using field and space observations.
 <br>
 <br>
@@ -29,25 +29,28 @@ countries <- ne_countries(
 
 sites_csv <- here("data/sites.csv")
 
-sites <- read_csv(sites_csv) %>% 
+sites <- read_csv(sites_csv) %>%
   st_as_sf(coords = c("longitude", "latitude"), crs = 4326)
+
+# create column of html for popup
+sites$html <- with(
+    sites, paste("<iframe src='", popup_url, "'></iframe>", sep="")
+)
 
 b <- sf::st_bbox(sites)
 
 pal <- colorFactor("Set2", countries$mapcolor7)
 leaflet(countries) %>%
   addProviderTiles(
-    providers$Esri.OceanBasemap, 
+    providers$Esri.OceanBasemap,
     options = providerTileOptions(opacity = 0.5)) %>%
   addPolygons(
     stroke = FALSE, smoothFactor = 0.2, fillOpacity = 0.8,
     fillColor = ~pal(mapcolor7),
-    label = ~admin) %>% 
+    label = ~admin) %>%
   addMarkers(
-    data = sites, 
-    popup = ~htmlEscape(name), label = ~htmlEscape(name)) %>% 
+    data = sites,
+    popup = ~html, label = ~htmlEscape(name)) %>%
   fitBounds(b[['xmin']], b[['ymin']], b[['xmax']], b[['ymax']])
 
 ```
-
-
