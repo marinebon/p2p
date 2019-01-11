@@ -40,10 +40,13 @@ sites$html <- with(
 b <- sf::st_bbox(sites)
 
 pal <- colorFactor("Set2", countries$mapcolor7)
+
+
+
 leaflet(countries) %>%
   addProviderTiles(
     providers$Esri.OceanBasemap,
-    options = providerTileOptions(opacity = 0.5)) %>%
+    options = providerTileOptions(opacity = 0.5, maxZoom = 20)) %>%
   addPolygons(
     stroke = FALSE, smoothFactor = 0.2, fillOpacity = 0.8,
     fillColor = ~pal(mapcolor7),
@@ -53,4 +56,7 @@ leaflet(countries) %>%
     popup = ~html, label = ~htmlEscape(name)) %>%
   fitBounds(b[['xmin']], b[['ymin']], b[['xmax']], b[['ymax']])
 
+
+# TODO: mv this map to data > in situ
+# TODO: + button to download
 ```

@@ -11,7 +11,7 @@
 
 
 
-<title>README.utf8.md</title>
+<title></title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -376,15 +376,19 @@ $(document).ready(function () {
 <li><p>The easiest way to generate the website is clicking on the <strong>Build Website</strong> menu button from the <strong>Build</strong> pane in RStudio after opening this repository’s project by double-clicking on <code>p2p.Rproj</code>. All the content files (*.Rmd, *.md, *.html) are rendered and output to the <strong><code>docs/</code></strong> folder, where it is served to <a href="https://marinebon.github.io/p2p">marinebon.github.io/p2p</a> via <a href="https://pages.github.com">Github Pages</a>.</p></li>
 <li><p><strong>WARNING</strong>: Do <em><strong>NOT</strong></em> place any content in the <strong><code>docs/</code></strong> since it gets wiped clean before rebuilding the website in its place.</p></li>
 </ul>
+<hr />
+<p>To install &amp; build from R command shell cd to the project &amp; run:</p>
+<pre class="r"><code>install.packages(&#39;devtools&#39;)
+devtools::install(&#39;./&#39;)
+rmarkdown::render_site()</code></pre>
+<p>If you are very lucky that will work, but you may need to do some manual dependency resolution. Look in the <code>before_install</code> section of <code>.travis.yml</code> for hints.</p>
 </div>
 <div id="resources" class="section level2">
 <h2>Resources</h2>
 <ul>
 <li><p><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown cheatsheet</a></p></li>
-<li>Jekyll themes:
-<ul>
-<li><a href="https://github.com/Phlow/feeling-responsive">Phlow/feeling-responsive</a>, <a href="http://phlow.github.io/feeling-responsive/">demo</a></li>
-</ul></li>
+<li>Jekyll themes:</li>
+<li><p><a href="https://github.com/Phlow/feeling-responsive">Phlow/feeling-responsive</a>, <a href="http://phlow.github.io/feeling-responsive/">demo</a></p></li>
 </ul>
 </div>
 </div>
