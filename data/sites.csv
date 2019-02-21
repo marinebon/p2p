@@ -1,4 +1,5 @@
 id,org,name,country,lat,lon,gmapurl
+usa-usfstpete,USF,USF St Petersburg,usa,27.772699,-82.625812,"http://maps.google.com/maps?q=27.772699,-82.625812&ll=27.772699,-82.625812&z=6"
 usa-fknms,NOAA,Florida Keys National Marine Sanctuary ,usa,24.5,-81,"http://maps.google.com/maps?q=24.5,-81&ll=24.5,-81&z=6"
 usa-mbnms,NOAA,Monterey Bay Marine Sanctuary ,usa,36.5,-122,"http://maps.google.com/maps?q=36.5,-122&ll=36.5,-122&z=6"
 usa-indianriver,SI,Indian River Lagoon ,usa,27.46,-80.31,"http://maps.google.com/maps?q=27.46,-80.31&ll=27.46,-80.31&z=6"
