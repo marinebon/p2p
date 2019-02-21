@@ -12,6 +12,7 @@ before_install:
   - sudo apt-get install -y libjq-dev libprotobuf-dev protobuf-compiler libudunits2-dev libv8-3.14-dev libudunits2-dev libgdal-dev libgeos-dev libproj-dev
 script:
 - Rscript -e 'rmarkdown::render_site()'
+- Rscript -e 'source("make_sites.R")'
 - git config --global user.name "Enrique Montes (Travis-CI)"
 - git config --global user.email "emontesh@mail.usf.edu"
 - git add -A
