@@ -67,13 +67,18 @@ get_raster <- function(info, lon, lat, date="last", field="sst"){
 
 map_raster <- function(r, site_lon, site_lat, site_label, title){
   pal <- colorNumeric(colors$temperature, values(r), na.color = "transparent")
+
   leaflet() %>%
-    addProviderTiles(providers$Esri.OceanBasemap) %>%
-    #addProviderTiles(providers$Stamen.TonerLite) %>%
+    addProviderTiles(providers$Esri.OceanBasemap, group="Color") %>%
+    addProviderTiles(providers$Stamen.TonerLite, group="B&W") %>%
     #addProviderTiles(providers$Stamen.TonerLabels) %>%
-    addRasterImage(r, colors = pal, opacity = 0.8, project=F) %>%
+    addRasterImage(r, colors = pal, opacity = 0.8, project=F, group="SST") %>%
     addMarkers(lng = site_lon, lat = site_lat, label = site_label) %>%
-    addLegend(pal = pal, values = values(r), title = title)
+    addLegend(pal = pal, values = values(r), title = title, position="bottomright") %>% 
+    addLayersControl(
+      baseGroups = c("Color", "B&W"),
+      overlayGroups = c("SST"),
+      options = layersControlOptions(collapsed = T))
 }
 
 get_timeseries <- function(info, lon, lat, csv, field="sst"){
@@ -115,11 +120,28 @@ get_timeseries <- function(info, lon, lat, csv, field="sst"){
   d
 }
 
-plot_timeseries <- function(d, title="SST", color="red"){
-  xts(select(d, -date), order.by=d$date) %>% 
-    dygraph(main=title) %>%
+plot_timeseries <- function(d, title="SST", color="red", dyRangeSelector=T, ...){
+  p <- xts(select(d, -date), order.by=d$date) %>% 
+    dygraph(main=title, ...) %>%
     dyOptions(
       colors = color,
-      fillGraph = TRUE, fillAlpha = 0.4) %>% 
-    dyRangeSelector()
+      fillGraph = TRUE, fillAlpha = 0.4) 
+  if (dyRangeSelector){
+    p <- p %>% 
+      dyRangeSelector()
+  }
+  p
+}
+
+popup_site_sst <- function(site_id, ...){
+  csv <- here(glue("data/sst/sst_{site$id}.csv"))
+  site <- read_csv(here("data/sites.csv")) %>% 
+    filter(id == params$site_id)
+  
+  sst <- info('jplMURSST41mday')
+  
+  d   <- get_timeseries(sst, lon=site$lon, lat=site$lat, csv=csv, field="sst")
+  p <- plot_timeseries(d, title="SST", color="red", dyRangeSelector=F, ...)
+  #p
+  as.character(p)
 }

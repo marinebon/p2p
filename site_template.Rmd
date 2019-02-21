@@ -1,7 +1,7 @@
 ---
 title: "Site: `r params$site_name`"
 params:
-  site_name: "Florida Keys National Marine Sanctuary"
+  site_name: "Isla Gorgona - La Mancora"
   site_id: "usa-fknms"
 ---
 
@@ -13,7 +13,12 @@ knitr::opts_chunk$set(echo = F, message = F)
 library(tidyverse)
 source("functions.R")
 
+# params = list(site_id="usa-fknms")
+# params = list(site_id="col-islagorgona-lamancora")
+# params = list(site_id="bra-costadasalgas-gramute")
 site <- read_csv(here("data/sites.csv")) %>% 
+  filter(id == params$site_id)
+photos <- read_csv(here("data/site_photos.csv")) %>% 
   filter(id == params$site_id)
 
 sst <- info('jplMURSST41mday')
@@ -22,28 +27,27 @@ sst <- info('jplMURSST41mday')
 - Country: **`r str_to_upper(site$country)`**
 - Organization: **`r site$org`**
 
-## Images
+## Photos
 
 ```{r}
+library(knitr)
 library(bsplus)
 
-bs_carousel(id = "the_beatles", use_indicators = TRUE) %>%
-  bs_append(
-    content = bs_carousel_image(src = image_uri("img/john.jpg")),
-    caption = bs_carousel_caption("John Lennon", "Rhythm guitar, vocals")
-  ) %>%
-  bs_append(
-    content = bs_carousel_image(src = image_uri("img/paul.jpg")),
-    caption = bs_carousel_caption("Paul McCartney", "Bass guitar, vocals")
-  ) %>%
-  bs_append(
-    content = bs_carousel_image(src = image_uri("img/george.jpg")),
-    caption = bs_carousel_caption("George Harrison", "Lead guitar, vocals")
-  ) %>%
-  bs_append(
-    content = bs_carousel_image(src = image_uri("img/ringo.jpg")),
-    caption = bs_carousel_caption("Ringo Starr", "Drums, vocals")
-  ) 
+if (nrow(photos) > 0){
+  carousel <- bs_carousel(id = "photos", use_indicators = TRUE)
+  
+  for (i in 1:nrow(photos)){
+    photo <- photos[i,]
+    carousel <-  bs_append(
+      carousel,
+      content = bs_carousel_image(src = photo$url),
+      caption = bs_carousel_caption(photo$caption))
+  }
+  
+  carousel
+} else {
+  cat("No photos yet posted.")
+}
 ```
 
 ## Map of SST
