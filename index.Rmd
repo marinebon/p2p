@@ -47,7 +47,7 @@ sites <- read_csv(sites_csv) %>%
   mutate(
     md = glue("**{name}**<br>Org: {org}<br>Country: {str_to_upper(country)}<br>↪[ Visit](site/{id}.html)"),
     html = map_chr(md, function(x) HTML(markdownToHTML(text=x, fragment.only=T))))
-View(sites)
+#View(sites)
 
 leaflet(countries) %>%
   addProviderTiles(

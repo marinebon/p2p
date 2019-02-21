@@ -6,7 +6,6 @@ library(raster)
 library(leaflet)
 library(dygraphs) # install.packages("dygraphs")
 library(xts)
-library(rerddap)
 #library(plotdap)
 select <- dplyr::select
 addLegend <- leaflet::addLegend

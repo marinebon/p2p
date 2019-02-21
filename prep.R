@@ -83,7 +83,7 @@ write_csv(sites, sites_csv)
 
 # make site pages ----
 sites <- read.csv(sites_csv)
-View(sites)
+#View(sites)
 
 site <- sites %>% slice(1)
 glue(.open = "{{", .close = "}}", '
