@@ -21,7 +21,7 @@ script:
 notifications:
   email:
     recipients:
-    - bdbest@gmail.com
+    - ben@ecoquants.com
     - emontesh@mail.usf.edu
     on_success: change
     on_failure: change
