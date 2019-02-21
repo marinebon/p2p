@@ -11,6 +11,8 @@ knitr::opts_chunk$set(echo = F, message = F)
 
 ```{r}
 library(tidyverse)
+library(knitr)
+library(bsplus)
 source("functions.R")
 
 # params = list(site_id="usa-fknms")
@@ -30,9 +32,6 @@ sst <- info('jplMURSST41mday')
 ## Photos
 
 ```{r}
-library(knitr)
-library(bsplus)
-
 if (nrow(photos) > 0){
   carousel <- bs_carousel(id = "photos", use_indicators = TRUE)
   
