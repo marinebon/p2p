@@ -371,18 +371,40 @@ $(document).ready(function () {
 <p>Pole to Pole website</p>
 <p><a href="https://travis-ci.org/marinebon/p2p"><img src="https://travis-ci.org/marinebon/p2p.svg?branch=master" alt="Build Status" /></a></p>
 <p>This website was built as an <a href="https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html">R Markdown website</a>.</p>
+<div id="add-a-site" class="section level2">
+<h2>Add a Site</h2>
+<p>Add entry to <a href="https://github.com/marinebon/p2p/blob/master/data/sites.csv"><code>data/sites.csv</code></a>. Be sure to use a unique <code>id</code>.</p>
+<p>Then build site (or check into Github and Travis will build it for you). A new marker will be populated into the home page map via <code>rmarkdown::render_site()</code> rendering <a href="https://github.com/marinebon/p2p/blob/master/index.Rmd"><code>index.Rmd</code></a> and a new site page will be generated via <code>source(&quot;make_sites.R&quot;)</code> (see <a href="https://github.com/marinebon/p2p/blob/master/index.Rmd"><code>make_sites.R</code></a>)) rendering a <a href="https://bookdown.org/yihui/rmarkdown/parameterized-reports.html">parameterized Rmarkdown</a> using <a href="https://github.com/marinebon/p2p/blob/master/site_template.Rmd"><code>site_template.Rmd</code></a>.</p>
+<p>For notes about finding country given lat/lon (ie reverse geocoding), creating Google Maps URL (<code>gmapurl</code>; optional, not a necessary field), check out code in <a href="https://github.com/marinebon/p2p/blob/master/prep.R"><code>prep.R</code></a>.</p>
+</div>
+<div id="add-pictures-to-a-site" class="section level2">
+<h2>Add Pictures to a Site</h2>
+<p>Associate URL of a photo to <code>id</code> of a site in a new row into <a href="https://github.com/marinebon/p2p/blob/master/data/site_photos.csv"><code>data/site_photos.csv</code></a>.</p>
+<p>So far as a test, we only have some pics from these two sites:</p>
+<ul>
+<li><a href="https://marinebon.github.io/p2p/z_col-islagorgona-lamancora.html">Site: Isla Gorgona - La Mancora</a></li>
+<li><a href="https://marinebon.github.io/p2p/z_bra-costadasalgas-gramute.html">Site: Costa das Algas - Gramuté</a></li>
+</ul>
+<p><a href="http://flickr.com/">Flickr</a> seems to have the most options for tagging and creating albums or collections (ie BB’s <a href="https://www.flickr.com/photos/bbest/albums/72157705442437201">mbon-p2p | Flickr</a>). You can also <a href="https://help.flickr.com/en_us/get-the-url-of-a-flickr-photo-S1Hnnmjym">get the URL of a Flickr photo</a> with a given size (eg “Medium (640 × 480)”).</p>
+<p>Then build site (or check into Github and Travis will build it for you).</p>
+</div>
 <div id="building-website" class="section level2">
 <h2>Building Website</h2>
 <ul>
 <li><p>The easiest way to generate the website is clicking on the <strong>Build Website</strong> menu button from the <strong>Build</strong> pane in RStudio after opening this repository’s project by double-clicking on <code>p2p.Rproj</code>. All the content files (*.Rmd, *.md, *.html) are rendered and output to the <strong><code>docs/</code></strong> folder, where it is served to <a href="https://marinebon.github.io/p2p">marinebon.github.io/p2p</a> via <a href="https://pages.github.com">Github Pages</a>.</p></li>
 <li><p><strong>WARNING</strong>: Do <em><strong>NOT</strong></em> place any content in the <strong><code>docs/</code></strong> since it gets wiped clean before rebuilding the website in its place.</p></li>
 </ul>
-<p>To build from command shell cd to the project &amp; run: * R : <code>rmarkdown::render_site()</code> * bash: <code>Rscript -e 'rmarkdown::render_site()'</code></p>
+<p>To build from command shell cd to the project &amp; run:</p>
+<ul>
+<li>R : <code>rmarkdown::render_site(); source(&quot;make_sites.R&quot;)</code></li>
+<li>bash: <code>Rscript -e 'rmarkdown::render_site(); source(&quot;make_sites.R&quot;)'</code></li>
+</ul>
 <div id="installing-dependencies" class="section level3">
 <h3>Installing Dependencies</h3>
 <p>If you don’t have the required packages you will need to install them: <code>cd</code> into the project directory then execute the following R to install dependencies automatically from the <code>DESCRIPTION</code> file.</p>
 <pre class="r"><code>install.packages(&#39;devtools&#39;)
 devtools.install(&#39;./&#39;)</code></pre>
+<p>For Travis to work, add package to <code>Imports:</code> in <code>DESCRIPTION</code>. For packages not on CRAN, also add to <code>Remotes:</code> to install via Github.</p>
 </div>
 </div>
 <div id="resources" class="section level2">
