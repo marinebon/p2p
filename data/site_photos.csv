@@ -1,0 +1,59 @@
+id,org,name,country
+usa-fknms,NOAA,Florida Keys National Marine Sanctuary ,usa
+usa-mbnms,NOAA,Monterey Bay Marine Sanctuary ,usa
+usa-indianriver,SI,Indian River Lagoon ,usa
+usa-chesapeakebay,SI,Chesapeake Bay ,usa
+blz-carriebowcay,SI,Carrie Bow Cay ,blz
+pan-bocasdeltoro,SI,Bocas del Toro ,pan
+usa-kaneohebay,SI,Kaneohe Bay ,usa
+usa-sfbay,SI,San Francisco Bay ,usa
+cri-esmeralda,CIMAR,Esmeralda ,cri
+cri-sanmiguel,CIMAR,San Miguel ,cri
+cri-puntamona,CIMAR,Punta Mona ,cri
+col-islagorgona-laventana,U. del Valle,Isla Gorgona - La Ventana ,col
+col-islagorgona-playaverde,U. del Valle,Isla Gorgona - Playa Verde ,col
+col-islagorgona-lamancora,U. del Valle,Isla Gorgona - La Mancora ,col
+ecu-puntilladestaelena-chocolatera,U. Guayaquil,Puntilla de Sta Elena - Chocolatera ,ecu
+ecu-puntilladestaelena-laloberia,U. Guayaquil,Puntilla de Sta Elena - La Lobería ,ecu
+ecu-laratonera-galapagos,Charles Darwin F.,La Ratonera - Galapagos Islands ,ecu
+ecu-tortugabay-galapagos,Charles Darwin F.,Tortuga Bay - Galapagos Islands ,ecu
+ecu-angermeyerpoint-galapagos,Charles Darwin F.,Angermeyer Point - Galapagos Islands ,ecu
+ecu-playaalemanes-galapagos,Charles Darwin F.,Playa Alemanes - Galapagos Island ,ecu
+ecu-playabrava-galapagos,Charles Darwin F.,Playa Brava - Galapagos Islands ,ecu
+ecu-playamansa-galapagos,Charles Darwin F.,Playa Mansa - Galapagos Islands ,ecu
+chl-puntaarenas-bahiamansa,U. Valparaíso,Punta Arenas - Bahía Mansa ,chl
+chl-concepcion-cocholguenorte,U. Valparaíso,Concepción - Cocholgue Norte ,chl
+chl-concepcion-cocholguesur,U. Valparaíso,Concepción - Cocholgue Sur ,chl
+chl-concepcion-dichato-coliumo,U. Valparaíso,Concepción - Dichato / Coliumo ,chl
+ata-antarctica-site1,U. Concepción,Antarctica - Site 1 ,ata
+ata-antarctica-site2,U. Concepción,Antarctica - Site 2 ,ata
+chl-bahiadevalparaiso-montemar,U. Concepción,Bahía de Valpararíso - Montemar ,chl
+arg-puertomadryn1,IBIOMAR/CONICET,Puerto Madryn 1 ,arg
+arg-puertomadryn2,IBIOMAR/CONICET,Puerto Madryn 2 ,arg
+arg-mardelplata-playachica,Museo Argentino de Ciencias Naturales,Mar del Plata - Playa Chica ,arg
+arg-mardelplata-saneduardobeach,Museo Argentino de Ciencias Naturales,Mar del Plata - San Eduardo Beach ,arg
+vir-usvi,USVI,USVI,vir
+bra-costadasalgas-gramute,U. Federal do Espirito Santo,Costa das Algas - Gramuté ,bra
+bra-costadasalgas-enseadadasgarcas,U. Federal do Espirito Santo,Costa das Algas - Enseada das Garças ,bra
+bra-costadasalgas-manguinhos,U. Federal do Espirito Santo,Costa das Algas - Manguinhos ,bra
+bra-jurubatibanationalpark,NUPEM,Jurubatiba National Park ,bra
+bra-arraialdocabo-prainha,U. Federal Fluminense,Arraial do Cabo - Prainha ,bra
+bra-arraialdocabo-atalaia,U. Federal Fluminense,Arraial do Cabo - Atalaia ,bra
+bra-arraialdocabo-fortaleza,U. Federal Fluminense,Arraial do Cabo - Fortaleza ,bra
+NA-saintpeterandsaintpaularchipelago-enseada,U. Federal Fluminese,Saint Peter and Saint Paul Archipelago - Enseada ,NA
+bra-fernandodenoronha-boldro,U. Federal Fluminese,Fernando de Noronha - Boldro ,bra
+bra-saosebastiao-baleeirohead,CEBIMAR / USP,São Sebastião - Baleeiro Head ,bra
+bra-saosebastiao-feiticeira,CEBIMAR / USP,São Sebastião - Feiticeira ,bra
+bra-saosebastiao-itassuceisland,CEBIMAR / USP,São Sebastião - Itassucê Island ,bra
+bra-encantadasnorth,U. Federal do Paraná,Encantadas North ,bra
+bra-encantadassouth,U. Federal do Paraná,Encantadas South ,bra
+ury-barradelchuy,U. de la República,Barra del Chuy ,ury
+mex-yucatan-marinadeyucalpeten,UNAM,Yucatán - Marina de Yucalpeten ,mex
+usa-hamiltoncove-lubecme,NE University,Hamilton Cove - Lubec ME ,usa
+usa-moosecove-lubecme,NE University,Moose Cove - Lubec ME ,usa
+usa-grindstone-winterharborme,NE University,Grindstone - Winter Harbor ME ,usa
+usa-chamberlain-chamberlainme,NE University,Chamberlain - Chamberlain ME ,usa
+usa-giantstairs-harpswellme,NE University,Giant Stairs - Harpswell ME ,usa
+usa-biddeford-biddefordme,NE University,Biddeford - Biddeford ME ,usa
+usa-marblehead-marbleheadma,NE University,Marblehead - Marblehead MA ,usa
+usa-pumphouse-nahantma,NE University,Pumphouse - Nahant MA ,usa

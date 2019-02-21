@@ -1,0 +1,63 @@
+---
+title: "Site: `r params$site_name`"
+params:
+  site_name: "Florida Keys National Marine Sanctuary"
+  site_id: "usa-fknms"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F, message = F)
+```
+
+```{r}
+library(tidyverse)
+source("functions.R")
+
+site <- read_csv(here("data/sites.csv")) %>% 
+  filter(id == params$site_id)
+
+sst <- info('jplMURSST41mday')
+```
+
+- Country: **`r str_to_upper(site$country)`**
+- Organization: **`r site$org`**
+
+## Images
+
+```{r}
+library(bsplus)
+
+bs_carousel(id = "the_beatles", use_indicators = TRUE) %>%
+  bs_append(
+    content = bs_carousel_image(src = image_uri("img/john.jpg")),
+    caption = bs_carousel_caption("John Lennon", "Rhythm guitar, vocals")
+  ) %>%
+  bs_append(
+    content = bs_carousel_image(src = image_uri("img/paul.jpg")),
+    caption = bs_carousel_caption("Paul McCartney", "Bass guitar, vocals")
+  ) %>%
+  bs_append(
+    content = bs_carousel_image(src = image_uri("img/george.jpg")),
+    caption = bs_carousel_caption("George Harrison", "Lead guitar, vocals")
+  ) %>%
+  bs_append(
+    content = bs_carousel_image(src = image_uri("img/ringo.jpg")),
+    caption = bs_carousel_caption("Ringo Starr", "Drums, vocals")
+  ) 
+```
+
+## Map of SST
+
+```{r}
+box <- get_box(site$lon, site$lat, cells_wide=10)
+r   <- get_raster(sst, lon=box$lon, lat=box$lat, date="last", field="sst")
+map_raster(r, site_lon=site$lon, site_lat=site$lat, site_label=site$name, title="SST")
+```
+
+## Timeseries of SST
+
+```{r}
+csv <- here(glue("data/sst/sst_{site$id}.csv"))
+d   <- get_timeseries(sst, lon=site$lon, lat=site$lat, csv=csv, field="sst")
+plot_timeseries(d, title="SST", color="red")
+```
