@@ -4,7 +4,8 @@ library(glue)
 
 sites_csv <- here("data/sites.csv")
 
-sites <- read_csv(sites_csv)
+sites <- read_csv(sites_csv) #%>% 
+  #filter(id == "bra-saintpeterandsaintpaularchipelago-enseada")
 
 make_site <- function(site_id){
   site_name <- sites %>% 
@@ -15,9 +16,7 @@ make_site <- function(site_id){
     params      = list(
       site_name = site_name,
       site_id   = site_id),
-    output_file = glue("docs/site/{site_id}.html"))
+    output_file = glue("docs/z_{site_id}.html"))
 }
-
-if (!dir.exists(here("docs/site"))) dir.create("docs/site")
 
 walk(sites$id, make_site)

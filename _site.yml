@@ -45,6 +45,8 @@ output_dir: "docs"
 output:
   html_document:
     theme: cosmo
+    self_contained: false
+    lib_dir: docs/site_libs
     highlight: textmate
     include:
       after_body: _includes/footer.html

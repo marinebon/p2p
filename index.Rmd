@@ -45,7 +45,7 @@ pal <- colorFactor("Set2", countries$mapcolor7)
 sites <- read_csv(sites_csv) %>% 
   st_as_sf(coords = c("lon", "lat"), crs = 4326) %>% 
   mutate(
-    md = glue("**{name}**<br>Org: {org}<br>Country: {str_to_upper(country)}<br>↪[ Visit](site/{id}.html)"),
+    md = glue("**{name}**<br>Org: {org}<br>Country: {str_to_upper(country)}<br>↪[ Visit](z_{id}.html)"),
     html = map_chr(md, function(x) HTML(markdownToHTML(text=x, fragment.only=T))))
 #View(sites)
 

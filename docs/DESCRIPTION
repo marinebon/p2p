@@ -4,4 +4,5 @@ Version: 0.0.1
 Imports: rmarkdown, tidyverse, stringr, dygraphs, 
   xts, lubridate, geojsonio, RColorBrewer, leaflet, crosstalk, servr, 
   roxygen2, futile.logger, pander, rnaturalearth, here,
-  rerrdap, knitr, bsplus, here, glue, raster, markdown
+  knitr, bsplus, here, glue, raster, markdown, rerddap, ncdf4
+Remotes: ropensci/rerddap
