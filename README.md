@@ -1,6 +1,8 @@
 # p2p
 Pole to Pole website
 
+[![Build Status](https://travis-ci.org/marinebon/p2p.svg?branch=master)](https://travis-ci.org/marinebon/p2p)
+
 This website was built as an [R Markdown website](https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html).
 
 ## Building Website
