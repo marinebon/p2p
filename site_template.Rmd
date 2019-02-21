@@ -2,7 +2,7 @@
 title: "Site: `r params$site_name`"
 params:
   site_name: "Isla Gorgona - La Mancora"
-  site_id: "usa-fknms"
+  site_id: "col-islagorgona-lamancora"
 ---
 
 ```{r setup, include=FALSE}
