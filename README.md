@@ -13,6 +13,8 @@ Then build site (or check into Github and Travis will build it for you). A new m
 
 For notes about finding country given lat/lon (ie reverse geocoding), creating Google Maps URL (`gmapurl`; optional, not a necessary field), check out code in [`prep.R`](https://github.com/marinebon/p2p/blob/master/prep.R).
 
+- **WARNING**: If you change the coordinates of a site (ie lat/lon in `sites.csv`), please delete the associated site's file in `data/sst`, so the timeseries plot becomes representative of the data for that coordinate.
+
 ## Add Pictures to a Site
 
 Associate URL of a photo to `id` of a site in a new row into [`data/site_photos.csv`](https://github.com/marinebon/p2p/blob/master/data/site_photos.csv).

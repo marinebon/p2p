@@ -1,8 +1,8 @@
 ---
 title: "Site: `r params$site_name`"
 params:
-  site_name: "Isla Gorgona - La Mancora"
-  site_id: "col-islagorgona-lamancora"
+  site_name: "Pass-a-Grille"
+  site_id: "usa-usfstpete"
 ---
 
 ```{r setup, include=FALSE}
