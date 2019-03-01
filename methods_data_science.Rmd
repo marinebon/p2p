@@ -6,5 +6,6 @@ title: "Methods for Data Science"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-TODO
+- [Rocky Shore](protocols/Data_Sheet_RockyShore_template.xlsx)
+- [Sandy Beach](protocols/Data_SandyBeach_template.xlsx)
 
