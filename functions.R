@@ -6,10 +6,10 @@ library(raster)
 library(leaflet)
 library(dygraphs) # install.packages("dygraphs")
 library(xts)
+
 #library(plotdap)
 select <- dplyr::select
 addLegend <- leaflet::addLegend
-
 
 grid_to_raster <- function (grid, var) {
   # original: plotdap:::get_raster

@@ -1,0 +1,36 @@
+---
+title: "test_gbif_4326_tiles"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F, message=F, warning = F)
+```
+
+## GBIF 4326
+
+```{r}
+library(leaflet)
+
+# leaflet(
+#   options =
+#     leafletOptions(crs=leafletCRS(crsClass='L.CRS.EPSG4326'))) %>% 
+#     #leafletOptions(crs=leafletCRS(crsClass='L.CRS.EPSG3857'))) %>% 
+#   #addProviderTiles(providers$Stamen.TonerLite)
+# # https://tile.gbif.org/4326/omt/0/0/0@1x.png?style=gbif-classic
+#   addTiles(
+#     "//tile.gbif.org/4326/omt/{z}/{x}/{y}@1x.png?style=gbif-classic")#,
+#     #tileOptions(tileSize=512))
+#             #tileOptions(tileSize=512))
+library(tidyverse)
+
+site <- read_rds("../tmp_site.rds")
+
+
+
+
+```
+
+
+![](https://tile.gbif.org/4326/omt/0/0/0@1x.png?style=gbif-classic)
+![](https://tile.gbif.org/4326/omt/gbif-light/0/1/0@1x.png?style=gbif-classic)
