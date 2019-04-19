@@ -8,12 +8,14 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Upcoming
 
-- [2nd Marine Biodiversity Workshop: from the Sea to the Cloud](https://marinebon.github.io/p2p-mexico-workshop/)<br>
-  2019-04-02 in Puerto Morelos, Mexico
+- NASA Biodiversity and Ecological Forecasting Meeting - May 21-24, 2019
+- 3rd Marine Biodiversity Workshop: from the Sea to the Cloud - TBD (end of 2019 - early 2020)
 
 ## Past
 
-
+- [2nd Marine Biodiversity Workshop: from the Sea to the Cloud](https://marinebon.github.io/p2p-mexico-workshop/)<br>
+  2019-04-02 in Puerto Morelos, Mexico
+  
 - [American Gephysical Union Fall Meeting 2018](https://drive.google.com/file/d/1YFOOYFZNmNTGzK3BRestIS1RltkZImEu/view?usp=sharing)<br>
   2018-12-10 in Washington DC, USA
 
