@@ -8,10 +8,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Upcoming
 
-- NASA Biodiversity and Ecological Forecasting Meeting - May 21-24, 2019
 - 3rd Marine Biodiversity Workshop: from the Sea to the Cloud - TBD (end of 2019 - early 2020)
 
 ## Past
+
+- [NASA Biodiversity and Ecological Forecasting Meeting](https://drive.google.com/file/d/1fxq8MvqTIWO_N1hUmw11F4L4u6AsyNuG/view?usp=sharing)<br> 2019-05-22 in Washington DC, USA
 
 - [2nd Marine Biodiversity Workshop: from the Sea to the Cloud](https://marinebon.github.io/p2p-mexico-workshop/)<br>
   2019-04-02 in Puerto Morelos, Mexico
