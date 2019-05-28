@@ -1,6 +1,10 @@
 ---
 title: "Network Members and Contributors"
 ---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
 <br>
 <br>
 ## Members
@@ -25,6 +29,9 @@ library(knitr)
 # using xlsx because in csv accent characters getting mangled by Excel
 read_excel("data/P2P-Brazil-workshop_participants.xlsx") %>%
   kable()
+```
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
 ```
 <br>
 ## Contributors to the network 
