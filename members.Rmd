@@ -21,6 +21,7 @@ library(knitr)
 read_excel("data/P2P-Brazil-workshop_participants.xlsx") %>%
   kable()
 ```
+<br>
 # Contributors to the network 
 <br>
 ```{r}
