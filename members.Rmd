@@ -1,8 +1,9 @@
 ---
 title: "Network Members and Contributors"
 ---
-
-# Members
+<br>
+<br>
+## Members
 <br>
 
 ![Group photo from [Brazil Workshop 2018-08](https://marinebon.github.io/p2p-brazil-workshop/).](images/P2P_group%20CebiMar_sm.JPG)
@@ -26,7 +27,7 @@ read_excel("data/P2P-Brazil-workshop_participants.xlsx") %>%
   kable()
 ```
 <br>
-# Contributors to the network 
+## Contributors to the network 
 <br>
 ```{r}
 # using xlsx because same reason
