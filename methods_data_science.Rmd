@@ -5,9 +5,15 @@ title: "Methods for Data Science"
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-
+Use the templates below to enter your data:
 - [Rocky Shore Data Template](protocols/Data_Sheet_RockyShore_template.xlsx)
 - [Sandy Beach Data Template](protocols/Data_SandyBeach_template.xlsx)
+<br>
+<br>
+Check your list of species with [WoRMS](http://www.marinespecies.org/aphia.php?p=webservice) for taxonomy quality control:
 - [Taxonomy quality check with WoRMS](protocols/WoRMS_quality_check.pdf)
+<br>
+<br>
+Use these instructions to upload you data to the [MBON Pole to Pole IPT](http://ipt.iobis.org/mbon/)
 - [HOW TO upload data to the Integrated Publishing Toolkit](https://diodon.github.io/P2P/PublishingDataIPT.html)
 
