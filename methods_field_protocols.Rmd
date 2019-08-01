@@ -7,9 +7,9 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 Use standardized field protocols below to collect biodiversity observations in rocky intertidal areas and sandy beaches:<br> 
 - [Rocky Shore](protocols/MBON_P2P_RS_Protocol.pdf) NEW!<br>
-- [Sandy Beach](protocols/Sandy-Beach_Protocol_MBON-P2P_2018-09-12.pdf)
+- [Sandy Beach](protocols/Protocol_Final version proposal.pdf) NEW!
 <br>
 <br>
 Use the template below to register observations during sandy beach surveys:<br>
-- [Sandy Beach Field Logsheet](protocols/Field_logsheet_Sandy_Beach_MBON_Pole_to_Pole.pdf)
+- [Sandy Beach Field Logsheet](protocols/FieldForm_SandyBeach.xlsx)
 
