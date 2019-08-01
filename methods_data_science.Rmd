@@ -9,7 +9,7 @@ Use the templates below to enter your data:
 <br>
 - [Rocky Shore Data Template](protocols/Data_Sheet_RockyShore_template.xlsx)
 <br>
-- [Sandy Beach Data Template](protocols/Data_SandyBeach_template.xlsx)
+- [Sandy Beach Data Template](protocols/Datasheet_template_SB.xlsx)
 <br>
 <br>
 Check your list of species with [WoRMS](http://www.marinespecies.org/aphia.php?p=webservice) for taxonomy quality control:
