@@ -11,5 +11,5 @@ Use standardized field protocols below to collect biodiversity observations in r
 <br>
 <br>
 Use the template below to register observations during sandy beach surveys:<br>
-- [Sandy Beach Field Logsheet](protocols/FieldForm_SandyBeach.xlsx)
+- [Sandy Beach Field Logsheet](protocols/FieldForm_SandyBeach.xlsx) NEW!
 
