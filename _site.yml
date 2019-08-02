@@ -18,8 +18,8 @@ navbar:
           href: data_rocky_shore.html
         - text: "Sandy Beach"
           href: data_sandy_beach.html
-        - text: "Environmental, Remotely Sensed"
-          href: data_rs.html
+#        - text: "Environmental, Remotely Sensed"
+#          href: data_rs.html
         - text: "Environmental, In Situ"
           href: data_in_situ.html
     - text: "Events"
