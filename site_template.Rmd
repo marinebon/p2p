@@ -7,11 +7,7 @@ editor_options:
   chunk_output_type: console
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = F, message = F)
-```
-
-```{r}
+```{r setup, include=FALSE, echo=F}
 library(tidyverse)
 library(knitr)
 library(leaflet)
@@ -25,12 +21,16 @@ source("functions.R")
 # params = list(
 #   site_id="ecu-puntilladestaelena-chocolatera",
 #   site_name="Puntilla de Sta Elena - Chocolatera")
+```
 
+```{r get_csv_data, include=F, echo=F}
 site <- read_csv(here("data/sites.csv")) %>% 
   filter(id == params$site_id)
 photos <- read_csv(here("data/site_photos.csv")) %>% 
   filter(id == params$site_id)
+```
 
+```{r fetch_erddap_info, include=F, echo=F}
 sst <- info('jplMURSST41mday')
 ```
 
