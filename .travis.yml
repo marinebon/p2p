@@ -25,6 +25,7 @@ before_install:
 script:
 - Rscript -e 'rmarkdown::render_site()'
 - Rscript -e 'source("make_sites.R")'
+after_success:
 - git config --global user.name "Enrique Montes (Travis-CI)"
 - git config --global user.email "emontesh@mail.usf.edu"
 - git add -A
