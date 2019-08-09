@@ -39,7 +39,7 @@ sst <- info('jplMURSST41mday')
 
 ## Photos
 
-```{r}
+```{r, echo=FALSE}
 if (nrow(photos) > 0){
   carousel <- bs_carousel(id = "photos", use_indicators = TRUE)
   
@@ -59,14 +59,14 @@ if (nrow(photos) > 0){
 
 ## Map of SST
 
-```{r}
+```{r, echo=FALSE}
 # get most recent date
 d <- get_dates(sst)[2]
 ```
 
 Map of the most recent (`r format(d,"%Y-%m-%d")`) sea-surface temperature (SST) around the site.
 
-```{r}
+```{r, echo=FALSE}
 # box <- get_box(site$lon, site$lat, cells_wide=10)
 # r   <- get_raster(sst, lon=box$lon, lat=box$lat, date="last", field="sst")
 # map_raster(r, site_lon=site$lon, site_lat=site$lat, site_label=site$name, title="SST")
@@ -97,7 +97,7 @@ leaflet(
 
 ## Timeseries of SST
 
-```{r}
+```{r, echo=FALSE}
 csv <- here(glue("data/sst/sst_{site$id}.csv"))
 d   <- get_timeseries(sst, lon=site$lon, lat=site$lat, csv=csv, field="sst")
 plot_timeseries(d, title="SST", color="red")
