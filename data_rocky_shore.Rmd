@@ -6,5 +6,11 @@ title: "Data for Rocky Shore"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-TODO
+Biodiversity survey data are currently being collected and uploaded to [OBIS](https://obis.org/) by MBON Pole to Pole members. 
+
+Datasets are available for these locations:
+
+[Montemar - Chile](https://obis.org/dataset/5e009291-b1ce-454f-bbcf-d98142eaeda9)
+
+More data will become available soon!
 
