@@ -72,7 +72,7 @@ Map of the most recent (`r format(d,"%Y-%m-%d")`) sea-surface temperature (SST) 
 # map_raster(r, site_lon=site$lon, site_lat=site$lat, site_label=site$name, title="SST")
 
 # bounding box offset around site marker for extent of map
-b <- 0.2
+b <- 1.0
 
 leaflet(
   options = leafletOptions(
