@@ -1,10 +1,18 @@
 ---
-title: "Data for Sandy Beach"
+title: "Sandy Beach Data"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-TODO
+Biodiversity survey data are currently being collected and uploaded to [OBIS](https://obis.org/) by MBON Pole to Pole members. 
+
+You can access available datasets for the following locations:
+
+[Yucatan Peninsula - Mexico](https://obis.org/dataset/5700fdc3-956f-4e33-903b-e66ba38d980c)
+
+[Barra del Chuy - Uruguay](https://obis.org/dataset/e2ae1710-46e4-4331-88c7-8970336fdb42)
+
+More data will become available soon!
 
