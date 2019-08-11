@@ -196,6 +196,19 @@ plot_timeseries <- function(d, title="SST", color="red", dyRangeSelector=T, ...)
   p
 }
 
+plot_timeseries_2 <- function(d_2, title="CHL", color="red", dyRangeSelector=T, ...){
+  p_2 <- xts(select(d_2, -date), order.by=d$date) %>% 
+    dygraph(main=title, ...) %>%
+    dyOptions(
+      colors = color,
+      fillGraph = TRUE, fillAlpha = 0.4) 
+  if (dyRangeSelector){
+    p_2 <- p_2 %>% 
+      dyRangeSelector()
+  }
+  p_2
+}
+
 popup_site_sst <- function(site_id, ...){
   csv <- here(glue("data/sst/sst_{site$id}.csv"))
   site <- read_csv(here("data/sites.csv")) %>% 
