@@ -63,6 +63,7 @@ if (nrow(photos) > 0){
 ```{r, echo=F}
 # get most recent date
 d <- get_dates(sst)[2]
+d_chl <- get_dates(chl)[2]
 ```
 
 Map of the most recent (`r format(d,"%Y-%m-%d")`) sea-surface temperature (SST) around the site.
