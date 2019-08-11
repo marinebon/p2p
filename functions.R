@@ -221,3 +221,17 @@ popup_site_sst <- function(site_id, ...){
   #p
   as.character(p)
 }
+
+popup_site_chl <- function(site_id, ...){
+  csv_chl <- here(glue("data/chl/chl_{site$id}.csv"))
+  site_chl <- read_csv(here("data/sites.csv")) %>% 
+    filter(id == params$site_id)
+  
+  chl <- info("nesdisVHNSQchlaMonthly")
+  
+  d_2   <- get_timeseries(chl, lon=site$lon, lat=site$lat, csv=csv, field="chl")
+  p_2 <- plot_timeseries(d_2, title="CHL", color="red", dyRangeSelector=F, ...)
+  #p
+  as.character(p_2)
+}
+
