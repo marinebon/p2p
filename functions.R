@@ -65,6 +65,22 @@ get_raster <- function(info, lon, lat, date="last", field="sst"){
 
 }
 
+map_raster <- function(r, site_lon, site_lat, site_label, title){
+  pal <- colorNumeric(colors$temperature, values(r), na.color = "transparent")
+
+  leaflet() %>%
+    addProviderTiles(providers$Esri.OceanBasemap, group="Color") %>%
+    addProviderTiles(providers$Stamen.TonerLite, group="B&W") %>%
+    #addProviderTiles(providers$Stamen.TonerLabels) %>%
+    addRasterImage(r, colors = pal, opacity = 0.8, project=F, group="CHL") %>%
+    addMarkers(lng = site_lon, lat = site_lat, label = site_label) %>%
+    addLegend(pal = pal, values = values(r), title = title, position="bottomright") %>% 
+    addLayersControl(
+      baseGroups = c("Color", "B&W"),
+      overlayGroups = c("SST"),
+      options = layersControlOptions(collapsed = T))
+}
+
 get_raster_2 <- function(info, lon, lat, date="last", field_2="chl"){
   g_2 <- griddap(
     info, longitude = lon, latitude = lat, 
@@ -73,19 +89,19 @@ get_raster_2 <- function(info, lon, lat, date="last", field_2="chl"){
     leaflet::projectRasterForLeaflet(method="ngb")
 }
 
-map_raster <- function(r, site_lon, site_lat, site_label, title){
+map_raster_2 <- function(r, site_lon, site_lat, site_label, title){
   pal <- colorNumeric(colors$temperature, values(r), na.color = "transparent")
 
   leaflet() %>%
     addProviderTiles(providers$Esri.OceanBasemap, group="Color") %>%
     addProviderTiles(providers$Stamen.TonerLite, group="B&W") %>%
     #addProviderTiles(providers$Stamen.TonerLabels) %>%
-    addRasterImage(r, colors = pal, opacity = 0.8, project=F, group="SST") %>%
+    addRasterImage(r, colors = pal, opacity = 0.8, project=F, group="CHL") %>%
     addMarkers(lng = site_lon, lat = site_lat, label = site_label) %>%
     addLegend(pal = pal, values = values(r), title = title, position="bottomright") %>% 
     addLayersControl(
       baseGroups = c("Color", "B&W"),
-      overlayGroups = c("SST"),
+      overlayGroups = c("CHL"),
       options = layersControlOptions(collapsed = T))
 }
 
