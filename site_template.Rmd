@@ -108,8 +108,8 @@ plot_timeseries(d, title="SST", color="red")
 ## Timeseries of CHL
 
 ```{r, echo=F}
-csv_chl <- here(glue("data/chl/chl_{site$id}.csv"))
-d_chl   <- get_timeseries(chl, lon=site$lon, lat=site$lat, csv_chl=csv_chl, field="chl")
+csv <- here(glue("data/chl/chl_{site$id}.csv"))
+d_chl   <- get_timeseries(chl, lon=site$lon, lat=site$lat, csv=csv, field="chl")
 plot_timeseries(d_chl, title="CHL", color="red")
 ```
 
