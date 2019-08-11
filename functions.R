@@ -64,6 +64,16 @@ get_raster <- function(info, lon, lat, date="last", field="sst"){
     leaflet::projectRasterForLeaflet(method="ngb")
 }
 
+}
+
+get_raster_2 <- function(info, lon, lat, date="last", field_2="chl"){
+  g_2 <- griddap(
+    info, longitude = lon, latitude = lat, 
+    time = c(date, date), fields = field_2)
+  grid_to_raster(g_2, "chl") %>% 
+    leaflet::projectRasterForLeaflet(method="ngb")
+}
+
 map_raster <- function(r, site_lon, site_lat, site_label, title){
   pal <- colorNumeric(colors$temperature, values(r), na.color = "transparent")
 
