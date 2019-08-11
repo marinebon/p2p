@@ -144,6 +144,45 @@ get_timeseries <- function(info, lon, lat, csv, field="sst"){
   d
 }
 
+get_timeseries_2 <- function(info, lon, lat, csv, field="chl"){
+  
+  dates_2  <- get_dates(info)
+  
+  if (file.exists(csv)){
+    d_prev <- read_csv(csv) %>% 
+      arrange(date)
+    start_date <- read_csv(csv) %>% 
+      tail(1) %>% 
+      pull(date) %>% 
+      as.POSIXct()
+  } else {
+    start_date <- dates[1]
+  }
+  
+  v_2 <- griddap(
+    info,
+    longitude = c(lon, lon), latitude = c(lat, lat), 
+    time = c(start_date, dates[2]), fields = field)
+  
+  d_now <- v$data %>%
+    as_tibble() %>%
+    mutate(
+      date = lubridate::as_date(time, "%Y-%m-%dT00:00:00Z")) %>%
+    select(date, chl) %>%
+    arrange(date)
+  
+  if (file.exists(csv)){
+    d_2 <- bind_rows(d_prev, d_now) %>% 
+      filter(!duplicated(date))
+  } else {
+    d_2 <- d_now
+  }
+  
+  d_2 %>% 
+    write_csv(csv)
+  d_2
+}
+
 plot_timeseries <- function(d, title="SST", color="red", dyRangeSelector=T, ...){
   p <- xts(select(d, -date), order.by=d$date) %>% 
     dygraph(main=title, ...) %>%
