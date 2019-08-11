@@ -62,7 +62,6 @@ get_raster <- function(info, lon, lat, date="last", field="sst"){
     time = c(date, date), fields = field)
   grid_to_raster(g, "sst") %>% 
     leaflet::projectRasterForLeaflet(method="ngb")
-}
 
 }
 
