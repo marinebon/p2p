@@ -104,3 +104,11 @@ csv <- here(glue("data/sst/sst_{site$id}.csv"))
 d   <- get_timeseries(sst, lon=site$lon, lat=site$lat, csv=csv, field="sst")
 plot_timeseries(d, title="SST", color="red")
 ```
+
+## Timeseries of CHL
+
+```{r, echo=F}
+csv <- here(glue("data/chl/chl_{site$id}.csv"))
+d_chl   <- get_timeseries(chl, lon=site$lon, lat=site$lat, csv=csv, field="chl")
+plot_timeseries(d_chl, title="CHL", color="red")
+```
