@@ -19,4 +19,4 @@ make_site <- function(site_id){
     output_file = glue("docs/z_{site_id}.html"))
 }
 
-walk(sites$id, make_site)
+walk(sites$id[1], make_site)

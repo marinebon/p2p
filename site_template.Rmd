@@ -7,11 +7,16 @@ editor_options:
   chunk_output_type: console
 ---
 
-```{r setup, include=FALSE, echo=F}
+```{r setup, include=F}
+knitr::opts_chunk$set(echo = F, message = F, warning = F)
+```
+
+```{r}
 library(tidyverse)
 library(knitr)
 library(leaflet)
 library(mapview)
+library(leafem)
 library(bsplus)
 source("functions.R")
 
@@ -123,7 +128,7 @@ b_2 <- 3.0
 
 leaflet(
   options = leafletOptions(
-    crs_2 = leafletCRS(crsClass = "L.CRS.EPSG4326"))) %>%
+    crs = leafletCRS(crsClass = "L.CRS.EPSG4326"))) %>%
   # basemap from GBIF in 4326
   addTiles("//tile.gbif.org/4326/omt/{z}/{x}/{y}@1x.png?style=gbif-geyser") %>%
   # sst
