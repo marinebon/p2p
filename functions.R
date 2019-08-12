@@ -50,7 +50,7 @@ get_dates <- function(info){
 }
 
 get_box <- function(lon, lat, cells_wide){
-  w <- cells_wide * 0.03 / 2
+  w <- cells_wide * 0.01 / 2
   box <- list(
     lon = c(round(lon, 2) - w, round(lon, 2) + w), 
     lat = c(round(lat, 2) - w, round(lat, 2) + w))
