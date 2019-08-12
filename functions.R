@@ -144,45 +144,6 @@ get_timeseries <- function(info, lon, lat, csv, field="sst"){
   d
 }
 
-get_timeseries_2 <- function(info, lon, lat, csv, field="chl"){
-
-  dates_2  <- get_dates(info)
-
-  if (file.exists(csv)){
-    d_prev <- read_csv(csv) %>%
-      arrange(date)
-    start_date <- read_csv(csv) %>%
-      tail(1) %>%
-      pull(date) %>%
-      as.POSIXct()
-  } else {
-    start_date <- dates[1]
-  }
-
-  v_2 <- griddap(
-    info,
-    longitude = c(lon, lon), latitude = c(lat, lat),
-    time = c(start_date, dates[2]), fields = field)
-
-  d_now <- v$data %>%
-    as_tibble() %>%
-    mutate(
-      date = lubridate::as_date(time, "%Y-%m-%dT00:00:00Z")) %>%
-    select(date, chl) %>%
-    arrange(date)
-
-  if (file.exists(csv)){
-    d_2 <- bind_rows(d_prev, d_now) %>%
-      filter(!duplicated(date))
-  } else {
-    d_2 <- d_now
-  }
-
-  d_2 %>%
-    write_csv(csv)
-  d_2
-}
-
 plot_timeseries <- function(d, title="SST", color="red", dyRangeSelector=T, ...){
   p <- xts(select(d, -date), order.by=d$date) %>%
     dygraph(main=title, ...) %>%
@@ -194,43 +155,4 @@ plot_timeseries <- function(d, title="SST", color="red", dyRangeSelector=T, ...)
       dyRangeSelector()
   }
   p
-}
-
-plot_timeseries_2 <- function(d_2, title="CHL", color="red", dyRangeSelector=T, ...){
-  p_2 <- xts(select(d_2, -date), order.by=d$date) %>%
-    dygraph(main=title, ...) %>%
-    dyOptions(
-      colors = color,
-      fillGraph = TRUE, fillAlpha = 0.4)
-  if (dyRangeSelector){
-    p_2 <- p_2 %>%
-      dyRangeSelector()
-  }
-  p_2
-}
-
-popup_site_sst <- function(site_id, ...){
-  csv <- here(glue("data/sst/sst_{site$id}.csv"))
-  site <- read_csv(here("data/sites.csv")) %>%
-    filter(id == params$site_id)
-
-  sst <- info('jplMURSST41mday')
-
-  d   <- get_timeseries(sst, lon=site$lon, lat=site$lat, csv=csv, field="sst")
-  p <- plot_timeseries(d, title="SST", color="red", dyRangeSelector=F, ...)
-  #p
-  as.character(p)
-}
-
-popup_site_chl <- function(site_id, ...){
-  csv_chl <- here(glue("data/chl/chl_{site$id}.csv"))
-  site_chl <- read_csv(here("data/sites.csv")) %>%
-    filter(id == params$site_id)
-
-  chl <- info("nesdisVHNSQchlaMonthly")
-
-  d_2   <- get_timeseries(chl, lon=site$lon, lat=site$lat, csv=csv, field="chl")
-  p_2 <- plot_timeseries(d_2, title="CHL", color="red", dyRangeSelector=F, ...)
-  #p
-  as.character(p_2)
 }
