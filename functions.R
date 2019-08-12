@@ -129,7 +129,7 @@ get_timeseries <- function(info, lon, lat, csv, field="sst"){
     as_tibble() %>%
     mutate(
       date = lubridate::as_date(time, "%Y-%m-%dT00:00:00Z")) %>%
-    select(date, info) %>%
+    select(date, field) %>%
     arrange(date)
 
   if (file.exists(csv)){
