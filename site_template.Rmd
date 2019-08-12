@@ -3,7 +3,7 @@ title: "Site: `r params$site_name`"
 params:
   site_name: "Puntilla de Sta Elena - Chocolatera" # "Pass-a-Grille"
   site_id: "ecu-puntilladestaelena-chocolatera" # "usa-usfstpete"
-editor_options: 
+editor_options:
   chunk_output_type: console
 ---
 
@@ -24,9 +24,9 @@ source("functions.R")
 ```
 
 ```{r get_csv_data, include=F, echo=F}
-site <- read_csv(here("data/sites.csv")) %>% 
+site <- read_csv(here("data/sites.csv")) %>%
   filter(id == params$site_id)
-photos <- read_csv(here("data/site_photos.csv")) %>% 
+photos <- read_csv(here("data/site_photos.csv")) %>%
   filter(id == params$site_id)
 ```
 
@@ -43,7 +43,7 @@ chl <- info("nesdisVHNSQchlaMonthly")
 ```{r, echo=F}
 if (nrow(photos) > 0){
   carousel <- bs_carousel(id = "photos", use_indicators = TRUE)
-  
+
   for (i in 1:nrow(photos)){
     photo <- photos[i,]
     carousel <-  bs_append(
@@ -51,7 +51,7 @@ if (nrow(photos) > 0){
       content = bs_carousel_image(src = photo$url),
       caption = bs_carousel_caption(photo$caption))
   }
-  
+
   carousel
 } else {
   cat("No photos yet posted.")
@@ -79,7 +79,7 @@ leaflet(
   options = leafletOptions(
     crs = leafletCRS(crsClass = "L.CRS.EPSG4326"))) %>%
   # basemap from GBIF in 4326
-  addTiles("//tile.gbif.org/4326/omt/{z}/{x}/{y}@1x.png?style=gbif-geyser") %>% 
+  addTiles("//tile.gbif.org/4326/omt/{z}/{x}/{y}@1x.png?style=gbif-geyser") %>%
   # sst
   addWMSTiles(
     baseUrl = 'https://coastwatch.pfeg.noaa.gov/erddap/wms/jplMURSST41mday/request?',
@@ -87,11 +87,11 @@ leaflet(
     options = WMSTileOptions(
       version = "1.3.0", format = "image/png", transparent = T, opacity = 0.7,
       time = format(d,"%Y-%m-%dT00:00:00Z")))  %>%
-  addMarkers(lng = ~lon, lat = ~lat, label = ~name, data=site) %>% 
-  addMouseCoordinates() %>% 
-  fitBounds(site$lon - b, site$lat - b, site$lon + b, site$lat + b) %>% 
+  addMarkers(lng = ~lon, lat = ~lat, label = ~name, data=site) %>%
+  addMouseCoordinates() %>%
+  fitBounds(site$lon - b, site$lat - b, site$lon + b, site$lat + b) %>%
   addLegend(
-    position="bottomright", 
+    position="bottomright",
     title = paste0("SST (°C)<br>", format(d,"%Y-%m-%d")),
     colorNumeric("Spectral", c(0,32), reverse=T), seq(0,32))
 ```
@@ -125,7 +125,7 @@ leaflet(
   options = leafletOptions(
     crs_2 = leafletCRS(crsClass = "L.CRS.EPSG4326"))) %>%
   # basemap from GBIF in 4326
-  addTiles("//tile.gbif.org/4326/omt/{z}/{x}/{y}@1x.png?style=gbif-geyser") %>% 
+  addTiles("//tile.gbif.org/4326/omt/{z}/{x}/{y}@1x.png?style=gbif-geyser") %>%
   # sst
   addWMSTiles(
     baseUrl = 'https://coastwatch.pfeg.noaa.gov/erddap/wms/nesdisVHNSQchlaMonthly/request?',
@@ -133,11 +133,11 @@ leaflet(
     options = WMSTileOptions(
       version = "1.3.0", format = "image/png", transparent = T, opacity = 0.7,
       time = format(d_2,"%Y-%m-%dT00:00:00Z")))  %>%
-  addMarkers(lng = ~lon, lat = ~lat, label = ~name, data=site) %>% 
-  addMouseCoordinates() %>% 
-  fitBounds(site$lon - b_2, site$lat - b_2, site$lon + b_2, site$lat + b_2) %>% 
+  addMarkers(lng = ~lon, lat = ~lat, label = ~name, data=site) %>%
+  addMouseCoordinates() %>%
+  fitBounds(site$lon - b_2, site$lat - b_2, site$lon + b_2, site$lat + b_2) %>%
   addLegend(
-    position="bottomright", 
+    position="bottomright",
     title = paste0("CHL (mg m^-3)<br>", format(d_2,"%Y-%m-%d")),
     colorNumeric("Spectral", c(0,4), reverse=T), seq(0,4))
 ```
@@ -147,4 +147,3 @@ leaflet(
 # csv <- here(glue("data/chl/chl_{site$id}.csv"))
 # d_2   <- get_timeseries(chl, lon=site$lon, lat=site$lat, csv=csv, field="chl")
 # plot_timeseries(d_2, title="CHL", color="red")
-
