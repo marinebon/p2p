@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Site: Monterey Bay Marine Sanctuary</title>
+
+<script src="site_libs/jquery-1.12.4/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/htmlwidgets-1.3/htmlwidgets.js"></script>
+<link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="site_libs/Proj4Leaflet-1.0.1/proj4-compressed.js"></script>
+<script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="site_libs/leaflet-binding-2.0.2/leaflet.js"></script>
+<link href="site_libs/dygraphs-1.1.1/dygraph.css" rel="stylesheet" />
+<script src="site_libs/dygraphs-1.1.1/dygraph-combined.js"></script>
+<script src="site_libs/dygraphs-1.1.1/shapes.js"></script>
+<script src="site_libs/moment-2.8.4/moment.js"></script>
+<script src="site_libs/moment-timezone-0.2.5/moment-timezone-with-data.js"></script>
+<script src="site_libs/moment-fquarter-1.0.0/moment-fquarter.min.js"></script>
+<script src="site_libs/dygraphs-binding-1.1.1.6/dygraphs.js"></script>
+<link href="site_libs/ionicons-2.0.1/css/ionicons.min.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">MBON Pole to Pole Americas</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+<li>
+  <a href="members.html">
+    <span class="ion ion-person-stalker"></span>
+     
+    Members
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="ion ion-stats-bars"></span>
+     
+    Data
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="data_rocky_shore.html">Rocky Shore</a>
+    </li>
+    <li>
+      <a href="data_sandy_beach.html">Sandy Beach</a>
+    </li>
+    <li>
+      <a href="data_in_situ.html">Environmental, In Situ</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="events.html">
+    <span class="ion ion-calendar"></span>
+     
+    Events
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="ion ion-clipboard"></span>
+     
+    Methods
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="methods_field_protocols.html">Field Protocols</a>
+    </li>
+    <li>
+      <a href="methods_data_science.html">Data Science</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://marinebon.github.io/help/">
+    <span class="ion ion-help"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="contact.html">
+    <span class="ion ion-email"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Site: Monterey Bay Marine Sanctuary</h1>
+
+</div>
+
+
+<ul>
+<li>Country: <strong>USA</strong></li>
+<li>Organization: <strong>NOAA</strong></li>
+</ul>
+<div id="photos" class="section level2">
+<h2>Photos</h2>
+<pre><code>## No photos yet posted.</code></pre>
+</div>
+<div id="map-of-sst" class="section level2">
+<h2>Map of SST</h2>
+<p>Map of the most recent (2019-07-16) sea-surface temperature (SST) around the site.</p>
+<div id="htmlwidget-489b16cc3cb5c8db11a2" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-489b16cc3cb5c8db11a2">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG4326","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//tile.gbif.org/4326/omt/{z}/{x}/{y}@1x.png?style=gbif-geyser",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false}]},{"method":"addWMSTiles","args":["https://coastwatch.pfeg.noaa.gov/erddap/wms/jplMURSST41mday/request?",null,null,{"styles":"","format":"image/png","transparent":true,"version":"1.3.0","opacity":0.7,"time":"2019-07-16T00:00:00Z","layers":"jplMURSST41mday:sst"}]},{"method":"addMarkers","args":[36.5,-122,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,"Monterey Bay Marine Sanctuary",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addLegend","args":[{"colors":["#5E4FA2 , #5E4FA2 0%, #56A8B0 15.625%, #B3E0A3 31.25%, #F7FCB3 46.875%, #FED480 62.5%, #F67A48 78.125%, #C02C4A 93.75%, #9E0142 "],"labels":["0","5","10","15","20","25","30"],"na_color":null,"na_label":"NA","opacity":0.5,"position":"bottomright","type":"numeric","title":"SST (°C)<br>2019-07-16","extra":{"p_1":0,"p_n":0.9375},"layerId":null,"className":"info legend","group":null}]}],"limits":{"lat":[36.5,36.5],"lng":[-122,-122]},"fitBounds":[33.5,-125,39.5,-119,[]]},"evals":[],"jsHooks":{"render":[{"code":"function(el, x, data) {\n  return (\n      function(el, x, data) {\n      // get the leaflet map\n      var map = this; //HTMLWidgets.find('#' + el.id);\n      // we need a new div element because we have to handle\n      // the mouseover output separately\n      // debugger;\n      function addElement () {\n      // generate new div Element\n      var newDiv = $(document.createElement('div'));\n      // append at end of leaflet htmlwidget container\n      $(el).append(newDiv);\n      //provide ID and style\n      newDiv.addClass('lnlt');\n      newDiv.css({\n      'position': 'relative',\n      'bottomleft':  '0px',\n      'background-color': 'rgba(255, 255, 255, 0.7)',\n      'box-shadow': '0 0 2px #bbb',\n      'background-clip': 'padding-box',\n      'margin': '0',\n      'padding-left': '5px',\n      'color': '#333',\n      'font': '9px/1.5 \"Helvetica Neue\", Arial, Helvetica, sans-serif',\n      'z-index': '700',\n      });\n      return newDiv;\n      }\n\n\n      // check for already existing lnlt class to not duplicate\n      var lnlt = $(el).find('.lnlt');\n\n      if(!lnlt.length) {\n      lnlt = addElement();\n\n      // grab the special div we generated in the beginning\n      // and put the mousmove output there\n\n      map.on('mousemove', function (e) {\n      if (e.originalEvent.ctrlKey) {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                           ' lon: ' + (e.latlng.lng).toFixed(5) +\n                           ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                           ' | zoom: ' + map.getZoom() +\n                           ' | x: ' + L.CRS.EPSG3857.project(e.latlng).x.toFixed(0) +\n                           ' | y: ' + L.CRS.EPSG3857.project(e.latlng).y.toFixed(0) +\n                           ' | epsg: 3857 ' +\n                           ' | proj4: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs ');\n      } else {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                      ' lon: ' + (e.latlng.lng).toFixed(5) +\n                      ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                      ' | zoom: ' + map.getZoom() + ' ');\n      }\n      });\n\n      // remove the lnlt div when mouse leaves map\n      map.on('mouseout', function (e) {\n      var strip = document.querySelector('.lnlt');\n      strip.remove();\n      });\n\n      };\n\n      //$(el).keypress(67, function(e) {\n      map.on('preclick', function(e) {\n      if (e.originalEvent.ctrlKey) {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                      ' lon: ' + (e.latlng.lng).toFixed(5) +\n                      ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                      ' | zoom: ' + map.getZoom() + ' ');\n      var txt = document.querySelector('.lnlt').textContent;\n      console.log(txt);\n      //txt.innerText.focus();\n      //txt.select();\n      setClipboardText('\"' + txt + '\"');\n      }\n      });\n\n      //map.on('click', function (e) {\n      //  var txt = document.querySelector('.lnlt').textContent;\n      //  console.log(txt);\n      //  //txt.innerText.focus();\n      //  //txt.select();\n      //  setClipboardText(txt);\n      //});\n\n      function setClipboardText(text){\n      var id = 'mycustom-clipboard-textarea-hidden-id';\n      var existsTextarea = document.getElementById(id);\n\n      if(!existsTextarea){\n      console.log('Creating textarea');\n      var textarea = document.createElement('textarea');\n      textarea.id = id;\n      // Place in top-left corner of screen regardless of scroll position.\n      textarea.style.position = 'fixed';\n      textarea.style.top = 0;\n      textarea.style.left = 0;\n\n      // Ensure it has a small width and height. Setting to 1px / 1em\n      // doesn't work as this gives a negative w/h on some browsers.\n      textarea.style.width = '1px';\n      textarea.style.height = '1px';\n\n      // We don't need padding, reducing the size if it does flash render.\n      textarea.style.padding = 0;\n\n      // Clean up any borders.\n      textarea.style.border = 'none';\n      textarea.style.outline = 'none';\n      textarea.style.boxShadow = 'none';\n\n      // Avoid flash of white box if rendered for any reason.\n      textarea.style.background = 'transparent';\n      document.querySelector('body').appendChild(textarea);\n      console.log('The textarea now exists :)');\n      existsTextarea = document.getElementById(id);\n      }else{\n      console.log('The textarea already exists :3')\n      }\n\n      existsTextarea.value = text;\n      existsTextarea.select();\n\n      try {\n      var status = document.execCommand('copy');\n      if(!status){\n      console.error('Cannot copy text');\n      }else{\n      console.log('The text is now on the clipboard');\n      }\n      } catch (err) {\n      console.log('Unable to copy.');\n      }\n      }\n\n\n      }\n      ).call(this.getMap(), el, x, data);\n}","data":null}]}}</script>
+</div>
+<div id="timeseries-of-sst" class="section level2">
+<h2>Timeseries of SST</h2>
+<div id="htmlwidget-b780efb45348273b94c5" style="width:672px;height:480px;" class="dygraphs html-widget"></div>
+<script type="application/json" data-for="htmlwidget-b780efb45348273b94c5">{"x":{"attrs":{"title":"SST","labels":["month","sst"],"legend":"auto","retainDateWindow":false,"axes":{"x":{"pixelsPerLabel":60,"drawAxis":true},"y":{"drawAxis":true}},"stackedGraph":false,"fillGraph":true,"fillAlpha":0.4,"stepPlot":false,"drawPoints":false,"pointSize":1,"drawGapEdgePoints":false,"connectSeparatedPoints":false,"strokeWidth":1,"strokeBorderColor":"white","colors":["red"],"colorValue":0.5,"colorSaturation":1,"includeZero":false,"drawAxesAtZero":false,"logscale":false,"axisTickSize":3,"axisLineColor":"black","axisLineWidth":0.3,"axisLabelColor":"black","axisLabelFontSize":14,"axisLabelWidth":60,"drawGrid":true,"gridLineWidth":0.3,"rightGap":5,"digitsAfterDecimal":2,"labelsKMB":false,"labelsKMG2":false,"labelsUTC":false,"maxNumberWidth":6,"animatedZooms":false,"mobileDisableYTouch":true,"disableZoom":false,"showRangeSelector":true,"rangeSelectorHeight":40,"rangeSelectorPlotFillColor":" #A7B1C4","rangeSelectorPlotStrokeColor":"#808FAB","interactionModel":"Dygraph.Interaction.defaultModel"},"scale":"monthly","annotations":[],"shadings":[],"events":[],"format":"date","data":[["2002-06-16T00:00:00.000Z","2002-07-16T00:00:00.000Z","2002-08-16T00:00:00.000Z","2002-09-16T00:00:00.000Z","2002-10-16T00:00:00.000Z","2002-11-16T00:00:00.000Z","2002-12-16T00:00:00.000Z","2003-01-16T00:00:00.000Z","2003-02-16T00:00:00.000Z","2003-03-16T00:00:00.000Z","2003-04-16T00:00:00.000Z","2003-05-16T00:00:00.000Z","2003-06-16T00:00:00.000Z","2003-07-16T00:00:00.000Z","2003-08-16T00:00:00.000Z","2003-09-16T00:00:00.000Z","2003-10-16T00:00:00.000Z","2003-11-16T00:00:00.000Z","2003-12-16T00:00:00.000Z","2004-01-16T00:00:00.000Z","2004-02-16T00:00:00.000Z","2004-03-16T00:00:00.000Z","2004-04-16T00:00:00.000Z","2004-05-16T00:00:00.000Z","2004-06-16T00:00:00.000Z","2004-07-16T00:00:00.000Z","2004-08-16T00:00:00.000Z","2004-09-16T00:00:00.000Z","2004-10-16T00:00:00.000Z","2004-11-16T00:00:00.000Z","2004-12-16T00:00:00.000Z","2005-01-16T00:00:00.000Z","2005-02-16T00:00:00.000Z","2005-03-16T00:00:00.000Z","2005-04-16T00:00:00.000Z","2005-05-16T00:00:00.000Z","2005-06-16T00:00:00.000Z","2005-07-16T00:00:00.000Z","2005-08-16T00:00:00.000Z","2005-09-16T00:00:00.000Z","2005-10-16T00:00:00.000Z","2005-11-16T00:00:00.000Z","2005-12-16T00:00:00.000Z","2006-01-16T00:00:00.000Z","2006-02-16T00:00:00.000Z","2006-03-16T00:00:00.000Z","2006-04-16T00:00:00.000Z","2006-05-16T00:00:00.000Z","2006-06-16T00:00:00.000Z","2006-07-16T00:00:00.000Z","2006-08-16T00:00:00.000Z","2006-09-16T00:00:00.000Z","2006-10-16T00:00:00.000Z","2006-11-16T00:00:00.000Z","2006-12-16T00:00:00.000Z","2007-01-16T00:00:00.000Z","2007-02-16T00:00:00.000Z","2007-03-16T00:00:00.000Z","2007-04-16T00:00:00.000Z","2007-05-16T00:00:00.000Z","2007-06-16T00:00:00.000Z","2007-07-16T00:00:00.000Z","2007-08-16T00:00:00.000Z","2007-09-16T00:00:00.000Z","2007-10-16T00:00:00.000Z","2007-11-16T00:00:00.000Z","2007-12-16T00:00:00.000Z","2008-01-16T00:00:00.000Z","2008-02-16T00:00:00.000Z","2008-03-16T00:00:00.000Z","2008-04-16T00:00:00.000Z","2008-05-16T00:00:00.000Z","2008-06-16T00:00:00.000Z","2008-07-16T00:00:00.000Z","2008-08-16T00:00:00.000Z","2008-09-16T00:00:00.000Z","2008-10-16T00:00:00.000Z","2008-11-16T00:00:00.000Z","2008-12-16T00:00:00.000Z","2009-01-16T00:00:00.000Z","2009-02-16T00:00:00.000Z","2009-03-16T00:00:00.000Z","2009-04-16T00:00:00.000Z","2009-05-16T00:00:00.000Z","2009-06-16T00:00:00.000Z","2009-07-16T00:00:00.000Z","2009-08-16T00:00:00.000Z","2009-09-16T00:00:00.000Z","2009-10-16T00:00:00.000Z","2009-11-16T00:00:00.000Z","2009-12-16T00:00:00.000Z","2010-01-16T00:00:00.000Z","2010-02-16T00:00:00.000Z","2010-03-16T00:00:00.000Z","2010-04-16T00:00:00.000Z","2010-05-16T00:00:00.000Z","2010-06-16T00:00:00.000Z","2010-07-16T00:00:00.000Z","2010-08-16T00:00:00.000Z","2010-09-16T00:00:00.000Z","2010-10-16T00:00:00.000Z","2010-11-16T00:00:00.000Z","2010-12-16T00:00:00.000Z","2011-01-16T00:00:00.000Z","2011-02-16T00:00:00.000Z","2011-03-16T00:00:00.000Z","2011-04-16T00:00:00.000Z","2011-05-16T00:00:00.000Z","2011-06-16T00:00:00.000Z","2011-07-16T00:00:00.000Z","2011-08-16T00:00:00.000Z","2011-09-16T00:00:00.000Z","2011-10-16T00:00:00.000Z","2011-11-16T00:00:00.000Z","2011-12-16T00:00:00.000Z","2012-01-16T00:00:00.000Z","2012-02-16T00:00:00.000Z","2012-03-16T00:00:00.000Z","2012-04-16T00:00:00.000Z","2012-05-16T00:00:00.000Z","2012-06-16T00:00:00.000Z","2012-07-16T00:00:00.000Z","2012-08-16T00:00:00.000Z","2012-09-16T00:00:00.000Z","2012-10-16T00:00:00.000Z","2012-11-16T00:00:00.000Z","2012-12-16T00:00:00.000Z","2013-01-16T00:00:00.000Z","2013-02-16T00:00:00.000Z","2013-03-16T00:00:00.000Z","2013-04-16T00:00:00.000Z","2013-05-16T00:00:00.000Z","2013-06-16T00:00:00.000Z","2013-07-16T00:00:00.000Z","2013-08-16T00:00:00.000Z","2013-09-16T00:00:00.000Z","2013-10-16T00:00:00.000Z","2013-11-16T00:00:00.000Z","2013-12-16T00:00:00.000Z","2014-01-16T00:00:00.000Z","2014-02-16T00:00:00.000Z","2014-03-16T00:00:00.000Z","2014-04-16T00:00:00.000Z","2014-05-16T00:00:00.000Z","2014-06-16T00:00:00.000Z","2014-07-16T00:00:00.000Z","2014-08-16T00:00:00.000Z","2014-09-16T00:00:00.000Z","2014-10-16T00:00:00.000Z","2014-11-16T00:00:00.000Z","2014-12-16T00:00:00.000Z","2015-01-16T00:00:00.000Z","2015-02-16T00:00:00.000Z","2015-03-16T00:00:00.000Z","2015-04-16T00:00:00.000Z","2015-05-16T00:00:00.000Z","2015-06-16T00:00:00.000Z","2015-07-16T00:00:00.000Z","2015-08-16T00:00:00.000Z","2015-09-16T00:00:00.000Z","2015-10-16T00:00:00.000Z","2015-11-16T00:00:00.000Z","2015-12-16T00:00:00.000Z","2016-01-16T00:00:00.000Z","2016-02-16T00:00:00.000Z","2016-03-16T00:00:00.000Z","2016-04-16T00:00:00.000Z","2016-05-16T00:00:00.000Z","2016-06-16T00:00:00.000Z","2016-07-16T00:00:00.000Z","2016-08-16T00:00:00.000Z","2016-09-16T00:00:00.000Z","2016-10-16T00:00:00.000Z","2016-11-16T00:00:00.000Z","2016-12-16T00:00:00.000Z","2017-01-16T00:00:00.000Z","2017-02-16T00:00:00.000Z","2017-03-16T00:00:00.000Z","2017-04-16T00:00:00.000Z","2017-05-16T00:00:00.000Z","2017-06-16T00:00:00.000Z","2017-07-16T00:00:00.000Z","2017-08-16T00:00:00.000Z","2017-09-16T00:00:00.000Z","2017-10-16T00:00:00.000Z","2017-11-16T00:00:00.000Z","2017-12-16T00:00:00.000Z","2018-01-16T00:00:00.000Z","2018-02-16T00:00:00.000Z","2018-03-16T00:00:00.000Z","2018-04-16T00:00:00.000Z","2018-05-16T00:00:00.000Z","2018-06-16T00:00:00.000Z","2018-07-16T00:00:00.000Z","2018-08-16T00:00:00.000Z","2018-09-16T00:00:00.000Z","2018-10-16T00:00:00.000Z","2018-11-16T00:00:00.000Z","2018-12-16T00:00:00.000Z","2019-01-16T00:00:00.000Z","2019-02-16T00:00:00.000Z","2019-03-16T00:00:00.000Z","2019-04-16T00:00:00.000Z","2019-06-16T00:00:00.000Z","2019-07-16T00:00:00.000Z"],[12.3563232421875,12.9046020507812,13.6581420898438,13.2244873046875,13.6560363769531,13.0139770507812,13.6297302246094,13.4270324707031,13.0790100097656,12.4694213867188,12.0027465820312,11.9636535644531,12.8755493164062,13.4165954589844,15.7665710449219,16.2914733886719,13.3518371582031,13.9833068847656,13.1592102050781,12.6275024414062,11.8984985351562,12.4941711425781,11.9566345214844,12.0542297363281,11.9325866699219,13.9882507324219,14.5995788574219,14.4829711914062,14.4483337402344,14.6409301757812,13.3026123046875,13.6469116210938,13.426025390625,14.1871337890625,12.6618957519531,13.5050048828125,12.4150390625,13.857666015625,14.9064025878906,13.9887084960938,12.8816833496094,12.9148559570312,12.4602661132812,12.4664306640625,11.94580078125,11.673828125,12.6378173828125,12.5228881835938,13.1143798828125,14.8890075683594,15.8887329101562,14.7969055175781,15.3772583007812,14.3752746582031,13.1904602050781,11.9522705078125,12.29541015625,11.8345031738281,11.0063781738281,11.4581604003906,12.5423889160156,14.0760498046875,14.4887390136719,15.0736694335938,14.1045532226562,13.2564697265625,11.5752868652344,11.5727844238281,11.3267822265625,10.9596557617188,10.3948669433594,10.6047973632812,12.3705139160156,14.2513122558594,14.1755981445312,15.6962890625,14.0920104980469,13.4678344726562,12.4853210449219,12.5152282714844,12.4264526367188,11.6191101074219,10.8803100585938,11.5350952148438,13.8479919433594,13.9078063964844,14.59228515625,14.2278137207031,13.6134643554688,12.9745178222656,12.6249694824219,13.3478393554688,13.3722534179688,12.9539489746094,12.0235290527344,11.3164367675781,12.1031188964844,14.0256042480469,14.1939392089844,13.8592224121094,13.8149108886719,12.9030151367188,12.3070373535156,12.574462890625,12.3159484863281,12.0230407714844,11.5071411132812,11.2885131835938,12.6921691894531,13.7319946289062,14.068115234375,14.9248962402344,15.2344970703125,13.0462951660156,12.5862731933594,12.3939514160156,11.8684387207031,11.0171203613281,11.7648315429688,11.0964050292969,11.9358825683594,13.5419311523438,14.5040283203125,14.7566223144531,15.1707153320312,14.8110046386719,13.6692504882812,12.4628601074219,11.7108459472656,11.4466247558594,11.0874938964844,12.0763854980469,13.1626586914062,14.3987121582031,14.4924621582031,14.1936340332031,13.267578125,13.3578186035156,12.8242797851562,13.5339965820312,12.7978515625,13.0912170410156,12.4486999511719,12.0281372070312,12.8952941894531,15.66357421875,17.204833984375,17.2578125,17.0906372070312,15.814453125,15.7149047851562,14.6337280273438,14.6329040527344,13.6014099121094,11.6991577148438,12.1990661621094,13.9324645996094,16.419921875,17.7443237304688,17.1523742675781,17.3321533203125,15.1800842285156,14.4619140625,13.7781982421875,13.4606018066406,13.5462341308594,12.7384643554688,13.1728210449219,13.3589172363281,13.1849365234375,15.27978515625,14.7524719238281,15.1068725585938,14.7004699707031,12.7406311035156,12.65625,12.8408203125,12.7815856933594,11.9341125488281,11.9439392089844,13.0393676757812,13.3364562988281,15.5835876464844,16.4930114746094,13.718994140625,14.3299560546875,13.7862243652344,13.6405029296875,12.3953857421875,12.3928527832031,12.6491088867188,12.55078125,12.5664978027344,14.8581848144531,14.5606079101562,14.4862365722656,15.9083862304688,15.3896484375,14.8294372558594,13.4556884765625,13.2013549804688,13.0150451660156,12.8923950195312,14.1456909179688,13.9275817871094]],"fixedtz":false,"tzone":"UTC"},"evals":["attrs.interactionModel"],"jsHooks":[]}</script>
+</div>
+<div id="map-of-chl" class="section level2">
+<h2>Map of CHL</h2>
+<p>Map of the most recent (2019-06-01) Chlorophyll-a (CHL) around the site.</p>
+<div id="htmlwidget-9ceb6a22b95994bcb432" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-9ceb6a22b95994bcb432">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG4326","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//tile.gbif.org/4326/omt/{z}/{x}/{y}@1x.png?style=gbif-geyser",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false}]},{"method":"addWMSTiles","args":["https://coastwatch.pfeg.noaa.gov/erddap/wms/nesdisVHNSQchlaMonthly/request?",null,null,{"styles":"","format":"image/png","transparent":true,"version":"1.3.0","opacity":0.7,"time":"2019-06-01T00:00:00Z","layers":"nesdisVHNSQchlaMonthly:chlor_a"}]},{"method":"addMarkers","args":[36.5,-122,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,"Monterey Bay Marine Sanctuary",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addLegend","args":[{"colors":["#5E4FA2 , #5E4FA2 0%, #4596B7 12.5%, #8BCFA5 25%, #D8EF9B 37.5%, #FFFFBF 50%, #FED480 62.5%, #F98F52 75%, #DD4B4D 87.5%, #9E0142 100%, #9E0142 "],"labels":["0.0","0.5","1.0","1.5","2.0","2.5","3.0","3.5","4.0"],"na_color":null,"na_label":"NA","opacity":0.5,"position":"bottomright","type":"numeric","title":"CHL (mg m^-3)<br>2019-06-01","extra":{"p_1":0,"p_n":1},"layerId":null,"className":"info legend","group":null}]}],"limits":{"lat":[36.5,36.5],"lng":[-122,-122]},"fitBounds":[33.5,-125,39.5,-119,[]]},"evals":[],"jsHooks":{"render":[{"code":"function(el, x, data) {\n  return (\n      function(el, x, data) {\n      // get the leaflet map\n      var map = this; //HTMLWidgets.find('#' + el.id);\n      // we need a new div element because we have to handle\n      // the mouseover output separately\n      // debugger;\n      function addElement () {\n      // generate new div Element\n      var newDiv = $(document.createElement('div'));\n      // append at end of leaflet htmlwidget container\n      $(el).append(newDiv);\n      //provide ID and style\n      newDiv.addClass('lnlt');\n      newDiv.css({\n      'position': 'relative',\n      'bottomleft':  '0px',\n      'background-color': 'rgba(255, 255, 255, 0.7)',\n      'box-shadow': '0 0 2px #bbb',\n      'background-clip': 'padding-box',\n      'margin': '0',\n      'padding-left': '5px',\n      'color': '#333',\n      'font': '9px/1.5 \"Helvetica Neue\", Arial, Helvetica, sans-serif',\n      'z-index': '700',\n      });\n      return newDiv;\n      }\n\n\n      // check for already existing lnlt class to not duplicate\n      var lnlt = $(el).find('.lnlt');\n\n      if(!lnlt.length) {\n      lnlt = addElement();\n\n      // grab the special div we generated in the beginning\n      // and put the mousmove output there\n\n      map.on('mousemove', function (e) {\n      if (e.originalEvent.ctrlKey) {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                           ' lon: ' + (e.latlng.lng).toFixed(5) +\n                           ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                           ' | zoom: ' + map.getZoom() +\n                           ' | x: ' + L.CRS.EPSG3857.project(e.latlng).x.toFixed(0) +\n                           ' | y: ' + L.CRS.EPSG3857.project(e.latlng).y.toFixed(0) +\n                           ' | epsg: 3857 ' +\n                           ' | proj4: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs ');\n      } else {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                      ' lon: ' + (e.latlng.lng).toFixed(5) +\n                      ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                      ' | zoom: ' + map.getZoom() + ' ');\n      }\n      });\n\n      // remove the lnlt div when mouse leaves map\n      map.on('mouseout', function (e) {\n      var strip = document.querySelector('.lnlt');\n      strip.remove();\n      });\n\n      };\n\n      //$(el).keypress(67, function(e) {\n      map.on('preclick', function(e) {\n      if (e.originalEvent.ctrlKey) {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                      ' lon: ' + (e.latlng.lng).toFixed(5) +\n                      ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                      ' | zoom: ' + map.getZoom() + ' ');\n      var txt = document.querySelector('.lnlt').textContent;\n      console.log(txt);\n      //txt.innerText.focus();\n      //txt.select();\n      setClipboardText('\"' + txt + '\"');\n      }\n      });\n\n      //map.on('click', function (e) {\n      //  var txt = document.querySelector('.lnlt').textContent;\n      //  console.log(txt);\n      //  //txt.innerText.focus();\n      //  //txt.select();\n      //  setClipboardText(txt);\n      //});\n\n      function setClipboardText(text){\n      var id = 'mycustom-clipboard-textarea-hidden-id';\n      var existsTextarea = document.getElementById(id);\n\n      if(!existsTextarea){\n      console.log('Creating textarea');\n      var textarea = document.createElement('textarea');\n      textarea.id = id;\n      // Place in top-left corner of screen regardless of scroll position.\n      textarea.style.position = 'fixed';\n      textarea.style.top = 0;\n      textarea.style.left = 0;\n\n      // Ensure it has a small width and height. Setting to 1px / 1em\n      // doesn't work as this gives a negative w/h on some browsers.\n      textarea.style.width = '1px';\n      textarea.style.height = '1px';\n\n      // We don't need padding, reducing the size if it does flash render.\n      textarea.style.padding = 0;\n\n      // Clean up any borders.\n      textarea.style.border = 'none';\n      textarea.style.outline = 'none';\n      textarea.style.boxShadow = 'none';\n\n      // Avoid flash of white box if rendered for any reason.\n      textarea.style.background = 'transparent';\n      document.querySelector('body').appendChild(textarea);\n      console.log('The textarea now exists :)');\n      existsTextarea = document.getElementById(id);\n      }else{\n      console.log('The textarea already exists :3')\n      }\n\n      existsTextarea.value = text;\n      existsTextarea.select();\n\n      try {\n      var status = document.execCommand('copy');\n      if(!status){\n      console.error('Cannot copy text');\n      }else{\n      console.log('The text is now on the clipboard');\n      }\n      } catch (err) {\n      console.log('Unable to copy.');\n      }\n      }\n\n\n      }\n      ).call(this.getMap(), el, x, data);\n}","data":null}]}}</script>
+</div>
+<div id="timeseries-of-chl" class="section level2">
+<h2>Timeseries of CHL</h2>
+<div id="htmlwidget-38d0ba5ea3cce2a4a3b8" style="width:672px;height:480px;" class="dygraphs html-widget"></div>
+<script type="application/json" data-for="htmlwidget-38d0ba5ea3cce2a4a3b8">{"x":{"attrs":{"title":"CHL","labels":["month","chlor_a"],"legend":"auto","retainDateWindow":false,"axes":{"x":{"pixelsPerLabel":60,"drawAxis":true},"y":{"drawAxis":true}},"stackedGraph":false,"fillGraph":true,"fillAlpha":0.4,"stepPlot":false,"drawPoints":false,"pointSize":1,"drawGapEdgePoints":false,"connectSeparatedPoints":false,"strokeWidth":1,"strokeBorderColor":"white","colors":["green"],"colorValue":0.5,"colorSaturation":1,"includeZero":false,"drawAxesAtZero":false,"logscale":false,"axisTickSize":3,"axisLineColor":"black","axisLineWidth":0.3,"axisLabelColor":"black","axisLabelFontSize":14,"axisLabelWidth":60,"drawGrid":true,"gridLineWidth":0.3,"rightGap":5,"digitsAfterDecimal":2,"labelsKMB":false,"labelsKMG2":false,"labelsUTC":false,"maxNumberWidth":6,"animatedZooms":false,"mobileDisableYTouch":true,"disableZoom":false,"showRangeSelector":true,"rangeSelectorHeight":40,"rangeSelectorPlotFillColor":" #A7B1C4","rangeSelectorPlotStrokeColor":"#808FAB","interactionModel":"Dygraph.Interaction.defaultModel"},"scale":"monthly","annotations":[],"shadings":[],"events":[],"format":"date","data":[["2012-01-02T00:00:00.000Z","2012-02-01T00:00:00.000Z","2012-03-01T00:00:00.000Z","2012-04-01T00:00:00.000Z","2012-05-01T00:00:00.000Z","2012-06-01T00:00:00.000Z","2012-07-01T00:00:00.000Z","2012-08-01T00:00:00.000Z","2012-09-01T00:00:00.000Z","2012-10-01T00:00:00.000Z","2012-11-01T00:00:00.000Z","2012-12-01T00:00:00.000Z","2013-01-01T00:00:00.000Z","2013-02-01T00:00:00.000Z","2013-03-01T00:00:00.000Z","2013-04-01T00:00:00.000Z","2013-05-01T00:00:00.000Z","2013-06-01T00:00:00.000Z","2013-07-01T00:00:00.000Z","2013-08-01T00:00:00.000Z","2013-09-01T00:00:00.000Z","2013-10-01T00:00:00.000Z","2013-11-01T00:00:00.000Z","2013-12-01T00:00:00.000Z","2014-01-01T00:00:00.000Z","2014-02-01T00:00:00.000Z","2014-03-01T00:00:00.000Z","2014-04-01T00:00:00.000Z","2014-05-01T00:00:00.000Z","2014-06-01T00:00:00.000Z","2014-07-01T00:00:00.000Z","2014-08-01T00:00:00.000Z","2014-09-01T00:00:00.000Z","2014-10-01T00:00:00.000Z","2014-11-01T00:00:00.000Z","2014-12-01T00:00:00.000Z","2015-01-01T00:00:00.000Z","2015-02-01T00:00:00.000Z","2015-03-01T00:00:00.000Z","2015-04-01T00:00:00.000Z","2015-05-01T00:00:00.000Z","2015-06-01T00:00:00.000Z","2015-07-01T00:00:00.000Z","2015-08-01T00:00:00.000Z","2015-09-01T00:00:00.000Z","2015-10-01T00:00:00.000Z","2015-11-01T00:00:00.000Z","2015-12-01T00:00:00.000Z","2016-01-01T00:00:00.000Z","2016-02-01T00:00:00.000Z","2016-03-01T00:00:00.000Z","2016-04-01T00:00:00.000Z","2016-05-01T00:00:00.000Z","2016-06-01T00:00:00.000Z","2016-07-01T00:00:00.000Z","2016-08-01T00:00:00.000Z","2016-09-01T00:00:00.000Z","2016-10-01T00:00:00.000Z","2016-11-01T00:00:00.000Z","2016-12-01T00:00:00.000Z","2017-01-01T00:00:00.000Z","2017-02-01T00:00:00.000Z","2017-03-01T00:00:00.000Z","2017-04-01T00:00:00.000Z","2017-05-01T00:00:00.000Z","2017-06-01T00:00:00.000Z","2017-07-02T00:00:00.000Z","2017-08-01T00:00:00.000Z","2017-09-01T00:00:00.000Z","2017-10-01T00:00:00.000Z","2017-11-01T00:00:00.000Z","2017-12-01T00:00:00.000Z","2018-01-01T00:00:00.000Z","2018-02-01T00:00:00.000Z","2018-03-01T00:00:00.000Z","2018-04-01T00:00:00.000Z","2018-05-01T00:00:00.000Z","2018-06-01T00:00:00.000Z","2018-07-01T00:00:00.000Z","2018-08-01T00:00:00.000Z","2018-09-01T00:00:00.000Z","2018-10-01T00:00:00.000Z","2018-11-01T00:00:00.000Z","2018-12-01T00:00:00.000Z","2019-01-01T00:00:00.000Z","2019-02-01T00:00:00.000Z","2019-03-01T00:00:00.000Z","2019-04-01T00:00:00.000Z","2019-05-01T00:00:00.000Z","2019-06-01T00:00:00.000Z"],[1.0336971282959,0.857808291912079,1.89999210834503,0.815860748291016,0.741786599159241,1.68890154361725,2.13530421257019,4.43193387985229,1.52057087421417,1.06857311725616,0.928746283054352,0.598445057868958,1.01867949962616,1.15188193321228,2.41082453727722,0.873901605606079,4.01418495178223,3.5442955493927,0.916441261768341,6.07793235778809,5.47606134414673,3.75905299186707,1.36479508876801,1.17065358161926,0.836227416992188,0.642842292785645,1.54874384403229,1.26572203636169,4.96859836578369,1.0563485622406,1.11243212223053,0.985417306423187,1.55386364459991,0.917774319648743,1.50218605995178,0.921555995941162,0.896751046180725,0.493551135063171,1.56544697284698,3.26839065551758,0.494997650384903,2.59676909446716,1.83315598964691,0.74702388048172,1.38588392734528,0.7380650639534,1.09532797336578,0.571343719959259,0.819513142108917,1.13790857791901,1.61525976657867,1.56791400909424,0.78789347410202,4.19659900665283,3.69953751564026,2.69587922096252,1.65308237075806,3.24806928634644,1.74895179271698,1.54461133480072,1.13393378257751,1.03220641613007,2.09687423706055,1.13488566875458,1.21234369277954,3.65831565856934,0.962351560592651,0.718048512935638,2.50254464149475,2.3554470539093,3.4940824508667,0.959896206855774,1.01141369342804,1.08354496955872,1.18840348720551,1.95055496692657,1.34206295013428,3.83598613739014,1.50698184967041,1.88668811321259,2.19885969161987,2.67239904403687,2.1940004825592,0.950530409812927,1.01597118377686,1.27024710178375,1.35894083976746,3.51574850082397,1.03978526592255,5.46349048614502]],"fixedtz":false,"tzone":"UTC"},"evals":["attrs.interactionModel"],"jsHooks":[]}</script>
+</div>
+
+<div class="footer text-center">
+  © 2018 <img width="40px" src="images/logo_NASA.svg"/>
+</div>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
