@@ -23,14 +23,14 @@ source("functions.R")
 #   site_name="Puntilla de Sta Elena - Chocolatera")
 ```
 
-```{r get_csv_data, include=F, echo=F}
+```{r get_csv_data, include=FALSE, echo=FALSE}
 site <- read_csv(here("data/sites.csv")) %>%
   filter(id == params$site_id)
 photos <- read_csv(here("data/site_photos.csv")) %>%
   filter(id == params$site_id)
 ```
 
-```{r fetch_erddap_info, include=F, echo=F}
+```{r fetch_erddap_info, include=FALSE, echo=FALSE}
 sst <- info('jplMURSST41mday')
 chl <- info("nesdisVHNSQchlaMonthly")
 ```
@@ -40,7 +40,7 @@ chl <- info("nesdisVHNSQchlaMonthly")
 
 ## Photos
 
-```{r, echo=F}
+```{r, echo=FALSE}
 if (nrow(photos) > 0){
   carousel <- bs_carousel(id = "photos", use_indicators = TRUE)
 
@@ -60,14 +60,14 @@ if (nrow(photos) > 0){
 
 ## Map of SST
 
-```{r, echo=F, warning=F}
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
 # get most recent date
 d <- get_dates(sst)[2]
 ```
 
 Map of the most recent (`r format(d,"%Y-%m-%d")`) sea-surface temperature (SST) around the site.
 
-```{r, echo=F}
+```{r, echo=FALSE}
 # box <- get_box(site$lon, site$lat, cells_wide=10)
 # r   <- get_raster(sst, lon=box$lon, lat=box$lat, date="last", field="sst")
 # map_raster(r, site_lon=site$lon, site_lat=site$lat, site_label=site$name, title="SST")
@@ -98,7 +98,7 @@ leaflet(
 
 ## Timeseries of SST
 
-```{r, echo=F}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 csv <- here(glue("data/sst/sst_{site$id}.csv"))
 d   <- get_timeseries(sst, lon=site$lon, lat=site$lat, csv=csv, field="sst")
 plot_timeseries(d, title="SST", color="red")
@@ -106,14 +106,14 @@ plot_timeseries(d, title="SST", color="red")
 
 ## Map of CHL
 
-```{r, echo=F, message=F}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 # get most recent date
 d_2 <- get_dates(chl)[2]
 ```
 
-Map of the most recent (`r format(d,"%Y-%m-%d")`) Chlorophyll-a (CHL) around the site.
+Map of the most recent (`r format(d_2, "%Y-%m-%d")`) Chlorophyll-a (CHL) around the site.
 
-```{r, echo=F}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 # box_2 <- get_box(site$lon, site$lat, cells_wide=10)
 # r_2   <- get_raster(chl, lon=box$lon, lat=box$lat, date="last", field="chl")
 # map_raster(r, site_lon=site$lon, site_lat=site$lat, site_label=site$name, title="CHL")
@@ -143,7 +143,7 @@ leaflet(
 ```
 ## Timeseries of CHL
 
-```{r, echo=F}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 csv <- here(glue("data/chl/chl_{site$id}.csv"))
 d_2   <- get_timeseries(chl, lon=site$lon, lat=site$lat, csv=csv, field="chlor_a")
 plot_timeseries(d_2, title="CHL", color="red")
