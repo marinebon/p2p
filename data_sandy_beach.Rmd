@@ -1,5 +1,5 @@
 ---
-title: "Sandy Beach Data"
+title: "Data from Sandy Beaches"
 ---
 
 ```{r setup, include=FALSE}
