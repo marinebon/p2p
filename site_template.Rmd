@@ -63,7 +63,6 @@ if (nrow(photos) > 0){
 ```{r, echo=F}
 # get most recent date
 d <- get_dates(sst)[2]
-d_2 <- get_dates(chl)[2]
 ```
 
 Map of the most recent (`r format(d,"%Y-%m-%d")`) sea-surface temperature (SST) around the site.
@@ -103,4 +102,42 @@ leaflet(
 csv <- here(glue("data/sst/sst_{site$id}.csv"))
 d   <- get_timeseries(sst, lon=site$lon, lat=site$lat, csv=csv, field="sst")
 plot_timeseries(d, title="SST", color="red")
+```
+
+## Map of CHL
+
+```{r, echo=F}
+# get most recent date
+d_2 <- get_dates(chl)[2]
+```
+
+Map of the most recent (`r format(d,"%Y-%m-%d")`) Chlorophyll-a (CHL) around the site.
+
+```{r, echo=F}
+# box_2 <- get_box(site$lon, site$lat, cells_wide=10)
+# r_2   <- get_raster(chl, lon=box$lon, lat=box$lat, date="last", field="chl")
+# map_raster(r, site_lon=site$lon, site_lat=site$lat, site_label=site$name, title="CHL")
+
+# bounding box offset around site marker for extent of map
+b_2 <- 3.0
+
+leaflet(
+  options = leafletOptions(
+    crs_2 = leafletCRS(crsClass = "L.CRS.EPSG4326"))) %>%
+  # basemap from GBIF in 4326
+  addTiles("//tile.gbif.org/4326/omt/{z}/{x}/{y}@1x.png?style=gbif-geyser") %>% 
+  # sst
+  addWMSTiles(
+    baseUrl = 'https://coastwatch.pfeg.noaa.gov/erddap/wms/nesdisVHNSQchlaMonthly/request?',
+    layers = "nesdisVHNSQchlaMonthly:chl",
+    options = WMSTileOptions(
+      version = "1.3.0", format = "image/png", transparent = T, opacity = 0.7,
+      time = format(d,"%Y-%m-%dT00:00:00Z")))  %>%
+  addMarkers(lng = ~lon, lat = ~lat, label = ~name, data=site) %>% 
+  addMouseCoordinates() %>% 
+  fitBounds(site$lon - b, site$lat - b, site$lon + b, site$lat + b) %>% 
+  addLegend(
+    position="bottomright", 
+    title = paste0("SST (°C)<br>", format(d,"%Y-%m-%d")),
+    colorNumeric("Spectral", c(0,32), reverse=T), seq(0,32))
 ```
