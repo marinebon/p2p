@@ -141,6 +141,7 @@ leaflet(
     title = paste0("CHL (mg m^-3)<br>", format(d_2,"%Y-%m-%d")),
     colorNumeric("Spectral", c(0,4), reverse=T), seq(0,4))
 ```
+
 ## Timeseries of CHL
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
