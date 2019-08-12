@@ -138,6 +138,6 @@ leaflet(
   fitBounds(site$lon - b, site$lat - b, site$lon + b, site$lat + b) %>% 
   addLegend(
     position="bottomright", 
-    title = paste0("SST (°C)<br>", format(d,"%Y-%m-%d")),
+    title = paste0("CHL (mg m-3)<br>", format(d_2,"%Y-%m-%d")),
     colorNumeric("Spectral", c(0,32), reverse=T), seq(0,32))
 ```
