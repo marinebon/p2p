@@ -152,6 +152,8 @@ d   <- get_timeseries(sst, lon=site$lon, lat=site$lat, csv=csv, field="sst")
 plot_timeseries(d, title="SST", color="red")
 ```
 
+[Click here to download timeseries as a `.csv` file.](`r csv`)
+
 ### Chlorophyll
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
@@ -159,3 +161,5 @@ csv <- here(glue("data/chl/chl_{site$id}.csv"))
 d_2   <- get_timeseries(chl, lon=site$lon, lat=site$lat, csv=csv, field="chlor_a")
 plot_timeseries(d_2, title="CHL", color="green")
 ```
+
+[Click here to download timeseries as a `.csv` file.](`r csv`)
