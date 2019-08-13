@@ -144,7 +144,7 @@ leaflet(
   addLegend(
     position="bottomright",
     title = paste0("CHL (mg m^-3)<br>", format(d_2,"%Y-%m-%d")),
-    colorNumeric("Spectral", c(0,4), reverse=T), seq(0,4))
+    colorNumeric("Spectral", c(0,10), reverse=T), seq(0,10))
 ```
 
 ## Timeseries of CHL
