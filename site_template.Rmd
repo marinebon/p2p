@@ -161,7 +161,7 @@ csv = str(r.csv).replace("/marinebon/p2p/data/", "/marinebon/p2p/master/data/")
 csv_link = "https://raw.githubusercontent.com/" + csv.split("/marinebon/p2p/")[1]
 ```
 
-[Click here to download timeseries as a `.csv` file.](`r csv_link`)
+[Click here to download timeseries as a `.csv` file.](`r py$csv_link`)
 
 ### Chlorophyll
 
@@ -180,4 +180,4 @@ csv = str(r.csv).replace("/marinebon/p2p/data/", "/marinebon/p2p/master/data/")
 csv_link = "https://raw.githubusercontent.com/" + csv.split("/marinebon/p2p/")[1]
 ```
 
-[Click here to download timeseries as a `.csv` file.](`r csv_link`)
+[Click here to download timeseries as a `.csv` file.](`r py$csv_link`)
