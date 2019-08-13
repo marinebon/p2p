@@ -38,7 +38,7 @@ photos <- read_csv(here("data/site_photos.csv")) %>%
 ```{r fetch_erddap_info, include=FALSE, echo=FALSE}
 sst <- info('jplMURSST41mday')
 chl <- info("nesdisVHNSQchlaMonthly")
-seas <- info("noaa_aoml_4729_9ee6_ab54")
+#seas <- info("noaa_aoml_4729_9ee6_ab54")
 ```
 
 - Country: **`r str_to_upper(site$country)`**
