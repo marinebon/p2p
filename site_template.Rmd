@@ -152,7 +152,15 @@ d   <- get_timeseries(sst, lon=site$lon, lat=site$lat, csv=csv, field="sst")
 plot_timeseries(d, title="SST", color="red")
 ```
 
-[Click here to download timeseries as a `.csv` file.](`r csv`)
+```{python}
+# transform something like
+#    https://marinebon.github.io/home/travis/build/marinebon/p2p/data/sst/sst_wi-maracas.csv
+# into
+#    https://raw.githubusercontent.com/marinebon/p2p/master/data/sst/sst_wi-maracas.csv
+csv_link = "https://raw.githubusercontent.com/" + csv.split("/marinebon/p2p/")[1]
+```
+
+[Click here to download timeseries as a `.csv` file.](`r csv_link`)
 
 ### Chlorophyll
 
@@ -162,4 +170,12 @@ d_2   <- get_timeseries(chl, lon=site$lon, lat=site$lat, csv=csv, field="chlor_a
 plot_timeseries(d_2, title="CHL", color="green")
 ```
 
-[Click here to download timeseries as a `.csv` file.](`r csv`)
+```{python}
+# transform something like
+#    https://marinebon.github.io/home/travis/build/marinebon/p2p/data/sst/sst_wi-maracas.csv
+# into
+#    https://raw.githubusercontent.com/marinebon/p2p/master/data/sst/sst_wi-maracas.csv
+csv_link = "https://raw.githubusercontent.com/" + csv.split("/marinebon/p2p/")[1]
+```
+
+[Click here to download timeseries as a `.csv` file.](`r csv_link`)
