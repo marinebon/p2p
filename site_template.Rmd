@@ -146,7 +146,7 @@ leaflet(
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 # get most recent date
-d_3 <- get_dates(seas)[2]
+# d_3 <- get_dates(seas)[2]
 ```
 
 ## Timeseries {.tabset}
