@@ -1,9 +1,9 @@
 Package: placeholder
 Title: Does not matter.
 Version: 0.0.1
-Imports: rmarkdown, tidyverse, stringr, dygraphs, 
-  xts, lubridate, geojsonio, RColorBrewer, leaflet, crosstalk, servr, 
+Imports: rmarkdown, tidyverse, stringr, dygraphs,
+  xts, lubridate, geojsonio, RColorBrewer, leaflet, crosstalk, servr,
   roxygen2, futile.logger, pander, rnaturalearth, here,
   knitr, bsplus, here, glue, raster, markdown, rerddap, ncdf4, mapview,
   reticulate
-Remotes: ropensci/rerddap
+Remotes: ropensci/rerddap, rstudio/reticulate
