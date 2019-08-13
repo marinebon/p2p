@@ -81,11 +81,11 @@ map_raster <- function(r, site_lon, site_lat, site_label, title){
       options = layersControlOptions(collapsed = T))
 }
 
-get_raster_2 <- function(info, lon, lat, date="last", field_2="chl"){
+get_raster_2 <- function(info, lon, lat, date="last", field="chlor_a"){
   g_2 <- griddap(
     info, longitude = lon, latitude = lat,
-    time = c(date, date), fields = field_2)
-  grid_to_raster(g_2, "chl") %>%
+    time = c(date, date), fields = field)
+  grid_to_raster(g_2, "chlor_a") %>%
     leaflet::projectRasterForLeaflet(method="ngb")
 }
 
