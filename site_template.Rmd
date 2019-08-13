@@ -38,6 +38,7 @@ photos <- read_csv(here("data/site_photos.csv")) %>%
 ```{r fetch_erddap_info, include=FALSE, echo=FALSE}
 sst <- info('jplMURSST41mday')
 chl <- info("nesdisVHNSQchlaMonthly")
+seas <- info("noaa_aoml_4729_9ee6_ab54")
 ```
 
 - Country: **`r str_to_upper(site$country)`**
@@ -141,6 +142,12 @@ leaflet(
     colorNumeric("Spectral", c(0,4), reverse=T), seq(0,4))
 ```
 
+## Seascapes
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+# get most recent date
+d_3 <- get_dates(seas)[2]
+```
 
 ## Timeseries {.tabset}
 
