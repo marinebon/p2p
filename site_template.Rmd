@@ -63,14 +63,16 @@ if (nrow(photos) > 0){
 }
 ```
 
-## Map of SST
+## Maps {.tabset}
+
+### Temperature
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 # get most recent date
 d <- get_dates(sst)[2]
 ```
 
-Map of the most recent (`r format(d,"%Y-%m-%d")`) sea-surface temperature (SST) around the site.
+Map of the most recent (`r format(d,"%Y-%m-%d")`) sea-surface temperature around the site.
 
 ```{r, echo=FALSE}
 # box <- get_box(site$lon, site$lat, cells_wide=10)
@@ -101,22 +103,14 @@ leaflet(
     colorNumeric("Spectral", c(0,32), reverse=T), seq(0,32))
 ```
 
-## Timeseries of SST
-
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-csv <- here(glue("data/sst/sst_{site$id}.csv"))
-d   <- get_timeseries(sst, lon=site$lon, lat=site$lat, csv=csv, field="sst")
-plot_timeseries(d, title="SST", color="red")
-```
-
-## Map of CHL
+### Chlorophyll
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 # get most recent date
 d_2 <- get_dates(chl)[2]
 ```
 
-Map of the most recent (`r format(d_2, "%Y-%m-%d")`) Chlorophyll-a (CHL) around the site.
+Map of the most recent (`r format(d_2, "%Y-%m-%d")`) Chlorophyll-a around the site.
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 # box_2 <- get_box(site$lon, site$lat, cells_wide=10)
@@ -144,10 +138,21 @@ leaflet(
   addLegend(
     position="bottomright",
     title = paste0("CHL (mg m^-3)<br>", format(d_2,"%Y-%m-%d")),
-    colorNumeric("Spectral", c(0,10), reverse=T), seq(0,10))
+    colorNumeric("Spectral", c(0,4), reverse=T), seq(0,4))
 ```
 
-## Timeseries of CHL
+
+## Timeseries {.tabset}
+
+### Temperature
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+csv <- here(glue("data/sst/sst_{site$id}.csv"))
+d   <- get_timeseries(sst, lon=site$lon, lat=site$lat, csv=csv, field="sst")
+plot_timeseries(d, title="SST", color="red")
+```
+
+### Chlorophyll
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 csv <- here(glue("data/chl/chl_{site$id}.csv"))
