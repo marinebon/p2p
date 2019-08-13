@@ -157,7 +157,7 @@ plot_timeseries(d, title="SST", color="red")
 #    https://marinebon.github.io/home/travis/build/marinebon/p2p/data/sst/sst_wi-maracas.csv
 # into
 #    https://raw.githubusercontent.com/marinebon/p2p/master/data/sst/sst_wi-maracas.csv
-csv = csv.replace("/marinebon/p2p/data/", "/marinebon/p2p/master/data/")
+csv = str(r.csv).replace("/marinebon/p2p/data/", "/marinebon/p2p/master/data/")
 csv_link = "https://raw.githubusercontent.com/" + csv.split("/marinebon/p2p/")[1]
 ```
 
@@ -176,7 +176,7 @@ plot_timeseries(d_2, title="CHL", color="green")
 #    https://marinebon.github.io/home/travis/build/marinebon/p2p/data/sst/sst_wi-maracas.csv
 # into
 #    https://raw.githubusercontent.com/marinebon/p2p/master/data/sst/sst_wi-maracas.csv
-csv = csv.replace("/marinebon/p2p/data/", "/marinebon/p2p/master/data/")
+csv = str(r.csv).replace("/marinebon/p2p/data/", "/marinebon/p2p/master/data/")
 csv_link = "https://raw.githubusercontent.com/" + csv.split("/marinebon/p2p/")[1]
 ```
 
