@@ -142,13 +142,6 @@ leaflet(
     colorNumeric("Spectral", c(0,4), reverse=T), seq(0,4))
 ```
 
-## Seascapes
-
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-# get most recent date
-# d_3 <- get_dates(seas)[2]
-```
-
 ## Timeseries {.tabset}
 
 ### Temperature
