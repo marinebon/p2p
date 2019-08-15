@@ -167,7 +167,7 @@ leaflet(
   addLegend(
     position="bottomright",
     title = paste0("CLASS<br>", format(d_2,"%Y-%m-%d")),
-    colorNumeric("Spectral", c(0,4), reverse=T), seq(0,4))
+    colorNumeric("Spectral", c(0,33), reverse=T), seq(0,33))
 ```
 
 ## Timeseries {.tabset}
