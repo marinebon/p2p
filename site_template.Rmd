@@ -56,8 +56,10 @@ if (nrow(photos) > 0){
 ## Maps {.tabset}
 
 ### Temperature
+
 Column 
 -------------------------------------
+
 ```{r}
 # get most recent date
 d <- get_dates(sst)[2]
@@ -93,13 +95,17 @@ leaflet(
     title = paste0("SST (°C)<br>", format(d,"%Y-%m-%d")),
     colorNumeric("Spectral", c(0,32), reverse=T), seq(0,32))
 ```
+
 Column 
 -------------------------------------
+
 Sea Surface Temperature Data from PFEG CoastWatch via ERDDAP.
 
 ### Chlorophyll
+
 Column 
 -------------------------------------
+
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 # get most recent date
 d_2 <- get_dates(chl)[2]
@@ -135,13 +141,17 @@ leaflet(
     title = paste0("CHL (mg m^-3)<br>", format(d_2,"%Y-%m-%d")),
     colorNumeric("Spectral", c(0,4), reverse=T), seq(0,4))
 ```
+
 Column 
 -------------------------------------
+
 Chlorophyll A data from PFEG CoastWatch via ERDDAP.
 
 ### Seascape
+
 Column 
 -------------------------------------
+
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 # get most recent date
 d_2 <- get_dates(scape)[2]
@@ -177,8 +187,10 @@ leaflet(
     title = paste0("CLASS<br>", format(d_2,"%Y-%m-%d")),
     colorNumeric("Spectral", c(1,33), reverse=T), seq(1,33))
 ```
+
 Column 
 -------------------------------------
+
 Read more about seascapes [here](http://www.marinebon.org/seascapes.html).
 Data hosted by AOML CWCGOM via ERDDAP. 
 
