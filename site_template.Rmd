@@ -57,15 +57,12 @@ if (nrow(photos) > 0){
 
 ### Temperature
 
-Column 
--------------------------------------
-
 ```{r}
 # get most recent date
 d <- get_dates(sst)[2]
 ```
 
-Map of the most recent (`r format(d,"%Y-%m-%d")`) sea-surface temperature around the site.
+Map of the most recent (`r format(d,"%Y-%m-%d")`) sea-surface temperature around the site. Data source: PFEG CoastWatch via ERDDAP.
 
 ```{r}
 # box <- get_box(site$lon, site$lat, cells_wide=10)
@@ -96,22 +93,14 @@ leaflet(
     colorNumeric("Spectral", c(0,32), reverse=T), seq(0,32))
 ```
 
-Column 
--------------------------------------
-
-Sea Surface Temperature Data from PFEG CoastWatch via ERDDAP.
-
 ### Chlorophyll
-
-Column 
--------------------------------------
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 # get most recent date
 d_2 <- get_dates(chl)[2]
 ```
 
-Map of the most recent (`r format(d_2, "%Y-%m-%d")`) Chlorophyll-a around the site.
+Map of the most recent (`r format(d_2, "%Y-%m-%d")`) Chlorophyll-a around the site. Data Source: PFEG CoastWatch via ERDDAP.
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 # box_2 <- get_box(site$lon, site$lat, cells_wide=10)
@@ -142,22 +131,14 @@ leaflet(
     colorNumeric("Spectral", c(0,4), reverse=T), seq(0,4))
 ```
 
-Column 
--------------------------------------
-
-Chlorophyll A data from PFEG CoastWatch via ERDDAP.
-
 ### Seascape
-
-Column 
--------------------------------------
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 # get most recent date
 d_2 <- get_dates(scape)[2]
 ```
 
-Map of the most recent (`r format(d_2, "%Y-%m-%d")`) seascapes around the site.
+Map of the most recent (`r format(d_2, "%Y-%m-%d")`) seascapes around the site. Data Source: AOML CWCGOM via ERDDAP.
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 # box_2 <- get_box(site$lon, site$lat, cells_wide=10)
@@ -188,11 +169,7 @@ leaflet(
     colorNumeric("Spectral", c(1,33), reverse=T), seq(1,33))
 ```
 
-Column 
--------------------------------------
-
-Read more about seascapes [here](http://www.marinebon.org/seascapes.html).
-Data hosted by AOML CWCGOM via ERDDAP. 
+Read more about seascapes [here](http://www.marinebon.org/seascapes.html). 
 
 ## Timeseries {.tabset}
 
@@ -203,6 +180,8 @@ csv <- here(glue("data/sst/sst_{site$id}.csv"))
 d   <- get_timeseries(sst, lon=site$lon, lat=site$lat, csv=csv, field="sst")
 plot_timeseries(d, title="SST", color="red")
 ```
+
+Download data: [`r basename(csv)`](https://raw.githubusercontent.com/marinebon/p2p/master/data/sst/`r basename(csv)`)
 
 ```{python, eval=F}
 # transform something like
@@ -220,3 +199,5 @@ csv <- here(glue("data/chl/chl_{site$id}.csv"))
 d_2   <- get_timeseries(chl, lon=site$lon, lat=site$lat, csv=csv, field="chlor_a")
 plot_timeseries(d_2, title="CHL", color="green")
 ```
+
+Download data: [`r basename(csv)`](https://raw.githubusercontent.com/marinebon/p2p/master/data/chl/`r basename(csv)`)
