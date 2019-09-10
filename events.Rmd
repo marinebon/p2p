@@ -8,13 +8,14 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Upcoming
 
-- [2019 AmeriGEO Week](https://www.amerigeoss.org/amerigeoss-events/amerigeoss-week-2019)<br> August 19-23, 2019, Lima, Peru. The MBON Pole to Pole will be represented at the AmeriGEO Week by [IMARPE](http://www.imarpe.gob.pe/imarpe/)
 - [OceanObs'19](http://www.oceanobs19.net/) - September 16-20, 2019. The MBON Pole to Pole absctract is available [here](https://drive.google.com/file/d/1oknglVqEQo81ornvYrQCIyIaTgdshKeh/view?usp=sharing)
 - [10ª Semana de Integração Acadêmica da UFRJ / SIAC](http://siac.ufrj.br/) - October 21-27, 2019, Rio de Janeiro, Brazil. The MBON Pole to Pole absctract is available [here](https://drive.google.com/file/d/1kfOI4tpIOvgNDfULEMbeOzDfKuH1M_7f/view?usp=sharing)
 - [AGU Fall Meeting 2019](https://www2.agu.org/fall-meeting) - December 9-13, 2019, San Francisco, California. The MBON Pole to Pole absctract is available [here](https://drive.google.com/file/d/17deXPg_umFPoeYPB6QKTLDfwqv7hBUmG/view?usp=sharing)
 - 3rd Marine Biodiversity Workshop: from the Sea to the Cloud - TBD (end of 2019 - early 2020)
 
 ## Past
+
+- [2019 AmeriGEO Week](https://www.amerigeoss.org/amerigeoss-events/amerigeoss-week-2019)<br> August 19-23, 2019, Lima, Peru. The MBON Pole to Pole will be represented at the AmeriGEO Week by [IMARPE](http://www.imarpe.gob.pe/imarpe/)
 
 - [XIII Biofouling, Benthic Ecology and Marine Biotechnology Meeting](https://xiiibioinc.wixsite.com/xiiibioinc) - August 5-9, 2019, Arraial do Cabo, Rio de Janeiro, Brazil. The MBON Pole to Pole poster is available [here](https://drive.google.com/file/d/1AVl5loMTuzkE_xdBw9d-J7HNMojO_v9F/view?usp=sharing)
 

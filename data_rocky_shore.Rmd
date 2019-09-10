@@ -10,7 +10,12 @@ Biodiversity survey data are currently being collected and uploaded to [OBIS](ht
 
 You can access available datasets for the following locations:
 
-[Montemar - Chile](https://obis.org/dataset/5e009291-b1ce-454f-bbcf-d98142eaeda9)
+- [Montemar - Chile](https://obis.org/dataset/5e009291-b1ce-454f-bbcf-d98142eaeda9)
+- [Gorgona Island - Colombia](https://obis.org/dataset/871e92ab-2a00-4851-b948-cb6dda862f9c)
+- [Puerto Madryn - Argentina](https://obis.org/dataset/1d8fb994-64af-4a57-abe2-19573cc91f85)
+- [Concepcion - Chile](https://obis.org/dataset/e4a2fe06-f082-4f36-9165-73263a121508)
+- [Arraial do Cabo - Brazil](https://obis.org/dataset/7ece3f71-6bae-4cc4-8619-d560a564f187)
+- [Costa das Algas - Brazil](https://obis.org/dataset/29059698-61ea-4882-9e1f-fca042056ddf)
 
 More data will become available soon!
 
