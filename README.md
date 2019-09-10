@@ -32,6 +32,7 @@ So here's the usable URL:
 
 * `http://drive.google.com/uc?export=view&id=18lW657Las2jUrDeA06nZ77Smd27Es_N3`
 
+The website will get rebuilt weekly (see [travis-ci.org/marinebon/p2p/settings](https://travis-ci.org/marinebon/p2p/settings)). If you want the website to rebuild sooner, simply make a modification to a file in the github site, like to the [`README.md`](https://github.com/marinebon/p2p/edit/master/README.md), and commit the change to fire off a website rebuild with Travis: [travis-ci.org/marinebon/p2p](https://travis-ci.org/marinebon/p2p).
 
 ### Old info...
 
@@ -42,8 +43,6 @@ So far as a test, we only have some pics from these two sites:
 
 [Flickr](http://flickr.com/) seems to have the most options for tagging and creating albums or collections (ie BB's [mbon-p2p | Flickr](https://www.flickr.com/photos/bbest/albums/72157705442437201)). You can also [get the URL of a Flickr photo](https://help.flickr.com/en_us/get-the-url-of-a-flickr-photo-S1Hnnmjym)
 with a given size (eg "Medium (640 × 480)").
-
-Then build site (or check into Github and Travis will build it for you).
 
 ## Building Website
 
