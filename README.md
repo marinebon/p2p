@@ -17,7 +17,23 @@ For notes about finding country given lat/lon (ie reverse geocoding), creating G
 
 ## Add Pictures to a Site
 
-Associate URL of a photo to `id` of a site in a new row into [`data/site_photos.csv`](https://github.com/marinebon/p2p/blob/master/data/site_photos.csv).
+Associate URL of a photo to `id` of a site in a new row into 
+[site_photos - Google Sheets](https://docs.google.com/spreadsheets/d/1-1rIIiH9OV1C7vPzAH4R_PpC1fFj3ZoA6sV8J28Loxc/edit#gid=292028887).
+
+To use a photo stored in Google Drive, right-click on the file > **Get sharable link**, for instance
+
+* sharable link: `https://drive.google.com/open?id=18lW657Las2jUrDeA06nZ77Smd27Es_N3`
+
+And replace the beginning of the URL up to `id=` with the following:
+
+* `http://drive.google.com/uc?export=view&id=`
+
+So here's the usable URL:
+
+* `http://drive.google.com/uc?export=view&id=18lW657Las2jUrDeA06nZ77Smd27Es_N3`
+
+
+### Old info...
 
 So far as a test, we only have some pics from these two sites:
 

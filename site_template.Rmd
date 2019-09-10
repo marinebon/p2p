@@ -1,8 +1,8 @@
 ---
 title: "Site: `r params$site_name`"
 params:
-  site_name: "Puntilla de Sta Elena - Chocolatera" # "Pass-a-Grille"
-  site_id: "ecu-puntilladestaelena-chocolatera" # "usa-usfstpete"
+  site_name: "Costa das Algas - Enseada das Garcas" # "Pass-a-Grille"
+  site_id: "bra-costadasalgas-enseadadasgarcas" # "usa-usfstpete"
 editor_options:
   chunk_output_type: console
 ---
@@ -22,7 +22,10 @@ source("functions.R")
 
 site <- read_csv(here("data/sites.csv")) %>%
   filter(id == params$site_id)
-photos <- read_csv(here("data/site_photos.csv")) %>%
+
+site_photo_csv <- "https://docs.google.com/spreadsheets/d/1-1rIIiH9OV1C7vPzAH4R_PpC1fFj3ZoA6sV8J28Loxc/gviz/tq?tqx=out:csv&sheet=site_photos.csv"
+
+photos <- read_csv(site_photo_csv) %>%
   filter(id == params$site_id)
 
 sst   <- info('jplMURSST41mday')
