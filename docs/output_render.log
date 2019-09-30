@@ -1,0 +1,259 @@
+  |                                                                         |                                                                 |   0%  |                                                                         |......................                                           |  33%
+  ordinary text without R code
+
+  |                                                                         |...........................................                      |  67%
+label: setup (with options) 
+List of 1
+ $ include: logi FALSE
+
+  |                                                                         |.................................................................| 100%
+  ordinary text without R code
+
+
+/usr/bin/pandoc +RTS -K512m -RTS about.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash+smart --output about.html --email-obfuscation none --standalone --section-divs --template /home/travis/R/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/RtmpvmfRAm/rmarkdown-str3ae553f362ef.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/RtmpvmfRAm/rmarkdown-str3ae5392b0904.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
+  |                                                                         |                                                                 |   0%  |                                                                         |......................                                           |  33%
+  ordinary text without R code
+
+  |                                                                         |...........................................                      |  67%
+label: setup (with options) 
+List of 1
+ $ include: logi FALSE
+
+  |                                                                         |.................................................................| 100%
+  ordinary text without R code
+
+
+/usr/bin/pandoc +RTS -K512m -RTS contact.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash+smart --output contact.html --email-obfuscation none --standalone --section-divs --template /home/travis/R/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/RtmpvmfRAm/rmarkdown-str3ae574c810fb.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/RtmpvmfRAm/rmarkdown-str3ae5e3e5987.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
+  |                                                                         |                                                                 |   0%  |                                                                         |......................                                           |  33%
+  ordinary text without R code
+
+  |                                                                         |...........................................                      |  67%
+label: setup (with options) 
+List of 1
+ $ include: logi FALSE
+
+  |                                                                         |.................................................................| 100%
+  ordinary text without R code
+
+
+/usr/bin/pandoc +RTS -K512m -RTS data_in_situ.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash+smart --output data_in_situ.html --email-obfuscation none --standalone --section-divs --template /home/travis/R/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/RtmpvmfRAm/rmarkdown-str3ae5433e0be1.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/RtmpvmfRAm/rmarkdown-str3ae559eb9eba.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
+  |                                                                         |                                                                 |   0%  |                                                                         |......................                                           |  33%
+  ordinary text without R code
+
+  |                                                                         |...........................................                      |  67%
+label: setup (with options) 
+List of 1
+ $ include: logi FALSE
+
+  |                                                                         |.................................................................| 100%
+  ordinary text without R code
+
+
+/usr/bin/pandoc +RTS -K512m -RTS data_rocky_shore.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash+smart --output data_rocky_shore.html --email-obfuscation none --standalone --section-divs --template /home/travis/R/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/RtmpvmfRAm/rmarkdown-str3ae5562cd0a9.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/RtmpvmfRAm/rmarkdown-str3ae568c91b5.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
+  |                                                                         |                                                                 |   0%  |                                                                         |......................                                           |  33%
+  ordinary text without R code
+
+  |                                                                         |...........................................                      |  67%
+label: setup (with options) 
+List of 1
+ $ include: logi FALSE
+
+  |                                                                         |.................................................................| 100%
+  ordinary text without R code
+
+
+/usr/bin/pandoc +RTS -K512m -RTS data_rs.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash+smart --output data_rs.html --email-obfuscation none --standalone --section-divs --template /home/travis/R/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/RtmpvmfRAm/rmarkdown-str3ae58065b9a.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/RtmpvmfRAm/rmarkdown-str3ae561890123.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
+  |                                                                         |                                                                 |   0%  |                                                                         |......................                                           |  33%
+  ordinary text without R code
+
+  |                                                                         |...........................................                      |  67%
+label: setup (with options) 
+List of 1
+ $ include: logi FALSE
+
+  |                                                                         |.................................................................| 100%
+  ordinary text without R code
+
+
+/usr/bin/pandoc +RTS -K512m -RTS data_sandy_beach.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash+smart --output data_sandy_beach.html --email-obfuscation none --standalone --section-divs --template /home/travis/R/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/RtmpvmfRAm/rmarkdown-str3ae510e97d1d.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/RtmpvmfRAm/rmarkdown-str3ae512839a4.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
+  |                                                                         |                                                                 |   0%  |                                                                         |......................                                           |  33%
+  ordinary text without R code
+
+  |                                                                         |...........................................                      |  67%
+label: setup (with options) 
+List of 1
+ $ include: logi FALSE
+
+  |                                                                         |.................................................................| 100%
+  ordinary text without R code
+
+
+/usr/bin/pandoc +RTS -K512m -RTS events.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash+smart --output events.html --email-obfuscation none --standalone --section-divs --template /home/travis/R/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/RtmpvmfRAm/rmarkdown-str3ae51a47650f.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/RtmpvmfRAm/rmarkdown-str3ae56b74a138.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: setup (with options) 
+List of 1
+ $ include: logi FALSE
+
+  |                                                                         |................................                                 |  50%
+  ordinary text without R code
+
+  |                                                                         |...........................................                      |  67%
+label: unnamed-chunk-1
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: unnamed-chunk-2
+
+/usr/bin/pandoc +RTS -K512m -RTS index.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash+smart --output index.html --email-obfuscation none --standalone --section-divs --template /home/travis/R/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/RtmpvmfRAm/rmarkdown-str3ae55a7ab4a6.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/RtmpvmfRAm/rmarkdown-str3ae52b4d1f2e.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
+  |                                                                         |                                                                 |   0%  |                                                                         |...........                                                      |  17%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: unnamed-chunk-1 (with options) 
+List of 1
+ $ include: logi FALSE
+
+  |                                                                         |................................                                 |  50%
+  ordinary text without R code
+
+  |                                                                         |...........................................                      |  67%
+label: unnamed-chunk-2
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: unnamed-chunk-3
+
+/usr/bin/pandoc +RTS -K512m -RTS members.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash+smart --output members.html --email-obfuscation none --standalone --section-divs --template /home/travis/R/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/RtmpvmfRAm/rmarkdown-str3ae53e8fdedf.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/RtmpvmfRAm/rmarkdown-str3ae58b6ed9d.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
+  |                                                                         |                                                                 |   0%  |                                                                         |......................                                           |  33%
+  ordinary text without R code
+
+  |                                                                         |...........................................                      |  67%
+label: setup (with options) 
+List of 1
+ $ include: logi FALSE
+
+  |                                                                         |.................................................................| 100%
+  ordinary text without R code
+
+
+/usr/bin/pandoc +RTS -K512m -RTS methods_data_science.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash+smart --output methods_data_science.html --email-obfuscation none --standalone --section-divs --template /home/travis/R/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/RtmpvmfRAm/rmarkdown-str3ae532eb7074.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/RtmpvmfRAm/rmarkdown-str3ae5604c35f9.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
+  |                                                                         |                                                                 |   0%  |                                                                         |......................                                           |  33%
+  ordinary text without R code
+
+  |                                                                         |...........................................                      |  67%
+label: setup (with options) 
+List of 1
+ $ include: logi FALSE
+
+  |                                                                         |.................................................................| 100%
+  ordinary text without R code
+
+
+/usr/bin/pandoc +RTS -K512m -RTS methods_field_protocols.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash+smart --output methods_field_protocols.html --email-obfuscation none --standalone --section-divs --template /home/travis/R/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/RtmpvmfRAm/rmarkdown-str3ae52d2353ef.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/RtmpvmfRAm/rmarkdown-str3ae5d6fef03.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
+  |                                                                         |                                                                 |   0%  |                                                                         |...                                                              |   4%
+   inline R code fragments
+
+  |                                                                         |.....                                                            |   8%
+label: setup (with options) 
+List of 1
+ $ include: symbol F
+
+  |                                                                         |........                                                         |  12%
+  ordinary text without R code
+
+  |                                                                         |..........                                                       |  16%
+label: unnamed-chunk-1
+  |                                                                         |.............                                                    |  20%
+   inline R code fragments
+
+  |                                                                         |................                                                 |  24%
+label: unnamed-chunk-2
+  |                                                                         |..................                                               |  28%
+  ordinary text without R code
+
+  |                                                                         |.....................                                            |  32%
+label: unnamed-chunk-3
+  |                                                                         |.......................                                          |  36%
+   inline R code fragments
+
+  |                                                                         |..........................                                       |  40%
+label: unnamed-chunk-4
+  |                                                                         |.............................                                    |  44%
+  ordinary text without R code
+
+  |                                                                         |...............................                                  |  48%
+label: unnamed-chunk-5 (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+  |                                                                         |..................................                               |  52%
+   inline R code fragments
+
+  |                                                                         |....................................                             |  56%
+label: unnamed-chunk-6 (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+  |                                                                         |.......................................                          |  60%
+  ordinary text without R code
+
+  |                                                                         |..........................................                       |  64%
+label: unnamed-chunk-7 (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+  |                                                                         |............................................                     |  68%
+   inline R code fragments
+
+  |                                                                         |...............................................                  |  72%
+label: unnamed-chunk-8 (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+  |                                                                         |.................................................                |  76%
+  ordinary text without R code
+
+  |                                                                         |....................................................             |  80%
+label: unnamed-chunk-9 (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+  |                                                                         |.......................................................          |  84%
+   inline R code fragments
+
+  |                                                                         |.........................................................        |  88%
+label: unnamed-chunk-10 (with options) 
+List of 2
+ $ eval  : symbol F
+ $ engine: chr "python"
+
+  |                                                                         |............................................................     |  92%
+  ordinary text without R code
+
+  |                                                                         |..............................................................   |  96%
+label: unnamed-chunk-11 (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+  |                                                                         |.................................................................| 100%
+   inline R code fragments
+
+
+/usr/bin/pandoc +RTS -K512m -RTS site_template.utf8.md --to html4 --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash+smart --output site_template.html --email-obfuscation none --standalone --section-divs --template /home/travis/R/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/RtmpvmfRAm/rmarkdown-str3ae548bb33d2.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/RtmpvmfRAm/rmarkdown-str3ae57d2c5ba7.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
