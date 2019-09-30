@@ -24,7 +24,7 @@ before_install:
   - sudo apt-get install -y gdal-bin libgdal-dev libgdal1-dev libgeos-dev libjq-dev libnetcdf-dev libproj-dev libprotobuf-dev libudunits2-dev libv8-3.14-dev netcdf-bin protobuf-compiler
 script:
 - Rscript -e 'rmarkdown::render_site()'
-- Rscript -e 'source("make_sites.R")'
+- Rscript make_sites.R
 after_success:
 - git config --global user.name "Enrique Montes (Travis-CI)"
 - git config --global user.email "emontesh@mail.usf.edu"
