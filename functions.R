@@ -110,9 +110,9 @@ get_timeseries <- function(info, lon, lat, csv, field="sst"){
   dates  <- get_dates(info)
 
   if (file.exists(csv)){
-    d_prev <- read_csv(csv) %>%
+    d_prev <- read_csv(csv, col_types=cols()) %>%
       arrange(date)
-    start_date <- read_csv(csv) %>%
+    start_date <- read_csv(csv, col_types=cols()) %>%
       tail(1) %>%
       pull(date) %>%
       as.POSIXct()

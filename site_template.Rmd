@@ -20,12 +20,12 @@ library(leafem)
 library(bsplus)
 source("functions.R")
 
-site <- read_csv(here("data/sites.csv")) %>%
+site <- read_csv(here("data/sites.csv"), col_types=cols()) %>%
   filter(id == params$site_id)
 
 site_photo_csv <- "https://docs.google.com/spreadsheets/d/1-1rIIiH9OV1C7vPzAH4R_PpC1fFj3ZoA6sV8J28Loxc/gviz/tq?tqx=out:csv&sheet=site_photos.csv"
 
-photos <- read_csv(site_photo_csv) %>%
+photos <- read_csv(site_photo_csv, col_types=cols()) %>%
   filter(id == params$site_id)
 
 sst   <- info('jplMURSST41mday')
@@ -172,7 +172,7 @@ leaflet(
     colorNumeric("Spectral", c(1,33), reverse=T), seq(1,33))
 ```
 
-Read more about seascapes [here](http://www.marinebon.org/seascapes.html). 
+Read more about seascapes [here](http://www.marinebon.org/seascapes.html).
 
 ## Timeseries {.tabset}
 

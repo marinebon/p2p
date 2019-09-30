@@ -1,6 +1,6 @@
 ---
 title: "MBON Pole to Pole Project"
-editor_options: 
+editor_options:
   chunk_output_type: console
 ---
 
@@ -9,7 +9,7 @@ knitr::opts_chunk$set(echo = F, message = F, warning = F)
 ```
 <br>
 <br>
-<font size="5"> 
+<font size="5">
 Welcome! We are developing a Community of Practice across the Americas to assess marine biodiversity and ecosystem change using field and space observations.
 <br>
 <br>
@@ -33,7 +33,7 @@ countries <- ne_countries(
 
 sites_csv <- here("data/sites.csv")
 
-sites <- read_csv(sites_csv) %>% 
+sites <- read_csv(sites_csv, col_types=cols()) %>%
   st_as_sf(coords = c("lon", "lat"), crs = 4326)
 
 b <- sf::st_bbox(sites)
@@ -42,8 +42,8 @@ pal <- colorFactor("Set2", countries$mapcolor7)
 ```
 
 ```{r}
-sites <- read_csv(sites_csv) %>% 
-  st_as_sf(coords = c("lon", "lat"), crs = 4326) %>% 
+sites <- read_csv(sites_csv, col_types=cols()) %>%
+  st_as_sf(coords = c("lon", "lat"), crs = 4326) %>%
   mutate(
     md = glue("**{name}**<br>Org: {org}<br>Country: {str_to_upper(country)}<br>↪[ Visit](z_{id}.html)"),
     html = map_chr(md, function(x) HTML(markdownToHTML(text=x, fragment.only=T))))
@@ -51,14 +51,14 @@ sites <- read_csv(sites_csv) %>%
 
 leaflet(countries) %>%
   addProviderTiles(
-    providers$Esri.OceanBasemap, 
+    providers$Esri.OceanBasemap,
     options = providerTileOptions(opacity = 0.5)) %>%
   addPolygons(
     stroke = FALSE, smoothFactor = 0.2, fillOpacity = 0.8,
     fillColor = ~pal(mapcolor7),
-    label = ~admin) %>% 
+    label = ~admin) %>%
   addMarkers(
-    data = sites, 
-    popup = ~html, label = ~htmlEscape(name)) %>% 
+    data = sites,
+    popup = ~html, label = ~htmlEscape(name)) %>%
   fitBounds(b[['xmin']], b[['ymin']], b[['xmax']], b[['ymax']])
 ```

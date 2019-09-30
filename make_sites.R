@@ -4,7 +4,7 @@ library(glue)
 
 sites_csv <- here("data/sites.csv")
 
-sites <- read_csv(sites_csv) #%>% 
+sites <- read_csv(sites_csv, col_types=cols()) #%>% 
   #filter(id == "bra-saintpeterandsaintpaularchipelago-enseada")
 
 make_site <- function(site_id){
