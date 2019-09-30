@@ -23,14 +23,17 @@ before_install:
   - sudo apt-get --yes --force-yes update -qq
   - sudo apt-get install -y gdal-bin libgdal-dev libgdal1-dev libgeos-dev libjq-dev libnetcdf-dev libproj-dev libprotobuf-dev libudunits2-dev libv8-3.14-dev netcdf-bin protobuf-compiler
 script:
-- Rscript -e 'rmarkdown::render_site()'
-- Rscript make_sites.R
+- Rscript -e 'rmarkdown::render_site()' > output_render.log
+- Rscript make_sites.R > output_make_sites.log
 after_success:
 - git config --global user.name "Enrique Montes (Travis-CI)"
 - git config --global user.email "emontesh@mail.usf.edu"
 - git add -A
 - git commit -a -m "Updating MBON Pole to Pole data portal via travis-ci.org [ci skip]"
 - git push https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git HEAD:${TRAVIS_BRANCH}
+after_fail:
+  - tail -n40 output_render.log
+  - tail -n40 output_make_sites.log
 notifications:
   email:
     recipients:
