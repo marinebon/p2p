@@ -172,7 +172,7 @@ leaflet(
     colorNumeric("Spectral", c(1,33), reverse=T), seq(1,33))
 ```
 
-Read more about seascapes [here](http://www.marinebon.org/seascapes.html).
+Read more about seascapes [here](https://coastwatch.noaa.gov/cw/satellite-data-products/multi-parameter-models/seascape-pelagic-habitat-classification.html).
 
 ## Timeseries {.tabset}
 
