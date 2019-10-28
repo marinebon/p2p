@@ -20,7 +20,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - [MBON Pole to Pole presentation](https://usf.app.box.com/s/08569c61yektdv3odcgwuy5x1cmvuy8p) for the Global MBON monthly webinar - September 9, 2019. 
 
-- [2019 AmeriGEO Week](https://www.amerigeoss.org/amerigeoss-events/amerigeoss-week-2019)<br> August 19-23, 2019, Lima, Peru. The MBON Pole to Pole will be represented at the AmeriGEO Week by [IMARPE](http://www.imarpe.gob.pe/imarpe/)
+- [2019 AmeriGEO Week](https://www.amerigeoss.org/amerigeoss-events/amerigeoss-week-2019) - August 19-23, 2019, Lima, Peru. The MBON Pole to Pole will be represented at the AmeriGEO Week by [IMARPE](http://www.imarpe.gob.pe/imarpe/)
 
 - [XIII Biofouling, Benthic Ecology and Marine Biotechnology Meeting](https://xiiibioinc.wixsite.com/xiiibioinc) - August 5-9, 2019, Arraial do Cabo, Rio de Janeiro, Brazil. The MBON Pole to Pole poster is available [here](https://drive.google.com/file/d/1AVl5loMTuzkE_xdBw9d-J7HNMojO_v9F/view?usp=sharing)
 
