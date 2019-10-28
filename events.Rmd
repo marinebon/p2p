@@ -8,11 +8,13 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Upcoming
 
-- [10ª Semana de Integração Acadêmica da UFRJ / SIAC](http://siac.ufrj.br/) - October 21-27, 2019, Rio de Janeiro, Brazil. The MBON Pole to Pole absctract is available [here](https://drive.google.com/file/d/1kfOI4tpIOvgNDfULEMbeOzDfKuH1M_7f/view?usp=sharing)
 - [AGU Fall Meeting 2019](https://www2.agu.org/fall-meeting) - December 9-13, 2019, San Francisco, California. The MBON Pole to Pole absctract is available [here](https://drive.google.com/file/d/17deXPg_umFPoeYPB6QKTLDfwqv7hBUmG/view?usp=sharing)
+
 - 3rd Marine Biodiversity Workshop: from the Sea to the Cloud - TBD (end of 2019 - early 2020)
 
 ## Past
+
+- [10ª Semana de Integração Acadêmica da UFRJ / SIAC](http://siac.ufrj.br/) - October 21-27, 2019, Rio de Janeiro, Brazil. A poster on sandy beach biodiversity is available [here](https://drive.google.com/file/d/1fTgRFdOIGuESTIFHzMmO-nYa0KF4DOMc/view?usp=sharing)
 
 - [OceanObs'19](http://www.oceanobs19.net/) - September 16-20, 2019. Check out posters on [MBON Pole to Pole](https://drive.google.com/file/d/1AWpEQSBzLOAGapNOh1J3KQwkB4GTVFXQ/view?usp=sharing) and [biodiversity monitoring and citizen science](https://drive.google.com/file/d/1BHuRr4WBTZIqBvBYphcUs9birViUnN5X/view?usp=sharing).  
 
