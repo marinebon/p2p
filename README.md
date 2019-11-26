@@ -75,3 +75,4 @@ For Travis to work, add package to `Imports:` in `DESCRIPTION`. For packages not
   - [Phlow/feeling-responsive](https://github.com/Phlow/feeling-responsive), [demo](http://phlow.github.io/feeling-responsive/)
   
   
+  
