@@ -22,7 +22,7 @@ library(knitr)
 
 ```{r}
 # using xlsx because in csv accent characters getting mangled by Excel
-read_excel("data/P2P-Brazil-workshop_participants.xlsx") %>%
+read_excel("data/P2P_members_list.xlsx") %>%
   kable()
 ```
 
