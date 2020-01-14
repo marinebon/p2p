@@ -29,7 +29,7 @@ photos <- read_csv(site_photo_csv, col_types=cols()) %>%
   filter(id == params$site_id)
 
 sst   <- info('jplMURSST41mday')
-chl   <- info("nesdisVHNSQchlaMonthly")
+chl   <- info("VIIRS_OC_NRT_7D")
 scape <- info("noaa_aoml_4729_9ee6_ab54", url = "https://cwcgom.aoml.noaa.gov/erddap/")
 ```
 
