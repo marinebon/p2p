@@ -12,6 +12,8 @@ title: "Network Members and Contributors"
 Rocky shores = RS <br>
 Sandy beaches = SB <br>
 Data science = DS <br>
+Seagrass = SG <br>
+Satellite data = SD <br>
 
 ```{r, include=FALSE}
 knitr::opts_chunk$set(echo = F)
