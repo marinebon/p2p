@@ -107,6 +107,8 @@ map_raster_2 <- function(r, site_lon, site_lat, site_label, title){
 
 get_timeseries <- function(info, lon, lat, csv, field="sst"){
 
+  # info = chl; lon=site$lon; lat=site$lat; csv=csv; field="chlor_a"
+  
   dates  <- get_dates(info)
 
   if (file.exists(csv)){
@@ -119,6 +121,85 @@ get_timeseries <- function(info, lon, lat, csv, field="sst"){
   } else {
     start_date <- dates[1]
   }
+  
+  # griddap <- function (x, ..., fields = "all", stride = 1, fmt = "nc", url = eurl(),
+  #                              store = disk(), read = TRUE, callopts = list())
+  # {
+  #   calls <- names(sapply(match.call(), deparse))[-1]
+  #   calls_vec <- "ncdf" %in% calls
+  #   if (any(calls_vec)) {
+  #     stop("The parameter ncdf has been removed. We use ncdf4 package now internally",
+  #          call. = FALSE)
+  #   }
+  #   x <- as.info(x, url)
+  #   dimargs <- list(...)
+  #   rerddap:::check_dims(dimargs, x)
+  #   rerddap:::check_lat_text(dimargs)
+  #   rerddap:::check_lon_text(dimargs)
+  #   dimargs <- rerddap:::fix_dims(dimargs, .info = x)
+  #   rerddap:::check_lon_data_range(dimargs, x)
+  #   rerddap:::check_lat_data_range(dimargs, x)
+  #   d <- attr(x, "datasetid")
+  #   var <- rerddap:::field_handler(fields, x$variables$variable_name)
+  #   dims <- rerddap:::dimvars(x)
+  #   store <- rerddap:::toggle_store(fmt, store)
+  #   if (all(var == "none")) {
+  #     args <- paste0(sapply(dims, function(y) {
+  #       rerddap:::parse_args(x, y, stride, dimargs, wname = TRUE)
+  #     }), collapse = ",")
+  #   }
+  #   else {
+  #     pargs <- sapply(dims, function(y) rerddap:::parse_args(x, y, stride,
+  #                                                  dimargs))
+  #     args <- paste0(lapply(var, function(y) {
+  #       paste0(y, paste0(pargs, collapse = ""))
+  #     }), collapse = ",")
+  #   }
+  #   fmt <- match.arg(fmt, c("nc", "csv"))
+  #   resp <- erd_up_GET(url = sprintf("%sgriddap/%s.%s", url,
+  #                                    d, fmt), dset = d, args = args, store = store, fmt = fmt,
+  #                      callopts)
+  #   loc <- if (store$store == "disk")
+  #     resp
+  #   else "memory"
+  #   outclasses <- switch(fmt, nc = c("griddap_nc", "nc", "list"),
+  #                        csv = c("griddap_csv", "csv", "data.frame"))
+  #   read <- toggle_read(read, store)
+  #   structure(read_all(resp, fmt, read), class = outclasses,
+  #             datasetid = d, path = loc, url = url_build(sprintf("%sgriddap/%s.%s",
+  #                                                                url, d, fmt), args))
+  # }
+  # 
+  # erd_up_GET <- function (url, dset, args, store, fmt, callopts){
+  #   if (length(args) > 0)
+  #     url <- sprintf("%s?%s", url, args)
+  #   cli <- crul::HttpClient$new(url = url, opts = callopts)
+  #   if (store$store == "disk") {
+  #     key <- rerddap:::gen_key(url, args, fmt)
+  #     if (file.exists(file.path(store$path, key))) {
+  #       file.path(store$path, key)
+  #     }
+  #     else {
+  #       dir.create(store$path, showWarnings = FALSE, recursive = TRUE)
+  #       if (!store$overwrite) {
+  #         stop("overwrite was `FALSE`, see ?disk")
+  #       }
+  #       res <- cli$get(disk = file.path(store$path, key))
+  # 
+  #       browser()
+  #       rerddap:::err_handle(res, store, key)
+  #       res$content
+  #     }
+  #   }
+  #   else {
+  #     res <- cli$get()
+  # 
+  #     browser()
+  #     rerddap:::err_handle(res, store, key)
+  #     res
+  #   }
+  # }
+  # 
 
   v <- griddap(
     info,

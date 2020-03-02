@@ -1,8 +1,10 @@
 ---
 title: "Site: `r params$site_name`"
 params:
-  site_name: "Costa das Algas - Enseada das Garcas" # "Pass-a-Grille"
-  site_id: "bra-costadasalgas-enseadadasgarcas" # "usa-usfstpete"
+  # site_id: "bra-costadasalgas-enseadadasgarcas"
+  # site_name: "Costa das Algas - Enseada das Garcas"
+  site_id: "usa-usfstpete"
+  site_name:  "Pass-a-Grille"
 editor_options:
   chunk_output_type: console
 ---
@@ -20,6 +22,11 @@ library(leafem)
 library(bsplus)
 source("functions.R")
 
+if (!exists("params")) 
+  params <- list(
+  site_name = "Costa das Algas - Enseada das Garcas",
+  site_id   = "bra-costadasalgas-enseadadasgarcas")
+
 site <- read_csv(here("data/sites.csv"), col_types=cols()) %>%
   filter(id == params$site_id)
 
@@ -28,8 +35,10 @@ site_photo_csv <- "https://docs.google.com/spreadsheets/d/1-1rIIiH9OV1C7vPzAH4R_
 photos <- read_csv(site_photo_csv, col_types=cols()) %>%
   filter(id == params$site_id)
 
+Sys.setenv(RERDDAP_DEFAULT_URL="https://upwell.pfeg.noaa.gov/erddap/")
+
 sst   <- info('jplMURSST41mday')
-chl   <- info("VIIRS_OC_NRT_7D")
+chl   <- info("VIIRS_OC_NRT_7D"         , url = "https://cwcgom.aoml.noaa.gov/erddap/")
 scape <- info("noaa_aoml_4729_9ee6_ab54", url = "https://cwcgom.aoml.noaa.gov/erddap/")
 ```
 
@@ -120,8 +129,8 @@ leaflet(
   addTiles("//tile.gbif.org/4326/omt/{z}/{x}/{y}@1x.png?style=gbif-geyser") %>%
   # sst
   addWMSTiles(
-    baseUrl = 'https://coastwatch.pfeg.noaa.gov/erddap/wms/erdMH1chlamday/request?',
-    layers = "erdMH1chlamday:chlorophyll",
+    baseUrl = 'https://cwcgom.aoml.noaa.gov/erddap/wms/VIIRS_OC_NRT_7D/request?',
+    layers = "VIIRS_OC_NRT_7D:chlor_a",
     options = WMSTileOptions(
       version = "1.3.0", format = "image/png", transparent = T, opacity = 0.7,
       time = format(d_2,"%Y-%m-%dT00:00:00Z")))  %>%
@@ -198,9 +207,15 @@ csv_link = "https://raw.githubusercontent.com/" + csv.split("/marinebon/p2p/")[1
 ### Chlorophyll
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-csv <- here(glue("data/chl/chl_{site$id}.csv"))
-d_2   <- get_timeseries(chl, lon=site$lon, lat=site$lat, csv=csv, field="chlor_a")
-plot_timeseries(d_2, title="CHL", color="green")
+csv   <- here(glue("data/chl/chl_{site$id}.csv"))
+
+# TODO: fix get_timeseries() -> griddap() -> erd_up_GET()
+Sys.setenv(RERDDAP_DEFAULT_URL="https://cwcgom.aoml.noaa.gov/erddap/")
+
+d_chl <- get_timeseries(chl, lon=site$lon, lat=site$lat, csv=csv, field="chlor_a")
+plot_timeseries(d_chl, title="CHL", color="green")
+
+Sys.setenv(RERDDAP_DEFAULT_URL="https://upwell.pfeg.noaa.gov/erddap/")
 ```
 
 Download data: [`r basename(csv)`](https://raw.githubusercontent.com/marinebon/p2p/master/data/chl/`r basename(csv)`)

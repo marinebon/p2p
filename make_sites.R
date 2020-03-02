@@ -4,19 +4,24 @@ library(glue)
 
 sites_csv <- here("data/sites.csv")
 
-sites <- read_csv(sites_csv, col_types=cols()) #%>% 
-  #filter(id == "bra-saintpeterandsaintpaularchipelago-enseada")
+sites <- read_csv(sites_csv, col_types=cols()) %>% 
+  arrange(id)
 
-make_site <- function(site_id){
-  site_name <- sites %>% 
-    filter(id == site_id) %>% 
-    pull(name)
+make_site <- function(id, name){
+  # show message of progress
+  i_row <- sprintf("%02d", which(id == sites$id))
+  message(glue("\n{i_row} of {nrow(sites)} sites\n   id: {id}\n  name: {name}"))
+  
+  # render html
   rmarkdown::render(
     input       = "site_template.Rmd",
     params      = list(
-      site_name = site_name,
-      site_id   = site_id),
-    output_file = glue("docs/z_{site_id}.html"))
+      site_name = name,
+      site_id   = id),
+    output_file = glue("docs/z_{id}.html"))
 }
 
-walk(sites$id, make_site)
+# walk through all sites to render html
+sites %>% 
+  select(id, name) %>% 
+  pwalk(make_site)
