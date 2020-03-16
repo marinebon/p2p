@@ -8,7 +8,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Upcoming
 
-- [3rd Marine Biodiversity Workshop: from the Sea to the Cloud](http://marinebon.org/p2p-colombia-workshop/) - May 4-8, 2020, Santa Marta, Colombia.
+- [3rd Marine Biodiversity Workshop: from the Sea to the Cloud](http://marinebon.org/p2p-colombia-workshop/) - May 4-8, 2020, Santa Marta, Colombia. THIS EVENT IS POSTPONED DUE TO THE COVID-19 OUTBREAK AND DATES ARE TBD
 
 ## Past
 
