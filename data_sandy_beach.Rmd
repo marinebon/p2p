@@ -14,5 +14,7 @@ You can access available datasets for the following locations:
 
 [Barra del Chuy - Uruguay](https://obis.org/dataset/e2ae1710-46e4-4331-88c7-8970336fdb42)
 
+[Atami Beach - Brazil](https://obis.org/dataset/58692e00-21aa-4c74-87a0-f06bf4610f86)
+
 More data will become available soon!
 
