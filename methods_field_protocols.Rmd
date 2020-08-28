@@ -6,7 +6,7 @@ title: "Methods for Field Protocols"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 Use standardized field protocols below to collect biodiversity observations in rocky intertidal areas and sandy beaches:<br> 
-- [Rocky Shore](protocols/MBON_P2P_RS_Protocol.pdf) NEW!<br>
+- [Rocky Shore](https://repository.oceanbestpractices.org/handle/11329/1143) NEW!<br>
 - [Sandy Beach](protocols/Protocol_Final version proposal.pdf) NEW!
 <br>
 <br>
