@@ -26,3 +26,11 @@ Try this [code](https://github.com/marinebon/p2p-dashboard) to develop [Biodiver
 <br>
 <br>
 <img width="1000px" src="images/dashboard.jpg"/>
+<br>
+<br>
+<br>
+<br>
+Try this [code](http://rpubs.com/eqmh/lme-obis-extractions) to visualize boundaries of selected Large Marine Ecosystems (LMEs) and extract [OBIS](iobis.org) records from selected [LMEs](http://lme.edc.uri.edu/index.php/digital-data)
+<br>
+<br>
+<img width="1000px" src="images/lme_extractions.jpg"/>
