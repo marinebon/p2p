@@ -20,4 +20,9 @@ Check your list of species with [WoRMS](http://www.marinespecies.org/aphia.php?p
 Use these instructions to upload you data to the [MBON Pole to Pole IPT](http://ipt.iobis.org/mbon/):
 <br>
 - [HOW TO upload data to the Integrated Publishing Toolkit](https://diodon.github.io/P2P_documents/PublishData/docs/PublishingDataIPT.html)
-
+<br>
+<br>
+Try this [code](https://github.com/marinebon/p2p-dashboard) to develop [Biodiversity Dashboards](https://marinebon.org/p2p-dashboard/biodivExplorer_beach.html#general-information) for your monitoring sites 
+<br>
+<br>
+<img width="1000px" src="images/dashboard.PNG"/>
