@@ -34,3 +34,11 @@ Try this [code](http://rpubs.com/eqmh/lme-obis-extractions) to visualize boundar
 <br>
 <br>
 <img width="1000px" src="images/lme_extractions.jpg"/>
+<br>
+<br>
+<br>
+<br>
+Try this [code](https://rpubs.com/eqmh/sat-data-plotter-mapper) to extract sea surface temperature (SST) and chlorophyll-a (CHL) from [ERDDAP](https://coastwatch.pfeg.noaa.gov/erddap/index.html) servers for particular location, create time series plots of [SST](https://rpubs.com/eqmh/sst_ts_Patag) and [CHL](https://rpubs.com/eqmh/chla_ts_Patag_v2) and their [climatologies](https://rpubs.com/eqmh/sst_climatology_plot), and generate a map with the latest satellite data.
+<br>
+<br>
+<img width="1000px" src="images/ts_plots_and_maps.jpg"/>
