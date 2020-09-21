@@ -10,7 +10,7 @@ editor_options:
 ---
 
 ```{r setup, include=F}
-knitr::opts_chunk$set(echo = F, message = F, warning = F)
+knitr::opts_chunk$set(echo = F, message = F, warning = F, python.reticulate = F)
 ```
 
 ```{r}
