@@ -1,10 +1,10 @@
 ---
 title: "Site: `r params$site_name`"
 params:
-  # site_id: "bra-costadasalgas-enseadadasgarcas"
-  # site_name: "Costa das Algas - Enseada das Garcas"
-  site_id: "usa-usfstpete"
-  site_name:  "Pass-a-Grille"
+  # site_id: "usa-sage"
+  # site_name: "Sage Rock - Alaska"
+  site_id: "usa-sage"
+  site_name:  "Sage Rock - Alaska"
 editor_options:
   chunk_output_type: console
 ---
