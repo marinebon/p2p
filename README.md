@@ -32,9 +32,9 @@ And replace the beginning of the URL up to `id=` or `/d/` with the following:
 
 So here's the usable URL:
 
-* `http://drive.google.com/uc?export=view&id=18lW657Las2jUrDeA06nZ77Smd27Es_N3`
+* `http://drive.google.com/uc?export=view&id=18lW657Las2jUrDeA06nZ77Smd27Es_N3` <br/>
 or
-* 
+* `http://drive.google.com/uc?export=view&id=1luySMHkWAOi-inyhURmarcii_1fXfbmW`
 
 The website will get rebuilt weekly (see [travis-ci.org/marinebon/p2p/settings](https://travis-ci.org/marinebon/p2p/settings)). If you want the website to rebuild sooner, simply make a modification to a file in the github site, like to the [`README.md`](https://github.com/marinebon/p2p/edit/master/README.md), and commit the change to fire off a website rebuild with Travis: [travis-ci.org/marinebon/p2p](https://travis-ci.org/marinebon/p2p).
 
