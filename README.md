@@ -22,7 +22,7 @@ Associate URL of a photo to `id` of a site in a new row into
 
 To use a photo stored in Google Drive, right-click on the file > **Get sharable link**, for instance
 
-* sharable link: `https://drive.google.com/open?id=18lW657Las2jUrDeA06nZ77Smd27Es_N3`
+* sharable link: `https://drive.google.com/open?id=18lW657Las2jUrDeA06nZ77Smd27Es_N3` <br/>
 or
 * shareble link: `https://drive.google.com/file/d/1luySMHkWAOi-inyhURmarcii_1fXfbmW/view?usp=sharing`
 
