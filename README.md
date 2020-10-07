@@ -23,14 +23,18 @@ Associate URL of a photo to `id` of a site in a new row into
 To use a photo stored in Google Drive, right-click on the file > **Get sharable link**, for instance
 
 * sharable link: `https://drive.google.com/open?id=18lW657Las2jUrDeA06nZ77Smd27Es_N3`
+or
+* shareble link: `https://drive.google.com/file/d/1luySMHkWAOi-inyhURmarcii_1fXfbmW/view?usp=sharing`
 
-And replace the beginning of the URL up to `id=` with the following:
+And replace the beginning of the URL up to `id=` or `/d/` with the following:
 
 * `http://drive.google.com/uc?export=view&id=`
 
 So here's the usable URL:
 
 * `http://drive.google.com/uc?export=view&id=18lW657Las2jUrDeA06nZ77Smd27Es_N3`
+or
+* 
 
 The website will get rebuilt weekly (see [travis-ci.org/marinebon/p2p/settings](https://travis-ci.org/marinebon/p2p/settings)). If you want the website to rebuild sooner, simply make a modification to a file in the github site, like to the [`README.md`](https://github.com/marinebon/p2p/edit/master/README.md), and commit the change to fire off a website rebuild with Travis: [travis-ci.org/marinebon/p2p](https://travis-ci.org/marinebon/p2p).
 
