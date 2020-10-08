@@ -1,10 +1,10 @@
 ---
 title: "Site: `r params$site_name`"
 params:
-  # site_id: "usa-sage"
-  # site_name: "Sage Rock - Alaska"
-  site_id: "usa-sage"
-  site_name:  "Sage Rock - Alaska"
+  # site_id: "usa-alc"
+  # site_name: "Alcatraz"
+  site_id: "usa-alc"
+  site_name:  "Alcatraz"
 editor_options:
   chunk_output_type: console
 ---
