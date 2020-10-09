@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Site: Cuyler Harbor</title>
+
+<script src="site_libs/jquery-1.12.4/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/htmlwidgets-1.5.2/htmlwidgets.js"></script>
+<link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="site_libs/Proj4Leaflet-1.0.1/proj4-compressed.js"></script>
+<script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="site_libs/leaflet-binding-2.0.3/leaflet.js"></script>
+<script src="site_libs/clipboard-0.0.1/setClipboardText.js"></script>
+<link href="site_libs/dygraphs-1.1.1/dygraph.css" rel="stylesheet" />
+<script src="site_libs/dygraphs-1.1.1/dygraph-combined.js"></script>
+<script src="site_libs/dygraphs-1.1.1/shapes.js"></script>
+<script src="site_libs/moment-2.8.4/moment.js"></script>
+<script src="site_libs/moment-timezone-0.2.5/moment-timezone-with-data.js"></script>
+<script src="site_libs/moment-fquarter-1.0.0/moment-fquarter.min.js"></script>
+<script src="site_libs/dygraphs-binding-1.1.1.6/dygraphs.js"></script>
+<link href="site_libs/ionicons-2.0.1/css/ionicons.min.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+      </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">MBON Pole to Pole Americas</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+<li>
+  <a href="members.html">
+    <span class="ion ion-person-stalker"></span>
+     
+    Members
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="ion ion-stats-bars"></span>
+     
+    Data
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="data_rocky_shore.html">Rocky Shore</a>
+    </li>
+    <li>
+      <a href="data_sandy_beach.html">Sandy Beach</a>
+    </li>
+    <li>
+      <a href="data_in_situ.html">Environmental, In Situ</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="events.html">
+    <span class="ion ion-calendar"></span>
+     
+    Events
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="ion ion-clipboard"></span>
+     
+    Methods
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="methods_field_protocols.html">Field Protocols</a>
+    </li>
+    <li>
+      <a href="methods_data_science.html">Data Science</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://marinebon.github.io/help/">
+    <span class="ion ion-help"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="contact.html">
+    <span class="ion ion-email"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Site: Cuyler Harbor</h1>
+
+</div>
+
+
+<ul>
+<li>Country: <strong>USA</strong></li>
+<li>Organization: <strong><a href="https://marine.ucsc.edu/sitepages/cuylerharbor.html">MARINe</a></strong></li>
+</ul>
+<div id="photos" class="section level2">
+<h2>Photos</h2>
+<div id="photos" class="carousel slide" data-ride="carousel">
+<ol class="carousel-indicators">
+<li data-target="#photos" data-slide-to="0" class="active"></li>
+</ol>
+<div class="carousel-inner" role="listbox">
+<div class="item active">
+<img src="http://drive.google.com/uc?export=view&amp;id=1luySMHkWAOi-inyhURmarcii_1fXfbmW" class="img-responsive center-block"/>
+<div class="carousel-caption">
+<h3></h3>
+<p></p>
+</div>
+</div>
+</div>
+<a class="left carousel-control" href="#photos" role="button" data-slide="prev">
+<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+<span class="sr-only">Previous</span>
+</a>
+<a class="right carousel-control" href="#photos" role="button" data-slide="next">
+<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+<span class="sr-only">Next</span>
+</a>
+</div>
+</div>
+<div id="maps" class="section level2 tabset">
+<h2>Maps</h2>
+<div id="temperature" class="section level3">
+<h3>Temperature</h3>
+<p>Map of the most recent (2020-09-16) sea-surface temperature around the site. Data source: PFEG CoastWatch via ERDDAP.</p>
+<div id="htmlwidget-0bd3e6fbf36d1fbb2ee2" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-0bd3e6fbf36d1fbb2ee2">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG4326","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//tile.gbif.org/4326/omt/{z}/{x}/{y}@1x.png?style=gbif-geyser",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false}]},{"method":"addWMSTiles","args":["https://coastwatch.pfeg.noaa.gov/erddap/wms/jplMURSST41mday/request?",null,null,{"styles":"","format":"image/png","transparent":true,"version":"1.3.0","opacity":0.7,"time":"2020-09-16T00:00:00Z","layers":"jplMURSST41mday:sst"}]},{"method":"addMarkers","args":[34.04854965,-120.33642,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,"Cuyler Harbor",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addLegend","args":[{"colors":["#5E4FA2 , #5E4FA2 0%, #56A8B0 15.625%, #B3E0A3 31.25%, #F7FCB3 46.875%, #FED480 62.5%, #F67A48 78.125%, #C02C4A 93.75%, #9E0142 "],"labels":["0","5","10","15","20","25","30"],"na_color":null,"na_label":"NA","opacity":0.5,"position":"bottomright","type":"numeric","title":"SST (°C)<br>2020-09-16","extra":{"p_1":0,"p_n":0.9375},"layerId":null,"className":"info legend","group":null}]}],"limits":{"lat":[34.04854965,34.04854965],"lng":[-120.33642,-120.33642]},"fitBounds":[31.04854965,-123.33642,37.04854965,-117.33642,[]]},"evals":[],"jsHooks":{"render":[{"code":"function(el, x, data) {\n  return (\n      function(el, x, data) {\n      // get the leaflet map\n      var map = this; //HTMLWidgets.find('#' + el.id);\n      // we need a new div element because we have to handle\n      // the mouseover output separately\n      // debugger;\n      function addElement () {\n      // generate new div Element\n      var newDiv = $(document.createElement('div'));\n      // append at end of leaflet htmlwidget container\n      $(el).append(newDiv);\n      //provide ID and style\n      newDiv.addClass('lnlt');\n      newDiv.css({\n      'position': 'relative',\n      'bottomleft':  '0px',\n      'background-color': 'rgba(255, 255, 255, 0.7)',\n      'box-shadow': '0 0 2px #bbb',\n      'background-clip': 'padding-box',\n      'margin': '0',\n      'padding-left': '5px',\n      'color': '#333',\n      'font': '9px/1.5 \"Helvetica Neue\", Arial, Helvetica, sans-serif',\n      'z-index': '700',\n      });\n      return newDiv;\n      }\n\n\n      // check for already existing lnlt class to not duplicate\n      var lnlt = $(el).find('.lnlt');\n\n      if(!lnlt.length) {\n      lnlt = addElement();\n\n      // grab the special div we generated in the beginning\n      // and put the mousmove output there\n\n      map.on('mousemove', function (e) {\n      if (e.originalEvent.ctrlKey) {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                           ' lon: ' + (e.latlng.lng).toFixed(5) +\n                           ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                           ' | zoom: ' + map.getZoom() +\n                           ' | x: ' + L.CRS.EPSG3857.project(e.latlng).x.toFixed(0) +\n                           ' | y: ' + L.CRS.EPSG3857.project(e.latlng).y.toFixed(0) +\n                           ' | epsg: 3857 ' +\n                           ' | proj4: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs ');\n      } else {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                      ' lon: ' + (e.latlng.lng).toFixed(5) +\n                      ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                      ' | zoom: ' + map.getZoom() + ' ');\n      }\n      });\n\n      // remove the lnlt div when mouse leaves map\n      map.on('mouseout', function (e) {\n      var strip = document.querySelector('.lnlt');\n      if( strip !==null) strip.remove();\n      });\n\n      };\n\n      //$(el).keypress(67, function(e) {\n      map.on('preclick', function(e) {\n      if (e.originalEvent.ctrlKey) {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                      ' lon: ' + (e.latlng.lng).toFixed(5) +\n                      ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                      ' | zoom: ' + map.getZoom() + ' ');\n      var txt = document.querySelector('.lnlt').textContent;\n      console.log(txt);\n      //txt.innerText.focus();\n      //txt.select();\n      setClipboardText('\"' + txt + '\"');\n      }\n      });\n\n      }\n      ).call(this.getMap(), el, x, data);\n}","data":null}]}}</script>
+</div>
+<div id="chlorophyll" class="section level3">
+<h3>Chlorophyll</h3>
+<p>Map of the most recent (2020-10-09) Chlorophyll-a around the site. Data Source: PFEG CoastWatch via ERDDAP.</p>
+<div id="htmlwidget-254b0abd85b32b8f4372" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-254b0abd85b32b8f4372">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG4326","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//tile.gbif.org/4326/omt/{z}/{x}/{y}@1x.png?style=gbif-geyser",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false}]},{"method":"addWMSTiles","args":["https://cwcgom.aoml.noaa.gov/erddap/wms/VIIRS_OC_NRT_7D/request?",null,null,{"styles":"","format":"image/png","transparent":true,"version":"1.3.0","opacity":0.7,"time":"2020-10-09T00:00:00Z","layers":"VIIRS_OC_NRT_7D:chlor_a"}]},{"method":"addMarkers","args":[34.04854965,-120.33642,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,"Cuyler Harbor",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addLegend","args":[{"colors":["#5E4FA2 , #5E4FA2 0%, #4596B7 12.5%, #8BCFA5 25%, #D8EF9B 37.5%, #FFFFBF 50%, #FED480 62.5%, #F98F52 75%, #DD4B4D 87.5%, #9E0142 100%, #9E0142 "],"labels":["0.0","0.5","1.0","1.5","2.0","2.5","3.0","3.5","4.0"],"na_color":null,"na_label":"NA","opacity":0.5,"position":"bottomright","type":"numeric","title":"CHL (mg m^-3)<br>2020-10-09","extra":{"p_1":0,"p_n":1},"layerId":null,"className":"info legend","group":null}]}],"limits":{"lat":[34.04854965,34.04854965],"lng":[-120.33642,-120.33642]},"fitBounds":[31.04854965,-123.33642,37.04854965,-117.33642,[]]},"evals":[],"jsHooks":{"render":[{"code":"function(el, x, data) {\n  return (\n      function(el, x, data) {\n      // get the leaflet map\n      var map = this; //HTMLWidgets.find('#' + el.id);\n      // we need a new div element because we have to handle\n      // the mouseover output separately\n      // debugger;\n      function addElement () {\n      // generate new div Element\n      var newDiv = $(document.createElement('div'));\n      // append at end of leaflet htmlwidget container\n      $(el).append(newDiv);\n      //provide ID and style\n      newDiv.addClass('lnlt');\n      newDiv.css({\n      'position': 'relative',\n      'bottomleft':  '0px',\n      'background-color': 'rgba(255, 255, 255, 0.7)',\n      'box-shadow': '0 0 2px #bbb',\n      'background-clip': 'padding-box',\n      'margin': '0',\n      'padding-left': '5px',\n      'color': '#333',\n      'font': '9px/1.5 \"Helvetica Neue\", Arial, Helvetica, sans-serif',\n      'z-index': '700',\n      });\n      return newDiv;\n      }\n\n\n      // check for already existing lnlt class to not duplicate\n      var lnlt = $(el).find('.lnlt');\n\n      if(!lnlt.length) {\n      lnlt = addElement();\n\n      // grab the special div we generated in the beginning\n      // and put the mousmove output there\n\n      map.on('mousemove', function (e) {\n      if (e.originalEvent.ctrlKey) {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                           ' lon: ' + (e.latlng.lng).toFixed(5) +\n                           ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                           ' | zoom: ' + map.getZoom() +\n                           ' | x: ' + L.CRS.EPSG3857.project(e.latlng).x.toFixed(0) +\n                           ' | y: ' + L.CRS.EPSG3857.project(e.latlng).y.toFixed(0) +\n                           ' | epsg: 3857 ' +\n                           ' | proj4: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs ');\n      } else {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                      ' lon: ' + (e.latlng.lng).toFixed(5) +\n                      ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                      ' | zoom: ' + map.getZoom() + ' ');\n      }\n      });\n\n      // remove the lnlt div when mouse leaves map\n      map.on('mouseout', function (e) {\n      var strip = document.querySelector('.lnlt');\n      if( strip !==null) strip.remove();\n      });\n\n      };\n\n      //$(el).keypress(67, function(e) {\n      map.on('preclick', function(e) {\n      if (e.originalEvent.ctrlKey) {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                      ' lon: ' + (e.latlng.lng).toFixed(5) +\n                      ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                      ' | zoom: ' + map.getZoom() + ' ');\n      var txt = document.querySelector('.lnlt').textContent;\n      console.log(txt);\n      //txt.innerText.focus();\n      //txt.select();\n      setClipboardText('\"' + txt + '\"');\n      }\n      });\n\n      }\n      ).call(this.getMap(), el, x, data);\n}","data":null}]}}</script>
+</div>
+<div id="seascape" class="section level3">
+<h3>Seascape</h3>
+<p>Map of the most recent (2020-08-15) seascapes around the site. Data Source: AOML CWCGOM via ERDDAP.</p>
+<div id="htmlwidget-1b48b45e761dfcb68ce1" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1b48b45e761dfcb68ce1">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG4326","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//tile.gbif.org/4326/omt/{z}/{x}/{y}@1x.png?style=gbif-geyser",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false}]},{"method":"addWMSTiles","args":["https://cwcgom.aoml.noaa.gov/erddap/wms/noaa_aoml_4729_9ee6_ab54/request?",null,null,{"styles":"","format":"image/png","transparent":true,"version":"1.3.0","opacity":0.7,"time":"2020-08-15T00:00:00Z","layers":"noaa_aoml_4729_9ee6_ab54:CLASS"}]},{"method":"addMarkers","args":[34.04854965,-120.33642,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,"Cuyler Harbor",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addLegend","args":[{"colors":["#5E4FA2 , #4596B7 12.5%, #9FD8A4 28.125%, #EFF9A7 43.75%, #FEE28E 59.375%, #F98F52 75%, #D13B4E 90.625%, #9E0142 "],"labels":["5","10","15","20","25","30"],"na_color":null,"na_label":"NA","opacity":0.5,"position":"bottomright","type":"numeric","title":"CLASS<br>2020-08-15","extra":{"p_1":0.125,"p_n":0.90625},"layerId":null,"className":"info legend","group":null}]}],"limits":{"lat":[34.04854965,34.04854965],"lng":[-120.33642,-120.33642]},"fitBounds":[31.04854965,-123.33642,37.04854965,-117.33642,[]]},"evals":[],"jsHooks":{"render":[{"code":"function(el, x, data) {\n  return (\n      function(el, x, data) {\n      // get the leaflet map\n      var map = this; //HTMLWidgets.find('#' + el.id);\n      // we need a new div element because we have to handle\n      // the mouseover output separately\n      // debugger;\n      function addElement () {\n      // generate new div Element\n      var newDiv = $(document.createElement('div'));\n      // append at end of leaflet htmlwidget container\n      $(el).append(newDiv);\n      //provide ID and style\n      newDiv.addClass('lnlt');\n      newDiv.css({\n      'position': 'relative',\n      'bottomleft':  '0px',\n      'background-color': 'rgba(255, 255, 255, 0.7)',\n      'box-shadow': '0 0 2px #bbb',\n      'background-clip': 'padding-box',\n      'margin': '0',\n      'padding-left': '5px',\n      'color': '#333',\n      'font': '9px/1.5 \"Helvetica Neue\", Arial, Helvetica, sans-serif',\n      'z-index': '700',\n      });\n      return newDiv;\n      }\n\n\n      // check for already existing lnlt class to not duplicate\n      var lnlt = $(el).find('.lnlt');\n\n      if(!lnlt.length) {\n      lnlt = addElement();\n\n      // grab the special div we generated in the beginning\n      // and put the mousmove output there\n\n      map.on('mousemove', function (e) {\n      if (e.originalEvent.ctrlKey) {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                           ' lon: ' + (e.latlng.lng).toFixed(5) +\n                           ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                           ' | zoom: ' + map.getZoom() +\n                           ' | x: ' + L.CRS.EPSG3857.project(e.latlng).x.toFixed(0) +\n                           ' | y: ' + L.CRS.EPSG3857.project(e.latlng).y.toFixed(0) +\n                           ' | epsg: 3857 ' +\n                           ' | proj4: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs ');\n      } else {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                      ' lon: ' + (e.latlng.lng).toFixed(5) +\n                      ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                      ' | zoom: ' + map.getZoom() + ' ');\n      }\n      });\n\n      // remove the lnlt div when mouse leaves map\n      map.on('mouseout', function (e) {\n      var strip = document.querySelector('.lnlt');\n      if( strip !==null) strip.remove();\n      });\n\n      };\n\n      //$(el).keypress(67, function(e) {\n      map.on('preclick', function(e) {\n      if (e.originalEvent.ctrlKey) {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                      ' lon: ' + (e.latlng.lng).toFixed(5) +\n                      ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                      ' | zoom: ' + map.getZoom() + ' ');\n      var txt = document.querySelector('.lnlt').textContent;\n      console.log(txt);\n      //txt.innerText.focus();\n      //txt.select();\n      setClipboardText('\"' + txt + '\"');\n      }\n      });\n\n      }\n      ).call(this.getMap(), el, x, data);\n}","data":null}]}}</script>
+<p>Read more about seascapes <a href="https://coastwatch.noaa.gov/cw/satellite-data-products/multi-parameter-models/seascape-pelagic-habitat-classification.html">here</a>.</p>
+</div>
+</div>
+<div id="timeseries" class="section level2 tabset">
+<h2>Timeseries</h2>
+<div id="temperature-1" class="section level3">
+<h3>Temperature</h3>
+<div id="htmlwidget-548fb9b545061ac2a2c3" style="width:672px;height:480px;" class="dygraphs html-widget"></div>
+<script type="application/json" data-for="htmlwidget-548fb9b545061ac2a2c3">{"x":{"attrs":{"title":"SST","labels":["month","sst"],"legend":"auto","retainDateWindow":false,"axes":{"x":{"pixelsPerLabel":60,"drawAxis":true},"y":{"drawAxis":true}},"stackedGraph":false,"fillGraph":true,"fillAlpha":0.4,"stepPlot":false,"drawPoints":false,"pointSize":1,"drawGapEdgePoints":false,"connectSeparatedPoints":false,"strokeWidth":1,"strokeBorderColor":"white","colors":["red"],"colorValue":0.5,"colorSaturation":1,"includeZero":false,"drawAxesAtZero":false,"logscale":false,"axisTickSize":3,"axisLineColor":"black","axisLineWidth":0.3,"axisLabelColor":"black","axisLabelFontSize":14,"axisLabelWidth":60,"drawGrid":true,"gridLineWidth":0.3,"rightGap":5,"digitsAfterDecimal":2,"labelsKMB":false,"labelsKMG2":false,"labelsUTC":false,"maxNumberWidth":6,"animatedZooms":false,"mobileDisableYTouch":true,"disableZoom":false,"showRangeSelector":true,"rangeSelectorHeight":40,"rangeSelectorPlotFillColor":" #A7B1C4","rangeSelectorPlotStrokeColor":"#808FAB","interactionModel":"Dygraph.Interaction.defaultModel"},"scale":"monthly","annotations":[],"shadings":[],"events":[],"format":"date","data":[["2002-06-16T00:00:00.000Z","2002-07-16T00:00:00.000Z","2002-08-16T00:00:00.000Z","2002-09-16T00:00:00.000Z","2002-10-16T00:00:00.000Z","2002-11-16T00:00:00.000Z","2002-12-16T00:00:00.000Z","2003-01-16T00:00:00.000Z","2003-02-16T00:00:00.000Z","2003-03-16T00:00:00.000Z","2003-04-16T00:00:00.000Z","2003-05-16T00:00:00.000Z","2003-06-16T00:00:00.000Z","2003-07-16T00:00:00.000Z","2003-08-16T00:00:00.000Z","2003-09-16T00:00:00.000Z","2003-10-16T00:00:00.000Z","2003-11-16T00:00:00.000Z","2003-12-16T00:00:00.000Z","2004-01-16T00:00:00.000Z","2004-02-16T00:00:00.000Z","2004-03-16T00:00:00.000Z","2004-04-16T00:00:00.000Z","2004-05-16T00:00:00.000Z","2004-06-16T00:00:00.000Z","2004-07-16T00:00:00.000Z","2004-08-16T00:00:00.000Z","2004-09-16T00:00:00.000Z","2004-10-16T00:00:00.000Z","2004-11-16T00:00:00.000Z","2004-12-16T00:00:00.000Z","2005-01-16T00:00:00.000Z","2005-02-16T00:00:00.000Z","2005-03-16T00:00:00.000Z","2005-04-16T00:00:00.000Z","2005-05-16T00:00:00.000Z","2005-06-16T00:00:00.000Z","2005-07-16T00:00:00.000Z","2005-08-16T00:00:00.000Z","2005-09-16T00:00:00.000Z","2005-10-16T00:00:00.000Z","2005-11-16T00:00:00.000Z","2005-12-16T00:00:00.000Z","2006-01-16T00:00:00.000Z","2006-02-16T00:00:00.000Z","2006-03-16T00:00:00.000Z","2006-04-16T00:00:00.000Z","2006-05-16T00:00:00.000Z","2006-06-16T00:00:00.000Z","2006-07-16T00:00:00.000Z","2006-08-16T00:00:00.000Z","2006-09-16T00:00:00.000Z","2006-10-16T00:00:00.000Z","2006-11-16T00:00:00.000Z","2006-12-16T00:00:00.000Z","2007-01-16T00:00:00.000Z","2007-02-16T00:00:00.000Z","2007-03-16T00:00:00.000Z","2007-04-16T00:00:00.000Z","2007-05-16T00:00:00.000Z","2007-06-16T00:00:00.000Z","2007-07-16T00:00:00.000Z","2007-08-16T00:00:00.000Z","2007-09-16T00:00:00.000Z","2007-10-16T00:00:00.000Z","2007-11-16T00:00:00.000Z","2007-12-16T00:00:00.000Z","2008-01-16T00:00:00.000Z","2008-02-16T00:00:00.000Z","2008-03-16T00:00:00.000Z","2008-04-16T00:00:00.000Z","2008-05-16T00:00:00.000Z","2008-06-16T00:00:00.000Z","2008-07-16T00:00:00.000Z","2008-08-16T00:00:00.000Z","2008-09-16T00:00:00.000Z","2008-10-16T00:00:00.000Z","2008-11-16T00:00:00.000Z","2008-12-16T00:00:00.000Z","2009-01-16T00:00:00.000Z","2009-02-16T00:00:00.000Z","2009-03-16T00:00:00.000Z","2009-04-16T00:00:00.000Z","2009-05-16T00:00:00.000Z","2009-06-16T00:00:00.000Z","2009-07-16T00:00:00.000Z","2009-08-16T00:00:00.000Z","2009-09-16T00:00:00.000Z","2009-10-16T00:00:00.000Z","2009-11-16T00:00:00.000Z","2009-12-16T00:00:00.000Z","2010-01-16T00:00:00.000Z","2010-02-16T00:00:00.000Z","2010-03-16T00:00:00.000Z","2010-04-16T00:00:00.000Z","2010-05-16T00:00:00.000Z","2010-06-16T00:00:00.000Z","2010-07-16T00:00:00.000Z","2010-08-16T00:00:00.000Z","2010-09-16T00:00:00.000Z","2010-10-16T00:00:00.000Z","2010-11-16T00:00:00.000Z","2010-12-16T00:00:00.000Z","2011-01-16T00:00:00.000Z","2011-02-16T00:00:00.000Z","2011-03-16T00:00:00.000Z","2011-04-16T00:00:00.000Z","2011-05-16T00:00:00.000Z","2011-06-16T00:00:00.000Z","2011-07-16T00:00:00.000Z","2011-08-16T00:00:00.000Z","2011-09-16T00:00:00.000Z","2011-10-16T00:00:00.000Z","2011-11-16T00:00:00.000Z","2011-12-16T00:00:00.000Z","2012-01-16T00:00:00.000Z","2012-02-16T00:00:00.000Z","2012-03-16T00:00:00.000Z","2012-04-16T00:00:00.000Z","2012-05-16T00:00:00.000Z","2012-06-16T00:00:00.000Z","2012-07-16T00:00:00.000Z","2012-08-16T00:00:00.000Z","2012-09-16T00:00:00.000Z","2012-10-16T00:00:00.000Z","2012-11-16T00:00:00.000Z","2012-12-16T00:00:00.000Z","2013-01-16T00:00:00.000Z","2013-02-16T00:00:00.000Z","2013-03-16T00:00:00.000Z","2013-04-16T00:00:00.000Z","2013-05-16T00:00:00.000Z","2013-06-16T00:00:00.000Z","2013-07-16T00:00:00.000Z","2013-08-16T00:00:00.000Z","2013-09-16T00:00:00.000Z","2013-10-16T00:00:00.000Z","2013-11-16T00:00:00.000Z","2013-12-16T00:00:00.000Z","2014-01-16T00:00:00.000Z","2014-02-16T00:00:00.000Z","2014-03-16T00:00:00.000Z","2014-04-16T00:00:00.000Z","2014-05-16T00:00:00.000Z","2014-06-16T00:00:00.000Z","2014-07-16T00:00:00.000Z","2014-08-16T00:00:00.000Z","2014-09-16T00:00:00.000Z","2014-10-16T00:00:00.000Z","2014-11-16T00:00:00.000Z","2014-12-16T00:00:00.000Z","2015-01-16T00:00:00.000Z","2015-02-16T00:00:00.000Z","2015-03-16T00:00:00.000Z","2015-04-16T00:00:00.000Z","2015-05-16T00:00:00.000Z","2015-06-16T00:00:00.000Z","2015-07-16T00:00:00.000Z","2015-08-16T00:00:00.000Z","2015-09-16T00:00:00.000Z","2015-10-16T00:00:00.000Z","2015-11-16T00:00:00.000Z","2015-12-16T00:00:00.000Z","2016-01-16T00:00:00.000Z","2016-02-16T00:00:00.000Z","2016-03-16T00:00:00.000Z","2016-04-16T00:00:00.000Z","2016-05-16T00:00:00.000Z","2016-06-16T00:00:00.000Z","2016-07-16T00:00:00.000Z","2016-08-16T00:00:00.000Z","2016-09-16T00:00:00.000Z","2016-10-16T00:00:00.000Z","2016-11-16T00:00:00.000Z","2016-12-16T00:00:00.000Z","2017-01-16T00:00:00.000Z","2017-02-16T00:00:00.000Z","2017-03-16T00:00:00.000Z","2017-04-16T00:00:00.000Z","2017-05-16T00:00:00.000Z","2017-06-16T00:00:00.000Z","2017-07-16T00:00:00.000Z","2017-08-16T00:00:00.000Z","2017-09-16T00:00:00.000Z","2017-10-16T00:00:00.000Z","2017-11-16T00:00:00.000Z","2017-12-16T00:00:00.000Z","2018-01-16T00:00:00.000Z","2018-02-16T00:00:00.000Z","2018-03-16T00:00:00.000Z","2018-04-16T00:00:00.000Z","2018-05-16T00:00:00.000Z","2018-06-16T00:00:00.000Z","2018-07-16T00:00:00.000Z","2018-08-16T00:00:00.000Z","2018-09-16T00:00:00.000Z","2018-10-16T00:00:00.000Z","2018-11-16T00:00:00.000Z","2018-12-16T00:00:00.000Z","2019-01-16T00:00:00.000Z","2019-02-16T00:00:00.000Z","2019-03-16T00:00:00.000Z","2019-04-16T00:00:00.000Z","2019-05-16T00:00:00.000Z","2019-06-16T00:00:00.000Z","2019-07-16T00:00:00.000Z","2019-08-16T00:00:00.000Z","2019-09-16T00:00:00.000Z","2019-10-16T00:00:00.000Z","2019-11-16T00:00:00.000Z","2019-12-16T00:00:00.000Z","2020-01-16T00:00:00.000Z","2020-02-16T00:00:00.000Z","2020-03-16T00:00:00.000Z","2020-04-16T00:00:00.000Z","2020-05-16T00:00:00.000Z","2020-06-16T00:00:00.000Z","2020-07-16T00:00:00.000Z","2020-08-16T00:00:00.000Z","2020-09-16T00:00:00.000Z"],[14.0495300292969,15.0117492675781,15.0395202636719,14.6702270507812,15.1646118164062,14.9874267578125,14.6404418945312,14.3093872070312,14.0530395507812,12.6804809570312,12.1879577636719,12.3167724609375,14.0875854492188,15.594482421875,15.7520446777344,15.6260070800781,16.5095520019531,14.8655395507812,13.7714233398438,13.1122436523438,12.6277770996094,13.1921081542969,12.657470703125,13.0027160644531,13.5470581054688,15.4149780273438,16.2015075683594,17.6142272949219,15.8365783691406,15.1809387207031,14.1943664550781,14.1218872070312,14.0087280273438,14.6653747558594,12.7574462890625,13.1968383789062,13.0403747558594,14.7052001953125,16.7172546386719,15.142578125,14.1383666992188,14.2738342285156,13.8927307128906,12.8006591796875,12.9562377929688,11.8797607421875,13.0184631347656,14.2606811523438,15.2651672363281,17.4932556152344,18.1509399414062,17.0106506347656,16.3659057617188,15.8794555664062,14.4825134277344,13.2926635742188,13.650390625,12.8047485351562,12.1988525390625,12.5631103515625,14.2391357421875,16.4499816894531,17.2509765625,16.3314819335938,15.1252136230469,14.4433288574219,12.8969116210938,12.64599609375,12.4887390136719,12.0993041992188,11.4116821289062,12.0792541503906,14.5508117675781,16.7590637207031,17.5078430175781,17.3056945800781,16.114013671875,15.803466796875,13.8692016601562,13.3904418945312,13.1083374023438,12.618408203125,12.0910339355469,13.5039978027344,15.5037841796875,16.1342163085938,16.25,17.7678527832031,16.6979064941406,15.5847473144531,14.0999450683594,14.3471374511719,13.7488403320312,13.3453674316406,12.6111145019531,12.2891540527344,14.0475769042969,15.3099975585938,14.7860107421875,14.8560180664062,15.996337890625,14.4661865234375,13.0401000976562,13.0407104492188,12.9986267089844,12.1412048339844,12.4045715332031,12.2416381835938,13.69873046875,16.2548217773438,15.8970947265625,16.6685485839844,16.17724609375,14.8739013671875,13.7890319824219,13.6596984863281,12.7063903808594,11.7926635742188,12.0348815917969,12.9054870605469,14.45849609375,15.486572265625,17.519775390625,17.8204956054688,18.13671875,16.3984375,14.8204650878906,12.8965148925781,12.7528991699219,12.8512268066406,12.5634155273438,13.8165893554688,15.2189636230469,16.3238220214844,15.9469909667969,16.3148193359375,16.5769653320312,16.1302490234375,14.3919372558594,14.6855163574219,13.6802673339844,13.8733825683594,13.1447143554688,14.0160522460938,15.7453002929688,18.87255859375,17.8736572265625,18.602783203125,19.0712280273438,17.8753356933594,16.6559753417969,15.5502624511719,15.5804748535156,14.7726135253906,14.0331115722656,13.7015075683594,15.5155334472656,18.1103210449219,18.7832946777344,20.878662109375,20.1425170898438,16.8704528808594,16.1109619140625,14.5197143554688,14.5625305175781,14.188232421875,13.507080078125,13.9117431640625,15.1147155761719,17.5697021484375,18.2048645019531,17.5758056640625,16.8163452148438,16.0739135742188,13.9158325195312,13.7105102539062,13.5662536621094,13.4342956542969,12.5737609863281,13.2340393066406,15.1467895507812,17.5405578613281,17.8965454101562,17.9856872558594,17.2791442871094,16.2824096679688,15.0946655273438,14.5508728027344,14.07568359375,13.3590087890625,12.4885864257812,13.1475524902344,14.7110290527344,18.3550415039062,19.0355834960938,17.9260864257812,17.7591857910156,17.4788208007812,15.4720764160156,14.5599060058594,13.8945007324219,13.6211242675781,13.2999877929688,14.108154296875,15.5997924804688,16.0488586425781,16.7725219726562,18.0648803710938,16.369140625,16.2439575195312,14.7381591796875,14.154296875,14.1600341796875,14.2909545898438,13.6661071777344,13.8529052734375,15.0751647949219,16.33740234375,17.5589599609375,18.5413818359375]],"fixedtz":false,"tzone":"UTC"},"evals":["attrs.interactionModel"],"jsHooks":[]}</script>
+<p>Download data: <a href="https://raw.githubusercontent.com/marinebon/p2p/master/data/sst/sst_usa-smch.csv">sst_usa-smch.csv</a></p>
+</div>
+<div id="chlorophyll-1" class="section level3">
+<h3>Chlorophyll</h3>
+<div id="htmlwidget-2dd3e11c021a6b61be08" style="width:672px;height:480px;" class="dygraphs html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2dd3e11c021a6b61be08">{"x":{"attrs":{"title":"CHL","labels":["day","chlor_a"],"legend":"auto","retainDateWindow":false,"axes":{"x":{"pixelsPerLabel":60,"drawAxis":true},"y":{"drawAxis":true}},"stackedGraph":false,"fillGraph":true,"fillAlpha":0.4,"stepPlot":false,"drawPoints":false,"pointSize":1,"drawGapEdgePoints":false,"connectSeparatedPoints":false,"strokeWidth":1,"strokeBorderColor":"white","colors":["green"],"colorValue":0.5,"colorSaturation":1,"includeZero":false,"drawAxesAtZero":false,"logscale":false,"axisTickSize":3,"axisLineColor":"black","axisLineWidth":0.3,"axisLabelColor":"black","axisLabelFontSize":14,"axisLabelWidth":60,"drawGrid":true,"gridLineWidth":0.3,"rightGap":5,"digitsAfterDecimal":2,"labelsKMB":false,"labelsKMG2":false,"labelsUTC":false,"maxNumberWidth":6,"animatedZooms":false,"mobileDisableYTouch":true,"disableZoom":false,"showRangeSelector":true,"rangeSelectorHeight":40,"rangeSelectorPlotFillColor":" #A7B1C4","rangeSelectorPlotStrokeColor":"#808FAB","interactionModel":"Dygraph.Interaction.defaultModel"},"scale":"daily","annotations":[],"shadings":[],"events":[],"format":"date","data":[["2017-02-16T00:00:00.000Z","2017-02-17T00:00:00.000Z","2017-02-18T00:00:00.000Z","2017-02-19T00:00:00.000Z","2017-02-20T00:00:00.000Z","2017-02-21T00:00:00.000Z","2017-02-22T00:00:00.000Z","2017-02-23T00:00:00.000Z","2017-02-24T00:00:00.000Z","2017-02-25T00:00:00.000Z","2017-02-26T00:00:00.000Z","2017-02-27T00:00:00.000Z","2017-02-28T00:00:00.000Z","2017-03-01T00:00:00.000Z","2017-03-02T00:00:00.000Z","2017-03-03T00:00:00.000Z","2017-03-04T00:00:00.000Z","2017-03-05T00:00:00.000Z","2017-03-06T00:00:00.000Z","2017-03-07T00:00:00.000Z","2017-03-08T00:00:00.000Z","2017-03-09T00:00:00.000Z","2017-03-10T00:00:00.000Z","2017-03-11T00:00:00.000Z","2017-03-12T00:00:00.000Z","2017-03-13T00:00:00.000Z","2017-03-14T00:00:00.000Z","2017-03-15T00:00:00.000Z","2017-03-16T00:00:00.000Z","2017-03-17T00:00:00.000Z","2017-03-18T00:00:00.000Z","2017-03-19T00:00:00.000Z","2017-03-20T00:00:00.000Z","2017-03-21T00:00:00.000Z","2017-06-14T00:00:00.000Z","2017-06-15T00:00:00.000Z","2017-06-16T00:00:00.000Z","2017-06-17T00:00:00.000Z","2017-06-18T00:00:00.000Z","2017-06-19T00:00:00.000Z","2017-06-20T00:00:00.000Z","2017-06-21T00:00:00.000Z","2017-06-22T00:00:00.000Z","2017-06-23T00:00:00.000Z","2017-06-24T00:00:00.000Z","2017-06-25T00:00:00.000Z","2017-06-26T00:00:00.000Z","2017-06-27T00:00:00.000Z","2017-06-28T00:00:00.000Z","2017-06-29T00:00:00.000Z","2017-07-04T00:00:00.000Z","2017-07-05T00:00:00.000Z","2017-07-06T00:00:00.000Z","2017-07-07T00:00:00.000Z","2017-07-08T00:00:00.000Z","2017-07-09T00:00:00.000Z","2017-07-10T00:00:00.000Z","2017-07-11T00:00:00.000Z","2017-07-12T00:00:00.000Z","2017-07-13T00:00:00.000Z","2017-07-14T00:00:00.000Z","2017-07-15T00:00:00.000Z","2017-07-16T00:00:00.000Z","2017-07-17T00:00:00.000Z","2017-07-18T00:00:00.000Z","2017-07-19T00:00:00.000Z","2017-07-20T00:00:00.000Z","2017-07-21T00:00:00.000Z","2017-07-22T00:00:00.000Z","2017-07-23T00:00:00.000Z","2017-07-24T00:00:00.000Z","2017-07-25T00:00:00.000Z","2017-07-26T00:00:00.000Z","2017-07-27T00:00:00.000Z","2017-07-28T00:00:00.000Z","2017-07-29T00:00:00.000Z","2017-07-30T00:00:00.000Z","2017-07-31T00:00:00.000Z","2017-08-07T00:00:00.000Z","2017-08-08T00:00:00.000Z","2017-08-09T00:00:00.000Z","2017-08-10T00:00:00.000Z","2017-08-11T00:00:00.000Z","2017-08-12T00:00:00.000Z","2017-08-13T00:00:00.000Z","2017-08-14T00:00:00.000Z","2017-08-15T00:00:00.000Z","2017-08-16T00:00:00.000Z","2017-08-17T00:00:00.000Z","2017-08-18T00:00:00.000Z","2017-08-19T00:00:00.000Z","2017-08-20T00:00:00.000Z","2017-08-21T00:00:00.000Z","2017-08-22T00:00:00.000Z","2017-08-23T00:00:00.000Z","2017-08-24T00:00:00.000Z","2017-08-25T00:00:00.000Z","2017-08-26T00:00:00.000Z","2017-08-27T00:00:00.000Z","2017-08-28T00:00:00.000Z","2017-08-29T00:00:00.000Z","2017-08-30T00:00:00.000Z","2017-08-31T00:00:00.000Z","2017-09-01T00:00:00.000Z","2017-09-02T00:00:00.000Z","2017-09-03T00:00:00.000Z","2017-09-04T00:00:00.000Z","2017-09-05T00:00:00.000Z","2017-09-06T00:00:00.000Z","2017-09-07T00:00:00.000Z","2017-09-08T00:00:00.000Z","2017-09-11T00:00:00.000Z","2017-09-12T00:00:00.000Z","2017-09-13T00:00:00.000Z","2017-09-14T00:00:00.000Z","2017-09-15T00:00:00.000Z","2017-09-16T00:00:00.000Z","2017-09-17T00:00:00.000Z","2017-09-18T00:00:00.000Z","2017-09-19T00:00:00.000Z","2017-09-20T00:00:00.000Z","2017-09-21T00:00:00.000Z","2017-09-22T00:00:00.000Z","2017-09-23T00:00:00.000Z","2017-09-24T00:00:00.000Z","2017-09-25T00:00:00.000Z","2017-09-26T00:00:00.000Z","2017-09-27T00:00:00.000Z","2017-09-28T00:00:00.000Z","2017-09-29T00:00:00.000Z","2017-09-30T00:00:00.000Z","2017-10-01T00:00:00.000Z","2017-10-02T00:00:00.000Z","2017-10-03T00:00:00.000Z","2017-10-04T00:00:00.000Z","2017-10-05T00:00:00.000Z","2017-10-06T00:00:00.000Z","2017-10-07T00:00:00.000Z","2017-10-08T00:00:00.000Z","2017-10-09T00:00:00.000Z","2017-10-10T00:00:00.000Z","2017-10-11T00:00:00.000Z","2017-10-12T00:00:00.000Z","2017-10-13T00:00:00.000Z","2017-10-14T00:00:00.000Z","2017-10-15T00:00:00.000Z","2017-10-16T00:00:00.000Z","2017-10-17T00:00:00.000Z","2017-10-18T00:00:00.000Z","2017-10-19T00:00:00.000Z","2017-10-20T00:00:00.000Z","2017-10-21T00:00:00.000Z","2017-10-22T00:00:00.000Z","2017-10-23T00:00:00.000Z","2017-10-24T00:00:00.000Z","2017-11-02T00:00:00.000Z","2017-11-03T00:00:00.000Z","2017-11-04T00:00:00.000Z","2017-11-05T00:00:00.000Z","2017-11-06T00:00:00.000Z","2017-11-07T00:00:00.000Z","2017-11-08T00:00:00.000Z","2017-11-09T00:00:00.000Z","2017-11-10T00:00:00.000Z","2017-11-11T00:00:00.000Z","2017-11-12T00:00:00.000Z","2017-11-13T00:00:00.000Z","2017-11-14T00:00:00.000Z","2017-11-15T00:00:00.000Z","2017-11-16T00:00:00.000Z","2017-11-18T00:00:00.000Z","2017-11-19T00:00:00.000Z","2017-11-20T00:00:00.000Z","2017-11-21T00:00:00.000Z","2017-11-22T00:00:00.000Z","2017-11-23T00:00:00.000Z","2017-11-25T00:00:00.000Z","2017-11-26T00:00:00.000Z","2017-11-27T00:00:00.000Z","2017-12-03T00:00:00.000Z","2017-12-04T00:00:00.000Z","2017-12-05T00:00:00.000Z","2017-12-06T00:00:00.000Z","2017-12-07T00:00:00.000Z","2017-12-08T00:00:00.000Z","2017-12-09T00:00:00.000Z","2017-12-10T00:00:00.000Z","2017-12-11T00:00:00.000Z","2017-12-12T00:00:00.000Z","2017-12-13T00:00:00.000Z","2017-12-14T00:00:00.000Z","2017-12-28T00:00:00.000Z","2017-12-29T00:00:00.000Z","2017-12-30T00:00:00.000Z","2017-12-31T00:00:00.000Z","2018-01-01T00:00:00.000Z","2018-01-02T00:00:00.000Z","2018-01-03T00:00:00.000Z","2018-01-04T00:00:00.000Z","2018-01-05T00:00:00.000Z","2018-01-06T00:00:00.000Z","2018-01-07T00:00:00.000Z","2018-01-08T00:00:00.000Z","2018-01-09T00:00:00.000Z","2018-01-10T00:00:00.000Z","2018-01-11T00:00:00.000Z","2018-01-12T00:00:00.000Z","2018-01-13T00:00:00.000Z","2018-01-29T00:00:00.000Z","2018-01-30T00:00:00.000Z","2018-01-31T00:00:00.000Z","2018-02-01T00:00:00.000Z","2018-02-02T00:00:00.000Z","2018-02-03T00:00:00.000Z","2018-02-04T00:00:00.000Z","2018-02-05T00:00:00.000Z","2018-02-06T00:00:00.000Z","2018-02-07T00:00:00.000Z","2018-02-08T00:00:00.000Z","2018-02-09T00:00:00.000Z","2018-02-10T00:00:00.000Z","2018-02-11T00:00:00.000Z","2018-02-12T00:00:00.000Z","2018-02-13T00:00:00.000Z","2018-02-14T00:00:00.000Z","2018-02-15T00:00:00.000Z","2018-02-16T00:00:00.000Z","2018-02-17T00:00:00.000Z","2018-02-18T00:00:00.000Z","2018-02-19T00:00:00.000Z","2018-02-20T00:00:00.000Z","2018-03-14T00:00:00.000Z","2018-03-15T00:00:00.000Z","2018-03-16T00:00:00.000Z","2018-03-17T00:00:00.000Z","2018-03-18T00:00:00.000Z","2018-03-19T00:00:00.000Z","2018-03-20T00:00:00.000Z","2018-03-21T00:00:00.000Z","2018-03-22T00:00:00.000Z","2018-03-23T00:00:00.000Z","2018-03-24T00:00:00.000Z","2018-03-25T00:00:00.000Z","2018-03-26T00:00:00.000Z","2018-03-27T00:00:00.000Z","2018-03-28T00:00:00.000Z","2018-03-29T00:00:00.000Z","2018-03-30T00:00:00.000Z","2018-03-31T00:00:00.000Z","2018-04-01T00:00:00.000Z","2018-04-02T00:00:00.000Z","2018-04-03T00:00:00.000Z","2018-04-04T00:00:00.000Z","2018-04-05T00:00:00.000Z","2018-04-06T00:00:00.000Z","2018-04-07T00:00:00.000Z","2018-04-08T00:00:00.000Z","2018-04-09T00:00:00.000Z","2018-04-10T00:00:00.000Z","2018-04-11T00:00:00.000Z","2018-04-12T00:00:00.000Z","2018-04-13T00:00:00.000Z","2018-04-14T00:00:00.000Z","2018-04-15T00:00:00.000Z","2018-04-16T00:00:00.000Z","2018-04-17T00:00:00.000Z","2018-04-18T00:00:00.000Z","2018-04-19T00:00:00.000Z","2018-04-20T00:00:00.000Z","2018-04-21T00:00:00.000Z","2018-04-22T00:00:00.000Z","2018-04-23T00:00:00.000Z","2018-04-24T00:00:00.000Z","2018-04-25T00:00:00.000Z","2018-04-26T00:00:00.000Z","2018-04-27T00:00:00.000Z","2018-04-28T00:00:00.000Z","2018-04-29T00:00:00.000Z","2018-04-30T00:00:00.000Z","2018-05-01T00:00:00.000Z","2018-05-02T00:00:00.000Z","2018-05-03T00:00:00.000Z","2018-05-04T00:00:00.000Z","2018-05-05T00:00:00.000Z","2018-05-06T00:00:00.000Z","2018-05-07T00:00:00.000Z","2018-05-08T00:00:00.000Z","2018-05-10T00:00:00.000Z","2018-05-11T00:00:00.000Z","2018-05-12T00:00:00.000Z","2018-05-13T00:00:00.000Z","2018-05-14T00:00:00.000Z","2018-05-15T00:00:00.000Z","2018-05-16T00:00:00.000Z","2018-05-17T00:00:00.000Z","2018-05-18T00:00:00.000Z","2018-05-19T00:00:00.000Z","2018-05-20T00:00:00.000Z","2018-05-21T00:00:00.000Z","2018-05-22T00:00:00.000Z","2018-05-23T00:00:00.000Z","2018-05-24T00:00:00.000Z","2018-05-25T00:00:00.000Z","2018-05-26T00:00:00.000Z","2018-05-27T00:00:00.000Z","2018-05-28T00:00:00.000Z","2018-05-29T00:00:00.000Z","2018-05-30T00:00:00.000Z","2018-05-31T00:00:00.000Z","2018-06-01T00:00:00.000Z","2018-06-02T00:00:00.000Z","2018-06-03T00:00:00.000Z","2018-06-04T00:00:00.000Z","2018-06-05T00:00:00.000Z","2018-06-06T00:00:00.000Z","2018-06-07T00:00:00.000Z","2018-06-08T00:00:00.000Z","2018-06-09T00:00:00.000Z","2018-06-10T00:00:00.000Z","2018-06-11T00:00:00.000Z","2018-06-12T00:00:00.000Z","2018-06-13T00:00:00.000Z","2018-06-14T00:00:00.000Z","2018-06-15T00:00:00.000Z","2018-06-16T00:00:00.000Z","2018-06-18T00:00:00.000Z","2018-06-19T00:00:00.000Z","2018-06-20T00:00:00.000Z","2018-06-21T00:00:00.000Z","2018-06-22T00:00:00.000Z","2018-06-23T00:00:00.000Z","2018-06-24T00:00:00.000Z","2018-06-25T00:00:00.000Z","2018-06-26T00:00:00.000Z","2018-06-27T00:00:00.000Z","2018-06-28T00:00:00.000Z","2018-06-29T00:00:00.000Z","2018-06-30T00:00:00.000Z","2018-07-01T00:00:00.000Z","2018-07-02T00:00:00.000Z","2018-07-03T00:00:00.000Z","2018-07-04T00:00:00.000Z","2018-07-05T00:00:00.000Z","2018-07-06T00:00:00.000Z","2018-07-07T00:00:00.000Z","2018-07-08T00:00:00.000Z","2018-07-09T00:00:00.000Z","2018-07-10T00:00:00.000Z","2018-07-11T00:00:00.000Z","2018-07-12T00:00:00.000Z","2018-07-13T00:00:00.000Z","2018-07-14T00:00:00.000Z","2018-07-15T00:00:00.000Z","2018-07-16T00:00:00.000Z","2018-07-17T00:00:00.000Z","2018-07-18T00:00:00.000Z","2018-07-19T00:00:00.000Z","2018-07-20T00:00:00.000Z","2018-07-21T00:00:00.000Z","2018-07-22T00:00:00.000Z","2018-07-23T00:00:00.000Z","2018-07-24T00:00:00.000Z","2018-07-25T00:00:00.000Z","2018-07-26T00:00:00.000Z","2018-07-27T00:00:00.000Z","2018-07-28T00:00:00.000Z","2018-07-29T00:00:00.000Z","2018-07-30T00:00:00.000Z","2018-08-12T00:00:00.000Z","2018-08-13T00:00:00.000Z","2018-08-14T00:00:00.000Z","2018-08-15T00:00:00.000Z","2018-08-16T00:00:00.000Z","2018-08-17T00:00:00.000Z","2018-08-18T00:00:00.000Z","2018-08-19T00:00:00.000Z","2018-08-20T00:00:00.000Z","2018-08-21T00:00:00.000Z","2018-08-22T00:00:00.000Z","2018-08-23T00:00:00.000Z","2018-08-24T00:00:00.000Z","2018-08-25T00:00:00.000Z","2018-08-26T00:00:00.000Z","2018-08-27T00:00:00.000Z","2018-08-28T00:00:00.000Z","2018-08-29T00:00:00.000Z","2018-08-30T00:00:00.000Z","2018-08-31T00:00:00.000Z","2018-09-01T00:00:00.000Z","2018-09-02T00:00:00.000Z","2018-09-03T00:00:00.000Z","2018-09-04T00:00:00.000Z","2018-09-05T00:00:00.000Z","2018-09-06T00:00:00.000Z","2018-09-07T00:00:00.000Z","2018-09-08T00:00:00.000Z","2018-09-09T00:00:00.000Z","2018-09-10T00:00:00.000Z","2018-09-11T00:00:00.000Z","2018-09-12T00:00:00.000Z","2018-09-13T00:00:00.000Z","2018-09-14T00:00:00.000Z","2018-09-15T00:00:00.000Z","2018-09-16T00:00:00.000Z","2018-09-17T00:00:00.000Z","2018-09-18T00:00:00.000Z","2018-09-19T00:00:00.000Z","2018-09-20T00:00:00.000Z","2018-09-21T00:00:00.000Z","2018-09-22T00:00:00.000Z","2018-09-23T00:00:00.000Z","2018-09-24T00:00:00.000Z","2018-09-25T00:00:00.000Z","2018-09-26T00:00:00.000Z","2018-09-27T00:00:00.000Z","2018-09-28T00:00:00.000Z","2018-09-29T00:00:00.000Z","2018-09-30T00:00:00.000Z","2018-10-01T00:00:00.000Z","2018-10-02T00:00:00.000Z","2018-10-03T00:00:00.000Z","2018-10-04T00:00:00.000Z","2018-10-05T00:00:00.000Z","2018-10-09T00:00:00.000Z","2018-10-10T00:00:00.000Z","2018-10-11T00:00:00.000Z","2018-10-12T00:00:00.000Z","2018-10-13T00:00:00.000Z","2018-10-14T00:00:00.000Z","2018-10-15T00:00:00.000Z","2018-10-16T00:00:00.000Z","2018-10-17T00:00:00.000Z","2018-10-18T00:00:00.000Z","2018-10-19T00:00:00.000Z","2018-10-20T00:00:00.000Z","2018-10-21T00:00:00.000Z","2018-10-24T00:00:00.000Z","2018-10-25T00:00:00.000Z","2018-10-26T00:00:00.000Z","2018-10-27T00:00:00.000Z","2018-10-28T00:00:00.000Z","2018-10-29T00:00:00.000Z","2018-10-30T00:00:00.000Z","2018-10-31T00:00:00.000Z","2018-11-01T00:00:00.000Z","2018-11-02T00:00:00.000Z","2018-11-04T00:00:00.000Z","2018-11-06T00:00:00.000Z","2018-11-13T00:00:00.000Z","2018-11-18T00:00:00.000Z","2018-11-27T00:00:00.000Z","2018-12-01T00:00:00.000Z","2018-12-09T00:00:00.000Z","2018-12-10T00:00:00.000Z","2018-12-11T00:00:00.000Z","2018-12-12T00:00:00.000Z","2018-12-13T00:00:00.000Z","2018-12-14T00:00:00.000Z","2018-12-15T00:00:00.000Z","2018-12-16T00:00:00.000Z","2018-12-17T00:00:00.000Z","2018-12-18T00:00:00.000Z","2018-12-19T00:00:00.000Z","2018-12-20T00:00:00.000Z","2018-12-21T00:00:00.000Z","2018-12-22T00:00:00.000Z","2018-12-23T00:00:00.000Z","2018-12-24T00:00:00.000Z","2018-12-25T00:00:00.000Z","2018-12-26T00:00:00.000Z","2018-12-27T00:00:00.000Z","2018-12-28T00:00:00.000Z","2018-12-29T00:00:00.000Z","2018-12-30T00:00:00.000Z","2018-12-31T00:00:00.000Z","2019-01-01T00:00:00.000Z","2019-01-02T00:00:00.000Z","2019-01-03T00:00:00.000Z","2019-01-04T00:00:00.000Z","2019-01-05T00:00:00.000Z","2019-01-06T00:00:00.000Z","2019-01-07T00:00:00.000Z","2019-01-08T00:00:00.000Z","2019-01-09T00:00:00.000Z","2019-01-10T00:00:00.000Z","2019-01-11T00:00:00.000Z","2019-01-12T00:00:00.000Z","2019-01-13T00:00:00.000Z","2019-01-14T00:00:00.000Z","2019-01-15T00:00:00.000Z","2019-01-16T00:00:00.000Z","2019-01-17T00:00:00.000Z","2019-01-18T00:00:00.000Z","2019-01-19T00:00:00.000Z","2019-01-20T00:00:00.000Z","2019-01-21T00:00:00.000Z","2019-01-22T00:00:00.000Z","2019-01-23T00:00:00.000Z","2019-01-24T00:00:00.000Z","2019-01-25T00:00:00.000Z","2019-01-26T00:00:00.000Z","2019-01-27T00:00:00.000Z","2019-01-28T00:00:00.000Z","2019-01-29T00:00:00.000Z","2019-01-30T00:00:00.000Z","2019-01-31T00:00:00.000Z","2019-02-01T00:00:00.000Z","2019-02-03T00:00:00.000Z","2019-02-04T00:00:00.000Z","2019-02-05T00:00:00.000Z","2019-02-06T00:00:00.000Z","2019-02-07T00:00:00.000Z","2019-02-08T00:00:00.000Z","2019-02-09T00:00:00.000Z","2019-02-10T00:00:00.000Z","2019-02-11T00:00:00.000Z","2019-02-12T00:00:00.000Z","2019-02-13T00:00:00.000Z","2019-02-14T00:00:00.000Z","2019-02-15T00:00:00.000Z","2019-02-16T00:00:00.000Z","2019-06-01T00:00:00.000Z","2019-06-02T00:00:00.000Z","2019-06-03T00:00:00.000Z","2019-06-04T00:00:00.000Z","2019-06-05T00:00:00.000Z","2019-06-06T00:00:00.000Z","2019-06-07T00:00:00.000Z","2019-06-08T00:00:00.000Z","2019-06-09T00:00:00.000Z","2019-06-10T00:00:00.000Z","2019-06-11T00:00:00.000Z","2019-06-12T00:00:00.000Z","2019-06-13T00:00:00.000Z","2019-06-14T00:00:00.000Z","2019-06-15T00:00:00.000Z","2019-06-16T00:00:00.000Z","2019-06-17T00:00:00.000Z","2019-06-18T00:00:00.000Z","2019-06-19T00:00:00.000Z","2019-06-20T00:00:00.000Z","2019-06-21T00:00:00.000Z","2019-06-22T00:00:00.000Z","2019-06-23T00:00:00.000Z","2019-06-24T00:00:00.000Z","2019-06-25T00:00:00.000Z","2019-06-26T00:00:00.000Z","2019-06-27T00:00:00.000Z","2019-06-28T00:00:00.000Z","2019-06-29T00:00:00.000Z","2019-06-30T00:00:00.000Z","2019-07-01T00:00:00.000Z","2019-07-02T00:00:00.000Z","2019-07-04T00:00:00.000Z","2019-07-05T00:00:00.000Z","2019-07-06T00:00:00.000Z","2019-07-07T00:00:00.000Z","2019-07-08T00:00:00.000Z","2019-07-09T00:00:00.000Z","2019-07-10T00:00:00.000Z","2019-07-11T00:00:00.000Z","2019-07-12T00:00:00.000Z","2019-07-13T00:00:00.000Z","2019-07-14T00:00:00.000Z","2019-07-15T00:00:00.000Z","2019-07-16T00:00:00.000Z","2019-07-17T00:00:00.000Z","2019-07-18T00:00:00.000Z","2019-07-19T00:00:00.000Z","2019-07-20T00:00:00.000Z","2019-07-21T00:00:00.000Z","2019-07-22T00:00:00.000Z","2019-07-23T00:00:00.000Z","2019-07-24T00:00:00.000Z","2019-07-25T00:00:00.000Z","2019-07-26T00:00:00.000Z","2019-07-27T00:00:00.000Z","2019-07-28T00:00:00.000Z","2019-07-29T00:00:00.000Z","2019-07-30T00:00:00.000Z","2019-07-31T00:00:00.000Z","2019-08-01T00:00:00.000Z","2019-08-02T00:00:00.000Z","2019-08-03T00:00:00.000Z","2019-08-04T00:00:00.000Z","2019-08-05T00:00:00.000Z","2019-08-06T00:00:00.000Z","2019-08-07T00:00:00.000Z","2019-08-08T00:00:00.000Z","2019-08-09T00:00:00.000Z","2019-08-10T00:00:00.000Z","2019-08-11T00:00:00.000Z","2019-08-12T00:00:00.000Z","2019-08-13T00:00:00.000Z","2019-08-14T00:00:00.000Z","2019-08-15T00:00:00.000Z","2019-08-16T00:00:00.000Z","2019-08-17T00:00:00.000Z","2019-08-18T00:00:00.000Z","2019-08-19T00:00:00.000Z","2019-08-20T00:00:00.000Z","2019-08-21T00:00:00.000Z","2019-08-22T00:00:00.000Z","2019-08-23T00:00:00.000Z","2019-08-24T00:00:00.000Z","2019-08-25T00:00:00.000Z","2019-08-26T00:00:00.000Z","2019-08-27T00:00:00.000Z","2019-08-28T00:00:00.000Z","2019-08-29T00:00:00.000Z","2019-08-30T00:00:00.000Z","2019-08-31T00:00:00.000Z","2019-09-01T00:00:00.000Z","2019-09-02T00:00:00.000Z","2019-09-03T00:00:00.000Z","2019-09-04T00:00:00.000Z","2019-09-05T00:00:00.000Z","2019-09-06T00:00:00.000Z","2019-09-07T00:00:00.000Z","2019-09-09T00:00:00.000Z","2019-09-10T00:00:00.000Z","2019-09-11T00:00:00.000Z","2019-09-12T00:00:00.000Z","2019-09-13T00:00:00.000Z","2019-09-14T00:00:00.000Z","2019-09-15T00:00:00.000Z","2019-09-16T00:00:00.000Z","2019-09-17T00:00:00.000Z","2019-09-18T00:00:00.000Z","2019-09-19T00:00:00.000Z","2019-09-20T00:00:00.000Z","2019-09-21T00:00:00.000Z","2019-09-22T00:00:00.000Z","2019-09-23T00:00:00.000Z","2019-09-24T00:00:00.000Z","2019-09-25T00:00:00.000Z","2019-09-26T00:00:00.000Z","2019-09-27T00:00:00.000Z","2019-09-28T00:00:00.000Z","2019-09-29T00:00:00.000Z","2019-09-30T00:00:00.000Z","2019-10-01T00:00:00.000Z","2019-10-02T00:00:00.000Z","2019-10-03T00:00:00.000Z","2019-10-04T00:00:00.000Z","2019-10-05T00:00:00.000Z","2019-10-06T00:00:00.000Z","2019-10-07T00:00:00.000Z","2019-10-08T00:00:00.000Z","2019-10-09T00:00:00.000Z","2019-10-10T00:00:00.000Z","2019-10-11T00:00:00.000Z","2019-10-12T00:00:00.000Z","2019-10-13T00:00:00.000Z","2019-10-14T00:00:00.000Z","2019-10-15T00:00:00.000Z","2019-10-16T00:00:00.000Z","2019-10-17T00:00:00.000Z","2019-10-18T00:00:00.000Z","2019-10-19T00:00:00.000Z","2019-10-20T00:00:00.000Z","2019-10-21T00:00:00.000Z","2019-10-22T00:00:00.000Z","2019-10-23T00:00:00.000Z","2019-10-24T00:00:00.000Z","2019-10-25T00:00:00.000Z","2019-10-26T00:00:00.000Z","2019-10-27T00:00:00.000Z","2019-10-28T00:00:00.000Z","2019-10-29T00:00:00.000Z","2019-10-30T00:00:00.000Z","2019-10-31T00:00:00.000Z","2019-11-01T00:00:00.000Z","2019-11-02T00:00:00.000Z","2019-11-03T00:00:00.000Z","2019-11-04T00:00:00.000Z","2019-11-05T00:00:00.000Z","2019-11-06T00:00:00.000Z","2019-11-07T00:00:00.000Z","2019-11-08T00:00:00.000Z","2019-11-09T00:00:00.000Z","2019-11-10T00:00:00.000Z","2019-11-11T00:00:00.000Z","2019-11-12T00:00:00.000Z","2019-11-13T00:00:00.000Z","2019-11-14T00:00:00.000Z","2019-11-15T00:00:00.000Z","2019-11-16T00:00:00.000Z","2019-11-17T00:00:00.000Z","2019-11-18T00:00:00.000Z","2019-11-19T00:00:00.000Z","2019-11-20T00:00:00.000Z","2019-11-21T00:00:00.000Z","2019-11-22T00:00:00.000Z","2019-11-23T00:00:00.000Z","2019-11-24T00:00:00.000Z","2019-11-25T00:00:00.000Z","2019-11-26T00:00:00.000Z","2019-11-27T00:00:00.000Z","2019-11-28T00:00:00.000Z","2019-11-29T00:00:00.000Z","2019-11-30T00:00:00.000Z","2019-12-01T00:00:00.000Z","2019-12-02T00:00:00.000Z","2019-12-03T00:00:00.000Z","2019-12-04T00:00:00.000Z","2019-12-05T00:00:00.000Z","2019-12-06T00:00:00.000Z","2019-12-07T00:00:00.000Z","2019-12-08T00:00:00.000Z","2019-12-09T00:00:00.000Z","2019-12-10T00:00:00.000Z","2019-12-11T00:00:00.000Z","2019-12-12T00:00:00.000Z","2019-12-13T00:00:00.000Z","2019-12-14T00:00:00.000Z","2019-12-15T00:00:00.000Z","2019-12-16T00:00:00.000Z","2019-12-17T00:00:00.000Z","2019-12-18T00:00:00.000Z","2019-12-19T00:00:00.000Z","2019-12-20T00:00:00.000Z","2019-12-21T00:00:00.000Z","2019-12-22T00:00:00.000Z","2019-12-23T00:00:00.000Z","2019-12-24T00:00:00.000Z","2019-12-25T00:00:00.000Z","2019-12-26T00:00:00.000Z","2019-12-27T00:00:00.000Z","2019-12-28T00:00:00.000Z","2019-12-29T00:00:00.000Z","2019-12-30T00:00:00.000Z","2020-01-03T00:00:00.000Z","2020-01-04T00:00:00.000Z","2020-01-05T00:00:00.000Z","2020-01-06T00:00:00.000Z","2020-01-07T00:00:00.000Z","2020-01-08T00:00:00.000Z","2020-01-09T00:00:00.000Z","2020-01-10T00:00:00.000Z","2020-01-11T00:00:00.000Z","2020-01-12T00:00:00.000Z","2020-01-13T00:00:00.000Z","2020-01-14T00:00:00.000Z","2020-01-15T00:00:00.000Z","2020-01-23T00:00:00.000Z","2020-01-24T00:00:00.000Z","2020-01-25T00:00:00.000Z","2020-01-26T00:00:00.000Z","2020-01-27T00:00:00.000Z","2020-01-28T00:00:00.000Z","2020-01-29T00:00:00.000Z","2020-01-30T00:00:00.000Z","2020-01-31T00:00:00.000Z","2020-02-01T00:00:00.000Z","2020-02-02T00:00:00.000Z","2020-02-03T00:00:00.000Z","2020-02-04T00:00:00.000Z","2020-02-05T00:00:00.000Z","2020-02-06T00:00:00.000Z","2020-02-07T00:00:00.000Z","2020-02-08T00:00:00.000Z","2020-02-09T00:00:00.000Z","2020-02-10T00:00:00.000Z","2020-02-11T00:00:00.000Z","2020-02-12T00:00:00.000Z","2020-02-13T00:00:00.000Z","2020-02-14T00:00:00.000Z","2020-02-15T00:00:00.000Z","2020-02-16T00:00:00.000Z","2020-02-17T00:00:00.000Z","2020-02-18T00:00:00.000Z","2020-02-19T00:00:00.000Z","2020-02-20T00:00:00.000Z","2020-02-21T00:00:00.000Z","2020-02-22T00:00:00.000Z","2020-02-23T00:00:00.000Z","2020-02-24T00:00:00.000Z","2020-02-25T00:00:00.000Z","2020-02-26T00:00:00.000Z","2020-02-27T00:00:00.000Z","2020-02-28T00:00:00.000Z","2020-02-29T00:00:00.000Z","2020-03-01T00:00:00.000Z","2020-03-02T00:00:00.000Z","2020-03-03T00:00:00.000Z","2020-03-04T00:00:00.000Z","2020-03-05T00:00:00.000Z","2020-03-06T00:00:00.000Z","2020-03-07T00:00:00.000Z","2020-03-08T00:00:00.000Z","2020-03-09T00:00:00.000Z","2020-03-10T00:00:00.000Z","2020-03-11T00:00:00.000Z","2020-03-12T00:00:00.000Z","2020-03-13T00:00:00.000Z","2020-03-14T00:00:00.000Z","2020-03-15T00:00:00.000Z","2020-03-16T00:00:00.000Z","2020-03-17T00:00:00.000Z","2020-03-18T00:00:00.000Z","2020-03-19T00:00:00.000Z","2020-03-20T00:00:00.000Z","2020-03-21T00:00:00.000Z","2020-03-22T00:00:00.000Z","2020-03-23T00:00:00.000Z","2020-03-24T00:00:00.000Z","2020-03-25T00:00:00.000Z","2020-03-26T00:00:00.000Z","2020-03-27T00:00:00.000Z","2020-03-28T00:00:00.000Z","2020-03-29T00:00:00.000Z","2020-03-30T00:00:00.000Z","2020-03-31T00:00:00.000Z","2020-04-01T00:00:00.000Z","2020-04-02T00:00:00.000Z","2020-04-03T00:00:00.000Z","2020-04-04T00:00:00.000Z","2020-04-07T00:00:00.000Z","2020-04-08T00:00:00.000Z","2020-04-09T00:00:00.000Z","2020-04-10T00:00:00.000Z","2020-04-11T00:00:00.000Z","2020-04-12T00:00:00.000Z","2020-04-13T00:00:00.000Z","2020-04-14T00:00:00.000Z","2020-04-15T00:00:00.000Z","2020-04-16T00:00:00.000Z","2020-04-17T00:00:00.000Z","2020-04-18T00:00:00.000Z","2020-04-19T00:00:00.000Z","2020-04-20T00:00:00.000Z","2020-04-21T00:00:00.000Z","2020-04-22T00:00:00.000Z","2020-04-23T00:00:00.000Z","2020-04-24T00:00:00.000Z","2020-04-25T00:00:00.000Z","2020-04-26T00:00:00.000Z","2020-04-27T00:00:00.000Z","2020-04-28T00:00:00.000Z","2020-04-29T00:00:00.000Z","2020-04-30T00:00:00.000Z","2020-05-01T00:00:00.000Z","2020-05-02T00:00:00.000Z","2020-05-03T00:00:00.000Z","2020-05-04T00:00:00.000Z","2020-05-05T00:00:00.000Z","2020-05-06T00:00:00.000Z","2020-05-07T00:00:00.000Z","2020-05-08T00:00:00.000Z","2020-05-09T00:00:00.000Z","2020-05-10T00:00:00.000Z","2020-05-11T00:00:00.000Z","2020-05-12T00:00:00.000Z","2020-05-13T00:00:00.000Z","2020-05-14T00:00:00.000Z","2020-05-15T00:00:00.000Z","2020-05-16T00:00:00.000Z","2020-05-17T00:00:00.000Z","2020-05-18T00:00:00.000Z","2020-05-19T00:00:00.000Z","2020-05-20T00:00:00.000Z","2020-05-21T00:00:00.000Z","2020-05-22T00:00:00.000Z","2020-05-23T00:00:00.000Z","2020-05-24T00:00:00.000Z","2020-05-25T00:00:00.000Z","2020-05-26T00:00:00.000Z","2020-05-27T00:00:00.000Z","2020-05-28T00:00:00.000Z","2020-05-29T00:00:00.000Z","2020-05-30T00:00:00.000Z","2020-05-31T00:00:00.000Z","2020-06-01T00:00:00.000Z","2020-06-02T00:00:00.000Z","2020-06-03T00:00:00.000Z","2020-06-04T00:00:00.000Z","2020-06-05T00:00:00.000Z","2020-06-06T00:00:00.000Z","2020-06-07T00:00:00.000Z","2020-06-08T00:00:00.000Z","2020-06-09T00:00:00.000Z","2020-06-10T00:00:00.000Z","2020-06-11T00:00:00.000Z","2020-06-12T00:00:00.000Z","2020-06-13T00:00:00.000Z","2020-06-14T00:00:00.000Z","2020-06-15T00:00:00.000Z","2020-06-16T00:00:00.000Z","2020-06-17T00:00:00.000Z","2020-06-18T00:00:00.000Z","2020-06-19T00:00:00.000Z","2020-06-20T00:00:00.000Z","2020-06-21T00:00:00.000Z","2020-06-22T00:00:00.000Z","2020-06-23T00:00:00.000Z","2020-06-24T00:00:00.000Z","2020-06-25T00:00:00.000Z","2020-06-26T00:00:00.000Z","2020-06-27T00:00:00.000Z","2020-06-28T00:00:00.000Z","2020-06-29T00:00:00.000Z","2020-06-30T00:00:00.000Z","2020-07-01T00:00:00.000Z","2020-07-02T00:00:00.000Z","2020-07-03T00:00:00.000Z","2020-07-04T00:00:00.000Z","2020-07-05T00:00:00.000Z","2020-07-06T00:00:00.000Z","2020-07-07T00:00:00.000Z","2020-07-08T00:00:00.000Z","2020-07-09T00:00:00.000Z","2020-07-10T00:00:00.000Z","2020-07-11T00:00:00.000Z","2020-07-12T00:00:00.000Z","2020-07-13T00:00:00.000Z","2020-07-14T00:00:00.000Z","2020-07-15T00:00:00.000Z","2020-07-16T00:00:00.000Z","2020-07-17T00:00:00.000Z","2020-07-18T00:00:00.000Z","2020-07-19T00:00:00.000Z","2020-07-20T00:00:00.000Z","2020-07-21T00:00:00.000Z","2020-07-22T00:00:00.000Z","2020-07-23T00:00:00.000Z","2020-07-24T00:00:00.000Z","2020-07-25T00:00:00.000Z","2020-07-26T00:00:00.000Z","2020-07-27T00:00:00.000Z","2020-07-28T00:00:00.000Z","2020-07-29T00:00:00.000Z","2020-07-30T00:00:00.000Z","2020-07-31T00:00:00.000Z","2020-08-01T00:00:00.000Z","2020-08-02T00:00:00.000Z","2020-08-03T00:00:00.000Z","2020-08-04T00:00:00.000Z","2020-08-05T00:00:00.000Z","2020-08-06T00:00:00.000Z","2020-08-07T00:00:00.000Z","2020-08-08T00:00:00.000Z","2020-08-09T00:00:00.000Z","2020-08-10T00:00:00.000Z","2020-08-11T00:00:00.000Z","2020-08-12T00:00:00.000Z","2020-08-13T00:00:00.000Z","2020-08-14T00:00:00.000Z","2020-08-15T00:00:00.000Z","2020-08-16T00:00:00.000Z","2020-08-17T00:00:00.000Z","2020-08-18T00:00:00.000Z","2020-08-19T00:00:00.000Z","2020-08-20T00:00:00.000Z","2020-08-21T00:00:00.000Z","2020-08-22T00:00:00.000Z","2020-08-23T00:00:00.000Z","2020-08-24T00:00:00.000Z","2020-08-25T00:00:00.000Z","2020-08-26T00:00:00.000Z","2020-08-27T00:00:00.000Z","2020-08-28T00:00:00.000Z","2020-08-29T00:00:00.000Z","2020-08-30T00:00:00.000Z","2020-08-31T00:00:00.000Z","2020-09-01T00:00:00.000Z","2020-09-02T00:00:00.000Z","2020-09-03T00:00:00.000Z","2020-09-04T00:00:00.000Z","2020-09-05T00:00:00.000Z","2020-09-06T00:00:00.000Z","2020-09-07T00:00:00.000Z","2020-09-08T00:00:00.000Z","2020-09-09T00:00:00.000Z","2020-09-10T00:00:00.000Z","2020-09-11T00:00:00.000Z","2020-09-18T00:00:00.000Z","2020-09-19T00:00:00.000Z","2020-09-20T00:00:00.000Z","2020-09-21T00:00:00.000Z","2020-09-22T00:00:00.000Z","2020-09-23T00:00:00.000Z","2020-09-24T00:00:00.000Z","2020-09-25T00:00:00.000Z","2020-09-26T00:00:00.000Z","2020-09-27T00:00:00.000Z","2020-09-28T00:00:00.000Z","2020-09-29T00:00:00.000Z","2020-09-30T00:00:00.000Z","2020-10-01T00:00:00.000Z","2020-10-02T00:00:00.000Z","2020-10-03T00:00:00.000Z","2020-10-04T00:00:00.000Z","2020-10-05T00:00:00.000Z","2020-10-06T00:00:00.000Z","2020-10-07T00:00:00.000Z","2020-10-08T00:00:00.000Z","2020-10-09T00:00:00.000Z"],[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,1.57057154178619,1.57057154178619,1.57057154178619,1.57057154178619,1.57057154178619,1.57057154178619,1.57057154178619,null,1.74379992485046,1.6727499961853,1.1671667098999,1.1671667098999,3.45088863372803,6.13880014419556,6.13880014419556,6.13880014419556,6.13880014419556,6.13880014419556,6.13880014419556,6.13880014419556,2.57599997520447,1.26999998092651,1.26999998092651,1.26999998092651,1.26999998092651,11.4570980072021,11.4570980072021,3.87236380577087,3.87236380577087,5.45377779006958,6.89669942855835,6.89669942855835,6.89669942855835,6.89669942855835,5.05025053024292,13.6863994598389,9.48209095001221,1.21520006656647,5.47416687011719,5.47416687011719,5.47416687011719,2.90800023078918,0.686833322048187,2.61508345603943,1.97271430492401,2.48519992828369,1.67514288425446,1.44609081745148,2.56992316246033,2.26339983940125,0.359800010919571,0.359800010919571,0.359800010919571,3.49092316627502,3.49092316627502,1.88949990272522,1.88949990272522,6.8984169960022,1.39690923690796,4.22250080108643,11.3015995025635,20.5023002624512,7.64619970321655,0.837999999523163,0.837999999523163,0.837999999523163,0.439500004053116,2.41845464706421,2.41845464706421,2.41845464706421,11.2261829376221,5.70122194290161,0.863999962806702,0.503333330154419,0.503333330154419,0.503333330154419,3.75087523460388,2.91418170928955,8.53653907775879,2.23014307022095,1.15044450759888,5.67150020599365,3.41890025138855,4.69209098815918,5.36164236068726,2.9909999370575,5.02855539321899,7.3148889541626,2.70600008964539,0.231000006198883,0.371999979019165,0.371999979019165,0.371999979019165,3.07883334159851,1.88383328914642,0.34566667675972,0.280749976634979,0.34799998998642,1.10177767276764,12.2409982681274,12.2409982681274,12.2409982681274,0.966749906539917,1.70254552364349,1.70254552364349,1.70254552364349,1.70254552364349,1.70254552364349,1.70254552364349,2.90300011634827,2.90300011634827,2.90300011634827,2.90300011634827,3.54850006103516,3.54850006103516,2.01709985733032,1.48342859745026,1.48342859745026,0.604499995708466,6.71799993515015,2.30609130859375,0.92849999666214,1.42866659164429,1.42866659164429,1.42866659164429,2.69566655158997,1.39938461780548,4.16833305358887,4.16833305358887,4.16833305358887,4.16833305358887,4.16833305358887,4.16833305358887,4.16833305358887,null,null,1.82099997997284,1.10699999332428,0.872200012207031,1.96622216701508,1.57349991798401,0.403750002384186,0.643999993801117,0.480000019073486,0.480000019073486,0.480000019073486,0.480000019073486,2.30372738838196,2.30372738838196,2.30372738838196,2.30372738838196,2.30372738838196,2.30372738838196,5.19799995422363,5.19799995422363,2.55166673660278,2.00716662406921,2.00716662406921,2.00716662406921,2.00716662406921,2.00716662406921,2.00716662406921,0.450199991464615,0.450199991464615,1.14900004863739,0.808600068092346,0.808600068092346,1.29599988460541,1.29599988460541,2.53287506103516,2.79366660118103,4.4527268409729,3.2699089050293,3.2699089050293,3.3899998664856,3.34233331680298,1.14950001239777,3.28925037384033,0.592124998569489,1.37477767467499,0.314000010490417,0.913750052452087,0.608333349227905,0.608333349227905,2.0271999835968,2.01359987258911,2.17211103439331,1.57616662979126,1.57616662979126,1.57616662979126,1.57616662979126,null,null,null,1.36589992046356,1.67292296886444,1.49149990081787,1.93124997615814,2.02291655540466,1.80644464492798,1.80644464492798,1.53684616088867,1.68783330917358,1.68783330917358,1.68783330917358,1.68783330917358,1.0514999628067,0.282833337783813,0.282833337783813,0.282833337783813,0.282833337783813,0.282833337783813,0.282833337783813,0.282833337783813,null,null,null,null,null,null,null,null,1.68628585338593,1.56666672229767,2.36189985275269,2.36189985275269,7.32509994506836,2.56100010871887,2.56100010871887,3.08936381340027,3.08936381340027,3.29562520980835,3.00724983215332,3.00724983215332,3.00724983215332,1.21924996376038,2.19249987602234,1.69559991359711,1.7109090089798,2.23215389251709,2.99481821060181,2.31124997138977,2.34769988059998,2.26363635063171,1.87661564350128,1.42581820487976,1.29372727870941,1.29372727870941,1.29372727870941,0.411499977111816,0.411499977111816,0.411499977111816,1.70033323764801,1.70033323764801,1.70033323764801,1.70033323764801,1.70033323764801,1.70033323764801,1.70033323764801,null,2.14910006523132,1.46083319187164,1.46083319187164,1.7603634595871,1.70963633060455,1.5972501039505,1.94700002670288,1.94700002670288,1.94700002670288,1.94700002670288,1.94700002670288,1.94700002670288,0.654999971389771,0.611142814159393,0.611142814159393,0.611142814159393,0.840999960899353,0.918799877166748,0.918799877166748,1.07491672039032,1.41609084606171,0.780857145786285,0.780857145786285,2.86010003089905,2.86010003089905,2.86010003089905,2.86010003089905,2.86010003089905,2.86010003089905,null,null,null,0.693000018596649,0.400666683912277,0.400666683912277,2.49200010299683,1.69059979915619,1.69059979915619,1.69059979915619,1.69059979915619,1.3639999628067,1.3639999628067,1.3639999628067,1.3639999628067,1.3639999628067,1.3639999628067,1.3639999628067,null,null,2.67911124229431,2.67911124229431,2.67911124229431,2.67911124229431,2.67911124229431,0.660999953746796,0.660999953746796,1.21387493610382,2.80019998550415,2.13633346557617,1.66983330249786,1.66983330249786,1.90450000762939,0.518500030040741,0.518500030040741,1.47733342647552,1.47733342647552,3.97900009155273,1.22100007534027,0.745000004768372,1.82679998874664,1.82679998874664,0.47022220492363,12.0816354751587,12.0816354751587,3.52846145629883,3.52846145629883,3.52846145629883,4.27199983596802,0.724428594112396,0.718500018119812,1.81159996986389,1.81159996986389,4.73457098007202,1.72100007534027,1.26366651058197,1.26366651058197,1.26366651058197,1.26366651058197,7.96409130096436,0.665000021457672,2.03220009803772,2.03220009803772,2.03220009803772,2.03220009803772,1.01900005340576,0.927666664123535,7.85100078582764,7.85100078582764,3.01300001144409,0.749500036239624,0.749500036239624,0.749500036239624,0.749500036239624,0.749500036239624,0.749500036239624,0.749500036239624,null,3.23958325386047,3.98860025405884,4.68100023269653,4.68100023269653,2.35650014877319,2.92046141624451,2.92046141624451,2.92046141624451,0.824714362621307,1.39575004577637,2.77859997749329,2.77859997749329,0.651800036430359,0.603999972343445,4.03770017623901,2.48555564880371,1.7307140827179,2.15383315086365,2.71350002288818,4.99819993972778,3.58340001106262,3.97800040245056,6.08154487609863,5.41633367538452,7.19737529754639,5.64827299118042,5.64827299118042,5.64827299118042,4.13758325576782,5.86766672134399,6.30863618850708,8.39799976348877,5.64366674423218,2.0763635635376,0.325500011444092,1.08200001716614,2.33323073387146,2.33323073387146,2.33323073387146,1.3289999961853,2.97330021858215,4.23799991607666,4.1567497253418,11.9700002670288,7.80245494842529,5.1742000579834,6.12050008773804,9.62241649627686,5.04866695404053,1.51622223854065,3.09683346748352,2.41544437408447,2.26300001144409,2.91925024986267,1.82400012016296,1.7008889913559,3.20320010185242,3.20320010185242,3.64181804656982,4.29749965667725,2.96666646003723,2.93611145019531,3.96463632583618,8.46292400360107,5.71127271652222,7.79000043869019,7.04928588867188,7.46040058135986,7.46040058135986,4.89145469665527,3.7805004119873,2.25716686248779,2.48733329772949,2.59449982643127,3.69599986076355,1.81318199634552,2.36277770996094,2.25000023841858,0.481250047683716,1.02950000762939,2.97433352470398,2.21066641807556,0.688250005245209,1.83429980278015,1.83429980278015,1.83429980278015,1.83429980278015,1.83429980278015,2.27244448661804,2.52083325386047,2.63607692718506,2.63607692718506,2.63607692718506,2.10500001907349,2.00239992141724,2.31666684150696,1.24418187141418,2.23044443130493,2.23044443130493,2.32072734832764,2.32072734832764,1.03827273845673,1.03827273845673,1.03827273845673,1.03827273845673,1.03827273845673,1.48487508296967,1.48487508296967,1.48487508296967,1.48487508296967,1.48487508296967,3.77092814445496,3.77092814445496,3.77092814445496,0.984000027179718,1.12957155704498,1.85839998722076,1.91336369514465,2.77536368370056,2.77536368370056,1.66862499713898,2.54874992370605,2.54874992370605,2.54874992370605,2.54874992370605,2.54874992370605,3.07177782058716,3.07177782058716,1.07777798175812,1.67579996585846,2.49449992179871,2.49449992179871,2.49449992179871,2.49449992179871,2.58859992027283,1.99985718727112,1.74391686916351,1.74391686916351,1.74391686916351,1.95012497901917,2.33076953887939,0.981666624546051,2.22077775001526,2.04130005836487,2.09999990463257,2.09999990463257,1.5714545249939,1.5714545249939,1.81350004673004,0.565999984741211,0.565999984741211,2.06319975852966,2.06319975852966,2.06319975852966,1.432000041008,5.43275022506714,5.43275022506714,2.1966667175293,1.5928750038147,1.5928750038147,2.50309085845947,1.01760005950928,0.730499982833862,1.33700001239777,1.52160000801086,2.22754549980164,1.32266664505005,3.97000026702881,13.3174285888672,1.83642864227295,5.42291641235352,1.85362505912781,1.89430010318756,7.86233329772949,7.82000064849854,6.50800037384033,2.40324997901917,4.79000043869019,3.37190008163452,5.03283309936523,5.03283309936523,5.03283309936523,5.03283309936523,1.49800002574921,1.49800002574921,2.84739995002747,1.81508350372314,1.81508350372314,1.81508350372314,2.45900011062622,13.9829998016357,2.4753999710083,1.432000041008,1.432000041008,0.432875037193298,0.432875037193298,0.432875037193298,3.36209106445312,3.36209106445312,3.36209106445312,1.04959988594055,0.920100033283234,0.888142883777618,0.888142883777618,1.73466646671295,1.73466646671295,7.80600070953369,2.47699999809265,1.40533339977264,1.40533339977264,2.55600023269653,2.55600023269653,6.35633325576782,3.2388334274292,3.2388334274292,2.28200006484985,3.55899977684021,2.46536350250244,2.46536350250244,0.439333349466324,4.52512502670288,4.52512502670288,4.52512502670288,4.52512502670288,4.52512502670288,4.52512502670288,3.74949955940247,4.9301815032959,4.9301815032959,4.9301815032959,1.88933324813843,1.75690889358521,2.4978334903717,2.4978334903717,2.4978334903717,2.00162506103516,1.50109994411469,2.50584578514099,2.50584578514099,1.60899996757507,3.02440023422241,3.02440023422241,2.37627291679382,1.92108345031738,1.92108345031738,1.91211104393005,1.9418888092041,2.06924986839294,1.8309999704361,1.8309999704361,1.8309999704361,1.8309999704361,1.8309999704361,4.39283323287964,4.39283323287964,2.92199993133545,3.23220014572144,3.02988886833191,3.02988886833191,3.02988886833191,3.02988886833191,6.15366697311401,5.74436330795288,4.97527313232422,2.06211113929749,2.06211113929749,2.06211113929749,2.06211113929749,2.06211113929749,0.454285711050034,0.454285711050034,0.454285711050034,0.454285711050034,0.454285711050034,0.454285711050034,0.454285711050034,null,0.528374969959259,0.528374969959259,8.83118152618408,3.53455543518066,3.53455543518066,5.70860004425049,10.5201110839844,8.95540046691895,9.42040061950684,9.42040061950684,2.87799978256226,2.87799978256226,6.92579936981201,7.31409120559692,7.31409120559692,7.31409120559692,7.31409120559692,0.447125017642975,0.447125017642975,0.447125017642975,0.447125017642975,0.447125017642975,0.216000005602837,0.437749981880188,0.437749981880188,0.437749981880188,1.27549993991852,1.27549993991852,1.27549993991852,5.10050010681152,5.10050010681152,5.10050010681152,3.86955547332764,3.86955547332764,1.26799988746643,0.762400031089783,0.762400031089783,1.57788908481598,8.57044410705566,1.33899998664856,2.02940011024475,2.02940011024475,1.52600002288818,1.52600002288818,2.20471429824829,2.54388904571533,2.54388904571533,2.54388904571533,2.54388904571533,2.54388904571533,0.778714239597321,0.778714239597321,0.778714239597321,0.778714239597321,1.07211112976074,1.07211112976074,2.40171432495117,2.40171432495117,2.3733332157135,2.91045475006104,7.45912408828735,7.45912408828735,7.45912408828735,7.45912408828735,5.70050048828125,8.26550006866455,7.06650018692017,4.19200038909912,4.19200038909912,3.18949961662292,0.879333317279816,4.41139984130859,2.42314314842224,2.42314314842224,1.77040004730225,1.53740000724792,1.69155550003052,1.69155550003052,1.69155550003052,1.62080001831055,1.62080001831055,0.95880001783371,1.62340009212494,1.62340009212494,1.62340009212494,1.06477785110474,2.38299989700317,2.72872734069824,3.49700021743774,2.14499998092651,0.818000018596649,0.818000018596649,1.57439994812012,5.6262001991272,4.889000415802,1.58320021629333,1.58320021629333,1.58320021629333,1.58320021629333,1.58320021629333,null,3.04699993133545,0.212500005960464,0.212500005960464,0.212500005960464,0.212500005960464,2.40188884735107,2.5843334197998,2.64827275276184,1.45318186283112,0.740000009536743,0.749666690826416,2.41449975967407,1.60088884830475,1.60088884830475,1.56774997711182,1.56774997711182,1.56774997711182,2.680499792099,2.53655552864075,1.79600012302399,1.79600012302399]],"fixedtz":false,"tzone":"UTC"},"evals":["attrs.interactionModel"],"jsHooks":[]}</script>
+<p>Download data: <a href="https://raw.githubusercontent.com/marinebon/p2p/master/data/chl/chl_usa-smch.csv">chl_usa-smch.csv</a></p>
+</div>
+</div>
+
+<div class="footer text-center">
+  © 2018 <img width="40px" src="/home/travis/build/marinebon/p2p/images/logo_NASA.svg"/>
+</div>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
