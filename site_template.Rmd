@@ -1,8 +1,8 @@
 ---
 title: "Site: `r params$site_name`"
 params:
-  site_id: "usa-olds"
-  site_name:  "Old Stairs"
+  site_id: "usa-pva"
+  site_name:  "Pacific Valley"
 editor_options:
   chunk_output_type: console
 ---
