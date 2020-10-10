@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Site: Friday Harbor</title>
+
+<script src="site_libs/jquery-1.12.4/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/htmlwidgets-1.5.2/htmlwidgets.js"></script>
+<link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="site_libs/Proj4Leaflet-1.0.1/proj4-compressed.js"></script>
+<script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="site_libs/leaflet-binding-2.0.3/leaflet.js"></script>
+<script src="site_libs/clipboard-0.0.1/setClipboardText.js"></script>
+<link href="site_libs/dygraphs-1.1.1/dygraph.css" rel="stylesheet" />
+<script src="site_libs/dygraphs-1.1.1/dygraph-combined.js"></script>
+<script src="site_libs/dygraphs-1.1.1/shapes.js"></script>
+<script src="site_libs/moment-2.8.4/moment.js"></script>
+<script src="site_libs/moment-timezone-0.2.5/moment-timezone-with-data.js"></script>
+<script src="site_libs/moment-fquarter-1.0.0/moment-fquarter.min.js"></script>
+<script src="site_libs/dygraphs-binding-1.1.1.6/dygraphs.js"></script>
+<link href="site_libs/ionicons-2.0.1/css/ionicons.min.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+      </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">MBON Pole to Pole Americas</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+<li>
+  <a href="members.html">
+    <span class="ion ion-person-stalker"></span>
+     
+    Members
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="ion ion-stats-bars"></span>
+     
+    Data
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="data_rocky_shore.html">Rocky Shore</a>
+    </li>
+    <li>
+      <a href="data_sandy_beach.html">Sandy Beach</a>
+    </li>
+    <li>
+      <a href="data_in_situ.html">Environmental, In Situ</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="events.html">
+    <span class="ion ion-calendar"></span>
+     
+    Events
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="ion ion-clipboard"></span>
+     
+    Methods
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="methods_field_protocols.html">Field Protocols</a>
+    </li>
+    <li>
+      <a href="methods_data_science.html">Data Science</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://marinebon.github.io/help/">
+    <span class="ion ion-help"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="contact.html">
+    <span class="ion ion-email"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Site: Friday Harbor</h1>
+
+</div>
+
+
+<ul>
+<li>Country: <strong>USA</strong></li>
+<li>Organization: <strong><a href="https://marinegeo.si.edu/friday-harbor">SI - MarineGEO</a></strong></li>
+</ul>
+<div id="photos" class="section level2">
+<h2>Photos</h2>
+<pre><code>## No photos yet posted.</code></pre>
+</div>
+<div id="maps" class="section level2 tabset">
+<h2>Maps</h2>
+<div id="temperature" class="section level3">
+<h3>Temperature</h3>
+<p>Map of the most recent (2020-09-16) sea-surface temperature around the site. Data source: PFEG CoastWatch via ERDDAP.</p>
+<div id="htmlwidget-e36e25aa0792131be5d4" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e36e25aa0792131be5d4">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG4326","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//tile.gbif.org/4326/omt/{z}/{x}/{y}@1x.png?style=gbif-geyser",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false}]},{"method":"addWMSTiles","args":["https://coastwatch.pfeg.noaa.gov/erddap/wms/jplMURSST41mday/request?",null,null,{"styles":"","format":"image/png","transparent":true,"version":"1.3.0","opacity":0.7,"time":"2020-09-16T00:00:00Z","layers":"jplMURSST41mday:sst"}]},{"method":"addMarkers","args":[48.546024,-123.012987,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,"Friday Harbor",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addLegend","args":[{"colors":["#5E4FA2 , #5E4FA2 0%, #56A8B0 15.625%, #B3E0A3 31.25%, #F7FCB3 46.875%, #FED480 62.5%, #F67A48 78.125%, #C02C4A 93.75%, #9E0142 "],"labels":["0","5","10","15","20","25","30"],"na_color":null,"na_label":"NA","opacity":0.5,"position":"bottomright","type":"numeric","title":"SST (°C)<br>2020-09-16","extra":{"p_1":0,"p_n":0.9375},"layerId":null,"className":"info legend","group":null}]}],"limits":{"lat":[48.546024,48.546024],"lng":[-123.012987,-123.012987]},"fitBounds":[45.546024,-126.012987,51.546024,-120.012987,[]]},"evals":[],"jsHooks":{"render":[{"code":"function(el, x, data) {\n  return (\n      function(el, x, data) {\n      // get the leaflet map\n      var map = this; //HTMLWidgets.find('#' + el.id);\n      // we need a new div element because we have to handle\n      // the mouseover output separately\n      // debugger;\n      function addElement () {\n      // generate new div Element\n      var newDiv = $(document.createElement('div'));\n      // append at end of leaflet htmlwidget container\n      $(el).append(newDiv);\n      //provide ID and style\n      newDiv.addClass('lnlt');\n      newDiv.css({\n      'position': 'relative',\n      'bottomleft':  '0px',\n      'background-color': 'rgba(255, 255, 255, 0.7)',\n      'box-shadow': '0 0 2px #bbb',\n      'background-clip': 'padding-box',\n      'margin': '0',\n      'padding-left': '5px',\n      'color': '#333',\n      'font': '9px/1.5 \"Helvetica Neue\", Arial, Helvetica, sans-serif',\n      'z-index': '700',\n      });\n      return newDiv;\n      }\n\n\n      // check for already existing lnlt class to not duplicate\n      var lnlt = $(el).find('.lnlt');\n\n      if(!lnlt.length) {\n      lnlt = addElement();\n\n      // grab the special div we generated in the beginning\n      // and put the mousmove output there\n\n      map.on('mousemove', function (e) {\n      if (e.originalEvent.ctrlKey) {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                           ' lon: ' + (e.latlng.lng).toFixed(5) +\n                           ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                           ' | zoom: ' + map.getZoom() +\n                           ' | x: ' + L.CRS.EPSG3857.project(e.latlng).x.toFixed(0) +\n                           ' | y: ' + L.CRS.EPSG3857.project(e.latlng).y.toFixed(0) +\n                           ' | epsg: 3857 ' +\n                           ' | proj4: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs ');\n      } else {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                      ' lon: ' + (e.latlng.lng).toFixed(5) +\n                      ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                      ' | zoom: ' + map.getZoom() + ' ');\n      }\n      });\n\n      // remove the lnlt div when mouse leaves map\n      map.on('mouseout', function (e) {\n      var strip = document.querySelector('.lnlt');\n      if( strip !==null) strip.remove();\n      });\n\n      };\n\n      //$(el).keypress(67, function(e) {\n      map.on('preclick', function(e) {\n      if (e.originalEvent.ctrlKey) {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                      ' lon: ' + (e.latlng.lng).toFixed(5) +\n                      ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                      ' | zoom: ' + map.getZoom() + ' ');\n      var txt = document.querySelector('.lnlt').textContent;\n      console.log(txt);\n      //txt.innerText.focus();\n      //txt.select();\n      setClipboardText('\"' + txt + '\"');\n      }\n      });\n\n      }\n      ).call(this.getMap(), el, x, data);\n}","data":null}]}}</script>
+</div>
+<div id="chlorophyll" class="section level3">
+<h3>Chlorophyll</h3>
+<p>Map of the most recent (2020-10-10) Chlorophyll-a around the site. Data Source: PFEG CoastWatch via ERDDAP.</p>
+<div id="htmlwidget-ac980ac35c2d9f99924f" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-ac980ac35c2d9f99924f">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG4326","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//tile.gbif.org/4326/omt/{z}/{x}/{y}@1x.png?style=gbif-geyser",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false}]},{"method":"addWMSTiles","args":["https://cwcgom.aoml.noaa.gov/erddap/wms/VIIRS_OC_NRT_7D/request?",null,null,{"styles":"","format":"image/png","transparent":true,"version":"1.3.0","opacity":0.7,"time":"2020-10-10T00:00:00Z","layers":"VIIRS_OC_NRT_7D:chlor_a"}]},{"method":"addMarkers","args":[48.546024,-123.012987,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,"Friday Harbor",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addLegend","args":[{"colors":["#5E4FA2 , #5E4FA2 0%, #4596B7 12.5%, #8BCFA5 25%, #D8EF9B 37.5%, #FFFFBF 50%, #FED480 62.5%, #F98F52 75%, #DD4B4D 87.5%, #9E0142 100%, #9E0142 "],"labels":["0.0","0.5","1.0","1.5","2.0","2.5","3.0","3.5","4.0"],"na_color":null,"na_label":"NA","opacity":0.5,"position":"bottomright","type":"numeric","title":"CHL (mg m^-3)<br>2020-10-10","extra":{"p_1":0,"p_n":1},"layerId":null,"className":"info legend","group":null}]}],"limits":{"lat":[48.546024,48.546024],"lng":[-123.012987,-123.012987]},"fitBounds":[45.546024,-126.012987,51.546024,-120.012987,[]]},"evals":[],"jsHooks":{"render":[{"code":"function(el, x, data) {\n  return (\n      function(el, x, data) {\n      // get the leaflet map\n      var map = this; //HTMLWidgets.find('#' + el.id);\n      // we need a new div element because we have to handle\n      // the mouseover output separately\n      // debugger;\n      function addElement () {\n      // generate new div Element\n      var newDiv = $(document.createElement('div'));\n      // append at end of leaflet htmlwidget container\n      $(el).append(newDiv);\n      //provide ID and style\n      newDiv.addClass('lnlt');\n      newDiv.css({\n      'position': 'relative',\n      'bottomleft':  '0px',\n      'background-color': 'rgba(255, 255, 255, 0.7)',\n      'box-shadow': '0 0 2px #bbb',\n      'background-clip': 'padding-box',\n      'margin': '0',\n      'padding-left': '5px',\n      'color': '#333',\n      'font': '9px/1.5 \"Helvetica Neue\", Arial, Helvetica, sans-serif',\n      'z-index': '700',\n      });\n      return newDiv;\n      }\n\n\n      // check for already existing lnlt class to not duplicate\n      var lnlt = $(el).find('.lnlt');\n\n      if(!lnlt.length) {\n      lnlt = addElement();\n\n      // grab the special div we generated in the beginning\n      // and put the mousmove output there\n\n      map.on('mousemove', function (e) {\n      if (e.originalEvent.ctrlKey) {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                           ' lon: ' + (e.latlng.lng).toFixed(5) +\n                           ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                           ' | zoom: ' + map.getZoom() +\n                           ' | x: ' + L.CRS.EPSG3857.project(e.latlng).x.toFixed(0) +\n                           ' | y: ' + L.CRS.EPSG3857.project(e.latlng).y.toFixed(0) +\n                           ' | epsg: 3857 ' +\n                           ' | proj4: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs ');\n      } else {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                      ' lon: ' + (e.latlng.lng).toFixed(5) +\n                      ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                      ' | zoom: ' + map.getZoom() + ' ');\n      }\n      });\n\n      // remove the lnlt div when mouse leaves map\n      map.on('mouseout', function (e) {\n      var strip = document.querySelector('.lnlt');\n      if( strip !==null) strip.remove();\n      });\n\n      };\n\n      //$(el).keypress(67, function(e) {\n      map.on('preclick', function(e) {\n      if (e.originalEvent.ctrlKey) {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                      ' lon: ' + (e.latlng.lng).toFixed(5) +\n                      ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                      ' | zoom: ' + map.getZoom() + ' ');\n      var txt = document.querySelector('.lnlt').textContent;\n      console.log(txt);\n      //txt.innerText.focus();\n      //txt.select();\n      setClipboardText('\"' + txt + '\"');\n      }\n      });\n\n      }\n      ).call(this.getMap(), el, x, data);\n}","data":null}]}}</script>
+</div>
+<div id="seascape" class="section level3">
+<h3>Seascape</h3>
+<p>Map of the most recent (2020-08-15) seascapes around the site. Data Source: AOML CWCGOM via ERDDAP.</p>
+<div id="htmlwidget-8aee20465880c7ecc468" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-8aee20465880c7ecc468">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG4326","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//tile.gbif.org/4326/omt/{z}/{x}/{y}@1x.png?style=gbif-geyser",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false}]},{"method":"addWMSTiles","args":["https://cwcgom.aoml.noaa.gov/erddap/wms/noaa_aoml_4729_9ee6_ab54/request?",null,null,{"styles":"","format":"image/png","transparent":true,"version":"1.3.0","opacity":0.7,"time":"2020-08-15T00:00:00Z","layers":"noaa_aoml_4729_9ee6_ab54:CLASS"}]},{"method":"addMarkers","args":[48.546024,-123.012987,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,"Friday Harbor",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addLegend","args":[{"colors":["#5E4FA2 , #4596B7 12.5%, #9FD8A4 28.125%, #EFF9A7 43.75%, #FEE28E 59.375%, #F98F52 75%, #D13B4E 90.625%, #9E0142 "],"labels":["5","10","15","20","25","30"],"na_color":null,"na_label":"NA","opacity":0.5,"position":"bottomright","type":"numeric","title":"CLASS<br>2020-08-15","extra":{"p_1":0.125,"p_n":0.90625},"layerId":null,"className":"info legend","group":null}]}],"limits":{"lat":[48.546024,48.546024],"lng":[-123.012987,-123.012987]},"fitBounds":[45.546024,-126.012987,51.546024,-120.012987,[]]},"evals":[],"jsHooks":{"render":[{"code":"function(el, x, data) {\n  return (\n      function(el, x, data) {\n      // get the leaflet map\n      var map = this; //HTMLWidgets.find('#' + el.id);\n      // we need a new div element because we have to handle\n      // the mouseover output separately\n      // debugger;\n      function addElement () {\n      // generate new div Element\n      var newDiv = $(document.createElement('div'));\n      // append at end of leaflet htmlwidget container\n      $(el).append(newDiv);\n      //provide ID and style\n      newDiv.addClass('lnlt');\n      newDiv.css({\n      'position': 'relative',\n      'bottomleft':  '0px',\n      'background-color': 'rgba(255, 255, 255, 0.7)',\n      'box-shadow': '0 0 2px #bbb',\n      'background-clip': 'padding-box',\n      'margin': '0',\n      'padding-left': '5px',\n      'color': '#333',\n      'font': '9px/1.5 \"Helvetica Neue\", Arial, Helvetica, sans-serif',\n      'z-index': '700',\n      });\n      return newDiv;\n      }\n\n\n      // check for already existing lnlt class to not duplicate\n      var lnlt = $(el).find('.lnlt');\n\n      if(!lnlt.length) {\n      lnlt = addElement();\n\n      // grab the special div we generated in the beginning\n      // and put the mousmove output there\n\n      map.on('mousemove', function (e) {\n      if (e.originalEvent.ctrlKey) {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                           ' lon: ' + (e.latlng.lng).toFixed(5) +\n                           ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                           ' | zoom: ' + map.getZoom() +\n                           ' | x: ' + L.CRS.EPSG3857.project(e.latlng).x.toFixed(0) +\n                           ' | y: ' + L.CRS.EPSG3857.project(e.latlng).y.toFixed(0) +\n                           ' | epsg: 3857 ' +\n                           ' | proj4: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs ');\n      } else {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                      ' lon: ' + (e.latlng.lng).toFixed(5) +\n                      ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                      ' | zoom: ' + map.getZoom() + ' ');\n      }\n      });\n\n      // remove the lnlt div when mouse leaves map\n      map.on('mouseout', function (e) {\n      var strip = document.querySelector('.lnlt');\n      if( strip !==null) strip.remove();\n      });\n\n      };\n\n      //$(el).keypress(67, function(e) {\n      map.on('preclick', function(e) {\n      if (e.originalEvent.ctrlKey) {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                      ' lon: ' + (e.latlng.lng).toFixed(5) +\n                      ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                      ' | zoom: ' + map.getZoom() + ' ');\n      var txt = document.querySelector('.lnlt').textContent;\n      console.log(txt);\n      //txt.innerText.focus();\n      //txt.select();\n      setClipboardText('\"' + txt + '\"');\n      }\n      });\n\n      }\n      ).call(this.getMap(), el, x, data);\n}","data":null}]}}</script>
+<p>Read more about seascapes <a href="https://coastwatch.noaa.gov/cw/satellite-data-products/multi-parameter-models/seascape-pelagic-habitat-classification.html">here</a>.</p>
+</div>
+</div>
+<div id="timeseries" class="section level2 tabset">
+<h2>Timeseries</h2>
+<div id="temperature-1" class="section level3">
+<h3>Temperature</h3>
+<div id="htmlwidget-0886b8d8869ec10cc5b7" style="width:672px;height:480px;" class="dygraphs html-widget"></div>
+<script type="application/json" data-for="htmlwidget-0886b8d8869ec10cc5b7">{"x":{"attrs":{"title":"SST","labels":["month","sst"],"legend":"auto","retainDateWindow":false,"axes":{"x":{"pixelsPerLabel":60,"drawAxis":true},"y":{"drawAxis":true}},"stackedGraph":false,"fillGraph":true,"fillAlpha":0.4,"stepPlot":false,"drawPoints":false,"pointSize":1,"drawGapEdgePoints":false,"connectSeparatedPoints":false,"strokeWidth":1,"strokeBorderColor":"white","colors":["red"],"colorValue":0.5,"colorSaturation":1,"includeZero":false,"drawAxesAtZero":false,"logscale":false,"axisTickSize":3,"axisLineColor":"black","axisLineWidth":0.3,"axisLabelColor":"black","axisLabelFontSize":14,"axisLabelWidth":60,"drawGrid":true,"gridLineWidth":0.3,"rightGap":5,"digitsAfterDecimal":2,"labelsKMB":false,"labelsKMG2":false,"labelsUTC":false,"maxNumberWidth":6,"animatedZooms":false,"mobileDisableYTouch":true,"disableZoom":false,"showRangeSelector":true,"rangeSelectorHeight":40,"rangeSelectorPlotFillColor":" #A7B1C4","rangeSelectorPlotStrokeColor":"#808FAB","interactionModel":"Dygraph.Interaction.defaultModel"},"scale":"monthly","annotations":[],"shadings":[],"events":[],"format":"date","data":[["2002-06-16T00:00:00.000Z","2002-07-16T00:00:00.000Z","2002-08-16T00:00:00.000Z","2002-09-16T00:00:00.000Z","2002-10-16T00:00:00.000Z","2002-11-16T00:00:00.000Z","2002-12-16T00:00:00.000Z","2003-01-16T00:00:00.000Z","2003-02-16T00:00:00.000Z","2003-03-16T00:00:00.000Z","2003-04-16T00:00:00.000Z","2003-05-16T00:00:00.000Z","2003-06-16T00:00:00.000Z","2003-07-16T00:00:00.000Z","2003-08-16T00:00:00.000Z","2003-09-16T00:00:00.000Z","2003-10-16T00:00:00.000Z","2003-11-16T00:00:00.000Z","2003-12-16T00:00:00.000Z","2004-01-16T00:00:00.000Z","2004-02-16T00:00:00.000Z","2004-03-16T00:00:00.000Z","2004-04-16T00:00:00.000Z","2004-05-16T00:00:00.000Z","2004-06-16T00:00:00.000Z","2004-07-16T00:00:00.000Z","2004-08-16T00:00:00.000Z","2004-09-16T00:00:00.000Z","2004-10-16T00:00:00.000Z","2004-11-16T00:00:00.000Z","2004-12-16T00:00:00.000Z","2005-01-16T00:00:00.000Z","2005-02-16T00:00:00.000Z","2005-03-16T00:00:00.000Z","2005-04-16T00:00:00.000Z","2005-05-16T00:00:00.000Z","2005-06-16T00:00:00.000Z","2005-07-16T00:00:00.000Z","2005-08-16T00:00:00.000Z","2005-09-16T00:00:00.000Z","2005-10-16T00:00:00.000Z","2005-11-16T00:00:00.000Z","2005-12-16T00:00:00.000Z","2006-01-16T00:00:00.000Z","2006-02-16T00:00:00.000Z","2006-03-16T00:00:00.000Z","2006-04-16T00:00:00.000Z","2006-05-16T00:00:00.000Z","2006-06-16T00:00:00.000Z","2006-07-16T00:00:00.000Z","2006-08-16T00:00:00.000Z","2006-09-16T00:00:00.000Z","2006-10-16T00:00:00.000Z","2006-11-16T00:00:00.000Z","2006-12-16T00:00:00.000Z","2007-01-16T00:00:00.000Z","2007-02-16T00:00:00.000Z","2007-03-16T00:00:00.000Z","2007-04-16T00:00:00.000Z","2007-05-16T00:00:00.000Z","2007-06-16T00:00:00.000Z","2007-07-16T00:00:00.000Z","2007-08-16T00:00:00.000Z","2007-09-16T00:00:00.000Z","2007-10-16T00:00:00.000Z","2007-11-16T00:00:00.000Z","2007-12-16T00:00:00.000Z","2008-01-16T00:00:00.000Z","2008-02-16T00:00:00.000Z","2008-03-16T00:00:00.000Z","2008-04-16T00:00:00.000Z","2008-05-16T00:00:00.000Z","2008-06-16T00:00:00.000Z","2008-07-16T00:00:00.000Z","2008-08-16T00:00:00.000Z","2008-09-16T00:00:00.000Z","2008-10-16T00:00:00.000Z","2008-11-16T00:00:00.000Z","2008-12-16T00:00:00.000Z","2009-01-16T00:00:00.000Z","2009-02-16T00:00:00.000Z","2009-03-16T00:00:00.000Z","2009-04-16T00:00:00.000Z","2009-05-16T00:00:00.000Z","2009-06-16T00:00:00.000Z","2009-07-16T00:00:00.000Z","2009-08-16T00:00:00.000Z","2009-09-16T00:00:00.000Z","2009-10-16T00:00:00.000Z","2009-11-16T00:00:00.000Z","2009-12-16T00:00:00.000Z","2010-01-16T00:00:00.000Z","2010-02-16T00:00:00.000Z","2010-03-16T00:00:00.000Z","2010-04-16T00:00:00.000Z","2010-05-16T00:00:00.000Z","2010-06-16T00:00:00.000Z","2010-07-16T00:00:00.000Z","2010-08-16T00:00:00.000Z","2010-09-16T00:00:00.000Z","2010-10-16T00:00:00.000Z","2010-11-16T00:00:00.000Z","2010-12-16T00:00:00.000Z","2011-01-16T00:00:00.000Z","2011-02-16T00:00:00.000Z","2011-03-16T00:00:00.000Z","2011-04-16T00:00:00.000Z","2011-05-16T00:00:00.000Z","2011-06-16T00:00:00.000Z","2011-07-16T00:00:00.000Z","2011-08-16T00:00:00.000Z","2011-09-16T00:00:00.000Z","2011-10-16T00:00:00.000Z","2011-11-16T00:00:00.000Z","2011-12-16T00:00:00.000Z","2012-01-16T00:00:00.000Z","2012-02-16T00:00:00.000Z","2012-03-16T00:00:00.000Z","2012-04-16T00:00:00.000Z","2012-05-16T00:00:00.000Z","2012-06-16T00:00:00.000Z","2012-07-16T00:00:00.000Z","2012-08-16T00:00:00.000Z","2012-09-16T00:00:00.000Z","2012-10-16T00:00:00.000Z","2012-11-16T00:00:00.000Z","2012-12-16T00:00:00.000Z","2013-01-16T00:00:00.000Z","2013-02-16T00:00:00.000Z","2013-03-16T00:00:00.000Z","2013-04-16T00:00:00.000Z","2013-05-16T00:00:00.000Z","2013-06-16T00:00:00.000Z","2013-07-16T00:00:00.000Z","2013-08-16T00:00:00.000Z","2013-09-16T00:00:00.000Z","2013-10-16T00:00:00.000Z","2013-11-16T00:00:00.000Z","2013-12-16T00:00:00.000Z","2014-01-16T00:00:00.000Z","2014-02-16T00:00:00.000Z","2014-03-16T00:00:00.000Z","2014-04-16T00:00:00.000Z","2014-05-16T00:00:00.000Z","2014-06-16T00:00:00.000Z","2014-07-16T00:00:00.000Z","2014-08-16T00:00:00.000Z","2014-09-16T00:00:00.000Z","2014-10-16T00:00:00.000Z","2014-11-16T00:00:00.000Z","2014-12-16T00:00:00.000Z","2015-01-16T00:00:00.000Z","2015-02-16T00:00:00.000Z","2015-03-16T00:00:00.000Z","2015-04-16T00:00:00.000Z","2015-05-16T00:00:00.000Z","2015-06-16T00:00:00.000Z","2015-07-16T00:00:00.000Z","2015-08-16T00:00:00.000Z","2015-09-16T00:00:00.000Z","2015-10-16T00:00:00.000Z","2015-11-16T00:00:00.000Z","2015-12-16T00:00:00.000Z","2016-01-16T00:00:00.000Z","2016-02-16T00:00:00.000Z","2016-03-16T00:00:00.000Z","2016-04-16T00:00:00.000Z","2016-05-16T00:00:00.000Z","2016-06-16T00:00:00.000Z","2016-07-16T00:00:00.000Z","2016-08-16T00:00:00.000Z","2016-09-16T00:00:00.000Z","2016-10-16T00:00:00.000Z","2016-11-16T00:00:00.000Z","2016-12-16T00:00:00.000Z","2017-01-16T00:00:00.000Z","2017-02-16T00:00:00.000Z","2017-03-16T00:00:00.000Z","2017-04-16T00:00:00.000Z","2017-05-16T00:00:00.000Z","2017-06-16T00:00:00.000Z","2017-07-16T00:00:00.000Z","2017-08-16T00:00:00.000Z","2017-09-16T00:00:00.000Z","2017-10-16T00:00:00.000Z","2017-11-16T00:00:00.000Z","2017-12-16T00:00:00.000Z","2018-01-16T00:00:00.000Z","2018-02-16T00:00:00.000Z","2018-03-16T00:00:00.000Z","2018-04-16T00:00:00.000Z","2018-05-16T00:00:00.000Z","2018-06-16T00:00:00.000Z","2018-07-16T00:00:00.000Z","2018-08-16T00:00:00.000Z","2018-09-16T00:00:00.000Z","2018-10-16T00:00:00.000Z","2018-11-16T00:00:00.000Z","2018-12-16T00:00:00.000Z","2019-01-16T00:00:00.000Z","2019-02-16T00:00:00.000Z","2019-03-16T00:00:00.000Z","2019-04-16T00:00:00.000Z","2019-05-16T00:00:00.000Z","2019-06-16T00:00:00.000Z","2019-07-16T00:00:00.000Z","2019-08-16T00:00:00.000Z","2019-09-16T00:00:00.000Z","2019-10-16T00:00:00.000Z","2019-11-16T00:00:00.000Z","2019-12-16T00:00:00.000Z","2020-01-16T00:00:00.000Z","2020-02-16T00:00:00.000Z","2020-03-16T00:00:00.000Z","2020-04-16T00:00:00.000Z","2020-05-16T00:00:00.000Z","2020-06-16T00:00:00.000Z","2020-07-16T00:00:00.000Z","2020-08-16T00:00:00.000Z","2020-09-16T00:00:00.000Z"],[11.8000793457031,15.3115539550781,13.7423706054688,11.7925415039062,10.6393127441406,9.20565795898438,8.38394165039062,8.19036865234375,8.1622314453125,8.33340454101562,9.07440185546875,10.6069946289062,12.8399047851562,15.4051513671875,16.294189453125,13.744140625,11.4749145507812,8.92440795898438,8.3197021484375,7.58438110351562,7.59201049804688,8.1561279296875,9.75872802734375,11.3755798339844,14.5168151855469,12.7391357421875,12.9468078613281,11.7562255859375,10.5653076171875,9.14697265625,8.48355102539062,7.64068603515625,7.66790771484375,8.26849365234375,9.0833740234375,10.5755004882812,11.5565185546875,12.6011657714844,13.4158630371094,11.7574462890625,10.1812438964844,9.28533935546875,8.04879760742188,8.0396728515625,8.17123413085938,7.59024047851562,8.27859497070312,9.72210693359375,11.3138427734375,12.6884765625,12.9655456542969,12.1948852539062,10.4754638671875,9.22067260742188,8.26800537109375,7.69589233398438,7.44149780273438,7.54916381835938,8.28729248046875,9.54788208007812,10.7463073730469,13.4413757324219,12.8438720703125,11.573486328125,9.59848022460938,8.9530029296875,7.97518920898438,7.2044677734375,6.98416137695312,7.075927734375,7.799072265625,9.30670166015625,10.8782653808594,12.247802734375,12.0734558105469,11.9214477539062,9.88507080078125,9.16781616210938,7.8995361328125,7.327392578125,6.85748291015625,6.85507202148438,7.94717407226562,8.99960327148438,10.9944458007812,12.3854064941406,12.8769226074219,11.8487243652344,10.2455444335938,9.22628784179688,7.90557861328125,7.43801879882812,8.03973388671875,8.1915283203125,8.46963500976562,9.18551635742188,10.2043151855469,12.4429321289062,12.6740112304688,11.4835205078125,10.0712890625,8.99322509765625,7.76303100585938,7.4305419921875,7.16632080078125,6.93527221679688,7.67919921875,8.87905883789062,10.4369506835938,11.5055541992188,12.0596618652344,12.07666015625,9.88067626953125,8.51565551757812,7.93408203125,7.39669799804688,7.11065673828125,7.00091552734375,7.7821044921875,9.25112915039062,10.0140075683594,12.1029663085938,13.2659606933594,11.9888610839844,9.96731567382812,8.98297119140625,8.19735717773438,7.80023193359375,7.2410888671875,7.57269287109375,8.35845947265625,9.8548583984375,10.6161499023438,12.9566345214844,12.8133544921875,12.3003540039062,10.2910766601562,8.93844604492188,7.84640502929688,7.84799194335938,7.15377807617188,7.32025146484375,8.42501831054688,10.2249755859375,11.5986633300781,12.2581787109375,13.6010131835938,12.1204833984375,11.1219177246094,10.058837890625,8.77032470703125,8.52413940429688,8.65676879882812,8.76153564453125,9.25106811523438,10.6010131835938,12.3326416015625,13.4776306152344,13.5589904785156,11.9446105957031,11.0469055175781,9.885498046875,8.8927001953125,8.39447021484375,8.42654418945312,8.70327758789062,9.871337890625,11.0267028808594,12.0981750488281,13.760009765625,13.9935302734375,11.8141479492188,10.4384155273438,10.1125183105469,8.79647827148438,7.51031494140625,7.21572875976562,7.53659057617188,8.79913330078125,10.3473510742188,11.9139709472656,12.8542785644531,13.3353881835938,12.4653015136719,10.3380432128906,9.00830078125,8.57913208007812,7.9703369140625,7.75054931640625,7.54281616210938,8.66171264648438,10.3139343261719,11.62255859375,13.3856811523438,13.6193237304688,11.7821044921875,10.6231994628906,9.67947387695312,8.7454833984375,8.45648193359375,7.61395263671875,7.59500122070312,8.8826904296875,10.4435729980469,12.0263061523438,12.9440002441406,13.6552734375,12.1196594238281,10.4713745117188,9.46340942382812,8.11553955078125,7.98220825195312,7.72946166992188,7.59646606445312,8.47189331054688,9.83944702148438,10.8406677246094,12.3947143554688,13.3955383300781,12.4008178710938]],"fixedtz":false,"tzone":"UTC"},"evals":["attrs.interactionModel"],"jsHooks":[]}</script>
+<p>Download data: <a href="https://raw.githubusercontent.com/marinebon/p2p/master/data/sst/sst_usa-fridayharbor.csv">sst_usa-fridayharbor.csv</a></p>
+</div>
+<div id="chlorophyll-1" class="section level3">
+<h3>Chlorophyll</h3>
+<div id="htmlwidget-c399f8f6564939922696" style="width:672px;height:480px;" class="dygraphs html-widget"></div>
+<script type="application/json" data-for="htmlwidget-c399f8f6564939922696">{"x":{"attrs":{"title":"CHL","labels":["day","chlor_a"],"legend":"auto","retainDateWindow":false,"axes":{"x":{"pixelsPerLabel":60,"drawAxis":true},"y":{"drawAxis":true}},"stackedGraph":false,"fillGraph":true,"fillAlpha":0.4,"stepPlot":false,"drawPoints":false,"pointSize":1,"drawGapEdgePoints":false,"connectSeparatedPoints":false,"strokeWidth":1,"strokeBorderColor":"white","colors":["green"],"colorValue":0.5,"colorSaturation":1,"includeZero":false,"drawAxesAtZero":false,"logscale":false,"axisTickSize":3,"axisLineColor":"black","axisLineWidth":0.3,"axisLabelColor":"black","axisLabelFontSize":14,"axisLabelWidth":60,"drawGrid":true,"gridLineWidth":0.3,"rightGap":5,"digitsAfterDecimal":2,"labelsKMB":false,"labelsKMG2":false,"labelsUTC":false,"maxNumberWidth":6,"animatedZooms":false,"mobileDisableYTouch":true,"disableZoom":false,"showRangeSelector":true,"rangeSelectorHeight":40,"rangeSelectorPlotFillColor":" #A7B1C4","rangeSelectorPlotStrokeColor":"#808FAB","interactionModel":"Dygraph.Interaction.defaultModel"},"scale":"daily","annotations":[],"shadings":[],"events":[],"format":"date","data":[["2017-02-16T00:00:00.000Z","2017-02-17T00:00:00.000Z","2017-02-18T00:00:00.000Z","2017-02-19T00:00:00.000Z","2017-02-20T00:00:00.000Z","2017-02-21T00:00:00.000Z","2017-02-22T00:00:00.000Z","2017-02-23T00:00:00.000Z","2017-02-24T00:00:00.000Z","2017-02-25T00:00:00.000Z","2017-02-26T00:00:00.000Z","2017-02-27T00:00:00.000Z","2017-02-28T00:00:00.000Z","2017-03-01T00:00:00.000Z","2017-03-02T00:00:00.000Z","2017-03-03T00:00:00.000Z","2017-03-04T00:00:00.000Z","2017-03-05T00:00:00.000Z","2017-03-06T00:00:00.000Z","2017-03-07T00:00:00.000Z","2017-03-08T00:00:00.000Z","2017-03-09T00:00:00.000Z","2017-03-10T00:00:00.000Z","2017-03-11T00:00:00.000Z","2017-03-12T00:00:00.000Z","2017-03-13T00:00:00.000Z","2017-03-14T00:00:00.000Z","2017-03-15T00:00:00.000Z","2017-03-16T00:00:00.000Z","2017-03-17T00:00:00.000Z","2017-03-18T00:00:00.000Z","2017-03-19T00:00:00.000Z","2017-03-20T00:00:00.000Z","2017-03-21T00:00:00.000Z","2017-06-14T00:00:00.000Z","2017-06-15T00:00:00.000Z","2017-06-16T00:00:00.000Z","2017-06-17T00:00:00.000Z","2017-06-18T00:00:00.000Z","2017-06-19T00:00:00.000Z","2017-06-20T00:00:00.000Z","2017-06-21T00:00:00.000Z","2017-06-22T00:00:00.000Z","2017-06-23T00:00:00.000Z","2017-06-24T00:00:00.000Z","2017-06-25T00:00:00.000Z","2017-06-26T00:00:00.000Z","2017-06-27T00:00:00.000Z","2017-06-28T00:00:00.000Z","2017-06-29T00:00:00.000Z","2017-07-04T00:00:00.000Z","2017-07-05T00:00:00.000Z","2017-07-06T00:00:00.000Z","2017-07-07T00:00:00.000Z","2017-07-08T00:00:00.000Z","2017-07-09T00:00:00.000Z","2017-07-10T00:00:00.000Z","2017-07-11T00:00:00.000Z","2017-07-12T00:00:00.000Z","2017-07-13T00:00:00.000Z","2017-07-14T00:00:00.000Z","2017-07-15T00:00:00.000Z","2017-07-16T00:00:00.000Z","2017-07-17T00:00:00.000Z","2017-07-18T00:00:00.000Z","2017-07-19T00:00:00.000Z","2017-07-20T00:00:00.000Z","2017-07-21T00:00:00.000Z","2017-07-22T00:00:00.000Z","2017-07-23T00:00:00.000Z","2017-07-24T00:00:00.000Z","2017-07-25T00:00:00.000Z","2017-07-26T00:00:00.000Z","2017-07-27T00:00:00.000Z","2017-07-28T00:00:00.000Z","2017-07-29T00:00:00.000Z","2017-07-30T00:00:00.000Z","2017-07-31T00:00:00.000Z","2017-08-07T00:00:00.000Z","2017-08-08T00:00:00.000Z","2017-08-09T00:00:00.000Z","2017-08-10T00:00:00.000Z","2017-08-11T00:00:00.000Z","2017-08-12T00:00:00.000Z","2017-08-13T00:00:00.000Z","2017-08-14T00:00:00.000Z","2017-08-15T00:00:00.000Z","2017-08-16T00:00:00.000Z","2017-08-17T00:00:00.000Z","2017-08-18T00:00:00.000Z","2017-08-19T00:00:00.000Z","2017-08-20T00:00:00.000Z","2017-08-21T00:00:00.000Z","2017-08-22T00:00:00.000Z","2017-08-23T00:00:00.000Z","2017-08-24T00:00:00.000Z","2017-08-25T00:00:00.000Z","2017-08-26T00:00:00.000Z","2017-08-27T00:00:00.000Z","2017-08-28T00:00:00.000Z","2017-08-29T00:00:00.000Z","2017-08-30T00:00:00.000Z","2017-08-31T00:00:00.000Z","2017-09-01T00:00:00.000Z","2017-09-02T00:00:00.000Z","2017-09-03T00:00:00.000Z","2017-09-04T00:00:00.000Z","2017-09-05T00:00:00.000Z","2017-09-06T00:00:00.000Z","2017-09-07T00:00:00.000Z","2017-09-08T00:00:00.000Z","2017-09-11T00:00:00.000Z","2017-09-12T00:00:00.000Z","2017-09-13T00:00:00.000Z","2017-09-14T00:00:00.000Z","2017-09-15T00:00:00.000Z","2017-09-16T00:00:00.000Z","2017-09-17T00:00:00.000Z","2017-09-18T00:00:00.000Z","2017-09-19T00:00:00.000Z","2017-09-20T00:00:00.000Z","2017-09-21T00:00:00.000Z","2017-09-22T00:00:00.000Z","2017-09-23T00:00:00.000Z","2017-09-24T00:00:00.000Z","2017-09-25T00:00:00.000Z","2017-09-26T00:00:00.000Z","2017-09-27T00:00:00.000Z","2017-09-28T00:00:00.000Z","2017-09-29T00:00:00.000Z","2017-09-30T00:00:00.000Z","2017-10-01T00:00:00.000Z","2017-10-02T00:00:00.000Z","2017-10-03T00:00:00.000Z","2017-10-04T00:00:00.000Z","2017-10-05T00:00:00.000Z","2017-10-06T00:00:00.000Z","2017-10-07T00:00:00.000Z","2017-10-08T00:00:00.000Z","2017-10-09T00:00:00.000Z","2017-10-10T00:00:00.000Z","2017-10-11T00:00:00.000Z","2017-10-12T00:00:00.000Z","2017-10-13T00:00:00.000Z","2017-10-14T00:00:00.000Z","2017-10-15T00:00:00.000Z","2017-10-16T00:00:00.000Z","2017-10-17T00:00:00.000Z","2017-10-18T00:00:00.000Z","2017-10-19T00:00:00.000Z","2017-10-20T00:00:00.000Z","2017-10-21T00:00:00.000Z","2017-10-22T00:00:00.000Z","2017-10-23T00:00:00.000Z","2017-10-24T00:00:00.000Z","2017-11-02T00:00:00.000Z","2017-11-03T00:00:00.000Z","2017-11-04T00:00:00.000Z","2017-11-05T00:00:00.000Z","2017-11-06T00:00:00.000Z","2017-11-07T00:00:00.000Z","2017-11-08T00:00:00.000Z","2017-11-09T00:00:00.000Z","2017-11-10T00:00:00.000Z","2017-11-11T00:00:00.000Z","2017-11-12T00:00:00.000Z","2017-11-13T00:00:00.000Z","2017-11-14T00:00:00.000Z","2017-11-15T00:00:00.000Z","2017-11-16T00:00:00.000Z","2017-11-18T00:00:00.000Z","2017-11-19T00:00:00.000Z","2017-11-20T00:00:00.000Z","2017-11-21T00:00:00.000Z","2017-11-22T00:00:00.000Z","2017-11-23T00:00:00.000Z","2017-11-25T00:00:00.000Z","2017-11-26T00:00:00.000Z","2017-11-27T00:00:00.000Z","2017-12-03T00:00:00.000Z","2017-12-04T00:00:00.000Z","2017-12-05T00:00:00.000Z","2017-12-06T00:00:00.000Z","2017-12-07T00:00:00.000Z","2017-12-08T00:00:00.000Z","2017-12-09T00:00:00.000Z","2017-12-10T00:00:00.000Z","2017-12-11T00:00:00.000Z","2017-12-12T00:00:00.000Z","2017-12-13T00:00:00.000Z","2017-12-14T00:00:00.000Z","2017-12-28T00:00:00.000Z","2017-12-29T00:00:00.000Z","2017-12-30T00:00:00.000Z","2017-12-31T00:00:00.000Z","2018-01-01T00:00:00.000Z","2018-01-02T00:00:00.000Z","2018-01-03T00:00:00.000Z","2018-01-04T00:00:00.000Z","2018-01-05T00:00:00.000Z","2018-01-06T00:00:00.000Z","2018-01-07T00:00:00.000Z","2018-01-08T00:00:00.000Z","2018-01-09T00:00:00.000Z","2018-01-10T00:00:00.000Z","2018-01-11T00:00:00.000Z","2018-01-12T00:00:00.000Z","2018-01-13T00:00:00.000Z","2018-01-29T00:00:00.000Z","2018-01-30T00:00:00.000Z","2018-01-31T00:00:00.000Z","2018-02-01T00:00:00.000Z","2018-02-02T00:00:00.000Z","2018-02-03T00:00:00.000Z","2018-02-04T00:00:00.000Z","2018-02-05T00:00:00.000Z","2018-02-06T00:00:00.000Z","2018-02-07T00:00:00.000Z","2018-02-08T00:00:00.000Z","2018-02-09T00:00:00.000Z","2018-02-10T00:00:00.000Z","2018-02-11T00:00:00.000Z","2018-02-12T00:00:00.000Z","2018-02-13T00:00:00.000Z","2018-02-14T00:00:00.000Z","2018-02-15T00:00:00.000Z","2018-02-16T00:00:00.000Z","2018-02-17T00:00:00.000Z","2018-02-18T00:00:00.000Z","2018-02-19T00:00:00.000Z","2018-02-20T00:00:00.000Z","2018-03-14T00:00:00.000Z","2018-03-15T00:00:00.000Z","2018-03-16T00:00:00.000Z","2018-03-17T00:00:00.000Z","2018-03-18T00:00:00.000Z","2018-03-19T00:00:00.000Z","2018-03-20T00:00:00.000Z","2018-03-21T00:00:00.000Z","2018-03-22T00:00:00.000Z","2018-03-23T00:00:00.000Z","2018-03-24T00:00:00.000Z","2018-03-25T00:00:00.000Z","2018-03-26T00:00:00.000Z","2018-03-27T00:00:00.000Z","2018-03-28T00:00:00.000Z","2018-03-29T00:00:00.000Z","2018-03-30T00:00:00.000Z","2018-03-31T00:00:00.000Z","2018-04-01T00:00:00.000Z","2018-04-02T00:00:00.000Z","2018-04-03T00:00:00.000Z","2018-04-04T00:00:00.000Z","2018-04-05T00:00:00.000Z","2018-04-06T00:00:00.000Z","2018-04-07T00:00:00.000Z","2018-04-08T00:00:00.000Z","2018-04-09T00:00:00.000Z","2018-04-10T00:00:00.000Z","2018-04-11T00:00:00.000Z","2018-04-12T00:00:00.000Z","2018-04-13T00:00:00.000Z","2018-04-14T00:00:00.000Z","2018-04-15T00:00:00.000Z","2018-04-16T00:00:00.000Z","2018-04-17T00:00:00.000Z","2018-04-18T00:00:00.000Z","2018-04-19T00:00:00.000Z","2018-04-20T00:00:00.000Z","2018-04-21T00:00:00.000Z","2018-04-22T00:00:00.000Z","2018-04-23T00:00:00.000Z","2018-04-24T00:00:00.000Z","2018-04-25T00:00:00.000Z","2018-04-26T00:00:00.000Z","2018-04-27T00:00:00.000Z","2018-04-28T00:00:00.000Z","2018-04-29T00:00:00.000Z","2018-04-30T00:00:00.000Z","2018-05-01T00:00:00.000Z","2018-05-02T00:00:00.000Z","2018-05-03T00:00:00.000Z","2018-05-04T00:00:00.000Z","2018-05-05T00:00:00.000Z","2018-05-06T00:00:00.000Z","2018-05-07T00:00:00.000Z","2018-05-08T00:00:00.000Z","2018-05-10T00:00:00.000Z","2018-05-11T00:00:00.000Z","2018-05-12T00:00:00.000Z","2018-05-13T00:00:00.000Z","2018-05-14T00:00:00.000Z","2018-05-15T00:00:00.000Z","2018-05-16T00:00:00.000Z","2018-05-17T00:00:00.000Z","2018-05-18T00:00:00.000Z","2018-05-19T00:00:00.000Z","2018-05-20T00:00:00.000Z","2018-05-21T00:00:00.000Z","2018-05-22T00:00:00.000Z","2018-05-23T00:00:00.000Z","2018-05-24T00:00:00.000Z","2018-05-25T00:00:00.000Z","2018-05-26T00:00:00.000Z","2018-05-27T00:00:00.000Z","2018-05-28T00:00:00.000Z","2018-05-29T00:00:00.000Z","2018-05-30T00:00:00.000Z","2018-05-31T00:00:00.000Z","2018-06-01T00:00:00.000Z","2018-06-02T00:00:00.000Z","2018-06-03T00:00:00.000Z","2018-06-04T00:00:00.000Z","2018-06-05T00:00:00.000Z","2018-06-06T00:00:00.000Z","2018-06-07T00:00:00.000Z","2018-06-08T00:00:00.000Z","2018-06-09T00:00:00.000Z","2018-06-10T00:00:00.000Z","2018-06-11T00:00:00.000Z","2018-06-12T00:00:00.000Z","2018-06-13T00:00:00.000Z","2018-06-14T00:00:00.000Z","2018-06-15T00:00:00.000Z","2018-06-16T00:00:00.000Z","2018-06-18T00:00:00.000Z","2018-06-19T00:00:00.000Z","2018-06-20T00:00:00.000Z","2018-06-21T00:00:00.000Z","2018-06-22T00:00:00.000Z","2018-06-23T00:00:00.000Z","2018-06-24T00:00:00.000Z","2018-06-25T00:00:00.000Z","2018-06-26T00:00:00.000Z","2018-06-27T00:00:00.000Z","2018-06-28T00:00:00.000Z","2018-06-29T00:00:00.000Z","2018-06-30T00:00:00.000Z","2018-07-01T00:00:00.000Z","2018-07-02T00:00:00.000Z","2018-07-03T00:00:00.000Z","2018-07-04T00:00:00.000Z","2018-07-05T00:00:00.000Z","2018-07-06T00:00:00.000Z","2018-07-07T00:00:00.000Z","2018-07-08T00:00:00.000Z","2018-07-09T00:00:00.000Z","2018-07-10T00:00:00.000Z","2018-07-11T00:00:00.000Z","2018-07-12T00:00:00.000Z","2018-07-13T00:00:00.000Z","2018-07-14T00:00:00.000Z","2018-07-15T00:00:00.000Z","2018-07-16T00:00:00.000Z","2018-07-17T00:00:00.000Z","2018-07-18T00:00:00.000Z","2018-07-19T00:00:00.000Z","2018-07-20T00:00:00.000Z","2018-07-21T00:00:00.000Z","2018-07-22T00:00:00.000Z","2018-07-23T00:00:00.000Z","2018-07-24T00:00:00.000Z","2018-07-25T00:00:00.000Z","2018-07-26T00:00:00.000Z","2018-07-27T00:00:00.000Z","2018-07-28T00:00:00.000Z","2018-07-29T00:00:00.000Z","2018-07-30T00:00:00.000Z","2018-08-12T00:00:00.000Z","2018-08-13T00:00:00.000Z","2018-08-14T00:00:00.000Z","2018-08-15T00:00:00.000Z","2018-08-16T00:00:00.000Z","2018-08-17T00:00:00.000Z","2018-08-18T00:00:00.000Z","2018-08-19T00:00:00.000Z","2018-08-20T00:00:00.000Z","2018-08-21T00:00:00.000Z","2018-08-22T00:00:00.000Z","2018-08-23T00:00:00.000Z","2018-08-24T00:00:00.000Z","2018-08-25T00:00:00.000Z","2018-08-26T00:00:00.000Z","2018-08-27T00:00:00.000Z","2018-08-28T00:00:00.000Z","2018-08-29T00:00:00.000Z","2018-08-30T00:00:00.000Z","2018-08-31T00:00:00.000Z","2018-09-01T00:00:00.000Z","2018-09-02T00:00:00.000Z","2018-09-03T00:00:00.000Z","2018-09-04T00:00:00.000Z","2018-09-05T00:00:00.000Z","2018-09-06T00:00:00.000Z","2018-09-07T00:00:00.000Z","2018-09-08T00:00:00.000Z","2018-09-09T00:00:00.000Z","2018-09-10T00:00:00.000Z","2018-09-11T00:00:00.000Z","2018-09-12T00:00:00.000Z","2018-09-13T00:00:00.000Z","2018-09-14T00:00:00.000Z","2018-09-15T00:00:00.000Z","2018-09-16T00:00:00.000Z","2018-09-17T00:00:00.000Z","2018-09-18T00:00:00.000Z","2018-09-19T00:00:00.000Z","2018-09-20T00:00:00.000Z","2018-09-21T00:00:00.000Z","2018-09-22T00:00:00.000Z","2018-09-23T00:00:00.000Z","2018-09-24T00:00:00.000Z","2018-09-25T00:00:00.000Z","2018-09-26T00:00:00.000Z","2018-09-27T00:00:00.000Z","2018-09-28T00:00:00.000Z","2018-09-29T00:00:00.000Z","2018-09-30T00:00:00.000Z","2018-10-01T00:00:00.000Z","2018-10-02T00:00:00.000Z","2018-10-03T00:00:00.000Z","2018-10-04T00:00:00.000Z","2018-10-05T00:00:00.000Z","2018-10-09T00:00:00.000Z","2018-10-10T00:00:00.000Z","2018-10-11T00:00:00.000Z","2018-10-12T00:00:00.000Z","2018-10-13T00:00:00.000Z","2018-10-14T00:00:00.000Z","2018-10-15T00:00:00.000Z","2018-10-16T00:00:00.000Z","2018-10-17T00:00:00.000Z","2018-10-18T00:00:00.000Z","2018-10-19T00:00:00.000Z","2018-10-20T00:00:00.000Z","2018-10-21T00:00:00.000Z","2018-10-24T00:00:00.000Z","2018-10-25T00:00:00.000Z","2018-10-26T00:00:00.000Z","2018-10-27T00:00:00.000Z","2018-10-28T00:00:00.000Z","2018-10-29T00:00:00.000Z","2018-10-30T00:00:00.000Z","2018-10-31T00:00:00.000Z","2018-11-01T00:00:00.000Z","2018-11-02T00:00:00.000Z","2018-11-04T00:00:00.000Z","2018-11-06T00:00:00.000Z","2018-11-13T00:00:00.000Z","2018-11-18T00:00:00.000Z","2018-11-27T00:00:00.000Z","2018-12-01T00:00:00.000Z","2018-12-09T00:00:00.000Z","2018-12-10T00:00:00.000Z","2018-12-11T00:00:00.000Z","2018-12-12T00:00:00.000Z","2018-12-13T00:00:00.000Z","2018-12-14T00:00:00.000Z","2018-12-15T00:00:00.000Z","2018-12-16T00:00:00.000Z","2018-12-17T00:00:00.000Z","2018-12-18T00:00:00.000Z","2018-12-19T00:00:00.000Z","2018-12-20T00:00:00.000Z","2018-12-21T00:00:00.000Z","2018-12-22T00:00:00.000Z","2018-12-23T00:00:00.000Z","2018-12-24T00:00:00.000Z","2018-12-25T00:00:00.000Z","2018-12-26T00:00:00.000Z","2018-12-27T00:00:00.000Z","2018-12-28T00:00:00.000Z","2018-12-29T00:00:00.000Z","2018-12-30T00:00:00.000Z","2018-12-31T00:00:00.000Z","2019-01-01T00:00:00.000Z","2019-01-02T00:00:00.000Z","2019-01-03T00:00:00.000Z","2019-01-04T00:00:00.000Z","2019-01-05T00:00:00.000Z","2019-01-06T00:00:00.000Z","2019-01-07T00:00:00.000Z","2019-01-08T00:00:00.000Z","2019-01-09T00:00:00.000Z","2019-01-10T00:00:00.000Z","2019-01-11T00:00:00.000Z","2019-01-12T00:00:00.000Z","2019-01-13T00:00:00.000Z","2019-01-14T00:00:00.000Z","2019-01-15T00:00:00.000Z","2019-01-16T00:00:00.000Z","2019-01-17T00:00:00.000Z","2019-01-18T00:00:00.000Z","2019-01-19T00:00:00.000Z","2019-01-20T00:00:00.000Z","2019-01-21T00:00:00.000Z","2019-01-22T00:00:00.000Z","2019-01-23T00:00:00.000Z","2019-01-24T00:00:00.000Z","2019-01-25T00:00:00.000Z","2019-01-26T00:00:00.000Z","2019-01-27T00:00:00.000Z","2019-01-28T00:00:00.000Z","2019-01-29T00:00:00.000Z","2019-01-30T00:00:00.000Z","2019-01-31T00:00:00.000Z","2019-02-01T00:00:00.000Z","2019-02-03T00:00:00.000Z","2019-02-04T00:00:00.000Z","2019-02-05T00:00:00.000Z","2019-02-06T00:00:00.000Z","2019-02-07T00:00:00.000Z","2019-02-08T00:00:00.000Z","2019-02-09T00:00:00.000Z","2019-02-10T00:00:00.000Z","2019-02-11T00:00:00.000Z","2019-02-12T00:00:00.000Z","2019-02-13T00:00:00.000Z","2019-02-14T00:00:00.000Z","2019-02-15T00:00:00.000Z","2019-02-16T00:00:00.000Z","2019-06-01T00:00:00.000Z","2019-06-02T00:00:00.000Z","2019-06-03T00:00:00.000Z","2019-06-04T00:00:00.000Z","2019-06-05T00:00:00.000Z","2019-06-06T00:00:00.000Z","2019-06-07T00:00:00.000Z","2019-06-08T00:00:00.000Z","2019-06-09T00:00:00.000Z","2019-06-10T00:00:00.000Z","2019-06-11T00:00:00.000Z","2019-06-12T00:00:00.000Z","2019-06-13T00:00:00.000Z","2019-06-14T00:00:00.000Z","2019-06-15T00:00:00.000Z","2019-06-16T00:00:00.000Z","2019-06-17T00:00:00.000Z","2019-06-18T00:00:00.000Z","2019-06-19T00:00:00.000Z","2019-06-20T00:00:00.000Z","2019-06-21T00:00:00.000Z","2019-06-22T00:00:00.000Z","2019-06-23T00:00:00.000Z","2019-06-24T00:00:00.000Z","2019-06-25T00:00:00.000Z","2019-06-26T00:00:00.000Z","2019-06-27T00:00:00.000Z","2019-06-28T00:00:00.000Z","2019-06-29T00:00:00.000Z","2019-06-30T00:00:00.000Z","2019-07-01T00:00:00.000Z","2019-07-02T00:00:00.000Z","2019-07-04T00:00:00.000Z","2019-07-05T00:00:00.000Z","2019-07-06T00:00:00.000Z","2019-07-07T00:00:00.000Z","2019-07-08T00:00:00.000Z","2019-07-09T00:00:00.000Z","2019-07-10T00:00:00.000Z","2019-07-11T00:00:00.000Z","2019-07-12T00:00:00.000Z","2019-07-13T00:00:00.000Z","2019-07-14T00:00:00.000Z","2019-07-15T00:00:00.000Z","2019-07-16T00:00:00.000Z","2019-07-17T00:00:00.000Z","2019-07-18T00:00:00.000Z","2019-07-19T00:00:00.000Z","2019-07-20T00:00:00.000Z","2019-07-21T00:00:00.000Z","2019-07-22T00:00:00.000Z","2019-07-23T00:00:00.000Z","2019-07-24T00:00:00.000Z","2019-07-25T00:00:00.000Z","2019-07-26T00:00:00.000Z","2019-07-27T00:00:00.000Z","2019-07-28T00:00:00.000Z","2019-07-29T00:00:00.000Z","2019-07-30T00:00:00.000Z","2019-07-31T00:00:00.000Z","2019-08-01T00:00:00.000Z","2019-08-02T00:00:00.000Z","2019-08-03T00:00:00.000Z","2019-08-04T00:00:00.000Z","2019-08-05T00:00:00.000Z","2019-08-06T00:00:00.000Z","2019-08-07T00:00:00.000Z","2019-08-08T00:00:00.000Z","2019-08-09T00:00:00.000Z","2019-08-10T00:00:00.000Z","2019-08-11T00:00:00.000Z","2019-08-12T00:00:00.000Z","2019-08-13T00:00:00.000Z","2019-08-14T00:00:00.000Z","2019-08-15T00:00:00.000Z","2019-08-16T00:00:00.000Z","2019-08-17T00:00:00.000Z","2019-08-18T00:00:00.000Z","2019-08-19T00:00:00.000Z","2019-08-20T00:00:00.000Z","2019-08-21T00:00:00.000Z","2019-08-22T00:00:00.000Z","2019-08-23T00:00:00.000Z","2019-08-24T00:00:00.000Z","2019-08-25T00:00:00.000Z","2019-08-26T00:00:00.000Z","2019-08-27T00:00:00.000Z","2019-08-28T00:00:00.000Z","2019-08-29T00:00:00.000Z","2019-08-30T00:00:00.000Z","2019-08-31T00:00:00.000Z","2019-09-01T00:00:00.000Z","2019-09-02T00:00:00.000Z","2019-09-03T00:00:00.000Z","2019-09-04T00:00:00.000Z","2019-09-05T00:00:00.000Z","2019-09-06T00:00:00.000Z","2019-09-07T00:00:00.000Z","2019-09-09T00:00:00.000Z","2019-09-10T00:00:00.000Z","2019-09-11T00:00:00.000Z","2019-09-12T00:00:00.000Z","2019-09-13T00:00:00.000Z","2019-09-14T00:00:00.000Z","2019-09-15T00:00:00.000Z","2019-09-16T00:00:00.000Z","2019-09-17T00:00:00.000Z","2019-09-18T00:00:00.000Z","2019-09-19T00:00:00.000Z","2019-09-20T00:00:00.000Z","2019-09-21T00:00:00.000Z","2019-09-22T00:00:00.000Z","2019-09-23T00:00:00.000Z","2019-09-24T00:00:00.000Z","2019-09-25T00:00:00.000Z","2019-09-26T00:00:00.000Z","2019-09-27T00:00:00.000Z","2019-09-28T00:00:00.000Z","2019-09-29T00:00:00.000Z","2019-09-30T00:00:00.000Z","2019-10-01T00:00:00.000Z","2019-10-02T00:00:00.000Z","2019-10-03T00:00:00.000Z","2019-10-04T00:00:00.000Z","2019-10-05T00:00:00.000Z","2019-10-06T00:00:00.000Z","2019-10-07T00:00:00.000Z","2019-10-08T00:00:00.000Z","2019-10-09T00:00:00.000Z","2019-10-10T00:00:00.000Z","2019-10-11T00:00:00.000Z","2019-10-12T00:00:00.000Z","2019-10-13T00:00:00.000Z","2019-10-14T00:00:00.000Z","2019-10-15T00:00:00.000Z","2019-10-16T00:00:00.000Z","2019-10-17T00:00:00.000Z","2019-10-18T00:00:00.000Z","2019-10-19T00:00:00.000Z","2019-10-20T00:00:00.000Z","2019-10-21T00:00:00.000Z","2019-10-22T00:00:00.000Z","2019-10-23T00:00:00.000Z","2019-10-24T00:00:00.000Z","2019-10-25T00:00:00.000Z","2019-10-26T00:00:00.000Z","2019-10-27T00:00:00.000Z","2019-10-28T00:00:00.000Z","2019-10-29T00:00:00.000Z","2019-10-30T00:00:00.000Z","2019-10-31T00:00:00.000Z","2019-11-01T00:00:00.000Z","2019-11-02T00:00:00.000Z","2019-11-03T00:00:00.000Z","2019-11-04T00:00:00.000Z","2019-11-05T00:00:00.000Z","2019-11-06T00:00:00.000Z","2019-11-07T00:00:00.000Z","2019-11-08T00:00:00.000Z","2019-11-09T00:00:00.000Z","2019-11-10T00:00:00.000Z","2019-11-11T00:00:00.000Z","2019-11-12T00:00:00.000Z","2019-11-13T00:00:00.000Z","2019-11-14T00:00:00.000Z","2019-11-15T00:00:00.000Z","2019-11-16T00:00:00.000Z","2019-11-17T00:00:00.000Z","2019-11-18T00:00:00.000Z","2019-11-19T00:00:00.000Z","2019-11-20T00:00:00.000Z","2019-11-21T00:00:00.000Z","2019-11-22T00:00:00.000Z","2019-11-23T00:00:00.000Z","2019-11-24T00:00:00.000Z","2019-11-25T00:00:00.000Z","2019-11-26T00:00:00.000Z","2019-11-27T00:00:00.000Z","2019-11-28T00:00:00.000Z","2019-11-29T00:00:00.000Z","2019-11-30T00:00:00.000Z","2019-12-01T00:00:00.000Z","2019-12-02T00:00:00.000Z","2019-12-03T00:00:00.000Z","2019-12-04T00:00:00.000Z","2019-12-05T00:00:00.000Z","2019-12-06T00:00:00.000Z","2019-12-07T00:00:00.000Z","2019-12-08T00:00:00.000Z","2019-12-09T00:00:00.000Z","2019-12-10T00:00:00.000Z","2019-12-11T00:00:00.000Z","2019-12-12T00:00:00.000Z","2019-12-13T00:00:00.000Z","2019-12-14T00:00:00.000Z","2019-12-15T00:00:00.000Z","2019-12-16T00:00:00.000Z","2019-12-17T00:00:00.000Z","2019-12-18T00:00:00.000Z","2019-12-19T00:00:00.000Z","2019-12-20T00:00:00.000Z","2019-12-21T00:00:00.000Z","2019-12-22T00:00:00.000Z","2019-12-23T00:00:00.000Z","2019-12-24T00:00:00.000Z","2019-12-25T00:00:00.000Z","2019-12-26T00:00:00.000Z","2019-12-27T00:00:00.000Z","2019-12-28T00:00:00.000Z","2019-12-29T00:00:00.000Z","2019-12-30T00:00:00.000Z","2020-01-03T00:00:00.000Z","2020-01-04T00:00:00.000Z","2020-01-05T00:00:00.000Z","2020-01-06T00:00:00.000Z","2020-01-07T00:00:00.000Z","2020-01-08T00:00:00.000Z","2020-01-09T00:00:00.000Z","2020-01-10T00:00:00.000Z","2020-01-11T00:00:00.000Z","2020-01-12T00:00:00.000Z","2020-01-13T00:00:00.000Z","2020-01-14T00:00:00.000Z","2020-01-15T00:00:00.000Z","2020-01-23T00:00:00.000Z","2020-01-24T00:00:00.000Z","2020-01-25T00:00:00.000Z","2020-01-26T00:00:00.000Z","2020-01-27T00:00:00.000Z","2020-01-28T00:00:00.000Z","2020-01-29T00:00:00.000Z","2020-01-30T00:00:00.000Z","2020-01-31T00:00:00.000Z","2020-02-01T00:00:00.000Z","2020-02-02T00:00:00.000Z","2020-02-03T00:00:00.000Z","2020-02-04T00:00:00.000Z","2020-02-05T00:00:00.000Z","2020-02-06T00:00:00.000Z","2020-02-07T00:00:00.000Z","2020-02-08T00:00:00.000Z","2020-02-09T00:00:00.000Z","2020-02-10T00:00:00.000Z","2020-02-11T00:00:00.000Z","2020-02-12T00:00:00.000Z","2020-02-13T00:00:00.000Z","2020-02-14T00:00:00.000Z","2020-02-15T00:00:00.000Z","2020-02-16T00:00:00.000Z","2020-02-17T00:00:00.000Z","2020-02-18T00:00:00.000Z","2020-02-19T00:00:00.000Z","2020-02-20T00:00:00.000Z","2020-02-21T00:00:00.000Z","2020-02-22T00:00:00.000Z","2020-02-23T00:00:00.000Z","2020-02-24T00:00:00.000Z","2020-02-25T00:00:00.000Z","2020-02-26T00:00:00.000Z","2020-02-27T00:00:00.000Z","2020-02-28T00:00:00.000Z","2020-02-29T00:00:00.000Z","2020-03-01T00:00:00.000Z","2020-03-02T00:00:00.000Z","2020-03-03T00:00:00.000Z","2020-03-04T00:00:00.000Z","2020-03-05T00:00:00.000Z","2020-03-06T00:00:00.000Z","2020-03-07T00:00:00.000Z","2020-03-08T00:00:00.000Z","2020-03-09T00:00:00.000Z","2020-03-10T00:00:00.000Z","2020-03-11T00:00:00.000Z","2020-03-12T00:00:00.000Z","2020-03-13T00:00:00.000Z","2020-03-14T00:00:00.000Z","2020-03-15T00:00:00.000Z","2020-03-16T00:00:00.000Z","2020-03-17T00:00:00.000Z","2020-03-18T00:00:00.000Z","2020-03-19T00:00:00.000Z","2020-03-20T00:00:00.000Z","2020-03-21T00:00:00.000Z","2020-03-22T00:00:00.000Z","2020-03-23T00:00:00.000Z","2020-03-24T00:00:00.000Z","2020-03-25T00:00:00.000Z","2020-03-26T00:00:00.000Z","2020-03-27T00:00:00.000Z","2020-03-28T00:00:00.000Z","2020-03-29T00:00:00.000Z","2020-03-30T00:00:00.000Z","2020-03-31T00:00:00.000Z","2020-04-01T00:00:00.000Z","2020-04-02T00:00:00.000Z","2020-04-03T00:00:00.000Z","2020-04-04T00:00:00.000Z","2020-04-07T00:00:00.000Z","2020-04-08T00:00:00.000Z","2020-04-09T00:00:00.000Z","2020-04-10T00:00:00.000Z","2020-04-11T00:00:00.000Z","2020-04-12T00:00:00.000Z","2020-04-13T00:00:00.000Z","2020-04-14T00:00:00.000Z","2020-04-15T00:00:00.000Z","2020-04-16T00:00:00.000Z","2020-04-17T00:00:00.000Z","2020-04-18T00:00:00.000Z","2020-04-19T00:00:00.000Z","2020-04-20T00:00:00.000Z","2020-04-21T00:00:00.000Z","2020-04-22T00:00:00.000Z","2020-04-23T00:00:00.000Z","2020-04-24T00:00:00.000Z","2020-04-25T00:00:00.000Z","2020-04-26T00:00:00.000Z","2020-04-27T00:00:00.000Z","2020-04-28T00:00:00.000Z","2020-04-29T00:00:00.000Z","2020-04-30T00:00:00.000Z","2020-05-01T00:00:00.000Z","2020-05-02T00:00:00.000Z","2020-05-03T00:00:00.000Z","2020-05-04T00:00:00.000Z","2020-05-05T00:00:00.000Z","2020-05-06T00:00:00.000Z","2020-05-07T00:00:00.000Z","2020-05-08T00:00:00.000Z","2020-05-09T00:00:00.000Z","2020-05-10T00:00:00.000Z","2020-05-11T00:00:00.000Z","2020-05-12T00:00:00.000Z","2020-05-13T00:00:00.000Z","2020-05-14T00:00:00.000Z","2020-05-15T00:00:00.000Z","2020-05-16T00:00:00.000Z","2020-05-17T00:00:00.000Z","2020-05-18T00:00:00.000Z","2020-05-19T00:00:00.000Z","2020-05-20T00:00:00.000Z","2020-05-21T00:00:00.000Z","2020-05-22T00:00:00.000Z","2020-05-23T00:00:00.000Z","2020-05-24T00:00:00.000Z","2020-05-25T00:00:00.000Z","2020-05-26T00:00:00.000Z","2020-05-27T00:00:00.000Z","2020-05-28T00:00:00.000Z","2020-05-29T00:00:00.000Z","2020-05-30T00:00:00.000Z","2020-05-31T00:00:00.000Z","2020-06-01T00:00:00.000Z","2020-06-02T00:00:00.000Z","2020-06-03T00:00:00.000Z","2020-06-04T00:00:00.000Z","2020-06-05T00:00:00.000Z","2020-06-06T00:00:00.000Z","2020-06-07T00:00:00.000Z","2020-06-08T00:00:00.000Z","2020-06-09T00:00:00.000Z","2020-06-10T00:00:00.000Z","2020-06-11T00:00:00.000Z","2020-06-12T00:00:00.000Z","2020-06-13T00:00:00.000Z","2020-06-14T00:00:00.000Z","2020-06-15T00:00:00.000Z","2020-06-16T00:00:00.000Z","2020-06-17T00:00:00.000Z","2020-06-18T00:00:00.000Z","2020-06-19T00:00:00.000Z","2020-06-20T00:00:00.000Z","2020-06-21T00:00:00.000Z","2020-06-22T00:00:00.000Z","2020-06-23T00:00:00.000Z","2020-06-24T00:00:00.000Z","2020-06-25T00:00:00.000Z","2020-06-26T00:00:00.000Z","2020-06-27T00:00:00.000Z","2020-06-28T00:00:00.000Z","2020-06-29T00:00:00.000Z","2020-06-30T00:00:00.000Z","2020-07-01T00:00:00.000Z","2020-07-02T00:00:00.000Z","2020-07-03T00:00:00.000Z","2020-07-04T00:00:00.000Z","2020-07-05T00:00:00.000Z","2020-07-06T00:00:00.000Z","2020-07-07T00:00:00.000Z","2020-07-08T00:00:00.000Z","2020-07-09T00:00:00.000Z","2020-07-10T00:00:00.000Z","2020-07-11T00:00:00.000Z","2020-07-12T00:00:00.000Z","2020-07-13T00:00:00.000Z","2020-07-14T00:00:00.000Z","2020-07-15T00:00:00.000Z","2020-07-16T00:00:00.000Z","2020-07-17T00:00:00.000Z","2020-07-18T00:00:00.000Z","2020-07-19T00:00:00.000Z","2020-07-20T00:00:00.000Z","2020-07-21T00:00:00.000Z","2020-07-22T00:00:00.000Z","2020-07-23T00:00:00.000Z","2020-07-24T00:00:00.000Z","2020-07-25T00:00:00.000Z","2020-07-26T00:00:00.000Z","2020-07-27T00:00:00.000Z","2020-07-28T00:00:00.000Z","2020-07-29T00:00:00.000Z","2020-07-30T00:00:00.000Z","2020-07-31T00:00:00.000Z","2020-08-01T00:00:00.000Z","2020-08-02T00:00:00.000Z","2020-08-03T00:00:00.000Z","2020-08-04T00:00:00.000Z","2020-08-05T00:00:00.000Z","2020-08-06T00:00:00.000Z","2020-08-07T00:00:00.000Z","2020-08-08T00:00:00.000Z","2020-08-09T00:00:00.000Z","2020-08-10T00:00:00.000Z","2020-08-11T00:00:00.000Z","2020-08-12T00:00:00.000Z","2020-08-13T00:00:00.000Z","2020-08-14T00:00:00.000Z","2020-08-15T00:00:00.000Z","2020-08-16T00:00:00.000Z","2020-08-17T00:00:00.000Z","2020-08-18T00:00:00.000Z","2020-08-19T00:00:00.000Z","2020-08-20T00:00:00.000Z","2020-08-21T00:00:00.000Z","2020-08-22T00:00:00.000Z","2020-08-23T00:00:00.000Z","2020-08-24T00:00:00.000Z","2020-08-25T00:00:00.000Z","2020-08-26T00:00:00.000Z","2020-08-27T00:00:00.000Z","2020-08-28T00:00:00.000Z","2020-08-29T00:00:00.000Z","2020-08-30T00:00:00.000Z","2020-08-31T00:00:00.000Z","2020-09-01T00:00:00.000Z","2020-09-02T00:00:00.000Z","2020-09-03T00:00:00.000Z","2020-09-04T00:00:00.000Z","2020-09-05T00:00:00.000Z","2020-09-06T00:00:00.000Z","2020-09-07T00:00:00.000Z","2020-09-08T00:00:00.000Z","2020-09-09T00:00:00.000Z","2020-09-10T00:00:00.000Z","2020-09-11T00:00:00.000Z","2020-09-18T00:00:00.000Z","2020-09-19T00:00:00.000Z","2020-09-20T00:00:00.000Z","2020-09-21T00:00:00.000Z","2020-09-22T00:00:00.000Z","2020-09-23T00:00:00.000Z","2020-09-24T00:00:00.000Z","2020-09-25T00:00:00.000Z","2020-09-26T00:00:00.000Z","2020-09-27T00:00:00.000Z","2020-09-28T00:00:00.000Z","2020-09-29T00:00:00.000Z","2020-09-30T00:00:00.000Z","2020-10-01T00:00:00.000Z","2020-10-02T00:00:00.000Z","2020-10-03T00:00:00.000Z","2020-10-04T00:00:00.000Z","2020-10-05T00:00:00.000Z","2020-10-06T00:00:00.000Z","2020-10-07T00:00:00.000Z","2020-10-08T00:00:00.000Z","2020-10-09T00:00:00.000Z","2020-10-10T00:00:00.000Z"],[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,4.13560009002686,3.51324987411499,3.51324987411499,3.51324987411499,3.51324987411499,3.51324987411499,2.58799982070923,2.58799982070923,2.58799982070923,2.58799982070923,1.00700008869171,1.00700008869171,1.00700008869171,1.00700008869171,1.00700008869171,1.00700008869171,1.00700008869171,null,null,null,null,null,null,null,null,null,null,null,0.937000036239624,0.937000036239624,0.937000036239624,0.937000036239624,0.937000036239624,0.937000036239624,0.937000036239624,null,null,null,1.99399995803833,2.36549997329712,2.36549997329712,2.39849996566772,2.36299991607666,2.36299991607666,2.36299991607666,2.36299991607666,2.36299991607666,1.78859996795654,2.22420001029968,2.34549999237061,2.34549999237061,2.43624997138977,2.44633340835571,2.69024991989136,2.69024991989136,2.69024991989136,3.15549993515015,3.96820020675659,3.96820020675659,5.00150012969971,2.90866661071777,4.8585000038147,4.8585000038147,4.8585000038147,3.13150000572205,2.5016667842865,1.30099999904633,4.04699993133545,3.46974992752075,3.46974992752075,4.12400007247925,4.12400007247925,4.30824947357178,4.30824947357178,4.30824947357178,4.30824947357178,4.30824947357178,4.30824947357178,8.08533382415771,8.08533382415771,8.08533382415771,8.08533382415771,8.08533382415771,8.08533382415771,8.08533382415771,null,7.0917501449585,17.2180004119873,17.2180004119873,17.2180004119873,17.2180004119873,17.2180004119873,17.2180004119873,8.27649974822998,8.27649974822998,8.27649974822998,1.56533336639404,1.56533336639404,3.83466649055481,3.83466649055481,3.83466649055481,3.44149994850159,3.44149994850159,3.44149994850159,3.44149994850159,3.44149994850159,3.44149994850159,1.692999958992,9.34375,9.34375,8.79366683959961,4.52050018310547,0.85533332824707,0.85533332824707,0.85533332824707,4.43580007553101,4.43580007553101,4.42999982833862,7.33966684341431,5.19899988174438,4.84074974060059,3.04900002479553,2.79300022125244,4.32649993896484,4.32649993896484,4.66050004959106,4.66050004959106,13.0504999160767,13.0504999160767,13.0504999160767,13.0504999160767,13.0504999160767,13.0504999160767,13.0504999160767,null,null,null,null,null,null,1.39100003242493,1.87999999523163,1.87999999523163,1.87999999523163,1.87999999523163,1.87999999523163,1.87999999523163,1.87999999523163,null,null,null,null,0.583999991416931,0.583999991416931,2.66299986839294,2.18499994277954,5.27633333206177,3.60119962692261,3.90524983406067,3.90524983406067,3.38324999809265,2.56666660308838,2.56666660308838,2.56666660308838,2.56666660308838,2.56666660308838,2.56666660308838,2.56666660308838,null,null,null,null,1.90199995040894,2.08279991149902,2.22119975090027,2.22119975090027,2.22119975090027,2.22119975090027,2.22119975090027,1.47399997711182,1.69833326339722,2.83899998664856,3.9593334197998,3.9593334197998,3.9593334197998,3.9593334197998,3.9593334197998,3.9593334197998,3.9593334197998,2.91866660118103,2.91866660118103,2.91866660118103,1.50366675853729,2.93166661262512,1.57233333587646,3.1074001789093,3.21000027656555,2.38633322715759,3.17820024490356,4.38800001144409,4.38800001144409,2.55833339691162,2.08549976348877,2.08549976348877,2.08549976348877,2.08549976348877,2.08549976348877,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,4.20749998092651,4.01200008392334,4.01200008392334,4.01200008392334,4.01200008392334,4.01200008392334,4.01200008392334,4.01200008392334,null,2.40599989891052,2.40599989891052,2.40599989891052,2.40599989891052,2.40599989891052,2.40599989891052,4.37866687774658,4.37866687774658,4.37866687774658,4.37866687774658,4.37866687774658,4.37866687774658,3.51300001144409,3.51300001144409,3.51300001144409,3.51300001144409,3.51300001144409,3.51300001144409,3.51300001144409,null,2.20625019073486,2.20625019073486,2.20625019073486,2.20625019073486,null,null,4.60150003433228,4.60150003433228,4.60150003433228,4.60150003433228,4.60150003433228,3.92366671562195,3.92366671562195,3.92366671562195,3.92366671562195,3.92366671562195,3.92366671562195,6.35174989700317,7.09149980545044,7.09149980545044,7.09149980545044,4.51000022888184,4.51000022888184,10.4879999160767,7.82600021362305,7.82600021362305,7.82600021362305,2.44449996948242,2.44449996948242,4.76039981842041,4.76039981842041,4.76039981842041,4.89050006866455,8.65799999237061,7.50833320617676,7.50833320617676,7.50833320617676,7.50833320617676,7.50833320617676,7.50833320617676,3.2153332233429,3.2153332233429,3.2153332233429,3.2153332233429,3.55499982833862,3.55499982833862,3.73300004005432,3.73300004005432,3.47040033340454,3.47040033340454,3.47040033340454,3.30100011825562,5.52933311462402,5.67366647720337,3.90199995040894,3.90199995040894,3.90199995040894,3.57759976387024,3.76349997520447,0.81033331155777,5.7776665687561,6.85249996185303,6.85249996185303,6.85249996185303,6.85249996185303,3.51249980926514,2.90350008010864,2.19300007820129,3.29724979400635,3.47699999809265,3.16424989700317,2.95300006866455,2.95300006866455,2.95300006866455,2.95300006866455,3.17199993133545,3.17199993133545,3.32649993896484,3.32649993896484,3.32649993896484,3.32649993896484,3.57674980163574,3.5620002746582,3.5620002746582,3.5620002746582,2.20000004768372,2.20000004768372,2.17499995231628,2.75333333015442,4.24250030517578,3.01950025558472,3.01950025558472,2.82699990272522,2.82699990272522,0.973000049591064,0.973000049591064,1.49233329296112,1.98166656494141,2.2960000038147,2.2960000038147,2.2960000038147,2.2960000038147,2.2960000038147,2.2960000038147,null,null,null,null,null,0.930999994277954,0.930999994277954,1.56299996376038,1.56299996376038,1.16974997520447,1.16974997520447,1.16974997520447,1.16974997520447,1.16974997520447,1.16974997520447,2.62299990653992,2.62299990653992,2.62299990653992,2.62299990653992,2.42700004577637,1.52499997615814,1.52499997615814,0.889999985694885,0.889999985694885,2.03299999237061,2.03299999237061,2.03299999237061,2.03299999237061,2.57050013542175,2.25666666030884,2.25666666030884,1.5625,1.5625,1.5625,1.5625,1.5625,1.5625,1.5625,null,null,null,null,null,null,null,2.0019998550415,2.68249988555908,2.4137499332428,2.06699991226196,2.06699991226196,2.06699991226196,2.06699991226196,2.60459995269775,2.60459995269775,2.60459995269775,2.60459995269775,2.60459995269775,2.60459995269775,2.60459995269775,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,23.2040004730225,23.2040004730225,23.2040004730225,23.2040004730225,23.2040004730225,23.2040004730225,23.2040004730225,null,null,null,null,null,null,null,null,null,null,null,null,17.6781253814697,2.64625000953674,2.17499995231628,3.15266680717468,3.1029999256134,1.87259995937347,1.87259995937347,1.87259995937347,1.87259995937347,1.87259995937347,1.87259995937347,1.87259995937347,1.79399991035461,1.79399991035461,1.79399991035461,1.79399991035461,2.66499996185303,2.66499996185303,2.66499996185303,2.66499996185303,2.66499996185303,3.58660006523132,3.58660006523132,3.58660006523132,3.58660006523132,3.58660006523132,3.57080006599426,3.06580018997192,2.47899985313416,2.47899985313416,3.72866654396057,3.61233329772949,4.19150018692017,3.63666653633118,3.63666653633118,3.63666653633118,3.63666653633118,3.98099994659424,3.98099994659424,3.98099994659424,3.98099994659424,3.98099994659424,3.98099994659424,3.98099994659424,1.49249994754791,1.49249994754791,1.49249994754791,1.49249994754791,1.38999998569489,1.96800005435944,1.86199998855591,1.9941999912262,1.98233330249786,1.57850003242493,1.66050004959106,1.66050004959106,1.66050004959106,1.27980005741119,1.27980005741119,0.984750032424927,0.984750032424927,1.73066663742065,1.73066663742065,1.73066663742065,1.73066663742065,1.73066663742065,1.49879992008209,1.49879992008209,1.49879992008209,1.49879992008209,1.49879992008209,1.49879992008209,1.49879992008209,null,1.01600003242493,1.01600003242493,1.01600003242493,2.21900010108948,2.21900010108948,2.80800008773804,2.80800008773804,2.80800008773804,2.80800008773804,2.80800008773804,2.80800008773804,2.80800008773804,2.74333310127258,2.74333310127258,2.74333310127258,2.59400010108948,1.76800000667572,1.76800000667572,10.2709999084473,10.2709999084473,10.2709999084473,10.2709999084473,10.2709999084473,10.2709999084473,2.85599994659424,2.85599994659424,2.85599994659424,2.85599994659424,0.371666669845581,2.60999989509583,2.60999989509583,2.60999989509583,2.60999989509583,2.60999989509583,2.86733341217041,2.68899989128113,2.68899989128113,2.68899989128113,2.68899989128113,2.68899989128113,2.68899989128113,2.68899989128113,null,null,null,2.96799993515015,2.96799993515015,2.96799993515015,2.96799993515015,3.22749996185303,3.08899998664856,3.08899998664856,3.08899998664856,2.54150009155273,2.54150009155273,2.54150009155273,5.08300018310547,5.08300018310547,5.08300018310547,5.08300018310547,5.08300018310547,5.08300018310547,1.64133322238922,2.10900020599365,2.10900020599365,2.10900020599365,2.10900020599365,2.10900020599365,2.10900020599365,2.10900020599365,null,2.77799987792969,5.23799991607666,4.33900022506714,4.33900022506714,4.33900022506714,6.67080020904541,6.67080020904541,8.20400047302246,8.20400047302246,4.38425016403198,1.06620001792908,1.06620001792908,2.78299999237061,3.16966652870178,3.16966652870178,4.79059982299805,4.79059982299805,4.49200010299683,4.49200010299683,2.73400020599365,2.73400020599365,2.73400020599365,2.86925005912781,2.75800013542175,2.75800013542175,2.75800013542175,2.75800013542175,7.62099981307983,7.62099981307983,7.62099981307983,7.62099981307983,5.20050001144409,4.61649990081787,5.04516649246216,3.69620013237,3.11999988555908,3.11999988555908,3.11999988555908,3.11999988555908,3.11999988555908,2.03159999847412,2.03159999847412,2.46425008773804,3.22900009155273,3.22900009155273,3.22900009155273,2.6027500629425,1.83800005912781,2.55433344841003,2.55433344841003,2.20374989509583,2.20374989509583,2.41760015487671,2.41760015487671,2.41760015487671,2.97199988365173,2.97199988365173,2.97199988365173,2.97199988365173,2.97199988365173,2.97199988365173,null,null,null,null,null,null,null,null,null,null,2.48399996757507,2.04080009460449,2.04080009460449,2.04080009460449,2.04080009460449,2.04080009460449,2.04080009460449,2.04080009460449,2.53600001335144,7.05499982833862,7.05499982833862,7.05499982833862,7.05499982833862]],"fixedtz":false,"tzone":"UTC"},"evals":["attrs.interactionModel"],"jsHooks":[]}</script>
+<p>Download data: <a href="https://raw.githubusercontent.com/marinebon/p2p/master/data/chl/chl_usa-fridayharbor.csv">chl_usa-fridayharbor.csv</a></p>
+</div>
+</div>
+
+<div class="footer text-center">
+  © 2018 <img width="40px" src="/home/travis/build/marinebon/p2p/images/logo_NASA.svg"/>
+</div>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
