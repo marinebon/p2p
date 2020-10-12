@@ -38,6 +38,8 @@ or
 
 The website will get rebuilt weekly (see [travis-ci.org/marinebon/p2p/settings](https://travis-ci.org/marinebon/p2p/settings)). If you want the website to rebuild sooner, simply make a modification to a file in the github site, like to the [`README.md`](https://github.com/marinebon/p2p/edit/master/README.md), and commit the change to fire off a website rebuild with Travis: [travis-ci.org/marinebon/p2p](https://travis-ci.org/marinebon/p2p).
 
+Photos are now stored in Enrique's GDrive and should eventually be moved to a dedicated drive.
+
 ### Old info...
 
 So far as a test, we only have some pics from these two sites:
