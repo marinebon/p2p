@@ -13,7 +13,7 @@ Then build site (or check into Github and Travis will build it for you). A new m
 
 For notes about finding country given lat/lon (ie reverse geocoding), creating Google Maps URL (`gmapurl`; optional, not a necessary field), check out code in [`prep.R`](https://github.com/marinebon/p2p/blob/master/prep.R).
 
-- **WARNING**: If you change the coordinates of a site (ie lat/lon in `sites.csv`), please delete the associated site's file in `data/sst`, so the timeseries plot becomes representative of the data for that coordinate.
+- **WARNING**: If you change the coordinates of a site (ie lat/lon in `sites.csv`), please delete the associated site's file in `data/sst`, so the timeseries plot becomes representative of the data for that coordinate. Also, do not add more than 10 sites to the `sites.csv` at once to avoid Tracis CI to stop running due to time limit.
 
 ## Add Pictures to a Site
 
