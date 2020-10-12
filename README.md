@@ -26,7 +26,7 @@ To use a photo stored in Google Drive, right-click on the file > **Get sharable 
 or
 * shareble link: `https://drive.google.com/file/d/1luySMHkWAOi-inyhURmarcii_1fXfbmW/view?usp=sharing`
 
-And replace the beginning of the URL up to `id=` or `/d/` with the following: 
+And replace the beginning of the URL up to `id=` or `/d/` with (also delete `/view?usp=sharing`): 
 
 * `http://drive.google.com/uc?export=view&id=`
 
