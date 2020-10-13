@@ -40,7 +40,7 @@ The website will get rebuilt weekly (see [travis-ci.org/marinebon/p2p/settings](
 
 Photos are now stored in Enrique's GDrive and should eventually be moved to a dedicated drive.
 
-### Old info...
+### Old info:
 
 So far as a test, we only have some pics from these two sites:
 
