@@ -80,6 +80,6 @@ For Travis to work, add package to `Imports:` in `DESCRIPTION`. For packages not
 - Jekyll themes:
   - [Phlow/feeling-responsive](https://github.com/Phlow/feeling-responsive), [demo](http://phlow.github.io/feeling-responsive/)
   
-
+End
 
   
