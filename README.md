@@ -1,5 +1,5 @@
 # p2p
-Pole to Pole website
+***Marine Biodiversity Observation Network Pole to Pole of the Americas ([MBON Pole to Pole](https://marinebon.org/p2p/)) website***
 
 [![Build Status](https://travis-ci.org/marinebon/p2p.svg?branch=master)](https://travis-ci.org/marinebon/p2p)
 
