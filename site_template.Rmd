@@ -22,8 +22,8 @@ source("functions.R")
 
 if (!exists("params")) 
   params <- list(
-  site_name = "Costa das Algas - Enseada das Garcas",
-  site_id   = "bra-costadasalgas-enseadadasgarcas")
+  site_name = "Pacific Valley",
+  site_id   = "usa-pva")
 
 site <- read_csv(here("data/sites.csv"), col_types=cols()) %>%
   filter(id == params$site_id)
