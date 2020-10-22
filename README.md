@@ -7,7 +7,7 @@ This website was built as an [R Markdown website](https://bookdown.org/yihui/rma
 
 ## Add a Site
 
-Add entry to [`data/sites.csv`](https://github.com/marinebon/p2p/blob/master/data/sites.csv). Be sure to use a unique `id`. Please do not add more than 10 entries at a time.
+Add entry to [`data/sites.csv`](https://github.com/marinebon/p2p/blob/master/data/sites.csv). Be sure to use a unique `id`. Please do not add more than 10 entries at a time. You can add a URL to the `org` and site `name` following this format: `[org short ID](URL)`.
 
 Then build site (or check into Github and Travis will build it for you). A new marker will be populated into the home page map via `rmarkdown::render_site()` rendering [`index.Rmd`](https://github.com/marinebon/p2p/blob/master/index.Rmd) and a new site page will be generated via `source("make_sites.R")` (see [`make_sites.R`](https://github.com/marinebon/p2p/blob/master/index.Rmd))) rendering a [parameterized Rmarkdown](https://bookdown.org/yihui/rmarkdown/parameterized-reports.html) using [`site_template.Rmd`](https://github.com/marinebon/p2p/blob/master/site_template.Rmd).
 
