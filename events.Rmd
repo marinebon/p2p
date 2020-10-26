@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Past
 
-- Webinar: [The Multi-Agency Rocky Intertidal Network (MARINe) Program](https://marine.ucsc.edu/) - October 26, 2020, 4:00-5:10 pm EDT. The recording of the webinar is available [here](https://drive.google.com/file/d/1ySW5141S90UHjwxiH3XmS3vnuBzoaa1Y/view?usp=sharing).
+- Webinar: [The Multi-Agency Rocky Intertidal Network (MARINe) Program](https://marine.ucsc.edu/) - October 26, 2020, 4:00-5:10 pm EDT. The recording of the webinar is available [here](https://usf.box.com/s/9oc14djcak07sjh9hw4ekq7fxcp1b2og).
 
 - [GEO BON Open Science Conference and All-Hands Meeting 2020](https://conf2020.geobon.org/) - July 6-10, 2020 (virtual). MBON Pole to Pole presentations are available for papers on [Sampling Effort Efficieny](https://drive.google.com/file/d/1b6CRFN7Mn5D9MS8OzB6fF0BPhhfM-a66/view?usp=sharing) and [Implemention of Best Practices](https://drive.google.com/file/d/1b6-DzslEnkgTqB4HwXve1lZEKLBSGGaj/view?usp=sharing).
 
