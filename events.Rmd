@@ -12,6 +12,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Past
 
+- Panel discussion: [MarineGEO Leaders in Networked Science panel](https://twitter.com/mbonpoletopole/status/1336203878069571586) - December 17, 2020 (virtual). The recording of the webinar and panel is available [here](https://smithsonian.zoom.us/rec/play/LIKD8VJ-Djax3mHkHAEMaemExsjNLwvnoeTIaT-3ie_A7_Aai7kWbLLLXPbjSmzwLN4__GUmHnjyamNw.uZYRZQojZsDcUg7Y?startTime=1608235286000&_x_zm_rtaid=4JAWT5QLQWuiqgD4iC15-Q.1608656141942.9e489a094b50da6a9f35e1e4f43dd78b&_x_zm_rhtaid=750).
+
 - Webinar: [The Multi-Agency Rocky Intertidal Network (MARINe) Program](https://marine.ucsc.edu/) - October 26, 2020, 4:00-5:10 pm EDT. The recording of the webinar is available [here](https://usf.box.com/s/9oc14djcak07sjh9hw4ekq7fxcp1b2og).
 
 - [GEO BON Open Science Conference and All-Hands Meeting 2020](https://conf2020.geobon.org/) - July 6-10, 2020 (virtual). MBON Pole to Pole presentations are available for papers on [Sampling Effort Efficieny](https://drive.google.com/file/d/1b6CRFN7Mn5D9MS8OzB6fF0BPhhfM-a66/view?usp=sharing) and [Implemention of Best Practices](https://drive.google.com/file/d/1b6-DzslEnkgTqB4HwXve1lZEKLBSGGaj/view?usp=sharing).
