@@ -219,7 +219,7 @@ Sys.setenv(RERDDAP_DEFAULT_URL="https://upwell.pfeg.noaa.gov/erddap/")
 
 Download data: [`r basename(csv)`](https://raw.githubusercontent.com/marinebon/p2p/master/data/chl/`r basename(csv)`)
 
-## OBIS records in [LME](https://www.lmehub.net/#antarctica) or [MWHS](https://whc.unesco.org/en/marine-programme/) {.tabset}
+## [OBIS](https://obis.org/) records in [LME](https://www.lmehub.net/#antarctica) or [MWHS](https://whc.unesco.org/en/marine-programme/) {.tabset}
 
 ### Number of records (0-500 m)
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}

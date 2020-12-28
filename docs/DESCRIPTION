@@ -5,5 +5,5 @@ Imports: rmarkdown, tidyverse, stringr, dygraphs,
   xts, lubridate, geojsonio, RColorBrewer, leaflet, crosstalk, servr,
   roxygen2, futile.logger, pander, rnaturalearth, here,
   knitr, bsplus, here, glue, raster, markdown, rerddap, ncdf4, mapview,
-  reticulate
+  reticulate, robis
 Remotes: ropensci/rerddap, rstudio/reticulate
