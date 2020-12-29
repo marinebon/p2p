@@ -20,8 +20,8 @@ navbar:
           href: data_sandy_beach.html
 #        - text: "Environmental, Remotely Sensed"
 #          href: data_rs.html
-        - text: "Environmental, In Situ"
-          href: data_in_situ.html
+#        - text: "Environmental, In Situ"
+#          href: data_in_situ.html
     - text: "Events"
       icon: ion-calendar
       href: events.html
@@ -32,15 +32,19 @@ navbar:
           href: methods_field_protocols.html
         - text: "Data Science"
           href: methods_data_science.html
+    - text: "Join us!"
+      icon: ion-email
+      href: contact.html
+      
   right:
 #    - icon: fa-newspaper-o
 #      href: news.html
 #    - icon: fa-info
 #      href: about.html
-    - icon: ion-help
-      href: https://marinebon.github.io/help/
-    - icon: ion-email
-      href: contact.html
+#    - icon: ion-help
+#      href: https://marinebon.github.io/help/
+#    - icon: ion-email
+#      href: contact.html
 output_dir: "docs"
 output:
   html_document:
