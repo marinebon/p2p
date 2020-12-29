@@ -1,8 +1,8 @@
 ---
 title: "Site: `r params$site_name`"
 params:
-  site_id: "usa-naso"
-  site_name:  "Navy South"
+  site_id: "usa-alc"
+  site_name:  "Alcatraz"
 editor_options:
   chunk_output_type: console
 ---
@@ -23,8 +23,8 @@ source("functions.R")
 
 if (!exists("params")) 
   params <- list(
-  site_name = "Navy South",
-  site_id   = "usa-naso")
+  site_name = "Alcatraz",
+  site_id   = "usa-alc")
 
 site <- read_csv(here("data/sites.csv"), col_types=cols()) %>%
   filter(id == params$site_id)
