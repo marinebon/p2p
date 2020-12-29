@@ -260,12 +260,14 @@ ts_plot <- ggplot() +
   geom_histogram(data = total, aes(x = year, fill = phylum), binwidth = 2) + 
   scale_fill_brewer(palette = "Spectral") + 
   xlim(c(1960, 2017)) + 
-  labs(title = title) + 
+#  labs(title = title) + 
   theme(axis.text=element_text(size=12),
         axis.title=element_text(size=14,face="bold")) +
   theme(axis.text.x = element_text(size=14, angle=0), 
         axis.text.y = element_text(size=14, angle=0))
 ts_plot
+
+print(title)
 ```
 
 
