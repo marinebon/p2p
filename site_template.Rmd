@@ -259,7 +259,7 @@ title <- glue("Data source: https://obis.org/area/{site$area_code}")
 ts_plot <- ggplot() +
   geom_histogram(data = total, aes(x = year, fill = phylum), binwidth = 2) +
   scale_fill_brewer(palette = "Spectral") +
-  xlim(c(1960, 2017)) +
+#  xlim(c(1960, 2017)) +
 #  labs(title = title) +
   theme(axis.text=element_text(size=12),
         axis.title=element_text(size=14,face="bold")) +
