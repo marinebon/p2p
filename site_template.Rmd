@@ -224,57 +224,40 @@ Download data: [`r basename(csv)`](https://raw.githubusercontent.com/marinebon/p
 ### Number of records (0-500 m)
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 
-# ## read data from OBIS
-# ## Molluscs
-# mollusc = occurrence(areaid = site$area_code, taxonid = 51, enddepth = 500) 
-# ## Ehinoderms
-# echino = occurrence(areaid = site$area_code, taxonid = 1806, enddepth = 500)
-# ## Annelida
-# anne = occurrence(areaid = site$area_code, taxonid = 882, enddepth = 500)
-# ## Platae
-# plant = occurrence(areaid = site$area_code, taxonid = 3, enddepth = 500)
-# 
-# ## Merge the data frames
-# #subset data (year and phylum)
-# sub_mollusc <- data.frame(mollusc$date_year, mollusc$phylum) 
-# names(sub_mollusc)[names(sub_mollusc) == "mollusc.date_year"] <- "year"
-# names(sub_mollusc)[names(sub_mollusc) == "mollusc.phylum"] <- "phylum"
-# 
-# sub_echino <- data.frame(echino$date_year, echino$phylum)
-# names(sub_echino)[names(sub_echino) == "echino.date_year"] <- "year"
-# names(sub_echino)[names(sub_echino) == "echino.phylum"] <- "phylum"
-# 
-# sub_anne <- data.frame(anne$date_year, anne$phylum)
-# names(sub_anne)[names(sub_anne) == "anne.date_year"] <- "year"
-# names(sub_anne)[names(sub_anne) == "anne.phylum"] <- "phylum"
-# 
-# sub_plant <- data.frame(plant$date_year, plant$phylum)
-# names(sub_plant)[names(sub_plant) == "plant.date_year"] <- "year"
-# names(sub_plant)[names(sub_plant) == "plant.phylum"] <- "phylum"
-# 
-# total <- bind_rows(sub_mollusc, sub_echino, sub_anne, sub_plant)
-# 
-# ## Plot the data
-# title <- glue("Data source: https://obis.org/area/{site$area_code}")
-# ts_plot <- ggplot() +
-#   geom_histogram(data = total, aes(x = year, fill = phylum), binwidth = 2) + 
-#   scale_fill_brewer(palette = "Spectral") + 
-#   xlim(c(1960, 2017)) + 
-# #  labs(title = title) + 
-#   theme(axis.text=element_text(size=12),
-#         axis.title=element_text(size=14,face="bold")) +
-#   theme(axis.text.x = element_text(size=14, angle=0), 
-#         axis.text.y = element_text(size=14, angle=0))
-# ts_plot
+## read data from OBIS
+## Molluscs
+mollusc = occurrence(areaid = site$area_code, taxonid = 51, enddepth = 500)
+## Ehinoderms
+echino = occurrence(areaid = site$area_code, taxonid = 1806, enddepth = 500)
+## Annelida
+anne = occurrence(areaid = site$area_code, taxonid = 882, enddepth = 500)
+## Platae
+plant = occurrence(areaid = site$area_code, taxonid = 3, enddepth = 500)
+
+## Merge the data frames
+#subset data (year and phylum)
+sub_mollusc <- data.frame(mollusc$date_year, mollusc$phylum)
+names(sub_mollusc)[names(sub_mollusc) == "mollusc.date_year"] <- "year"
+names(sub_mollusc)[names(sub_mollusc) == "mollusc.phylum"] <- "phylum"
+
+sub_echino <- data.frame(echino$date_year, echino$phylum)
+names(sub_echino)[names(sub_echino) == "echino.date_year"] <- "year"
+names(sub_echino)[names(sub_echino) == "echino.phylum"] <- "phylum"
+
+sub_anne <- data.frame(anne$date_year, anne$phylum)
+names(sub_anne)[names(sub_anne) == "anne.date_year"] <- "year"
+names(sub_anne)[names(sub_anne) == "anne.phylum"] <- "phylum"
+
+sub_plant <- data.frame(plant$date_year, plant$phylum)
+names(sub_plant)[names(sub_plant) == "plant.date_year"] <- "year"
+names(sub_plant)[names(sub_plant) == "plant.phylum"] <- "phylum"
+
+total <- bind_rows(sub_mollusc, sub_echino, sub_anne, sub_plant)
 
 ## Plot the data
-setwd("~/p2p/data/obis")
-filename <- glue("obis_{area_code}.csv")
-data_tbl <- read.csv(filename)
-data_tbl <- data_tbl[, 2:3]
 title <- glue("Data source: https://obis.org/area/{site$area_code}")
 ts_plot <- ggplot() +
-  geom_histogram(data = data_tbl, aes(x = year, fill = phylum), binwidth = 2) +
+  geom_histogram(data = total, aes(x = year, fill = phylum), binwidth = 2) +
   scale_fill_brewer(palette = "Spectral") +
   xlim(c(1960, 2017)) +
 #  labs(title = title) +
@@ -283,6 +266,23 @@ ts_plot <- ggplot() +
   theme(axis.text.x = element_text(size=14, angle=0),
         axis.text.y = element_text(size=14, angle=0))
 ts_plot
+
+# ## Plot the data
+# setwd("~/p2p/data/obis")
+# filename <- glue("obis_{area_code}.csv")
+# data_tbl <- read.csv(filename)
+# data_tbl <- data_tbl[, 2:3]
+# title <- glue("Data source: https://obis.org/area/{site$area_code}")
+# ts_plot <- ggplot() +
+#   geom_histogram(data = data_tbl, aes(x = year, fill = phylum), binwidth = 2) +
+#   scale_fill_brewer(palette = "Spectral") +
+#   xlim(c(1960, 2017)) +
+# #  labs(title = title) +
+#   theme(axis.text=element_text(size=12),
+#         axis.title=element_text(size=14,face="bold")) +
+#   theme(axis.text.x = element_text(size=14, angle=0),
+#         axis.text.y = element_text(size=14, angle=0))
+# ts_plot
 
 print(title)
 ```
