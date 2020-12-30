@@ -267,24 +267,24 @@ Download data: [`r basename(csv)`](https://raw.githubusercontent.com/marinebon/p
 #         axis.text.y = element_text(size=14, angle=0))
 # ts_plot
 
-## Plot the data
-setwd("~/p2p/data/obis")
-filename <- glue("obis_{area_code}.csv")
-data_tbl <- read.csv(filename)
-data_tbl <- data_tbl[, 2:3]
-title <- glue("Data source: https://obis.org/area/{site$area_code}")
-ts_plot <- ggplot() +
-  geom_histogram(data = data_tbl, aes(x = year, fill = phylum), binwidth = 2) +
-  scale_fill_brewer(palette = "Spectral") +
-  xlim(c(1960, 2017)) +
-#  labs(title = title) +
-  theme(axis.text=element_text(size=12),
-        axis.title=element_text(size=14,face="bold")) +
-  theme(axis.text.x = element_text(size=14, angle=0),
-        axis.text.y = element_text(size=14, angle=0))
-ts_plot
-
-print(title)
+# ## Plot the data
+# setwd("~/p2p/data/obis")
+# filename <- glue("obis_{area_code}.csv")
+# data_tbl <- read.csv(filename)
+# data_tbl <- data_tbl[, 2:3]
+# title <- glue("Data source: https://obis.org/area/{site$area_code}")
+# ts_plot <- ggplot() +
+#   geom_histogram(data = data_tbl, aes(x = year, fill = phylum), binwidth = 2) +
+#   scale_fill_brewer(palette = "Spectral") +
+#   xlim(c(1960, 2017)) +
+# #  labs(title = title) +
+#   theme(axis.text=element_text(size=12),
+#         axis.title=element_text(size=14,face="bold")) +
+#   theme(axis.text.x = element_text(size=14, angle=0),
+#         axis.text.y = element_text(size=14, angle=0))
+# ts_plot
+# 
+# print(title)
 ```
 
 
