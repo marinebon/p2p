@@ -1,8 +1,8 @@
 ---
 title: "Site: `r params$site_name`"
 params:
-  site_id: "bra-fernandodenoronha-boldro"
-  site_name:  "Fernando de Noronha - Boldro "
+  site_id: "usa-chukchi-sea"
+  site_name:  "Chukchi Sea"
 editor_options:
   chunk_output_type: console
 ---
@@ -23,8 +23,8 @@ source("functions.R")
 
 if (!exists("params")) 
   params <- list(
-  site_name = "Fernando de Noronha - Boldro",
-  site_id   = "bra-fernandodenoronha-boldro")
+  site_name = "usa-chukchi-sea",
+  site_id   = "Chukchi Sea")
 
 site <- read_csv(here("data/sites.csv"), col_types=cols()) %>%
   filter(id == params$site_id)
@@ -219,9 +219,9 @@ Sys.setenv(RERDDAP_DEFAULT_URL="https://upwell.pfeg.noaa.gov/erddap/")
 
 Download data: [`r basename(csv)`](https://raw.githubusercontent.com/marinebon/p2p/master/data/chl/`r basename(csv)`)
 
-## [OBIS](https://obis.org/) records in [LME](https://www.lmehub.net/#antarctica) or [MWHS](https://whc.unesco.org/en/marine-programme/) {.tabset}
+## Taxonomic records in [OBIS](https://obis.org/) {.tabset}
 
-### Number of records
+### Time Series
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 
 ## read data from OBIS
@@ -271,6 +271,10 @@ print(title)
 ```
 
 
+### Map
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+print("Coming soon")
+```
 
 
 
