@@ -1,8 +1,8 @@
 ---
 title: "Site: `r params$site_name`"
 params:
-  site_id: "ecu-laratonera-galapagos"
-  site_name:  "La Ratonera - Galapagos Islands"
+  site_id: "cri-esmeralda"
+  site_name:  "Esmeralda "
 editor_options:
   chunk_output_type: console
 ---
@@ -23,8 +23,8 @@ source("functions.R")
 
 if (!exists("params")) 
   params <- list(
-  site_name = "ecu-laratonera-galapagos",
-  site_id   = "La Ratonera - Galapagos Islands")
+  site_name = "Esmeralda ",
+  site_id   = "cri-esmeralda")
 
 site <- read_csv(here("data/sites.csv"), col_types=cols()) %>%
   filter(id == params$site_id)
@@ -275,7 +275,9 @@ print(title)
 
 **Mollusca**
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-mytext <- paste(mollusc$scientificName, sep="") %>%
+if (length(mollusc) == 0)
+{print("No data")
+  } else if(length(mollusc) > 0){mytext <- paste(mollusc$scientificName, sep="") %>%
   lapply(htmltools::HTML)
 
 m <- leaflet(mollusc) %>%
@@ -287,12 +289,14 @@ m <- leaflet(mollusc) %>%
                    label = mytext,
                    labelOptions = labelOptions( style = list("font-weight" = "normal", padding = "3px 8px"), textsize = "13px", direction = "auto")
   )
-m
+m}
 ```
 
 **Echinodermata**
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-mytext2 <- paste(echino$scientificName, sep="") %>%
+if (length(echino) == 0)
+{print("No data")
+  } else if(length(echino) > 0){mytext2 <- paste(echino$scientificName, sep="") %>%
   lapply(htmltools::HTML)
 
 m2 <- leaflet(echino) %>%
@@ -304,12 +308,14 @@ m2 <- leaflet(echino) %>%
                    label = mytext2,
                    labelOptions = labelOptions( style = list("font-weight" = "normal", padding = "3px 8px"), textsize = "13px", direction = "auto")
   )
-m2
+m2}
 ```
 
 **Annelida**
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-mytext3 <- paste(anne$scientificName, sep="") %>%
+if (length(anne) == 0)
+{print("No data")
+  } else if(length(anne) > 0){mytext3 <- paste(anne$scientificName, sep="") %>%
   lapply(htmltools::HTML)
 
 m3<- leaflet(anne) %>%
@@ -321,12 +327,14 @@ m3<- leaflet(anne) %>%
                    label = mytext3,
                    labelOptions = labelOptions( style = list("font-weight" = "normal", padding = "3px 8px"), textsize = "13px", direction = "auto")
   )
-m3
+m3}
 ```
 
 **Plantae**
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-mytext4 <- paste(plant$scientificName, sep="") %>%
+if (length(plant) == 0)
+{print("No data")
+  } else if(length(plant) > 0){mytext4 <- paste(anne$scientificName, sep="") %>%
   lapply(htmltools::HTML)
 
 m4 <- leaflet(plant) %>%
@@ -338,5 +346,5 @@ m4 <- leaflet(plant) %>%
                    label = mytext4,
                    labelOptions = labelOptions( style = list("font-weight" = "normal", padding = "3px 8px"), textsize = "13px", direction = "auto")
   )
-m4
+m4}
 ```
