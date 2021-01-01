@@ -1,8 +1,8 @@
 ---
 title: "Site: `r params$site_name`"
 params:
-  site_id: "wi-las-cuevas"
-  site_name:  "Las Cuevas"
+  site_id: "vir-usvi"
+  site_name:  "USVI"
 editor_options:
   chunk_output_type: console
 ---
@@ -23,8 +23,8 @@ source("functions.R")
 
 if (!exists("params")) 
   params <- list(
-  site_name = "Las Cuevas",
-  site_id   = "wi-las-cuevas")
+  site_name = "USVI",
+  site_id   = "vir-usvi")
 
 site <- read_csv(here("data/sites.csv"), col_types=cols()) %>%
   filter(id == params$site_id)
@@ -277,16 +277,12 @@ print(title)
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 if (length(mollusc) == 0)
 {print("No data")
-  } else if(length(mollusc) > 0){mytext <- paste(mollusc$scientificName, sep="") %>%
-  lapply(htmltools::HTML)
-
-m <- leaflet(mollusc) %>%
+  } else if(length(mollusc) > 0){m <- leaflet(mollusc) %>%
   addTiles()  %>%
   setView( lat=site$lat, lng=site$lon, zoom=10) %>%
   addProviderTiles("Esri.WorldImagery") %>%
   addCircleMarkers(~mollusc$decimalLongitude, ~mollusc$decimalLatitude,
                    fillOpacity = 0.7, color="yellow", radius=7, stroke=FALSE,
-                   label = mytext,
                    labelOptions = labelOptions( style = list("font-weight" = "normal", padding = "3px 8px"), textsize = "13px", direction = "auto")
   )
 m}
@@ -296,16 +292,12 @@ m}
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 if (length(echino) == 0)
 {print("No data")
-  } else if(length(echino) > 0){mytext2 <- paste(echino$scientificName, sep="") %>%
-  lapply(htmltools::HTML)
-
-m2 <- leaflet(echino) %>%
+  } else if(length(echino) > 0){m2 <- leaflet(echino) %>%
   addTiles()  %>%
   setView( lat=site$lat, lng=site$lon, zoom=10) %>%
   addProviderTiles("Esri.WorldImagery") %>%
   addCircleMarkers(~echino$decimalLongitude, ~echino$decimalLatitude,
                    fillOpacity = 0.7, color="red", radius=7, stroke=FALSE,
-                   label = mytext2,
                    labelOptions = labelOptions( style = list("font-weight" = "normal", padding = "3px 8px"), textsize = "13px", direction = "auto")
   )
 m2}
@@ -315,16 +307,12 @@ m2}
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 if (length(anne) == 0)
 {print("No data")
-  } else if(length(anne) > 0){mytext3 <- paste(anne$scientificName, sep="") %>%
-  lapply(htmltools::HTML)
-
-m3<- leaflet(anne) %>%
+  } else if(length(anne) > 0){m3<- leaflet(anne) %>%
   addTiles()  %>%
   setView( lat=site$lat, lng=site$lon, zoom=10) %>%
   addProviderTiles("Esri.WorldImagery") %>%
   addCircleMarkers(~anne$decimalLongitude, ~anne$decimalLatitude,
                    fillOpacity = 0.7, color="white", radius=7, stroke=FALSE,
-                   label = mytext3,
                    labelOptions = labelOptions( style = list("font-weight" = "normal", padding = "3px 8px"), textsize = "13px", direction = "auto")
   )
 m3}
@@ -334,16 +322,12 @@ m3}
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 if (length(plant) == 0)
 {print("No data")
-  } else if(length(plant) > 0){mytext4 <- paste(anne$scientificName, sep="") %>%
-  lapply(htmltools::HTML)
-
-m4 <- leaflet(plant) %>%
+  } else if(length(plant) > 0){m4 <- leaflet(plant) %>%
   addTiles()  %>%
   setView( lat=site$lat, lng=site$lon, zoom=10) %>%
   addProviderTiles("Esri.WorldImagery") %>%
   addCircleMarkers(~plant$decimalLongitude, ~plant$decimalLatitude,
                    fillOpacity = 0.7, color="orange", radius=7, stroke=FALSE,
-                   label = mytext4,
                    labelOptions = labelOptions( style = list("font-weight" = "normal", padding = "3px 8px"), textsize = "13px", direction = "auto")
   )
 m4}
