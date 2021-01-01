@@ -1,8 +1,8 @@
 ---
 title: "Site: `r params$site_name`"
 params:
-  site_id: "cri-esmeralda"
-  site_name:  "Esmeralda "
+  site_id: "wi-las-cuevas"
+  site_name:  "Las Cuevas"
 editor_options:
   chunk_output_type: console
 ---
@@ -23,8 +23,8 @@ source("functions.R")
 
 if (!exists("params")) 
   params <- list(
-  site_name = "Esmeralda ",
-  site_id   = "cri-esmeralda")
+  site_name = "Las Cuevas",
+  site_id   = "wi-las-cuevas")
 
 site <- read_csv(here("data/sites.csv"), col_types=cols()) %>%
   filter(id == params$site_id)
