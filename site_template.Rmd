@@ -1,8 +1,8 @@
 ---
 title: "Site: `r params$site_name`"
 params:
-  site_id: "vir-usvi"
-  site_name:  "USVI"
+  site_id: "usa-alc"
+  site_name:  "Alcatraz"
 editor_options:
   chunk_output_type: console
 ---
@@ -23,8 +23,8 @@ source("functions.R")
 
 if (!exists("params")) 
   params <- list(
-  site_name = "USVI",
-  site_id   = "vir-usvi")
+  site_name = "Alcatraz",
+  site_id   = "usa-alc")
 
 site <- read_csv(here("data/sites.csv"), col_types=cols()) %>%
   filter(id == params$site_id)
@@ -225,25 +225,15 @@ Download data: [`r basename(csv)`](https://raw.githubusercontent.com/marinebon/p
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 
 ## read data from OBIS
-## Molluscs
-mollusc = occurrence(areaid = site$area_code, taxonid = 51)
-## Ehinoderms
-echino = occurrence(areaid = site$area_code, taxonid = 1806)
-## Annelida
-anne = occurrence(areaid = site$area_code, taxonid = 882)
-## Platae
-plant = occurrence(areaid = site$area_code, taxonid = 3)
-
-## Merge the data frames
-total <- bind_rows(mollusc, echino, anne, plant)
-total <- data.frame(total$date_year, total$phylum)
-names(total)[names(total) == "total.date_year"] <- "year"
-names(total)[names(total) == "total.phylum"] <- "phylum"
+total = occurrence(areaid = site$area_code, taxonid = c(51, 1806, 882, 3))
+total2 <- data.frame(total$date_year, total$phylum)
+names(total2)[names(total2) == "total.date_year"] <- "year"
+names(total2)[names(total2) == "total.phylum"] <- "phylum"
 
 ## Plot the data
 title <- glue("Data source: https://obis.org/area/{site$area_code}")
 ts_plot <- ggplot() +
-  geom_histogram(data = total, aes(x = year, fill = phylum), binwidth = 3) +
+  geom_histogram(data = total2, aes(x = year, fill = phylum), binwidth = 3) +
   scale_fill_brewer(palette = "Spectral") +
 #  xlim(c(1960, 2017)) +
 #  labs(title = title) +
@@ -261,6 +251,8 @@ print(title)
 
 **Mollusca**
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
+mollusc <- filter(total, phylum == "Mollusca")
+
 if (length(mollusc) == 0)
 {print("No data")
   } else if(length(mollusc) > 0){m <- leaflet(mollusc) %>%
@@ -276,6 +268,8 @@ m}
 
 **Echinodermata**
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
+echino <- filter(total, phylum == "Echinodermata")
+
 if (length(echino) == 0)
 {print("No data")
   } else if(length(echino) > 0){m2 <- leaflet(echino) %>%
@@ -291,6 +285,8 @@ m2}
 
 **Annelida**
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
+anne <- filter(total, phylum == "Annelida")
+
 if (length(anne) == 0)
 {print("No data")
   } else if(length(anne) > 0){m3<- leaflet(anne) %>%
@@ -306,6 +302,8 @@ m3}
 
 **Plantae**
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
+plant <- filter(total, kingdom == "Plantae")
+
 if (length(plant) == 0)
 {print("No data")
   } else if(length(plant) > 0){m4 <- leaflet(plant) %>%
