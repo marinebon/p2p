@@ -235,24 +235,10 @@ anne = occurrence(areaid = site$area_code, taxonid = 882)
 plant = occurrence(areaid = site$area_code, taxonid = 3)
 
 ## Merge the data frames
-#subset data (year and phylum)
-sub_mollusc <- data.frame(mollusc$date_year, mollusc$phylum)
-names(sub_mollusc)[names(sub_mollusc) == "mollusc.date_year"] <- "year"
-names(sub_mollusc)[names(sub_mollusc) == "mollusc.phylum"] <- "phylum"
-
-sub_echino <- data.frame(echino$date_year, echino$phylum)
-names(sub_echino)[names(sub_echino) == "echino.date_year"] <- "year"
-names(sub_echino)[names(sub_echino) == "echino.phylum"] <- "phylum"
-
-sub_anne <- data.frame(anne$date_year, anne$phylum)
-names(sub_anne)[names(sub_anne) == "anne.date_year"] <- "year"
-names(sub_anne)[names(sub_anne) == "anne.phylum"] <- "phylum"
-
-sub_plant <- data.frame(plant$date_year, plant$phylum)
-names(sub_plant)[names(sub_plant) == "plant.date_year"] <- "year"
-names(sub_plant)[names(sub_plant) == "plant.phylum"] <- "phylum"
-
-total <- bind_rows(sub_mollusc, sub_echino, sub_anne, sub_plant)
+total <- bind_rows(mollusc, echino, anne, plant)
+total <- data.frame(total$date_year, total$phylum)
+names(total)[names(total) == "total.date_year"] <- "year"
+names(total)[names(total) == "total.phylum"] <- "phylum"
 
 ## Plot the data
 title <- glue("Data source: https://obis.org/area/{site$area_code}")
