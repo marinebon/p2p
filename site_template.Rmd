@@ -225,7 +225,11 @@ Download data: [`r basename(csv)`](https://raw.githubusercontent.com/marinebon/p
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 
 ## read data from OBIS
-total = occurrence(areaid = site$area_code, taxonid = c(51, 1806, 882, 3))
+# total = occurrence(areaid = site$area_code, taxonid = c(51, 1806, 882, 3))
+setwd("~/p2p/data/obis")
+sel_area <- site$area_code
+filename <- glue("obis_{sel_area}.csv")
+total <- read.csv(filename)
 total2 <- data.frame(total$date_year, total$phylum)
 names(total2)[names(total2) == "total.date_year"] <- "year"
 names(total2)[names(total2) == "total.phylum"] <- "phylum"

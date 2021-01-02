@@ -24,6 +24,7 @@ library(here)
 library(glue)
 library(htmltools)
 library(markdown)
+library(robis)
 
 countries <- ne_countries(
   scale = "small", type = "countries", returnclass = "sf",
@@ -62,3 +63,19 @@ leaflet(countries) %>%
     popup = ~html, label = ~htmlEscape(name)) %>%
   fitBounds(b[['xmin']], b[['ymin']], b[['xmax']], b[['ymax']])
 ```
+
+```{r}
+poly_tbl <- c(40014, 40061, 40015, 40016, 40013, 40011, 40003, 21000, 20001)
+
+for (i in 1:length(poly_tbl))
+{
+  area_code <- poly_tbl[i]
+  
+  ## Total
+  total = occurrence(areaid = area_code, taxonid = c(51, 1806, 882, 3))
+  csv <- here(glue("data/obis/obis_{area_code}.csv"))
+  write.csv(total, file = csv)
+}
+```
+
+
