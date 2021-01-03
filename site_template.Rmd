@@ -238,10 +238,10 @@ if (is.numeric(polygon) == TRUE)
 } else if(is.numeric(polygon) == FALSE){
     lat <- site$lat
     lon <- site$lon
-    latmin <- lat - 1
-    latmax <- lat + 1
-    lonmin <- lon - 1
-    lonmax <- lon + 1
+    latmin <- lat - 2
+    latmax <- lat + 2
+    lonmin <- lon - 2
+    lonmax <- lon + 2
   polygon <- glue("POLYGON (({lonmin} {latmin}, {lonmin} {latmax}, {lonmax} {latmax}, {lonmax} {latmin}, {lonmin} {latmin}))")
   total = occurrence(taxonid = c(51, 1806, 882, 3), geometry = polygon)
 }
@@ -336,4 +336,4 @@ m4}
 ```
 
 ## Data source:
-Data shown here is extracted using the [occurrence](https://www.rdocumentation.org/packages/robis/versions/1.0.1/topics/occurrence) function of the [robis](https://www.rdocumentation.org/packages/robis/versions/1.0.1) package within polygons (e.g. EEZ, WMHS) or 1x1 degree boxes centered at monitoring site
+Data shown here is extracted using the [occurrence](https://www.rdocumentation.org/packages/robis/versions/1.0.1/topics/occurrence) function of the [robis](https://www.rdocumentation.org/packages/robis/versions/1.0.1) package within polygons (e.g. EEZ, WMHS) or 2x2 degree boxes centered at monitoring site
