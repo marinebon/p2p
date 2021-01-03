@@ -10,7 +10,7 @@ List of 1
   ordinary text without R code
 
 
-/usr/bin/pandoc +RTS -K512m -RTS about.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output about.html --lua-filter /home/travis/R/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /home/travis/R/Library/rmarkdown/rmarkdown/lua/latex-div.lua --standalone --section-divs --template /home/travis/R/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/Rtmpf1k8mV/rmarkdown-str48d45390ce4e.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/Rtmpf1k8mV/rmarkdown-str48d41301660e.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
+/usr/bin/pandoc +RTS -K512m -RTS about.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output about.html --lua-filter /home/travis/R/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /home/travis/R/Library/rmarkdown/rmarkdown/lua/latex-div.lua --standalone --section-divs --template /home/travis/R/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/RtmpwrviMY/rmarkdown-str48c612adcf06.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/RtmpwrviMY/rmarkdown-str48c6233a7531.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
   |                                                                              |                                                                      |   0%  |                                                                              |.......................                                               |  33%
   ordinary text without R code
 
@@ -23,7 +23,7 @@ List of 1
   ordinary text without R code
 
 
-/usr/bin/pandoc +RTS -K512m -RTS contact.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output contact.html --lua-filter /home/travis/R/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /home/travis/R/Library/rmarkdown/rmarkdown/lua/latex-div.lua --standalone --section-divs --template /home/travis/R/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/Rtmpf1k8mV/rmarkdown-str48d46937d9e.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/Rtmpf1k8mV/rmarkdown-str48d455675175.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
+/usr/bin/pandoc +RTS -K512m -RTS contact.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output contact.html --lua-filter /home/travis/R/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /home/travis/R/Library/rmarkdown/rmarkdown/lua/latex-div.lua --standalone --section-divs --template /home/travis/R/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/RtmpwrviMY/rmarkdown-str48c6213de217.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/RtmpwrviMY/rmarkdown-str48c6442eb1fd.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
   |                                                                              |                                                                      |   0%  |                                                                              |.......................                                               |  33%
   ordinary text without R code
 
@@ -36,7 +36,7 @@ List of 1
   ordinary text without R code
 
 
-/usr/bin/pandoc +RTS -K512m -RTS data_in_situ.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output data_in_situ.html --lua-filter /home/travis/R/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /home/travis/R/Library/rmarkdown/rmarkdown/lua/latex-div.lua --standalone --section-divs --template /home/travis/R/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/Rtmpf1k8mV/rmarkdown-str48d41144a17c.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/Rtmpf1k8mV/rmarkdown-str48d417e14d2f.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
+/usr/bin/pandoc +RTS -K512m -RTS data_in_situ.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output data_in_situ.html --lua-filter /home/travis/R/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /home/travis/R/Library/rmarkdown/rmarkdown/lua/latex-div.lua --standalone --section-divs --template /home/travis/R/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/RtmpwrviMY/rmarkdown-str48c66f1c1bd7.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/RtmpwrviMY/rmarkdown-str48c62d109e50.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
   |                                                                              |                                                                      |   0%  |                                                                              |.......................                                               |  33%
   ordinary text without R code
 
@@ -49,7 +49,7 @@ List of 1
   ordinary text without R code
 
 
-/usr/bin/pandoc +RTS -K512m -RTS data_rocky_shore.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output data_rocky_shore.html --lua-filter /home/travis/R/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /home/travis/R/Library/rmarkdown/rmarkdown/lua/latex-div.lua --standalone --section-divs --template /home/travis/R/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/Rtmpf1k8mV/rmarkdown-str48d47c4ee857.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/Rtmpf1k8mV/rmarkdown-str48d420f5171e.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
+/usr/bin/pandoc +RTS -K512m -RTS data_rocky_shore.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output data_rocky_shore.html --lua-filter /home/travis/R/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /home/travis/R/Library/rmarkdown/rmarkdown/lua/latex-div.lua --standalone --section-divs --template /home/travis/R/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/RtmpwrviMY/rmarkdown-str48c654d1aa7c.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/RtmpwrviMY/rmarkdown-str48c61760eacd.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
   |                                                                              |                                                                      |   0%  |                                                                              |.......................                                               |  33%
   ordinary text without R code
 
@@ -62,7 +62,7 @@ List of 1
   ordinary text without R code
 
 
-/usr/bin/pandoc +RTS -K512m -RTS data_rs.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output data_rs.html --lua-filter /home/travis/R/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /home/travis/R/Library/rmarkdown/rmarkdown/lua/latex-div.lua --standalone --section-divs --template /home/travis/R/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/Rtmpf1k8mV/rmarkdown-str48d44a153ff4.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/Rtmpf1k8mV/rmarkdown-str48d42177f263.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
+/usr/bin/pandoc +RTS -K512m -RTS data_rs.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output data_rs.html --lua-filter /home/travis/R/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /home/travis/R/Library/rmarkdown/rmarkdown/lua/latex-div.lua --standalone --section-divs --template /home/travis/R/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/RtmpwrviMY/rmarkdown-str48c6605885a5.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/RtmpwrviMY/rmarkdown-str48c636e459a0.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
   |                                                                              |                                                                      |   0%  |                                                                              |.......................                                               |  33%
   ordinary text without R code
 
@@ -75,7 +75,7 @@ List of 1
   ordinary text without R code
 
 
-/usr/bin/pandoc +RTS -K512m -RTS data_sandy_beach.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output data_sandy_beach.html --lua-filter /home/travis/R/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /home/travis/R/Library/rmarkdown/rmarkdown/lua/latex-div.lua --standalone --section-divs --template /home/travis/R/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/Rtmpf1k8mV/rmarkdown-str48d42c64ba20.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/Rtmpf1k8mV/rmarkdown-str48d43bbdf01a.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
+/usr/bin/pandoc +RTS -K512m -RTS data_sandy_beach.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output data_sandy_beach.html --lua-filter /home/travis/R/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /home/travis/R/Library/rmarkdown/rmarkdown/lua/latex-div.lua --standalone --section-divs --template /home/travis/R/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/RtmpwrviMY/rmarkdown-str48c62873a6ad.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/RtmpwrviMY/rmarkdown-str48c6117b229b.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
   |                                                                              |                                                                      |   0%  |                                                                              |.......................                                               |  33%
   ordinary text without R code
 
@@ -88,27 +88,35 @@ List of 1
   ordinary text without R code
 
 
-/usr/bin/pandoc +RTS -K512m -RTS events.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output events.html --lua-filter /home/travis/R/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /home/travis/R/Library/rmarkdown/rmarkdown/lua/latex-div.lua --standalone --section-divs --template /home/travis/R/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/Rtmpf1k8mV/rmarkdown-str48d4465788c2.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/Rtmpf1k8mV/rmarkdown-str48d436c53574.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
-  |                                                                              |                                                                      |   0%  |                                                                              |............                                                          |  17%
+/usr/bin/pandoc +RTS -K512m -RTS events.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output events.html --lua-filter /home/travis/R/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /home/travis/R/Library/rmarkdown/rmarkdown/lua/latex-div.lua --standalone --section-divs --template /home/travis/R/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/RtmpwrviMY/rmarkdown-str48c679cf0654.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/RtmpwrviMY/rmarkdown-str48c656d13dc3.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
+  |                                                                              |                                                                      |   0%  |                                                                              |........                                                              |  11%
   ordinary text without R code
+
+  |                                                                              |................                                                      |  22%
+label: setup (with options) 
+List of 1
+ $ include: logi FALSE
 
   |                                                                              |.......................                                               |  33%
-label: setup (with options) 
-List of 1
- $ include: logi FALSE
+  ordinary text without R code
 
-  |                                                                              |...................................                                   |  50%
+  |                                                                              |...............................                                       |  44%
+label: unnamed-chunk-1
+  |                                                                              |.......................................                               |  56%
   ordinary text without R code
 
   |                                                                              |...............................................                       |  67%
-label: unnamed-chunk-1
-  |                                                                              |..........................................................            |  83%
+label: unnamed-chunk-2
+  |                                                                              |......................................................                |  78%
   ordinary text without R code
 
+  |                                                                              |..............................................................        |  89%
+label: unnamed-chunk-3
   |                                                                              |......................................................................| 100%
-label: unnamed-chunk-2
+  ordinary text without R code
 
-/usr/bin/pandoc +RTS -K512m -RTS index.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output index.html --lua-filter /home/travis/R/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /home/travis/R/Library/rmarkdown/rmarkdown/lua/latex-div.lua --standalone --section-divs --template /home/travis/R/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/Rtmpf1k8mV/rmarkdown-str48d4c699f87.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/Rtmpf1k8mV/rmarkdown-str48d4328c4697.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
+
+/usr/bin/pandoc +RTS -K512m -RTS index.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output index.html --lua-filter /home/travis/R/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /home/travis/R/Library/rmarkdown/rmarkdown/lua/latex-div.lua --standalone --section-divs --template /home/travis/R/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/RtmpwrviMY/rmarkdown-str48c62290425b.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/RtmpwrviMY/rmarkdown-str48c6d279235.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
   |                                                                              |                                                                      |   0%  |                                                                              |............                                                          |  17%
   ordinary text without R code
 
@@ -128,7 +136,7 @@ label: unnamed-chunk-2
   |                                                                              |......................................................................| 100%
 label: unnamed-chunk-3
 
-/usr/bin/pandoc +RTS -K512m -RTS members.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output members.html --lua-filter /home/travis/R/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /home/travis/R/Library/rmarkdown/rmarkdown/lua/latex-div.lua --standalone --section-divs --template /home/travis/R/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/Rtmpf1k8mV/rmarkdown-str48d424a5540a.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/Rtmpf1k8mV/rmarkdown-str48d46860c443.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
+/usr/bin/pandoc +RTS -K512m -RTS members.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output members.html --lua-filter /home/travis/R/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /home/travis/R/Library/rmarkdown/rmarkdown/lua/latex-div.lua --standalone --section-divs --template /home/travis/R/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/RtmpwrviMY/rmarkdown-str48c6117c9416.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/RtmpwrviMY/rmarkdown-str48c63125c94c.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
   |                                                                              |                                                                      |   0%  |                                                                              |.......................                                               |  33%
   ordinary text without R code
 
@@ -141,7 +149,7 @@ List of 1
   ordinary text without R code
 
 
-/usr/bin/pandoc +RTS -K512m -RTS methods_data_science.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output methods_data_science.html --lua-filter /home/travis/R/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /home/travis/R/Library/rmarkdown/rmarkdown/lua/latex-div.lua --standalone --section-divs --template /home/travis/R/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/Rtmpf1k8mV/rmarkdown-str48d4421172.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/Rtmpf1k8mV/rmarkdown-str48d42596713f.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
+/usr/bin/pandoc +RTS -K512m -RTS methods_data_science.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output methods_data_science.html --lua-filter /home/travis/R/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /home/travis/R/Library/rmarkdown/rmarkdown/lua/latex-div.lua --standalone --section-divs --template /home/travis/R/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/RtmpwrviMY/rmarkdown-str48c65e4d7418.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/RtmpwrviMY/rmarkdown-str48c6295fdede.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
   |                                                                              |                                                                      |   0%  |                                                                              |.......................                                               |  33%
   ordinary text without R code
 
@@ -154,7 +162,7 @@ List of 1
   ordinary text without R code
 
 
-/usr/bin/pandoc +RTS -K512m -RTS methods_field_protocols.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output methods_field_protocols.html --lua-filter /home/travis/R/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /home/travis/R/Library/rmarkdown/rmarkdown/lua/latex-div.lua --standalone --section-divs --template /home/travis/R/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/Rtmpf1k8mV/rmarkdown-str48d4468b885d.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/Rtmpf1k8mV/rmarkdown-str48d41a802639.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
+/usr/bin/pandoc +RTS -K512m -RTS methods_field_protocols.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output methods_field_protocols.html --lua-filter /home/travis/R/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /home/travis/R/Library/rmarkdown/rmarkdown/lua/latex-div.lua --standalone --section-divs --template /home/travis/R/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/RtmpwrviMY/rmarkdown-str48c64f65ff55.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/RtmpwrviMY/rmarkdown-str48c616dd1ee8.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
   |                                                                              |                                                                      |   0%  |                                                                              |..                                                                    |   3%
    inline R code fragments
 
@@ -166,141 +174,144 @@ List of 1
   |                                                                              |......                                                                |   9%
   ordinary text without R code
 
-  |                                                                              |........                                                              |  12%
+  |                                                                              |........                                                              |  11%
 label: unnamed-chunk-1
-  |                                                                              |..........                                                            |  15%
+  |                                                                              |..........                                                            |  14%
    inline R code fragments
 
-  |                                                                              |............                                                          |  18%
+  |                                                                              |............                                                          |  17%
 label: unnamed-chunk-2
-  |                                                                              |..............                                                        |  21%
+  |                                                                              |..............                                                        |  20%
   ordinary text without R code
 
-  |                                                                              |................                                                      |  24%
+  |                                                                              |................                                                      |  23%
 label: unnamed-chunk-3
-  |                                                                              |...................                                                   |  26%
+  |                                                                              |..................                                                    |  26%
    inline R code fragments
 
-  |                                                                              |.....................                                                 |  29%
+  |                                                                              |....................                                                  |  29%
 label: unnamed-chunk-4
-  |                                                                              |.......................                                               |  32%
+  |                                                                              |......................                                                |  31%
   ordinary text without R code
 
-  |                                                                              |.........................                                             |  35%
+  |                                                                              |........................                                              |  34%
 label: unnamed-chunk-5 (with options) 
 List of 3
  $ echo   : logi FALSE
  $ message: logi FALSE
  $ warning: logi FALSE
 
-  |                                                                              |...........................                                           |  38%
+  |                                                                              |..........................                                            |  37%
    inline R code fragments
 
-  |                                                                              |.............................                                         |  41%
+  |                                                                              |............................                                          |  40%
 label: unnamed-chunk-6 (with options) 
 List of 3
  $ echo   : logi FALSE
  $ message: logi FALSE
  $ warning: logi FALSE
 
-  |                                                                              |...............................                                       |  44%
+  |                                                                              |..............................                                        |  43%
   ordinary text without R code
 
-  |                                                                              |.................................                                     |  47%
+  |                                                                              |................................                                      |  46%
 label: unnamed-chunk-7 (with options) 
 List of 3
  $ echo   : logi FALSE
  $ message: logi FALSE
  $ warning: logi FALSE
 
-  |                                                                              |...................................                                   |  50%
+  |                                                                              |..................................                                    |  49%
    inline R code fragments
 
-  |                                                                              |.....................................                                 |  53%
+  |                                                                              |....................................                                  |  51%
 label: unnamed-chunk-8 (with options) 
 List of 3
  $ echo   : logi FALSE
  $ message: logi FALSE
  $ warning: logi FALSE
 
-  |                                                                              |.......................................                               |  56%
+  |                                                                              |......................................                                |  54%
   ordinary text without R code
 
-  |                                                                              |.........................................                             |  59%
+  |                                                                              |........................................                              |  57%
 label: unnamed-chunk-9 (with options) 
 List of 3
  $ echo   : logi FALSE
  $ message: logi FALSE
  $ warning: logi FALSE
 
-  |                                                                              |...........................................                           |  62%
+  |                                                                              |..........................................                            |  60%
    inline R code fragments
 
-  |                                                                              |.............................................                         |  65%
+  |                                                                              |............................................                          |  63%
 label: unnamed-chunk-10 (with options) 
 List of 2
  $ eval  : symbol F
  $ engine: chr "python"
 
-  |                                                                              |...............................................                       |  68%
+  |                                                                              |..............................................                        |  66%
   ordinary text without R code
 
-  |                                                                              |.................................................                     |  71%
+  |                                                                              |................................................                      |  69%
 label: unnamed-chunk-11 (with options) 
 List of 3
  $ echo   : logi FALSE
  $ message: logi FALSE
  $ warning: logi FALSE
 
-  |                                                                              |...................................................                   |  74%
+  |                                                                              |..................................................                    |  71%
    inline R code fragments
 
-  |                                                                              |......................................................                |  76%
+  |                                                                              |....................................................                  |  74%
 label: unnamed-chunk-12 (with options) 
 List of 3
  $ echo   : logi FALSE
  $ message: logi FALSE
  $ warning: logi FALSE
 
-  |                                                                              |........................................................              |  79%
+  |                                                                              |......................................................                |  77%
   ordinary text without R code
 
-  |                                                                              |..........................................................            |  82%
+  |                                                                              |........................................................              |  80%
 label: unnamed-chunk-13 (with options) 
 List of 3
  $ echo   : logi FALSE
  $ message: logi FALSE
  $ warning: logi FALSE
 
-  |                                                                              |............................................................          |  85%
+  |                                                                              |..........................................................            |  83%
   ordinary text without R code
 
-  |                                                                              |..............................................................        |  88%
+  |                                                                              |............................................................          |  86%
 label: unnamed-chunk-14 (with options) 
 List of 3
  $ echo   : logi FALSE
  $ message: logi FALSE
  $ warning: logi FALSE
 
-  |                                                                              |................................................................      |  91%
+  |                                                                              |..............................................................        |  89%
   ordinary text without R code
 
-  |                                                                              |..................................................................    |  94%
+  |                                                                              |................................................................      |  91%
 label: unnamed-chunk-15 (with options) 
 List of 3
  $ echo   : logi FALSE
  $ message: logi FALSE
  $ warning: logi FALSE
 
-  |                                                                              |....................................................................  |  97%
+  |                                                                              |..................................................................    |  94%
   ordinary text without R code
 
-  |                                                                              |......................................................................| 100%
+  |                                                                              |....................................................................  |  97%
 label: unnamed-chunk-16 (with options) 
 List of 3
  $ echo   : logi FALSE
  $ message: logi FALSE
  $ warning: logi FALSE
 
+  |                                                                              |......................................................................| 100%
+  ordinary text without R code
 
-/usr/bin/pandoc +RTS -K512m -RTS site_template.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output site_template.html --lua-filter /home/travis/R/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /home/travis/R/Library/rmarkdown/rmarkdown/lua/latex-div.lua --standalone --section-divs --template /home/travis/R/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/Rtmpf1k8mV/rmarkdown-str48d43545b2e.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/Rtmpf1k8mV/rmarkdown-str48d42cbfceaa.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
+
+/usr/bin/pandoc +RTS -K512m -RTS site_template.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output site_template.html --lua-filter /home/travis/R/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /home/travis/R/Library/rmarkdown/rmarkdown/lua/latex-div.lua --standalone --section-divs --template /home/travis/R/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/RtmpwrviMY/rmarkdown-str48c644f30c2b.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/RtmpwrviMY/rmarkdown-str48c639648489.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
