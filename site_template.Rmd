@@ -2,7 +2,7 @@
 title: "Site: `r params$site_name`"
 params:
   site_id: "bra-fernandodenoronha-boldro"
-  site_name:  "Fernando de Noronha - Boldro"
+  site_name:  "Fernando de Noronha - Boldro "
 editor_options:
   chunk_output_type: console
 ---
@@ -23,7 +23,7 @@ source("functions.R")
 
 if (!exists("params")) 
   params <- list(
-  site_name = "Fernando de Noronha - Boldro",
+  site_name = "Fernando de Noronha - Boldro ",
   site_id   = "bra-fernandodenoronha-boldro")
 
 site <- read_csv(here("data/sites.csv"), col_types=cols()) %>%
@@ -250,7 +250,7 @@ if (is.numeric(polygon) == TRUE)
 total2 <- data.frame(total$date_year, total$phylum)
 names(total2)[names(total2) == "total.date_year"] <- "year"
 names(total2)[names(total2) == "total.phylum"] <- "phylum"
-title <- glue("Data source: https://obis.org/area/{site$area_code}")
+# title <- glue("Data source: https://obis.org/area/{site$area_code}")
 ts_plot <- ggplot() +
   geom_histogram(data = total2, aes(x = year, fill = phylum), binwidth = 3) +
   scale_fill_brewer(palette = "Spectral") +
@@ -262,9 +262,8 @@ ts_plot <- ggplot() +
         axis.text.y = element_text(size=14, angle=0))
 ts_plot
 
-print(title)
-```
 
+```
 
 ### Maps
 
@@ -335,3 +334,6 @@ if (length(plant) == 0)
   )
 m4}
 ```
+
+## Data source:
+Data shown here is extracted using the [occurrence](https://www.rdocumentation.org/packages/robis/versions/1.0.1/topics/occurrence) function of the [robis](https://www.rdocumentation.org/packages/robis/versions/1.0.1) package within polygons (e.g. EEZ, WMHS) or 1x1 degree boxes centered at monitoring site
