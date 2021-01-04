@@ -11,7 +11,7 @@ The MBON Pole to Pole effort seeks to develop a framework for the collection, us
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-## People
+## **People**
 
 <img width="1000px" src="images/P2P_group CebiMar.JPG"/>
 <br>
@@ -30,30 +30,11 @@ The MBON Pole to Pole team at the [**2nd Marine Biodiversity Workshop: from the 
 <br>
 <br>
 
-## Sponsors
-<br>
-<br>
-<img width="300px" src="images/AmeriGEO_logo_new.png"/>
-<br>
-<br>
-<br>
-<br>
-<img width="200px" src="images/MBON_logo.jpg"/>
-<br>
-<br>
-<br>
-<br>
-<img width="400px" src="images/GOOS_Biology-and-Ecosystems_WhiteUNFRAMED2_logo.png"/>
-<br>
-<br>
-<img width="200px" src="images/obis_logo.jpg"/>
-<br>
-<br>
-<img width="200px" src="images/logo_NASA.svg"/>
-<br>
-<br>
-<br>
-<br>
-<img width="200px" src="images/logo_NOAA.svg"/>
+## **Partner Organizations**
+![](images/partner_orgs.jpg) 
+
+## **Sponsors**
+![](images/sponsors.jpg) 
+
 
 

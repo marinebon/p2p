@@ -5,40 +5,22 @@ title: "Methods for Data Science"
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-Use the templates below to enter your data:
+## Use the templates below to enter your data:
+[**Rocky Shore Data Template**](protocols/Data_Sheet_RockyShore_template.xlsx)
 <br>
-- [Rocky Shore Data Template](protocols/Data_Sheet_RockyShore_template.xlsx)
-<br>
-- [Sandy Beach Data Template](protocols/Datasheet_template_SB.xlsx)
-<br>
-<br>
-Check your list of species with [WoRMS](http://www.marinespecies.org/aphia.php?p=webservice) for taxonomy quality control:
-<br>
-- [Taxonomy quality check with WoRMS](protocols/WoRMS_quality_check.pdf)
-<br>
-<br>
-Use these instructions to upload you data to the [MBON Pole to Pole IPT](http://ipt.iobis.org/mbon/):
-<br>
-- [HOW TO upload data to the Integrated Publishing Toolkit](https://diodon.github.io/P2P_documents/PublishData/docs/PublishingDataIPT.html)
-<br>
-<br>
-Try this [code](https://github.com/marinebon/p2p-dashboard) to develop [Biodiversity Dashboards](https://marinebon.org/p2p-dashboard/biodivExplorer_beach.html#general-information) for your monitoring sites 
-<br>
-<br>
+[**Sandy Beach Data Template**](protocols/Datasheet_template_SB.xlsx)
+
+## Check your list of species with [WoRMS](http://www.marinespecies.org/aphia.php?p=webservice) for taxonomy quality control:
+[**Taxonomy quality check with WoRMS**](protocols/WoRMS_quality_check.pdf)
+
+## Use these instructions to upload you data to the [MBON Pole to Pole IPT](http://ipt.iobis.org/mbon/):
+[**HOW TO upload data to the Integrated Publishing Toolkit**](https://diodon.github.io/P2P_documents/PublishData/docs/PublishingDataIPT.html)
+
+## Try this [code](https://github.com/marinebon/p2p-dashboard) to develop [Biodiversity Dashboards](https://marinebon.org/p2p-dashboard/biodivExplorer_beach.html#general-information) for your monitoring sites 
 <img width="1000px" src="images/dashboard.jpg"/>
-<br>
-<br>
-<br>
-<br>
-Try this [code](http://rpubs.com/eqmh/lme-obis-extractions) to visualize boundaries of selected Large Marine Ecosystems (LMEs) and extract [OBIS](http://obis.org) records from selected [LMEs](http://lme.edc.uri.edu/index.php/digital-data)
-<br>
-<br>
+
+## Try this [code](http://rpubs.com/eqmh/lme-obis-extractions) to visualize boundaries of selected Large Marine Ecosystems (LMEs) and extract [OBIS](http://obis.org) records from selected [LMEs](http://lme.edc.uri.edu/index.php/digital-data)
 <img width="1000px" src="images/lme_extractions.jpg"/>
-<br>
-<br>
-<br>
-<br>
-Try this [code](https://rpubs.com/eqmh/sat-data-plotter-mapper) to extract sea surface temperature (SST) and chlorophyll-a (CHL) from [ERDDAP](https://coastwatch.pfeg.noaa.gov/erddap/index.html) servers for particular location, create time series plots of [SST](https://rpubs.com/eqmh/sst_ts_Patag) and [CHL](https://rpubs.com/eqmh/chla_ts_Patag_v2) and their [climatologies](https://rpubs.com/eqmh/sst_climatology_plot), and generate a map with the latest satellite data.
-<br>
-<br>
+
+## Try this [code](https://rpubs.com/eqmh/sat-data-plotter-mapper) to extract sea surface temperature (SST) and chlorophyll-a (CHL) from [ERDDAP](https://coastwatch.pfeg.noaa.gov/erddap/index.html) servers for selected locations, create time series plots of [SST](https://rpubs.com/eqmh/sst_ts_Patag) and [CHL](https://rpubs.com/eqmh/chla_ts_Patag_v2) and their [climatologies](https://rpubs.com/eqmh/sst_climatology_plot), and generate a map with the latest satellite data.
 <img width="1000px" src="images/ts_plots_and_maps.jpg"/>

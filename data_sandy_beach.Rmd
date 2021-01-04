@@ -6,7 +6,7 @@ title: "Data from Sandy Beaches"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Biodiversity survey data are currently being collected and uploaded to [OBIS](https://obis.org/) by MBON Pole to Pole members. 
+## Biodiversity survey data are currently being collected and uploaded to [OBIS](https://obis.org/) by network members. 
 
 You can access available datasets for the following locations:
 

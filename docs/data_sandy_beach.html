@@ -24,15 +24,6 @@
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/ionicons-2.0.1/css/ionicons.min.css" rel="stylesheet" />
 
-<style type="text/css">
-  code{white-space: pre-wrap;}
-  span.smallcaps{font-variant: small-caps;}
-  span.underline{text-decoration: underline;}
-  div.column{display: inline-block; vertical-align: top; width: 50%;}
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-  ul.task-list{list-style: none;}
-    </style>
-
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
   pre:not([class]) {
@@ -77,7 +68,6 @@ h6 {
   text-align: left;
 }
 </style>
-
 
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
@@ -361,12 +351,14 @@ $(document).ready(function () {
 </div>
 
 
-<p>Biodiversity survey data are currently being collected and uploaded to <a href="https://obis.org/">OBIS</a> by MBON Pole to Pole members.</p>
+<div id="biodiversity-survey-data-are-currently-being-collected-and-uploaded-to-obis-by-network-members." class="section level2">
+<h2>Biodiversity survey data are currently being collected and uploaded to <a href="https://obis.org/">OBIS</a> by network members.</h2>
 <p>You can access available datasets for the following locations:</p>
 <p><a href="https://obis.org/dataset/5700fdc3-956f-4e33-903b-e66ba38d980c">Yucatan Peninsula - Mexico</a></p>
 <p><a href="https://obis.org/dataset/e2ae1710-46e4-4331-88c7-8970336fdb42">Barra del Chuy - Uruguay</a></p>
 <p><a href="https://obis.org/dataset/58692e00-21aa-4c74-87a0-f06bf4610f86">Atami Beach - Brazil</a></p>
 <p>More data will become available soon!</p>
+</div>
 
 <div class="footer text-center">
   © 2018 <img width="40px" src="images/logo_NASA.svg"/>
@@ -380,7 +372,7 @@ $(document).ready(function () {
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
