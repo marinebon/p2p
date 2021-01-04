@@ -5,7 +5,7 @@ editor_options:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = F, message = F, warning = F)
+knitr::opts_chunk$set(echo = F, message = F, warning = F, fig.width=9.5, fig.height=12)
 ```
 <br>
 <br>
@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = F, message = F, warning = F)
 Welcome! We are developing a Community of Practice across the Americas to assess marine biodiversity and ecosystem change using field and space observations.
 <br>
 <br>
-Ongoing biodiversity monitoring sites  
+Learn about ongoing biodiversity monitoring efforts contributing to the network by clicking markers on the map
 
 ```{r}
 library(tidyverse)
@@ -24,7 +24,6 @@ library(here)
 library(glue)
 library(htmltools)
 library(markdown)
-library(robis)
 
 countries <- ne_countries(
   scale = "small", type = "countries", returnclass = "sf",
@@ -54,6 +53,7 @@ leaflet(countries) %>%
   addProviderTiles(
     providers$Esri.OceanBasemap,
     options = providerTileOptions(opacity = 0.5)) %>%
+  setView(lat=5, lng=-80, zoom=20) %>%
   addPolygons(
     stroke = FALSE, smoothFactor = 0.2, fillOpacity = 0.8,
     fillColor = ~pal(mapcolor7),
