@@ -1,8 +1,8 @@
 ---
 title: "Site: `r params$site_name`"
 params:
-  site_id: "usa-arg"
-  site_name:  "Cape Arago"
+  site_id: "arg-puertomadryn2"
+  site_name:  "Punta Cuevas"
 editor_options:
   chunk_output_type: console
 ---
@@ -23,8 +23,8 @@ source("functions.R")
 
 if (!exists("params")) 
   params <- list(
-  site_name = "Cape Arago",
-  site_id   = "usa-arg")
+  site_name = "Punta Cuevas",
+  site_id   = "arg-puertomadryn2")
 
 site <- read_csv(here("data/sites.csv"), col_types=cols()) %>%
   filter(id == params$site_id)
@@ -233,9 +233,9 @@ Download data: [`r basename(csv)`](https://raw.githubusercontent.com/marinebon/p
 
 polygon <- site$area_code
 
-if (is.numeric(polygon) == TRUE)
+if (polygon > 0)
 {total <- occurrence(areaid = polygon, taxonid = c(51, 1806, 882, 3))
-} else if(is.numeric(polygon) == FALSE){
+} else if(polygon == -9999){
     val <- .5
     lat <- site$lat
     lon <- site$lon
