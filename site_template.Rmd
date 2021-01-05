@@ -236,7 +236,7 @@ polygon <- site$area_code
 if (polygon > 0)
 {total <- occurrence(areaid = polygon, taxonid = c(51, 1806, 882, 3))
 } else if(polygon == -9999){
-    val <- .5
+    val <- .25
     lat <- site$lat
     lon <- site$lon
     latmin <- lat - val
