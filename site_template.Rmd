@@ -339,4 +339,4 @@ m4}
 ```
 
 ## Data source:
-Data shown here is extracted using the [occurrence](https://www.rdocumentation.org/packages/robis/versions/1.0.1/topics/occurrence) function of the [robis](https://www.rdocumentation.org/packages/robis/versions/1.0.1) package within polygons (e.g. EEZ, WMHS) or a 0.5 x 0.5 degrees box centered at monitoring site
+Data shown here is extracted using the [occurrence](https://www.rdocumentation.org/packages/robis/versions/1.0.1/topics/occurrence) function of the [robis](https://www.rdocumentation.org/packages/robis/versions/1.0.1) package within polygons (e.g. EEZ, WMHS) or a 0.25 x 0.25 degrees box centered at monitoring site in data-rich regions.
