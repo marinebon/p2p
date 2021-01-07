@@ -1,0 +1,35 @@
+name: obis_download
+
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  schedule:
+    # * is a special character in YAML so you have to quote this string - change cron string to '0 * 7 * *' to run once on the 7th day of the month
+    - cron:  '0 * 7 * *'
+  #push:
+  #  branches: [ master ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:    
+  build:
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, 'ci skip')"
+    container: bdbest/cinms:1.0 # docker image
+    steps:
+      - name: clone repo
+        # get a shallow copy (depth 1) so only getting the latest version of files, not whole history
+        run: git clone --depth 1 https://github.com/${{ github.repository }}.git .; ls
+      - name: obis_download
+        run: Rscript scripts/obis_download.R
+      #- name: obis_render
+      #  run: Rscript scripts/render_oceano-modals.R
+      - name: commit changes
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}          
+          git add -A
+          git commit -a -m "changes from workflow **${{ github.workflow }}** [ci skip]"
+          git push
