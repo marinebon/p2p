@@ -4,7 +4,7 @@ if (!require(librarian)){
 }
 shelf(
   # obis
-  robis,
+  iobis/robis,
   # tidyverse
   dplyr, readr,
   # utilities
@@ -46,9 +46,9 @@ if (site$area_code > 0){
   options(show.error.messages = FALSE)
   
   #total <- try(occurrence(taxonid = c(51, 1806, 882, 3), geometry = polygon))
-  # total <- occurrence(taxonid = c(51, 1806, 882, 3), geometry = polygon)
+  total <- occurrence(taxonid = c(51, 1806, 882, 3), geometry = polygon)
   # DEBUG
-  total <- read_csv(obis_csv)
+  #total <- read_csv(obis_csv)
   
   # Peter Provoost seems to have fixed this issue:
   # if("try-error" %in% class(total))
