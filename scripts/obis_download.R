@@ -44,8 +44,12 @@ if (site$area_code > 0){
   lonmax <- lon + val
   polygon <- glue("POLYGON (({lonmin} {latmin}, {lonmin} {latmax}, {lonmax} {latmax}, {lonmax} {latmin}, {lonmin} {latmin}))")
   options(show.error.messages = FALSE)
+  
   #total <- try(occurrence(taxonid = c(51, 1806, 882, 3), geometry = polygon))
-  total <- occurrence(taxonid = c(51, 1806, 882, 3), geometry = polygon)
+  # total <- occurrence(taxonid = c(51, 1806, 882, 3), geometry = polygon)
+  # DEBUG
+  total <- read_csv(obis_csv)
+  
   # Peter Provoost seems to have fixed this issue:
   # if("try-error" %in% class(total))
   #   total <- occurrence(areaid = 40003, taxonid = c(51, 1806, 882, 3))
