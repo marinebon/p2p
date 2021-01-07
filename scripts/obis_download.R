@@ -1,5 +1,5 @@
 if (!require(librarian))
-  install.packages(librarian)
+  install.packages("librarian")
 shelf(
   # obis
   robis,
