@@ -3,7 +3,7 @@ if (!require(librarian)){
   library(librarian)
 }
 shelf(
-  # obis
+  # obis (latest version directly from Github repo)
   iobis/robis,
   # tidyverse
   dplyr, readr,
