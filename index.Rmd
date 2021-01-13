@@ -53,7 +53,6 @@ leaflet(countries) %>%
   addProviderTiles(
     providers$Esri.OceanBasemap,
     options = providerTileOptions(opacity = 0.5)) %>%
-  setView(lat=5, lng=-80, zoom=20) %>%
   addPolygons(
     stroke = FALSE, smoothFactor = 0.2, fillOpacity = 0.8,
     fillColor = ~pal(mapcolor7),
