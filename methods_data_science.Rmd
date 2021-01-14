@@ -6,15 +6,15 @@ title: "Methods for Data Science"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 ## Use the templates below to enter your survey data:
-- [**Rocky Shore Data Template -- NEW!**](protocols/DataSheet_longformat_v1-2.xlsx)
-- [**Sandy Beach Data Template**](protocols/Datasheet_template_SB.xlsx)
+- [**Rocky Shore Data Template -- NEW!**](https://github.com/diodon/P2P-templates/blob/main/RS_DataSheet_longformat_v1.3.xlsx){target="_blank"}
+- [**Sandy Beach Data Template -- NEW!**](https://github.com/diodon/P2P-templates/blob/main/SB_DataSheet_longformat_v1.3.xlsx){target="_blank"}
 
 ## Check your list of species with [WoRMS](http://www.marinespecies.org/aphia.php?p=webservice){target="_blank"} for taxonomy quality control:
 - [**Taxonomy quality check with WoRMS**](protocols/WoRMS_quality_check.pdf){target="_blank"}
 
 ## Transform your survey data tables to Darwin Core Archive files (DwC-A):
 - [**DwC-A Writer**](https://rpubs.com/eqmh/DwCA_Gen){target="_blank"}
-- [**Download this test dataset to run DwC-A Writer**](protocols/DataSheet_longformat_TEST.xlsx)
+- [**Download this test dataset to run DwC-A Writer**](https://github.com/diodon/P2P-templates/blob/main/DataSheet_longformat_TEST_v2.xlsx){target="_blank"}
 
 ## Use these instructions to upload you data to the [MBON Pole to Pole IPT](http://ipt.iobis.org/mbon/){target="_blank"}:
 - [**HOW TO upload data to the Integrated Publishing Toolkit**](https://diodon.github.io/P2P_documents/PublishData/docs/PublishingDataIPT.html){target="_blank"}
