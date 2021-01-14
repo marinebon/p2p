@@ -5,22 +5,28 @@ title: "Methods for Data Science"
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-## Use the templates below to enter your data:
-[**Rocky Shore Data Template**](protocols/Data_Sheet_RockyShore_template.xlsx)
-<br>
-[**Sandy Beach Data Template**](protocols/Datasheet_template_SB.xlsx)
+## Use the templates below to enter your survey data:
+- [**Rocky Shore Data Template -- NEW!**](protocols/DataSheet_longformat_v1-2.xlsx)
+- [**Sandy Beach Data Template**](protocols/Datasheet_template_SB.xlsx)
 
 ## Check your list of species with [WoRMS](http://www.marinespecies.org/aphia.php?p=webservice) for taxonomy quality control:
-[**Taxonomy quality check with WoRMS**](protocols/WoRMS_quality_check.pdf)
+- [**Taxonomy quality check with WoRMS**](protocols/WoRMS_quality_check.pdf)
+
+## Transform your survey data tables to Darwin Core Archive files (DwC-A):
+- [**DwC-A Writer**](https://rpubs.com/eqmh/DwCA_Gen)
+- [**Download this test dataset to run DwC-A Writer**](protocols/DataSheet_longformat_TEST.xlsx)
 
 ## Use these instructions to upload you data to the [MBON Pole to Pole IPT](http://ipt.iobis.org/mbon/):
-[**HOW TO upload data to the Integrated Publishing Toolkit**](https://diodon.github.io/P2P_documents/PublishData/docs/PublishingDataIPT.html)
+- [**HOW TO upload data to the Integrated Publishing Toolkit**](https://diodon.github.io/P2P_documents/PublishData/docs/PublishingDataIPT.html)
 
-## Try this [code](https://github.com/marinebon/p2p-dashboard) to develop [Biodiversity Dashboards](https://marinebon.org/p2p-dashboard/biodivExplorer_beach.html#general-information) for your monitoring sites 
+## Create your biodiversity dashboard:
+- [R script](https://github.com/marinebon/p2p-dashboard) to develop [Biodiversity Dashboards](https://marinebon.org/p2p-dashboard/biodivExplorer_beach.html#general-information) for your monitoring sites 
 <img width="1000px" src="images/dashboard.jpg"/>
 
-## Try this [code](http://rpubs.com/eqmh/lme-obis-extractions) to visualize boundaries of selected Large Marine Ecosystems (LMEs) and extract [OBIS](http://obis.org) records from selected [LMEs](http://lme.edc.uri.edu/index.php/digital-data)
+## OBIS extractions:
+- [R script](http://rpubs.com/eqmh/lme-obis-extractions) to visualize boundaries of selected Large Marine Ecosystems (LMEs) and extract [OBIS](http://obis.org) records from selected [LMEs](http://lme.edc.uri.edu/index.php/digital-data)
 <img width="1000px" src="images/lme_extractions.jpg"/>
 
-## Try this [code](https://rpubs.com/eqmh/sat-data-plotter-mapper) to extract sea surface temperature (SST) and chlorophyll-a (CHL) from [ERDDAP](https://coastwatch.pfeg.noaa.gov/erddap/index.html) servers for selected locations, create time series plots of [SST](https://rpubs.com/eqmh/sst_ts_Patag) and [CHL](https://rpubs.com/eqmh/chla_ts_Patag_v2) and their [climatologies](https://rpubs.com/eqmh/sst_climatology_plot), and generate a map with the latest satellite data.
+## Extract satellite data:
+- [R script](https://rpubs.com/eqmh/sat-data-plotter-mapper) to extract sea surface temperature (SST) and chlorophyll-a (CHL) from [ERDDAP](https://coastwatch.pfeg.noaa.gov/erddap/index.html) servers for selected locations, create time series plots of [SST](https://rpubs.com/eqmh/sst_ts_Patag) and [CHL](https://rpubs.com/eqmh/chla_ts_Patag_v2) and their [climatologies](https://rpubs.com/eqmh/sst_climatology_plot), and generate a map with the latest satellite data.
 <img width="1000px" src="images/ts_plots_and_maps.jpg"/>
