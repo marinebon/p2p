@@ -6,23 +6,23 @@ title: "Data from Rocky Intertidal Zones"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Biodiversity survey data are currently being collected and uploaded to [OBIS](https://obis.org/) by network members. 
+## Biodiversity survey data are currently being collected and uploaded to [OBIS](https://obis.org/){target="_blank"} by network members. 
 
 You can access available datasets for the following locations:
 
-- [Montemar - Chile](https://obis.org/dataset/5e009291-b1ce-454f-bbcf-d98142eaeda9)
-- [Gorgona Island - Colombia](https://obis.org/dataset/871e92ab-2a00-4851-b948-cb6dda862f9c)
-- [Puerto Madryn - Argentina](https://obis.org/dataset/1d8fb994-64af-4a57-abe2-19573cc91f85)
-- [Concepcion - Chile](https://obis.org/dataset/e4a2fe06-f082-4f36-9165-73263a121508)
-- [Arraial do Cabo - Brazil](https://obis.org/dataset/7ece3f71-6bae-4cc4-8619-d560a564f187)
-- [Fernando de Noronha - Brazil](https://obis.org/dataset/dae283ff-1835-465c-b058-fa6417d0ff2d)
-- [Costa das Algas - Brazil](https://obis.org/dataset/29059698-61ea-4882-9e1f-fca042056ddf)
-- [Massachusetts - USA](https://obis.org/dataset/952c1493-9265-440d-8f6c-882ae12bf33b)
-- [Biddeford, Maine - USA](https://obis.org/dataset/86ed1f5d-e911-4423-b965-8349248dfee2)
-- [Chamberlain, Maine - USA](https://obis.org/dataset/2c4e7f5f-50a4-4a6d-a92b-8382a92617f4)
-- [Lubec, Maine - USA](https://obis.org/dataset/3efdd6d8-7dd3-427c-ac08-ecdc94c15919)
-- [Giant Stairs, Maine - USA](https://www.gbif.org/dataset/11aec408-f323-454a-8057-9f9fc3552064)
-- [Galapagos Islands - Ecuador](https://obis.org/dataset/3cdb3dca-4df4-4931-9155-b41da2ce4075)
+- [Montemar - Chile](https://obis.org/dataset/5e009291-b1ce-454f-bbcf-d98142eaeda9){target="_blank"}
+- [Gorgona Island - Colombia](https://obis.org/dataset/871e92ab-2a00-4851-b948-cb6dda862f9c){target="_blank"}
+- [Puerto Madryn - Argentina](https://obis.org/dataset/1d8fb994-64af-4a57-abe2-19573cc91f85){target="_blank"}
+- [Concepcion - Chile](https://obis.org/dataset/e4a2fe06-f082-4f36-9165-73263a121508){target="_blank"}
+- [Arraial do Cabo - Brazil](https://obis.org/dataset/7ece3f71-6bae-4cc4-8619-d560a564f187){target="_blank"}
+- [Fernando de Noronha - Brazil](https://obis.org/dataset/dae283ff-1835-465c-b058-fa6417d0ff2d){target="_blank"}
+- [Costa das Algas - Brazil](https://obis.org/dataset/29059698-61ea-4882-9e1f-fca042056ddf){target="_blank"}
+- [Massachusetts - USA](https://obis.org/dataset/952c1493-9265-440d-8f6c-882ae12bf33b){target="_blank"}
+- [Biddeford, Maine - USA](https://obis.org/dataset/86ed1f5d-e911-4423-b965-8349248dfee2){target="_blank"}
+- [Chamberlain, Maine - USA](https://obis.org/dataset/2c4e7f5f-50a4-4a6d-a92b-8382a92617f4){target="_blank"}
+- [Lubec, Maine - USA](https://obis.org/dataset/3efdd6d8-7dd3-427c-ac08-ecdc94c15919){target="_blank"}
+- [Giant Stairs, Maine - USA](https://www.gbif.org/dataset/11aec408-f323-454a-8057-9f9fc3552064){target="_blank"}
+- [Galapagos Islands - Ecuador](https://obis.org/dataset/3cdb3dca-4df4-4931-9155-b41da2ce4075){target="_blank"}
 
 More data will become available soon!
 

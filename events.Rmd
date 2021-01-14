@@ -8,40 +8,40 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Upcoming
 
-- [3rd Marine Biodiversity Workshop: from the Sea to the Cloud](http://marinebon.org/p2p-colombia-workshop/) - May 4-8, 2020, Santa Marta, Colombia. THIS EVENT IS POSTPONED DUE TO THE COVID-19 OUTBREAK AND DATES ARE TBD
+- [3rd Marine Biodiversity Workshop: from the Sea to the Cloud](http://marinebon.org/p2p-colombia-workshop/){target="_blank"} - May 4-8, 2020, Santa Marta, Colombia. THIS EVENT IS POSTPONED DUE TO THE COVID-19 OUTBREAK AND DATES ARE TBD
 
 ## Past
 
-- Panel discussion: [MarineGEO Leaders in Networked Science panel](https://twitter.com/mbonpoletopole/status/1336203878069571586) - December 17, 2020 (virtual). The recording of the webinar and panel is available [here](https://smithsonian.zoom.us/rec/play/LIKD8VJ-Djax3mHkHAEMaemExsjNLwvnoeTIaT-3ie_A7_Aai7kWbLLLXPbjSmzwLN4__GUmHnjyamNw.uZYRZQojZsDcUg7Y?startTime=1608235286000&_x_zm_rtaid=4JAWT5QLQWuiqgD4iC15-Q.1608656141942.9e489a094b50da6a9f35e1e4f43dd78b&_x_zm_rhtaid=750).
+- Panel discussion: [MarineGEO Leaders in Networked Science panel](https://twitter.com/mbonpoletopole/status/1336203878069571586){target="_blank"} - December 17, 2020 (virtual). The recording of the webinar and panel is available [here](https://smithsonian.zoom.us/rec/play/LIKD8VJ-Djax3mHkHAEMaemExsjNLwvnoeTIaT-3ie_A7_Aai7kWbLLLXPbjSmzwLN4__GUmHnjyamNw.uZYRZQojZsDcUg7Y?startTime=1608235286000&_x_zm_rtaid=4JAWT5QLQWuiqgD4iC15-Q.1608656141942.9e489a094b50da6a9f35e1e4f43dd78b&_x_zm_rhtaid=750){target="_blank"}.
 
-- Webinar: [The Multi-Agency Rocky Intertidal Network (MARINe) Program](https://marine.ucsc.edu/) - October 26, 2020, 4:00-5:10 pm EDT. The recording of the webinar is available [here](https://usf.box.com/s/9oc14djcak07sjh9hw4ekq7fxcp1b2og).
+- Webinar: [The Multi-Agency Rocky Intertidal Network (MARINe) Program](https://marine.ucsc.edu/){target="_blank"} - October 26, 2020, 4:00-5:10 pm EDT. The recording of the webinar is available [here](https://usf.box.com/s/9oc14djcak07sjh9hw4ekq7fxcp1b2og){target="_blank"}.
 
-- [GEO BON Open Science Conference and All-Hands Meeting 2020](https://conf2020.geobon.org/) - July 6-10, 2020 (virtual). MBON Pole to Pole presentations are available for papers on [Sampling Effort Efficieny](https://drive.google.com/file/d/1b6CRFN7Mn5D9MS8OzB6fF0BPhhfM-a66/view?usp=sharing) and [Implemention of Best Practices](https://drive.google.com/file/d/1b6-DzslEnkgTqB4HwXve1lZEKLBSGGaj/view?usp=sharing).
+- [GEO BON Open Science Conference and All-Hands Meeting 2020](https://conf2020.geobon.org/){target="_blank"} - July 6-10, 2020 (virtual). MBON Pole to Pole presentations are available for papers on [Sampling Effort Efficieny](https://drive.google.com/file/d/1b6CRFN7Mn5D9MS8OzB6fF0BPhhfM-a66/view?usp=sharing){target="_blank"} and [Implemention of Best Practices](https://drive.google.com/file/d/1b6-DzslEnkgTqB4HwXve1lZEKLBSGGaj/view?usp=sharing){target="_blank"}.
 
-- [AGU Fall Meeting 2019](https://www2.agu.org/fall-meeting) - December 9-13, 2019, San Francisco, California. The MBON Pole to Pole absctract is available [here](https://drive.google.com/file/d/17deXPg_umFPoeYPB6QKTLDfwqv7hBUmG/view?usp=sharing).
+- [AGU Fall Meeting 2019](https://www2.agu.org/fall-meeting){target="_blank"} - December 9-13, 2019, San Francisco, California. The MBON Pole to Pole absctract is available [here](https://drive.google.com/file/d/17deXPg_umFPoeYPB6QKTLDfwqv7hBUmG/view?usp=sharing){target="_blank"}.
 
-- [10ª Semana de Integração Acadêmica da UFRJ / SIAC](http://siac.ufrj.br/) - October 21-27, 2019, Rio de Janeiro, Brazil. A poster on sandy beach biodiversity is available [here](https://drive.google.com/file/d/1fTgRFdOIGuESTIFHzMmO-nYa0KF4DOMc/view?usp=sharing)
+- [10ª Semana de Integração Acadêmica da UFRJ / SIAC](http://siac.ufrj.br/){target="_blank"} - October 21-27, 2019, Rio de Janeiro, Brazil. A poster on sandy beach biodiversity is available [here](https://drive.google.com/file/d/1fTgRFdOIGuESTIFHzMmO-nYa0KF4DOMc/view?usp=sharing){target="_blank"}
 
-- [OceanObs'19](http://www.oceanobs19.net/) - September 16-20, 2019. Check out posters on [MBON Pole to Pole](https://drive.google.com/file/d/1AWpEQSBzLOAGapNOh1J3KQwkB4GTVFXQ/view?usp=sharing) and [biodiversity monitoring and citizen science](https://drive.google.com/file/d/1BHuRr4WBTZIqBvBYphcUs9birViUnN5X/view?usp=sharing).  
+- [OceanObs'19](http://www.oceanobs19.net/){target="_blank"} - September 16-20, 2019. Check out posters on [MBON Pole to Pole](https://drive.google.com/file/d/1AWpEQSBzLOAGapNOh1J3KQwkB4GTVFXQ/view?usp=sharing){target="_blank"} and [biodiversity monitoring and citizen science](https://drive.google.com/file/d/1BHuRr4WBTZIqBvBYphcUs9birViUnN5X/view?usp=sharing){target="_blank"}.  
 
-- [MBON Pole to Pole presentation](https://usf.app.box.com/s/08569c61yektdv3odcgwuy5x1cmvuy8p) for the Global MBON monthly webinar - September 9, 2019. 
+- [MBON Pole to Pole presentation](https://usf.app.box.com/s/08569c61yektdv3odcgwuy5x1cmvuy8p){target="_blank"} for the Global MBON monthly webinar - September 9, 2019. 
 
-- [2019 AmeriGEO Week](https://www.amerigeoss.org/amerigeoss-events/amerigeoss-week-2019) - August 19-23, 2019, Lima, Peru. The MBON Pole to Pole will be represented at the AmeriGEO Week by [IMARPE](http://www.imarpe.gob.pe/imarpe/)
+- [2019 AmeriGEO Week](https://www.amerigeoss.org/amerigeoss-events/amerigeoss-week-2019){target="_blank"} - August 19-23, 2019, Lima, Peru. The MBON Pole to Pole will be represented at the AmeriGEO Week by [IMARPE](http://www.imarpe.gob.pe/imarpe/){target="_blank"}
 
-- [XIII Biofouling, Benthic Ecology and Marine Biotechnology Meeting](https://xiiibioinc.wixsite.com/xiiibioinc) - August 5-9, 2019, Arraial do Cabo, Rio de Janeiro, Brazil. The MBON Pole to Pole poster is available [here](https://drive.google.com/file/d/1AVl5loMTuzkE_xdBw9d-J7HNMojO_v9F/view?usp=sharing)
+- [XIII Biofouling, Benthic Ecology and Marine Biotechnology Meeting](https://xiiibioinc.wixsite.com/xiiibioinc){target="_blank"} - August 5-9, 2019, Arraial do Cabo, Rio de Janeiro, Brazil. The MBON Pole to Pole poster is available [here](https://drive.google.com/file/d/1AVl5loMTuzkE_xdBw9d-J7HNMojO_v9F/view?usp=sharing){target="_blank"}
 
-- [XXXIX Congreso de Ciencias del Mar “Recuperación y protección de la biodiversidad en un escenario de cambio global”](https://www.congresocienciasdelmar.cl/)<br>
-May 27-31, 2019, Iquique, Chile. The MBON Pole to Pole absctract is available [here](https://drive.google.com/file/d/1V5ZDpoSoY9vU3MFXR6tVSro6Uaab4PZh/view?usp=sharing). Presentation slides are also available [here](https://drive.google.com/file/d/1V3j9ZRAJg0ycXsPYmUWyNw4Hx7trJLeW/view?usp=sharing).
+- [XXXIX Congreso de Ciencias del Mar “Recuperación y protección de la biodiversidad en un escenario de cambio global”](https://www.congresocienciasdelmar.cl/){target="_blank"}<br>
+May 27-31, 2019, Iquique, Chile. The MBON Pole to Pole absctract is available [here](https://drive.google.com/file/d/1V5ZDpoSoY9vU3MFXR6tVSro6Uaab4PZh/view?usp=sharing){target="_blank"}. Presentation slides are also available [here](https://drive.google.com/file/d/1V3j9ZRAJg0ycXsPYmUWyNw4Hx7trJLeW/view?usp=sharing){target="_blank"}.
 
-- [NASA Biodiversity and Ecological Forecasting Meeting](https://drive.google.com/file/d/1fxq8MvqTIWO_N1hUmw11F4L4u6AsyNuG/view?usp=sharing)<br> 2019-05-22 in Washington DC, USA
+- [NASA Biodiversity and Ecological Forecasting Meeting](https://drive.google.com/file/d/1fxq8MvqTIWO_N1hUmw11F4L4u6AsyNuG/view?usp=sharing){target="_blank"}<br> 2019-05-22 in Washington DC, USA
 
-- [2nd Marine Biodiversity Workshop: from the Sea to the Cloud](https://marinebon.github.io/p2p-mexico-workshop/)<br>
+- [2nd Marine Biodiversity Workshop: from the Sea to the Cloud](https://marinebon.github.io/p2p-mexico-workshop/){target="_blank"}<br>
   2019-04-02 in Puerto Morelos, Mexico
   
-- [American Gephysical Union Fall Meeting 2018](https://drive.google.com/file/d/1YFOOYFZNmNTGzK3BRestIS1RltkZImEu/view?usp=sharing)<br>
+- [American Gephysical Union Fall Meeting 2018](https://drive.google.com/file/d/1YFOOYFZNmNTGzK3BRestIS1RltkZImEu/view?usp=sharing){target="_blank"}<br>
   2018-12-10 in Washington DC, USA
 
-- [Marine Biodiversity Workshop: from the Sea to the Cloud](https://marinebon.github.io/p2p-brazil-workshop/)<br>
+- [Marine Biodiversity Workshop: from the Sea to the Cloud](https://marinebon.github.io/p2p-brazil-workshop/){target="_blank"}<br>
   2018-08-06 in São Sebastião, Brazil
 
 

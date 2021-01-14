@@ -6,15 +6,15 @@ title: "Data from Sandy Beaches"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Biodiversity survey data are currently being collected and uploaded to [OBIS](https://obis.org/) by network members. 
+## Biodiversity survey data are currently being collected and uploaded to [OBIS](https://obis.org/){target="_blank"} by network members. 
 
 You can access available datasets for the following locations:
 
-[Yucatan Peninsula - Mexico](https://obis.org/dataset/5700fdc3-956f-4e33-903b-e66ba38d980c)
+- [Yucatan Peninsula - Mexico](https://obis.org/dataset/5700fdc3-956f-4e33-903b-e66ba38d980c){target="_blank"}
 
-[Barra del Chuy - Uruguay](https://obis.org/dataset/e2ae1710-46e4-4331-88c7-8970336fdb42)
+- [Barra del Chuy - Uruguay](https://obis.org/dataset/e2ae1710-46e4-4331-88c7-8970336fdb42){target="_blank"}
 
-[Atami Beach - Brazil](https://obis.org/dataset/58692e00-21aa-4c74-87a0-f06bf4610f86)
+- [Atami Beach - Brazil](https://obis.org/dataset/58692e00-21aa-4c74-87a0-f06bf4610f86){target="_blank"}
 
 More data will become available soon!
 

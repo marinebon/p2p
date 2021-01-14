@@ -5,21 +5,19 @@ title: "Methods for Field Protocols"
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-Use standardized field protocols below to collect biodiversity observations in rocky intertidal areas and sandy beaches:<br> 
-- [Rocky Shore](https://repository.oceanbestpractices.org/handle/11329/1143) Included on the [OBPS](https://search.oceanbestpractices.org/) 
+# Use standardized field protocols below to collect biodiversity observations in rocky intertidal areas and sandy beaches:<br> 
+- [Rocky Shore](https://repository.oceanbestpractices.org/handle/11329/1143) Included on the [OBPS](https://search.oceanbestpractices.org/){target="_blank"} 
 <br>
 <br>
 <img width="1000px" src="images/rs_manual.png"/>
 <br>
 <br>
 <br>
-- [Sandy Beach](https://repository.oceanbestpractices.org/handle/11329/1145) Included on the [OBPS](https://search.oceanbestpractices.org/)
+- [Sandy Beach](https://repository.oceanbestpractices.org/handle/11329/1145){target="_blank"} Included on the [OBPS](https://search.oceanbestpractices.org/){target="_blank"}
 <br>
 <br>
 <img width="1000px" src="images/sb_manual.png"/>
-<br>
-<br>
-<br>
-Use the template below to register observations during sandy beach surveys:<br>
+
+# Use the template below to register observations collected in sandy beach surveys:
 - [Sandy Beach Field Logsheet](protocols/FieldForm_SandyBeach.xlsx) NEW!
 

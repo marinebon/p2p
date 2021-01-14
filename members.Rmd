@@ -5,7 +5,7 @@ title: "Network Members and Contributors"
 <br>
 <br>
 
-![Group photo from [Brazil Workshop 2018-08](https://marinebon.github.io/p2p-brazil-workshop/).](images/P2P_group%20CebiMar_sm.JPG)
+![Group photo from [Brazil Workshop 2018-08](https://marinebon.github.io/p2p-brazil-workshop/){target="_blank"}.](images/P2P_group%20CebiMar_sm.JPG)
 
 <br>
 **Topic:** <br>
