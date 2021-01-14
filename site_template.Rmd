@@ -1,8 +1,8 @@
 ---
 title: "Site: `r params$site_name`"
 params:
-  site_id: "usa-chukchi-sea"
-  site_name:  "Arctic MBON - Chukchi Sea"
+  site_id: "usa-kib"
+  site_name:  "Kibesillah Hill"
 editor_options:
   chunk_output_type: console
 ---
@@ -23,8 +23,8 @@ source("functions.R")
 
 if (!exists("params")) 
   params <- list(
-  site_name = "Arctic MBON - Chukchi Sea",
-  site_id   = "usa-chukchi-sea")
+  site_name = "Kibesillah Hill",
+  site_id   = "usa-kib")
 
 site <- read_csv(here("data/sites.csv"), col_types=cols()) %>%
   filter(id == params$site_id)
