@@ -180,7 +180,7 @@ leaflet(
     colorNumeric("Spectral", c(1,33), reverse=T), seq(1,33))
 ```
 
-Read more about seascapes [here](https://coastwatch.noaa.gov/cw/satellite-data-products/multi-parameter-models/seascape-pelagic-habitat-classification.html).
+Read more about seascapes [here](https://coastwatch.noaa.gov/cw/satellite-data-products/multi-parameter-models/seascape-pelagic-habitat-classification.html){target="_blank"}.
 
 ## Timeseries {.tabset}
 
@@ -192,7 +192,7 @@ d   <- get_timeseries(sst, lon=site$lon, lat=site$lat, csv=csv, field="sst")
 plot_timeseries(d, title="SST", color="red")
 ```
 
-Download data: [`r basename(csv)`](https://raw.githubusercontent.com/marinebon/p2p/master/data/sst/`r basename(csv)`)
+Download data: [`r basename(csv)`](https://raw.githubusercontent.com/marinebon/p2p/master/data/sst/`r basename(csv)`){target="_blank"}
 
 ```{python, eval=F}
 # transform something like
@@ -217,9 +217,9 @@ plot_timeseries(d_chl, title="CHL", color="green")
 Sys.setenv(RERDDAP_DEFAULT_URL="https://upwell.pfeg.noaa.gov/erddap/")
 ```
 
-Download data: [`r basename(csv)`](https://raw.githubusercontent.com/marinebon/p2p/master/data/chl/`r basename(csv)`)
+Download data: [`r basename(csv)`](https://raw.githubusercontent.com/marinebon/p2p/master/data/chl/`r basename(csv)`){target="_blank"}
 
-## Taxonomic records in [OBIS](https://obis.org/) {.tabset}
+## Taxonomic records in [OBIS](https://obis.org/){target="_blank"} {.tabset}
 
 ### Time Series
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
@@ -339,4 +339,4 @@ m4}
 ```
 
 ## Data source:
-Data shown here is extracted using the [occurrence](https://www.rdocumentation.org/packages/robis/versions/1.0.1/topics/occurrence) function of the [robis](https://www.rdocumentation.org/packages/robis/versions/1.0.1) package within polygons (e.g. EEZ, WMHS) or a 0.25 x 0.25 degrees box centered at monitoring site in data-rich regions.
+Data shown here is extracted using the [occurrence](https://www.rdocumentation.org/packages/robis/versions/1.0.1/topics/occurrence){target="_blank"} function of the [robis](https://www.rdocumentation.org/packages/robis/versions/1.0.1){target="_blank"} package within polygons (e.g. EEZ, WMHS) or a 0.25 x 0.25 degrees box centered at monitoring site in data-rich regions.
