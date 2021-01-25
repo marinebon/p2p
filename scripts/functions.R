@@ -1,11 +1,9 @@
-library(tidyverse)
-library(here)
-library(glue)
-library(rerddap)  # install.packages("rerddap")
-library(raster)
-library(leaflet)
-library(dygraphs) # install.packages("dygraphs")
-library(xts)
+if (!require(librarian)){
+  install.packages("librarian")
+  library(librarian)
+}
+shelf(
+  bsplus, dygraphs, glue, here, iobis/robis, knitr, leafem, leaflet, mapview, raster, rerddap, tidyverse, xts)
 
 #library(plotdap)
 select <- dplyr::select

@@ -5,3 +5,4 @@
 README.html
 .~lock*
 site_template_files
+.DS_Store
