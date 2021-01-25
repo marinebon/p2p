@@ -26,7 +26,7 @@ jobs:
       - name: make_sites
         run: Rscript scripts/make_sites.R > scripts/output_make_sites.log
       - name: if failure
-        if: ${{ failure() }}
+        if: failure()
         run: tail -n40 scripts/output_make_sites.log
       - name: commit changes
         run: |
