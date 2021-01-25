@@ -23,10 +23,9 @@ jobs:
         run: git clone --depth 1 https://github.com/${{ github.repository }}.git .; ls
       - name: obis_download
         run: Rscript scripts/obis_download.R
-      - name: obis_render
-        run: | 
-        Rscript scripts/make_sites.R > scripts/output_make_sites.log
-      - name: The job has failed
+      - name: make_sites
+        run: Rscript scripts/make_sites.R > scripts/output_make_sites.log
+      - name: if failure
         if: ${{ failure() }}
         run: tail -n40 scripts/output_make_sites.log
       - name: commit changes
