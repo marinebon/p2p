@@ -28,7 +28,7 @@ jobs:
         Rscript scripts/make_sites.R > scripts/output_make_sites.log
       - name: The job has failed
         if: ${{ failure() }}
-        - tail -n40 scripts/output_make_sites.log
+        run: tail -n40 scripts/output_make_sites.log
       - name: commit changes
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
