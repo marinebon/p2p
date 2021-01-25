@@ -23,8 +23,12 @@ jobs:
         run: git clone --depth 1 https://github.com/${{ github.repository }}.git .; ls
       - name: obis_download
         run: Rscript scripts/obis_download.R
-      #- name: obis_render
-      #  run: Rscript scripts/render_oceano-modals.R
+      - name: obis_render
+        run: | 
+        Rscript scripts/make_sites.R > scripts/output_make_sites.log
+      - name: The job has failed
+        if: ${{ failure() }}
+        - tail -n40 scripts/output_make_sites.log
       - name: commit changes
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
