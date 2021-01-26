@@ -1,5 +1,6 @@
 {
 "type": "FeatureCollection",
+"name": "obis_sites",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "features": [
 { "type": "Feature", "properties": { "id": "arg-mardelplata-faro", "org": "[MACN](https:\/\/www.macnconicet.gob.ar\/investigacion\/ecologia\/)", "name": "Mar del Plata - Faro", "country": "arg", "lat": -38.0939222, "lon": -57.541275, "gmapurl": "http:\/\/maps.google.com\/maps?q=-38.0939222,-57.541275&ll=-38.0939222,-57.541275&z=6", "area_code": -9999.0, "bbox_025": "POLYGON ((-57.791275 -38.3439222, -57.791275 -37.8439222, -57.291275 -37.8439222, -57.291275 -38.3439222, -57.791275 -38.3439222))", "n_025": 713, "bbox_100": null, "n_100": null, "bbox_500": null, "n_500": null, "bbox_dd": 0.25, "bbox": "POLYGON ((-57.791275 -38.3439222, -57.791275 -37.8439222, -57.291275 -37.8439222, -57.291275 -38.3439222, -57.791275 -38.3439222))" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -57.791275, -38.3439222 ], [ -57.791275, -37.8439222 ], [ -57.291275, -37.8439222 ], [ -57.291275, -38.3439222 ], [ -57.791275, -38.3439222 ] ] ] } },

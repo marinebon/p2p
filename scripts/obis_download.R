@@ -235,17 +235,14 @@ sites_plys <- sites_plys %>%
 unlink(list.files(here("data/obis"), "^obis_sites_plys_[0-9]+\\.csv$"))
 
 tic("iterate over sites_plys")
-#for (i in 1:nrow(sites_plys)) { # i=1
-for (i in 2:nrow(sites_plys)) { # i=1
+for (i in 1:nrow(sites_plys)) { # i=1
+# for (i in 13:nrow(sites_plys)) { # i=12 # DEBUG
   
   ply       <- sites_plys$wkt[i]
   wkt_nchar <- sites_plys$wkt_nchar[i]
   occs_csv  <- glue("{dir_obis}/obis_sites_plys_{sprintf('%02d', i)}.csv")
 
-  tic(glue("site {i} of {nrow(sites_plys)} sites_plys (nchar={wkt_nchar})"))
-  
-  # n_obis <- try(occurrence_count(taxonid = c(51, 1806, 882, 3), geometry = ply))
-  # message(glue("  n_obis: {n_obis}"))
+  tic(glue("\nsite {i} of {nrow(sites_plys)} sites_plys (nchar={wkt_nchar})"))
   
   occs <- try(occurrence(taxonid = c(51, 1806, 882, 3), geometry = ply, fields = obis_flds)) # 1st ply: 99.702 sec elapsed
   
@@ -268,15 +265,12 @@ for (i in 2:nrow(sites_plys)) { # i=1
   # ORIGINAL: site 1 of 43 sites_plys (nchar=911): 99.702 sec elapsed
   # NEW API: 75695 * 9.064/10000 = 68.60995 sec to do it
   
-  toc()
-  
   if ("try-error" %in% class(occs)){
     message(glue("  ERROR: {total}"))
     next()
   }
   
   write_csv(occs, occs_csv)
-  
   # occs <- read_csv(here("data/obis/obis_sites_plys_01.csv")) # %>% names()
 
 }
@@ -287,5 +281,8 @@ obis_sites_plys_csvs <- list.files(here("data/obis"), "^obis_sites_plys_[0-9]+\\
 obis_sites_plys_csvs %>% 
   map_dfr(read_csv, col_types = cols()) %>% 
   write_csv(obis_data_csv)
-  # TODO: Deal with parsing failures by explicitly setting col_types() per field in flds
+  # TODO: Deal with parsing failure(s) by explicitly setting col_types() per field in flds
+  # Warning: 1 parsing failure.
+  #  row           col           expected actual                                                       file
+  # 1680 institutionID 1/0/T/F/TRUE/FALSE   ISDM '/Users/bbest/github/p2p/data/obis/obis_sites_plys_38.csv'
 unlink(obis_sites_plys_csvs)

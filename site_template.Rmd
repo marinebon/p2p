@@ -1,8 +1,10 @@
 ---
 title: "Site: `r params$site_name`"
 params:
-  site_id: "usa-kib"
-  site_name:  "Kibesillah Hill"
+  # site_id: "usa-kib"
+  # site_name:  "Kibesillah Hill"
+  site_id: "arg-mardelplata-faro"
+  site_name: "Mar del Plata - Faro"
 editor_options:
   chunk_output_type: console
 ---
@@ -16,8 +18,10 @@ source(here::here("scripts/functions.R"))
 
 if (!exists("params")) 
   params <- list(
-  site_name = "Kibesillah Hill",
-  site_id   = "usa-kib")
+  # site_name = "Kibesillah Hill",
+  # site_id   = "usa-kib")
+  site_name = "Mar del Plata - Faro",
+  site_id   = "arg-mardelplata-faro")
 
 site <- read_csv(here("data/sites.csv"), col_types=cols()) %>%
   filter(id == params$site_id)
@@ -259,7 +263,7 @@ obis_sites <- read_sf(here("data/obis/obis_sites.geojson"))
 obis_site <- obis_sites %>% 
   filter(id == params$site_id)
 obis_site_data <- obis_data[st_intersects(obis_data, obis_site, sparse = F),] %>% 
-  select(year = date_year, phylum) # obis_site_data
+  select(year = date_year, kingdom, phylum) # obis_site_data
 
 ## Plot the data ----
 # title <- glue("Data source: https://obis.org/area/{site$area_code}")
