@@ -23,7 +23,7 @@ make_site <- function(id, name){
 
 # walk through all sites to render html
 sites %>% 
-  slice(113:nrow(sites)) %>% # DEBUG
+  # slice(113:nrow(sites)) %>% # DEBUG
   # TODO: handle ERDDAP timeout
   # slice(113) %>% 
   #   label: unnamed-chunk-1
