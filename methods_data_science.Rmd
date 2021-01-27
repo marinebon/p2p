@@ -3,7 +3,7 @@ title: "Methods for Data Science"
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = F, message = F, warning = F)
 ```
 ## Use the templates below to enter your survey data:
 - [**Rocky Shore Data Template -- NEW!**](https://github.com/diodon/P2P-templates/blob/main/RS_DataSheet_longformat_v1.3.xlsx){target="_blank"}
@@ -15,6 +15,17 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Transform your survey data tables to Darwin Core Archive files (DwC-A):
 - [**DwC-A Writer**](https://rpubs.com/eqmh/DwCA_Gen){target="_blank"}
 - [**Download this test dataset to run DwC-A Writer**](https://github.com/diodon/P2P-templates/blob/main/DataSheet_longformat_TEST_v2.xlsx){target="_blank"}
+
+```{r}
+if (!require(librarian)){
+  install.packages("librarian")
+  library(librarian)
+}
+shelf(vembedr)
+
+embed_youtube("teJhfsSWonE", width = 910, height = 910*360/640, frameborder = 0,
+  allowfullscreen = TRUE, query = NULL)
+```
 
 ## Use these instructions to upload you data to the [MBON Pole to Pole IPT](http://ipt.iobis.org/mbon/){target="_blank"}:
 - [**HOW TO upload data to the Integrated Publishing Toolkit**](https://diodon.github.io/P2P_documents/PublishData/docs/PublishingDataIPT.html){target="_blank"}
