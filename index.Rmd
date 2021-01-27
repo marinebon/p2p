@@ -16,14 +16,12 @@ Welcome! We are developing a Community of Practice across the Americas to assess
 Learn about ongoing biodiversity monitoring efforts contributing to the network by clicking markers on the map
 
 ```{r}
-library(tidyverse)
-library(rnaturalearth) # install.packages("rnaturalearth")
-library(sf)
-library(leaflet)
-library(here)
-library(glue)
-library(htmltools)
-library(markdown)
+if (!require(librarian)){
+  install.packages("librarian")
+  library(librarian)
+}
+shelf(
+  glue, here, htmltools, leaflet, markdown, rnaturalearth, sf, tidyverse)
 
 countries <- ne_countries(
   scale = "small", type = "countries", returnclass = "sf",
