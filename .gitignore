@@ -4,5 +4,6 @@
 .Ruserdata
 README.html
 .~lock*
-site_template_files
+_site_template_files
+_site_template.html
 .DS_Store

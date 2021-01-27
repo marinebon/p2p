@@ -1,0 +1,29 @@
+name: render_pages
+
+on:
+  push:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:    
+  build:
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, 'ci skip')"
+    container: bdbest/cinms:1.0 # docker image
+    steps:
+      - name: clone repo
+        # get a shallow copy (depth 1) so only getting the latest version of files, not whole history
+        run: git clone --depth 1 https://github.com/${{ github.repository }}.git .; ls
+      - name: make_pages
+        run: Rscript scripts/make_pages.R > scripts/output_render.log
+      - name: if failure
+        if: failure()
+        run: tail -n40 scripts/output_render.log
+      - name: commit changes
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}          
+          git add -A
+          git commit -a -m "changes from workflow **${{ github.workflow }}** [ci skip]"
+          git push

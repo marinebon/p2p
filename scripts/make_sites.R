@@ -14,7 +14,7 @@ make_site <- function(id, name){
   
   # render html
   rmarkdown::render(
-    input       = "site_template.Rmd",
+    input       = "_site_template.Rmd",
     params      = list(
       site_name = name,
       site_id   = id),
