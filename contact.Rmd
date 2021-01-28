@@ -6,7 +6,7 @@ title: "Join the MBON Pole to Pole program!"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-We invite marine ecologists and biological oceanographers, resource managers, and conservation groups to contribute to the MBON Pole to Pole network. Groups and individuals conducting repeated sampling in one or more locations in their countries are encouraged and welcome to join the program. 
+We invite marine ecologists and biological oceanographers, resource managers, and conservation groups to contribute to the MBON Pole to Pole network. Groups and individuals conducting repeated sampling in one or more locations in their countries are encouraged and welcome to [join the program](https://forms.gle/44MVfe3x6pvoxHCY6). 
 
 To participate, please fill out the form below.
 
