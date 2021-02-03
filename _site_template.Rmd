@@ -262,12 +262,18 @@ obis_sites <- read_sf(here("data/obis/obis_sites.geojson"))
 # params <- list(site_id = "arg-puertomadryn2")
 obis_site <- obis_sites %>% 
   filter(id == params$site_id)
-obis_site_data <- obis_data[st_intersects(obis_data, obis_site, sparse = F),] %>% 
-  select(year = date_year, kingdom, phylum) # obis_site_data
+obis_site_data <- obis_data[st_intersects(obis_data, obis_site, sparse = F),]
+
+obis_site_data %>% 
+  st_drop_geometry() %>% 
+  mutate(
+    taxa = ifelse(kingdom == "Plantae", "Plantae", phylum)) %>% 
+  group_by(institutionID, taxa) %>% 
+  summarize(n = n())
 
 ## Plot the data ----
 # title <- glue("Data source: https://obis.org/area/{site$area_code}")
-ts_obis(obis_site_data)
+ts_obis(obis_site_data %>% st_drop_geometry() %>% select(year = date_year, kingdom, phylum))
 ```
 
 ### Maps
