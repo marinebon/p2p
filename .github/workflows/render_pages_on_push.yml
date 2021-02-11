@@ -15,7 +15,9 @@ jobs:
         # get a shallow copy (depth 1) so only getting the latest version of files, not whole history
         run: git clone --depth 1 https://github.com/${{ github.repository }}.git .; ls
       - name: make_pages
-        run: Rscript scripts/make_pages.R > scripts/output_render.log
+        run: Rscript scripts/make_pages.R
+        # DEBUG: output to log, otherwise prevent unnecessary commit if files unchanged (b/c temp file always diff't)        
+        #run: Rscript scripts/make_pages.R > scripts/output_render.log
       - name: if failure
         if: failure()
         run: tail -n40 scripts/output_render.log
