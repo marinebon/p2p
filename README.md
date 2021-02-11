@@ -1,8 +1,8 @@
 # p2p
 ***Marine Biodiversity Observation Network Pole to Pole of the Americas ([MBON Pole to Pole](https://marinebon.org/p2p/)) website***
 
-![render_pages_on_push](https://github.com/marinebon/p2p/workflows/render_pages_on_push/badge.svg)
-![update_sites_monthly](https://github.com/marinebon/p2p/workflows/update_sites_monthly/badge.svg)
+[![render_pages_on_push](https://github.com/marinebon/p2p/workflows/render_pages_on_push/badge.svg)](https://github.com/marinebon/p2p/actions?query=workflow%3Arender_pages_on_push)
+[![update_sites_monthly](https://github.com/marinebon/p2p/workflows/update_sites_monthly/badge.svg)](https://github.com/marinebon/p2p/actions?query=workflow%3Aupdate_sites_monthly)
 
 This website was built as an [R Markdown website](https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html).
 
