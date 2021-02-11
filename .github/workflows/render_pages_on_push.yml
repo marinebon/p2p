@@ -1,4 +1,4 @@
-name: render_pages
+name: render_pages_on_push
 
 on:
   push:
