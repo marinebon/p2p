@@ -6,7 +6,7 @@ if (! require(librarian)){
   library(librarian)
 }
 shelf(
-  here, fs, rmarkdown)
+  dplyr, here, fs, rmarkdown)
 
 setwd(here())
 dir_pages <- here("docs_pages") # directory to stage copy of Rmarkdown website files

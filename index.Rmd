@@ -27,7 +27,8 @@ countries <- ne_countries(
   scale = "small", type = "countries", returnclass = "sf",
   continent= c("North America", "South America")) %>%
   mutate(
-    mapcolor7 = as.factor(as.character(mapcolor7)))
+    mapcolor7 = as.factor(as.character(mapcolor7))) %>% 
+  st_set_crs(4326)
 
 sites_csv <- here("data/sites.csv")
 
