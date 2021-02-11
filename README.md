@@ -3,6 +3,9 @@
 
 [![Build Status](https://travis-ci.org/marinebon/p2p.svg?branch=master)](https://travis-ci.org/marinebon/p2p)
 
+[](https://github.com/marinebon/p2p/workflows/render_pages_on_push/badge.svg)
+[](https://github.com/marinebon/p2p/workflows/update_sites_monthly/badge.svg)
+
 This website was built as an [R Markdown website](https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html).
 
 ## Add a Site
