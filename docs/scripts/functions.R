@@ -106,9 +106,9 @@ map_raster_2 <- function(r, site_lon, site_lat, site_label, title){
 get_timeseries <- function(info, lon, lat, csv, field="sst"){
 
   # info = chl; lon=site$lon; lat=site$lat; csv=csv; field="chlor_a"
-  
-  dates  <- get_dates(info)
 
+  dates  <- get_dates(info)
+  
   if (file.exists(csv)){
     d_prev <- read_csv(csv, col_types=cols()) %>%
       arrange(date)
@@ -120,6 +120,7 @@ get_timeseries <- function(info, lon, lat, csv, field="sst"){
     start_date <- dates[1]
   }
   
+  # TODO: handle non-responsive ERDDAP server
   # griddap <- function (x, ..., fields = "all", stride = 1, fmt = "nc", url = eurl(),
   #                              store = disk(), read = TRUE, callopts = list())
   # {
@@ -207,13 +208,13 @@ get_timeseries <- function(info, lon, lat, csv, field="sst"){
   d_now <- v$data %>%
     as_tibble() %>%
     mutate(
-      date = lubridate::as_date(time, "%Y-%m-%dT00:00:00Z")) %>%
+      date = lubridate::as_date(time, format = "%Y-%m-%dT00:00:00Z")) %>%
     select(date, field) %>%
     arrange(date)
 
   if (file.exists(csv)){
     d <- bind_rows(d_prev, d_now) %>%
-      filter(!duplicated(date))
+      filter(!duplicated(all_of(date)))
   } else {
     d <- d_now
   }
@@ -234,4 +235,29 @@ plot_timeseries <- function(d, title="SST", color="red", dyRangeSelector=T, ...)
       dyRangeSelector()
   }
   p
+}
+
+map_obis_pts <- function(pts, ply){
+  if (nrow(pts) == 0){
+    print("No data")
+  } else if (nrow(pts)  > 0){
+    leaflet(pts) %>%
+      addProviderTiles(providers$Esri.WorldImagery) %>%
+      addPolygons(
+        data = ply, color = "blue") %>% 
+      addCircleMarkers(
+        fillOpacity = 0.7, color = "yellow", radius = 7, stroke = F,
+        clusterOptions = markerClusterOptions())
+  }
+}
+
+plot_obis_hist <- function(df, x, y){
+  g <- ggplot() +
+    geom_histogram(data = df, aes(x = {{x}}, fill = {{y}}), binwidth = 3) +
+    scale_fill_brewer(palette = "Spectral") +
+    theme(axis.text=element_text(size=12),
+          axis.title=element_text(size=14,face="bold")) +
+    theme(axis.text.x = element_text(size=14, angle=0),
+          axis.text.y = element_text(size=14, angle=0))
+  g
 }

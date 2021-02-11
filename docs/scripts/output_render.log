@@ -10,7 +10,11 @@ List of 1
   ordinary text without R code
 
 
+<<<<<<< HEAD
 /usr/local/bin/pandoc +RTS -K512m -RTS about.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash+smart --output /__w/p2p/p2p/docs/about.html --email-obfuscation none --standalone --section-divs --template /usr/local/lib/R/site-library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/RtmpmERupd/rmarkdown-str1e72a8f75a.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/RtmpmERupd/rmarkdown-str1e61f1b9c2.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/pagebreak.lua --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/latex-div.lua --include-after-body _includes/footer.html 
+=======
+/usr/local/bin/pandoc +RTS -K512m -RTS about.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash+smart --output /__w/p2p/p2p/docs/about.html --email-obfuscation none --standalone --section-divs --template /usr/local/lib/R/site-library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/Rtmpk8kMes/rmarkdown-str1e51ba63c8.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/Rtmpk8kMes/rmarkdown-str1e4c0bb166.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/pagebreak.lua --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/latex-div.lua --include-after-body _includes/footer.html 
+>>>>>>> 71b351e1... @eqmh, fixed make_pages.R w/ imgs, ggplotly(obis_ts) for sites, if erddap hangs doesn't error
   |                                                                              |                                                                      |   0%  |                                                                              |.......................                                               |  33%
   ordinary text without R code
 
@@ -23,7 +27,11 @@ List of 1
   ordinary text without R code
 
 
+<<<<<<< HEAD
 /usr/local/bin/pandoc +RTS -K512m -RTS contact.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash+smart --output /__w/p2p/p2p/docs/contact.html --email-obfuscation none --standalone --section-divs --template /usr/local/lib/R/site-library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/RtmpmERupd/rmarkdown-str1e3df45b6f.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/RtmpmERupd/rmarkdown-str1e5678be8d.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/pagebreak.lua --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/latex-div.lua --include-after-body _includes/footer.html 
+=======
+/usr/local/bin/pandoc +RTS -K512m -RTS contact.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash+smart --output /__w/p2p/p2p/docs/contact.html --email-obfuscation none --standalone --section-divs --template /usr/local/lib/R/site-library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/Rtmpk8kMes/rmarkdown-str1e75d13ed2.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/Rtmpk8kMes/rmarkdown-str1e66c3a748.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/pagebreak.lua --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/latex-div.lua --include-after-body _includes/footer.html 
+>>>>>>> 71b351e1... @eqmh, fixed make_pages.R w/ imgs, ggplotly(obis_ts) for sites, if erddap hangs doesn't error
   |                                                                              |                                                                      |   0%  |                                                                              |.......................                                               |  33%
   ordinary text without R code
 
@@ -36,7 +44,11 @@ List of 1
   ordinary text without R code
 
 
+<<<<<<< HEAD
 /usr/local/bin/pandoc +RTS -K512m -RTS data_in_situ.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash+smart --output /__w/p2p/p2p/docs/data_in_situ.html --email-obfuscation none --standalone --section-divs --template /usr/local/lib/R/site-library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/RtmpmERupd/rmarkdown-str1e76c4b557.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/RtmpmERupd/rmarkdown-str1e6c59aeab.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/pagebreak.lua --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/latex-div.lua --include-after-body _includes/footer.html 
+=======
+/usr/local/bin/pandoc +RTS -K512m -RTS data_in_situ.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash+smart --output /__w/p2p/p2p/docs/data_in_situ.html --email-obfuscation none --standalone --section-divs --template /usr/local/lib/R/site-library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/Rtmpk8kMes/rmarkdown-str1e70ec0892.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/Rtmpk8kMes/rmarkdown-str1eb60a25e.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/pagebreak.lua --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/latex-div.lua --include-after-body _includes/footer.html 
+>>>>>>> 71b351e1... @eqmh, fixed make_pages.R w/ imgs, ggplotly(obis_ts) for sites, if erddap hangs doesn't error
   |                                                                              |                                                                      |   0%  |                                                                              |.......................                                               |  33%
   ordinary text without R code
 
@@ -49,7 +61,11 @@ List of 1
   ordinary text without R code
 
 
+<<<<<<< HEAD
 /usr/local/bin/pandoc +RTS -K512m -RTS data_rocky_shore.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash+smart --output /__w/p2p/p2p/docs/data_rocky_shore.html --email-obfuscation none --standalone --section-divs --template /usr/local/lib/R/site-library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/RtmpmERupd/rmarkdown-str1e5ef68a42.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/RtmpmERupd/rmarkdown-str1e79fe8fbd.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/pagebreak.lua --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/latex-div.lua --include-after-body _includes/footer.html 
+=======
+/usr/local/bin/pandoc +RTS -K512m -RTS data_rocky_shore.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash+smart --output /__w/p2p/p2p/docs/data_rocky_shore.html --email-obfuscation none --standalone --section-divs --template /usr/local/lib/R/site-library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/Rtmpk8kMes/rmarkdown-str1e9fc4988.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/Rtmpk8kMes/rmarkdown-str1e4332920f.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/pagebreak.lua --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/latex-div.lua --include-after-body _includes/footer.html 
+>>>>>>> 71b351e1... @eqmh, fixed make_pages.R w/ imgs, ggplotly(obis_ts) for sites, if erddap hangs doesn't error
   |                                                                              |                                                                      |   0%  |                                                                              |.......................                                               |  33%
   ordinary text without R code
 
@@ -62,7 +78,11 @@ List of 1
   ordinary text without R code
 
 
+<<<<<<< HEAD
 /usr/local/bin/pandoc +RTS -K512m -RTS data_rs.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash+smart --output /__w/p2p/p2p/docs/data_rs.html --email-obfuscation none --standalone --section-divs --template /usr/local/lib/R/site-library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/RtmpmERupd/rmarkdown-str1e487d6012.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/RtmpmERupd/rmarkdown-str1e543a223f.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/pagebreak.lua --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/latex-div.lua --include-after-body _includes/footer.html 
+=======
+/usr/local/bin/pandoc +RTS -K512m -RTS data_rs.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash+smart --output /__w/p2p/p2p/docs/data_rs.html --email-obfuscation none --standalone --section-divs --template /usr/local/lib/R/site-library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/Rtmpk8kMes/rmarkdown-str1e7e758d00.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/Rtmpk8kMes/rmarkdown-str1e24184bf7.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/pagebreak.lua --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/latex-div.lua --include-after-body _includes/footer.html 
+>>>>>>> 71b351e1... @eqmh, fixed make_pages.R w/ imgs, ggplotly(obis_ts) for sites, if erddap hangs doesn't error
   |                                                                              |                                                                      |   0%  |                                                                              |.......................                                               |  33%
   ordinary text without R code
 
@@ -75,7 +95,11 @@ List of 1
   ordinary text without R code
 
 
+<<<<<<< HEAD
 /usr/local/bin/pandoc +RTS -K512m -RTS data_sandy_beach.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash+smart --output /__w/p2p/p2p/docs/data_sandy_beach.html --email-obfuscation none --standalone --section-divs --template /usr/local/lib/R/site-library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/RtmpmERupd/rmarkdown-str1e393031b0.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/RtmpmERupd/rmarkdown-str1e58515eca.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/pagebreak.lua --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/latex-div.lua --include-after-body _includes/footer.html 
+=======
+/usr/local/bin/pandoc +RTS -K512m -RTS data_sandy_beach.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash+smart --output /__w/p2p/p2p/docs/data_sandy_beach.html --email-obfuscation none --standalone --section-divs --template /usr/local/lib/R/site-library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/Rtmpk8kMes/rmarkdown-str1e4b4b62be.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/Rtmpk8kMes/rmarkdown-str1e42393ca9.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/pagebreak.lua --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/latex-div.lua --include-after-body _includes/footer.html 
+>>>>>>> 71b351e1... @eqmh, fixed make_pages.R w/ imgs, ggplotly(obis_ts) for sites, if erddap hangs doesn't error
   |                                                                              |                                                                      |   0%  |                                                                              |.......................                                               |  33%
   ordinary text without R code
 
@@ -88,7 +112,11 @@ List of 1
   ordinary text without R code
 
 
+<<<<<<< HEAD
 /usr/local/bin/pandoc +RTS -K512m -RTS events.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash+smart --output /__w/p2p/p2p/docs/events.html --email-obfuscation none --standalone --section-divs --template /usr/local/lib/R/site-library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/RtmpmERupd/rmarkdown-str1e4cfdacf4.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/RtmpmERupd/rmarkdown-str1e11578155.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/pagebreak.lua --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/latex-div.lua --include-after-body _includes/footer.html 
+=======
+/usr/local/bin/pandoc +RTS -K512m -RTS events.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash+smart --output /__w/p2p/p2p/docs/events.html --email-obfuscation none --standalone --section-divs --template /usr/local/lib/R/site-library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/Rtmpk8kMes/rmarkdown-str1e1cfde259.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/Rtmpk8kMes/rmarkdown-str1eb8eaa2a.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/pagebreak.lua --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/latex-div.lua --include-after-body _includes/footer.html 
+>>>>>>> 71b351e1... @eqmh, fixed make_pages.R w/ imgs, ggplotly(obis_ts) for sites, if erddap hangs doesn't error
   |                                                                              |                                                                      |   0%  |                                                                              |........                                                              |  11%
   ordinary text without R code
 
@@ -116,7 +144,11 @@ label: unnamed-chunk-3
   ordinary text without R code
 
 
+<<<<<<< HEAD
 /usr/local/bin/pandoc +RTS -K512m -RTS index.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash+smart --output /__w/p2p/p2p/docs/index.html --email-obfuscation none --standalone --section-divs --template /usr/local/lib/R/site-library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/RtmpmERupd/rmarkdown-str1e3dce25a1.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/RtmpmERupd/rmarkdown-str1e203a83b4.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/pagebreak.lua --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/latex-div.lua --include-after-body _includes/footer.html 
+=======
+/usr/local/bin/pandoc +RTS -K512m -RTS index.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash+smart --output /__w/p2p/p2p/docs/index.html --email-obfuscation none --standalone --section-divs --template /usr/local/lib/R/site-library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/Rtmpk8kMes/rmarkdown-str1e14bc7327.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/Rtmpk8kMes/rmarkdown-str1e5a27b1b8.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/pagebreak.lua --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/latex-div.lua --include-after-body _includes/footer.html 
+>>>>>>> 71b351e1... @eqmh, fixed make_pages.R w/ imgs, ggplotly(obis_ts) for sites, if erddap hangs doesn't error
   |                                                                              |                                                                      |   0%  |                                                                              |............                                                          |  17%
   ordinary text without R code
 
@@ -136,7 +168,11 @@ label: unnamed-chunk-2
   |                                                                              |......................................................................| 100%
 label: unnamed-chunk-3
 
+<<<<<<< HEAD
 /usr/local/bin/pandoc +RTS -K512m -RTS members.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash+smart --output /__w/p2p/p2p/docs/members.html --email-obfuscation none --standalone --section-divs --template /usr/local/lib/R/site-library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/RtmpmERupd/rmarkdown-str1e429131b3.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/RtmpmERupd/rmarkdown-str1e2bf7baf8.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/pagebreak.lua --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/latex-div.lua --include-after-body _includes/footer.html 
+=======
+/usr/local/bin/pandoc +RTS -K512m -RTS members.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash+smart --output /__w/p2p/p2p/docs/members.html --email-obfuscation none --standalone --section-divs --template /usr/local/lib/R/site-library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/Rtmpk8kMes/rmarkdown-str1e5b0ab0d9.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/Rtmpk8kMes/rmarkdown-str1e35d59037.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/pagebreak.lua --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/latex-div.lua --include-after-body _includes/footer.html 
+>>>>>>> 71b351e1... @eqmh, fixed make_pages.R w/ imgs, ggplotly(obis_ts) for sites, if erddap hangs doesn't error
   |                                                                              |                                                                      |   0%  |                                                                              |..............                                                        |  20%
   ordinary text without R code
 
@@ -154,7 +190,11 @@ label: unnamed-chunk-1
   ordinary text without R code
 
 
+<<<<<<< HEAD
 /usr/local/bin/pandoc +RTS -K512m -RTS methods_data_science.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash+smart --output /__w/p2p/p2p/docs/methods_data_science.html --email-obfuscation none --standalone --section-divs --template /usr/local/lib/R/site-library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/RtmpmERupd/rmarkdown-str1e46531127.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/RtmpmERupd/rmarkdown-str1ede16aa0.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/pagebreak.lua --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/latex-div.lua --include-after-body _includes/footer.html 
+=======
+/usr/local/bin/pandoc +RTS -K512m -RTS methods_data_science.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash+smart --output /__w/p2p/p2p/docs/methods_data_science.html --email-obfuscation none --standalone --section-divs --template /usr/local/lib/R/site-library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/Rtmpk8kMes/rmarkdown-str1e36b71a38.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/Rtmpk8kMes/rmarkdown-str1e70679cbf.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/pagebreak.lua --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/latex-div.lua --include-after-body _includes/footer.html 
+>>>>>>> 71b351e1... @eqmh, fixed make_pages.R w/ imgs, ggplotly(obis_ts) for sites, if erddap hangs doesn't error
   |                                                                              |                                                                      |   0%  |                                                                              |.......................                                               |  33%
   ordinary text without R code
 
@@ -167,7 +207,11 @@ List of 1
   ordinary text without R code
 
 
+<<<<<<< HEAD
 /usr/local/bin/pandoc +RTS -K512m -RTS methods_field_protocols.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash+smart --output /__w/p2p/p2p/docs/methods_field_protocols.html --email-obfuscation none --standalone --section-divs --template /usr/local/lib/R/site-library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/RtmpmERupd/rmarkdown-str1e5584eae.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/RtmpmERupd/rmarkdown-str1e4b11fbff.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/pagebreak.lua --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/latex-div.lua --include-after-body _includes/footer.html 
+=======
+/usr/local/bin/pandoc +RTS -K512m -RTS methods_field_protocols.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash+smart --output /__w/p2p/p2p/docs/methods_field_protocols.html --email-obfuscation none --standalone --section-divs --template /usr/local/lib/R/site-library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/Rtmpk8kMes/rmarkdown-str1e7c6c3893.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/Rtmpk8kMes/rmarkdown-str1e2f6b7c22.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/pagebreak.lua --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/latex-div.lua --include-after-body _includes/footer.html 
+>>>>>>> 71b351e1... @eqmh, fixed make_pages.R w/ imgs, ggplotly(obis_ts) for sites, if erddap hangs doesn't error
                                        about.Rmd 
                   "/__w/p2p/p2p/docs/about.html" 
                                      contact.Rmd 

@@ -1,5 +1,5 @@
 name: "mbon-p2p"
-exclude: ["survey imagery", "data"]
+exclude: ["survey imagery", "data", "docs/z_*"]
 navbar:
   title: "MBON Pole to Pole Americas"
   left:

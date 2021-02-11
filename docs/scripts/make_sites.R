@@ -2,6 +2,8 @@ library(tidyverse)
 library(here)
 library(glue)
 
+setwd(here())
+
 sites_csv <- here("data/sites.csv")
 
 sites <- read_csv(sites_csv, col_types=cols()) %>% 
@@ -14,7 +16,7 @@ make_site <- function(id, name){
   
   # render html
   rmarkdown::render(
-    input       = "_site_template.Rmd",
+    input       = here("_site_template.Rmd"),
     params      = list(
       site_name = name,
       site_id   = id),
@@ -24,6 +26,7 @@ make_site <- function(id, name){
 # walk through all sites to render html
 sites %>% 
   # slice(113:nrow(sites)) %>% # DEBUG
+  slice(1:3) %>% # DEBUG
   # TODO: handle ERDDAP timeout
   # slice(113) %>% 
   #   label: unnamed-chunk-1
