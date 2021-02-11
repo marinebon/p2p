@@ -1,10 +1,10 @@
 # p2p
 ***Marine Biodiversity Observation Network Pole to Pole of the Americas ([MBON Pole to Pole](https://marinebon.org/p2p/)) website***
 
-- [![make_pages_on_push](https://github.com/marinebon/p2p/workflows/make_pages_on_push/badge.svg)](https://github.com/marinebon/p2p/actions?query=workflow%3Amake_pages_on_push)
-  makes the normal web pages (`*.Rmd` to `*.html`; not sites `z_*.html`) when a new commit is pushed to this repo.
-- [![make_sites_monthly](https://github.com/marinebon/p2p/workflows/make_sites_monthly/badge.svg)](https://github.com/marinebon/p2p/actions?query=workflow%3Amake_sites_monthly)
-  makes all site pages (`z_*.html` from `_site_template.Rmd`) on the 7th day of the month, first downloading all the OBIS data within the unionized buffer boxes, then rendering each site page, including fetching the latest SST & Chl satellite products.
+[![make_pages_on_push](https://github.com/marinebon/p2p/workflows/make_pages_on_push/badge.svg)](https://github.com/marinebon/p2p/actions?query=workflow%3Amake_pages_on_push) [![make_sites_monthly](https://github.com/marinebon/p2p/workflows/make_sites_monthly/badge.svg)](https://github.com/marinebon/p2p/actions?query=workflow%3Amake_sites_monthly)
+
+- `make_pages_on_push`: Make the normal web pages (`*.Rmd` to `*.html`; not sites `z_*.html`) when a new commit is pushed to this repo.
+- `make_sites_monthly`: Make all site pages (`z_*.html` from `_site_template.Rmd`) on the 7th day of the month, first downloading all the OBIS data within the unionized buffer boxes, then rendering each site page, including fetching the latest SST & Chl satellite products.
 
 This website was built as an [R Markdown website](https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html).
 
