@@ -1,8 +1,8 @@
 # p2p
 ***Marine Biodiversity Observation Network Pole to Pole of the Americas ([MBON Pole to Pole](https://marinebon.org/p2p/)) website***
 
-- [![make_pages_on_push](https://github.com/marinebon/p2p/workflows/make_pages_on_push/badge.svg)](https://github.com/marinebon/p2p/actions?query=workflow%3Amake_pages_on_push): renders the *.Rmd to *.html (not the individual sites) when a new commit is pushed to this repo.
-- [![make_sites_monthly](https://github.com/marinebon/p2p/workflows/make_sites_monthly/badge.svg)](https://github.com/marinebon/p2p/actions?query=workflow%3Amake_sites_monthly): renders all site pages on the 7th day of the month, first downloading all the OBIS data within the unionized buffer boxes, then rendering each site page, including fetching the latest SST & Chl satellite products.
+- [![make_pages_on_push](https://github.com/marinebon/p2p/workflows/make_pages_on_push/badge.svg)](https://github.com/marinebon/p2p/actions?query=workflow%3Amake_pages_on_push): renders the *.Rmd to *.html (not the individual sites z_*.html) when a new commit is pushed to this repo.
+- [![make_sites_monthly](https://github.com/marinebon/p2p/workflows/make_sites_monthly/badge.svg)](https://github.com/marinebon/p2p/actions?query=workflow%3Amake_sites_monthly): renders all site pages (`z_*.html` from `_site_template.Rmd`) on the 7th day of the month, first downloading all the OBIS data within the unionized buffer boxes, then rendering each site page, including fetching the latest SST & Chl satellite products.
 
 This website was built as an [R Markdown website](https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html).
 
@@ -53,10 +53,10 @@ with a given size (eg "Medium (640 × 480)").
 
 ## Building Website
 
-Since making the site pages is time consuming and the typical method for building an Rmarkdown website (`rmarkdown::render_site()`) deletes the output **`docs/`** folder, these processes are broken up into two seperate scripts:
+Since making the site pages (`z_*.html`) is time consuming and the typical method for building an Rmarkdown website (`rmarkdown::render_site()`: `*.Rmd` -> `*.html`) deletes the output **`docs/`** folder, these processes are broken up into two seperate scripts:
 
 - [make_pages.R](https://github.com/marinebon/p2p/blob/master/scripts/make_pages.R): renders the *.Rmd to *.html (not the individual sites)
-- [make_sites.R](https://github.com/marinebon/p2p/blob/master/scripts/make_sites.R): renders all site pages, first downloading all the OBIS data within the unionized buffer boxes, then rendering each site page, including fetching the latest SST & Chl satellite products
+- [make_sites.R](https://github.com/marinebon/p2p/blob/master/scripts/make_sites.R): renders all site pages (`z_*.html` from `_site_template.Rmd`), first downloading all the OBIS data within the unionized buffer boxes, then rendering each site page, including fetching the latest SST & Chl satellite products
 
 Note that you can run the corresponding workflows through the [p2p Github Actions](https://github.com/marinebon/p2p/actions) web interface:
 
