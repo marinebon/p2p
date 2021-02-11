@@ -68,16 +68,4 @@ Note that you can run the corresponding workflows through the [p2p Github Action
 ## Resources
 
 - [Markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-
-- Jekyll themes:
-  - [Phlow/feeling-responsive](https://github.com/Phlow/feeling-responsive), [demo](http://phlow.github.io/feeling-responsive/)
-  
-- End -
-
-
-
-
-
-
-
-  
+ 
