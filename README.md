@@ -1,8 +1,8 @@
 # p2p
 ***Marine Biodiversity Observation Network Pole to Pole of the Americas ([MBON Pole to Pole](https://marinebon.org/p2p/)) website***
 
-- [![render_pages_on_push](https://github.com/marinebon/p2p/workflows/render_pages_on_push/badge.svg)](https://github.com/marinebon/p2p/actions?query=workflow%3Arender_pages_on_push): renders the *.Rmd to *.html (not the individual sites) when a new commit is pushed to this repo.
-- [![update_sites_monthly](https://github.com/marinebon/p2p/workflows/update_sites_monthly/badge.svg)](https://github.com/marinebon/p2p/actions?query=workflow%3Aupdate_sites_monthly): renders all site pages on the 7th day of the month, first downloading all the OBIS data within the unionized buffer boxes, then rendering each site page, including fetching the latest SST & Chl satellite products.
+- [![make_pages_on_push](https://github.com/marinebon/p2p/workflows/make_pages_on_push/badge.svg)](https://github.com/marinebon/p2p/actions?query=workflow%3Amake_pages_on_push): renders the *.Rmd to *.html (not the individual sites) when a new commit is pushed to this repo.
+- [![make_sites_monthly](https://github.com/marinebon/p2p/workflows/make_sites_monthly/badge.svg)](https://github.com/marinebon/p2p/actions?query=workflow%3Amake_sites_monthly): renders all site pages on the 7th day of the month, first downloading all the OBIS data within the unionized buffer boxes, then rendering each site page, including fetching the latest SST & Chl satellite products.
 
 This website was built as an [R Markdown website](https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html).
 
@@ -53,26 +53,15 @@ with a given size (eg "Medium (640 × 480)").
 
 ## Building Website
 
-- The easiest way to generate the website is clicking on the **Build Website** menu button from the **Build** pane in RStudio after opening this repository's project by double-clicking on `p2p.Rproj`. All the content files (\*.Rmd, \*.md, \*.html) are rendered and output to the **`docs/`** folder, where it is served to [marinebon.github.io/p2p](https://marinebon.github.io/p2p) via [Github Pages](https://pages.github.com).
+Since making the site pages is time consuming and the typical method for building an Rmarkdown website (`rmarkdown::render_site()`) deletes the output **`docs/`** folder, these processes are broken up into two seperate scripts:
 
-- **WARNING**: Do _**NOT**_ place any content in the **`docs/`** since it gets wiped clean before rebuilding the website in its place.
+- [make_pages.R](https://github.com/marinebon/p2p/blob/master/scripts/make_pages.R): renders the *.Rmd to *.html (not the individual sites)
+- [make_sites.R](https://github.com/marinebon/p2p/blob/master/scripts/make_sites.R): renders all site pages, first downloading all the OBIS data within the unionized buffer boxes, then rendering each site page, including fetching the latest SST & Chl satellite products
 
-To build from command shell cd to the project & run:
+Note that you can run the corresponding workflows through the [p2p Github Actions](https://github.com/marinebon/p2p/actions) web interface:
 
-- R   : `rmarkdown::render_site(); source("make_sites.R")`
-- bash: `Rscript -e 'rmarkdown::render_site(); source("make_sites.R")'`
-
-### Installing Dependencies
-
-If you don't have the required packages you will need to install them:
-`cd` into the project directory then execute the following R to install dependencies automatically from the `DESCRIPTION` file.
-
-```R
-install.packages('devtools')
-devtools.install('./')
-```
-
-For Travis to work, add package to `Imports:` in `DESCRIPTION`. For packages not on CRAN, also add to `Remotes:` to install via Github.
+- [make_pages_on_push](https://github.com/marinebon/p2p/actions?query=workflow%3Amake_pages_on_push): by pushing a new git commit
+- [make_sites_monthly](https://github.com/marinebon/p2p/actions?query=workflow%3Amake_sites): by [manually running the workflow](https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow)
 
 ## Resources
 
