@@ -1,10 +1,8 @@
 ---
-title: "Site: `r params$site_name`"
+title: 'Site: `r params$site_name`'
 params:
-  # site_id: "usa-kib"
-  # site_name:  "Kibesillah Hill"
-  site_id: "arg-mardelplata-faro"
-  site_name: "Mar del Plata - Faro"
+  site_id: arg-mardelplata-faro
+  site_name: Mar del Plata - Faro
 editor_options:
   chunk_output_type: console
 ---
@@ -290,4 +288,4 @@ d_obis_site %>%
 ```
 
 ## Data source:
-Data shown here is extracted using the [occurrence](https://www.rdocumentation.org/packages/robis/versions/1.0.1/topics/occurrence){target="_blank"} function of the [robis](https://www.rdocumentation.org/packages/robis/versions/1.0.1){target="_blank"} package within polygons (e.g. EEZ, WMHS) or a 0.25 x 0.25 degrees box centered at monitoring site in data-rich regions.
+Data shown here is extracted using the [occurrence](https://www.rdocumentation.org/packages/robis/versions/1.0.1/topics/occurrence){target="_blank"} function of the [robis](https://www.rdocumentation.org/packages/robis/versions/1.0.1){target="_blank"} package within a 0.25 x 0.25 degrees box centered at monitoring site.
