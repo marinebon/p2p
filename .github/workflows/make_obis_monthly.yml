@@ -3,9 +3,8 @@ name: make_sites_monthly
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   schedule:
-    # 0 min, 1st hr, 7th day of month, any month, any day of week; see https://crontab.guru/every-month
-    # 1 hour after running make_obis_monthly.yml
-    - cron:  '0 1 7 * *'
+    # 0 min, 0 hr, 7th day of month, any month, any day of week; see https://crontab.guru/every-month
+    - cron:  '0 0 7 * *'
   #push:
   #  branches: [ master ]
 
@@ -38,29 +37,20 @@ jobs:
           key: r-${{ hashFiles('renv.lock') }}
           restore-keys: r-      
  
-# perhaps redo as Rmd website (vs bookdown):     
-#      - name: Cache bookdown results
-#        uses: actions/cache@v2
-#        with:
-#          path: _bookdown_files
-#          key: bookdown-${{ hashFiles('**/*Rmd') }}
-#          restore-keys: bookdown-
-
       - name: Install packages
         run: |
           R -e 'install.packages("renv")'
           R -e 'renv::restore()'
 
-# TODO: mv to seperate Github Action and run just before this one monthly          
-#      - name: obis_download
-#        run: Rscript scripts/obis_download.R
+      - name: obis_download
+        run: Rscript scripts/obis_download.R > scripts/output_make_obis.log
         
-      - name: make_sites
-        run: Rscript scripts/make_sites.R > scripts/output_make_sites.log
+#      - name: make_sites
+#        run: Rscript scripts/make_sites.R > scripts/output_make_sites.log
         
       - name: if failure
         if: failure()
-        run: tail -n40 scripts/output_make_sites.log
+        run: tail -n40 scripts/output_make_obis.log
       - name: commit changes
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
