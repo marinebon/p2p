@@ -1,4 +1,4 @@
-name: make_sites_monthly
+name: make_obis_monthly
 
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
