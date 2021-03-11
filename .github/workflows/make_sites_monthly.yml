@@ -18,7 +18,6 @@ jobs:
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     if: "!contains(github.event.head_commit.message, 'ci skip')"
-    container: bdbest/cinms:1.0 # docker image
     steps:
       - name: clone repo
         # get a shallow copy (depth 1) so only getting the latest version of files, not whole history
@@ -50,9 +49,10 @@ jobs:
         run: |
           R -e 'install.packages("renv")'
           R -e 'renv::restore()'
-          
-      - name: obis_download
-        run: Rscript scripts/obis_download.R
+
+# TODO: mv to seperate Github Action and run just before this one monthly          
+#      - name: obis_download
+#        run: Rscript scripts/obis_download.R
         
       - name: make_sites
         run: Rscript scripts/make_sites.R > scripts/output_make_sites.log
