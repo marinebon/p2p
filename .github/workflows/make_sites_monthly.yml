@@ -14,17 +14,49 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:    
   build:
-    runs-on: ubuntu-latest
+    runs-on: macOS-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     if: "!contains(github.event.head_commit.message, 'ci skip')"
     container: bdbest/cinms:1.0 # docker image
     steps:
       - name: clone repo
         # get a shallow copy (depth 1) so only getting the latest version of files, not whole history
         run: git clone --depth 1 https://github.com/${{ github.repository }}.git .; ls
+        
+      - name: Setup R
+        uses: r-lib/actions/setup-r@v1
+
+#      - name: Install pandoc
+#        run: |
+#          brew install pandoc
+          
+      - name: Cache Renv packages
+        uses: actions/cache@v2
+        with:
+          path: $HOME/.local/share/renv
+          key: r-${{ hashFiles('renv.lock') }}
+          restore-keys: r-      
+ 
+# perhaps redo as Rmd website (vs bookdown):     
+#      - name: Cache bookdown results
+#        uses: actions/cache@v2
+#        with:
+#          path: _bookdown_files
+#          key: bookdown-${{ hashFiles('**/*Rmd') }}
+#          restore-keys: bookdown-
+
+      - name: Install packages
+        run: |
+          R -e 'install.packages("renv")'
+          R -e 'renv::restore()'
+          
       - name: obis_download
         run: Rscript scripts/obis_download.R
+        
       - name: make_sites
         run: Rscript scripts/make_sites.R > scripts/output_make_sites.log
+        
       - name: if failure
         if: failure()
         run: tail -n40 scripts/output_make_sites.log
