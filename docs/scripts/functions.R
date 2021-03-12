@@ -200,10 +200,10 @@ get_timeseries <- function(info, lon, lat, csv, field="sst"){
   # }
   # 
 
-  v <- griddap(
+  v <- try(griddap(
     info,
     longitude = c(lon, lon), latitude = c(lat, lat),
-    time = c(start_date, dates[2]), fields = field)
+    time = c(start_date, dates[2]), fields = field))
 
   d_now <- v$data %>%
     as_tibble() %>%

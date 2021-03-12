@@ -1,6 +1,9 @@
-library(tidyverse)
-library(here)
-library(glue)
+if (! require(librarian)){
+  install.packages("librarian")
+  library(librarian)
+}
+shelf(
+  dplyr, glue, here, fs, purrr, readr, rmarkdown)
 
 setwd(here())
 
@@ -9,10 +12,11 @@ sites_csv <- here("data/sites.csv")
 sites <- read_csv(sites_csv, col_types=cols()) %>% 
   arrange(id)
 
-make_site <- function(id, name){
+make_site <- function(id, name, ...){
   # show message of progress
   i_row <- sprintf("%02d", which(id == sites$id))
   message(glue("\n{i_row} of {nrow(sites)} sites\n   id: {id}\n  name: {name}"))
+  html <- glue("z_{id}.html")
   
   # render html
   rmarkdown::render(
@@ -20,13 +24,14 @@ make_site <- function(id, name){
     params      = list(
       site_name = name,
       site_id   = id),
-    output_file = glue("docs/z_{id}.html"))
+    output_file = html,
+    output_dir  = "docs")
 }
 
 # walk through all sites to render html
 sites %>% 
-  # slice(113:nrow(sites)) %>% # DEBUG
-  slice(1:3) %>% # DEBUG
+  # slice(134:nrow(sites)) %>% # DEBUG
+  # slice(1:3) %>% # DEBUG
   # TODO: handle ERDDAP timeout
   # slice(113) %>% 
   #   label: unnamed-chunk-1
