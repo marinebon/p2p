@@ -3,8 +3,9 @@ name: make_sites_monthly
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   schedule:
-    # * is a special character in YAML so you have to quote this string - change cron string to '0 * 7 * *' to run once on the 7th day of the month
-    - cron:  '0 * 7 * *'
+    # 0 min, 1st hr, 7th day of month, any month, any day of week; see https://crontab.guru/every-month
+    # 1 hour after running make_obis_monthly.yml
+    - cron:  '0 1 7 * *'
   #push:
   #  branches: [ master ]
 
@@ -26,9 +27,9 @@ jobs:
       - name: Setup R
         uses: r-lib/actions/setup-r@v1
 
-#      - name: Install pandoc
-#        run: |
-#          brew install pandoc
+      - name: Install pandoc
+        run: |
+          brew install pandoc
           
       - name: Cache Renv packages
         uses: actions/cache@v2

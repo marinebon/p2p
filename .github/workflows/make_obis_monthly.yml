@@ -1,0 +1,61 @@
+name: make_obis_monthly
+
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  schedule:
+    # 0 min, 0 hr, 7th day of month, any month, any day of week; see https://crontab.guru/every-month
+    - cron:  '0 0 7 * *'
+  #push:
+  #  branches: [ master ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:    
+  build:
+    runs-on: macOS-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+    if: "!contains(github.event.head_commit.message, 'ci skip')"
+    steps:
+      - name: clone repo
+        # get a shallow copy (depth 1) so only getting the latest version of files, not whole history
+        run: git clone --depth 1 https://github.com/${{ github.repository }}.git .; ls
+        
+      - name: Setup R
+        uses: r-lib/actions/setup-r@v1
+
+      - name: Install pandoc
+        run: |
+          brew install pandoc
+          
+      - name: Cache Renv packages
+        uses: actions/cache@v2
+        with:
+          path: $HOME/.local/share/renv
+          key: r-${{ hashFiles('renv.lock') }}
+          restore-keys: r-      
+ 
+      - name: Install packages
+        run: |
+          R -e 'install.packages("renv")'
+          R -e 'renv::restore()'
+
+      - name: obis_download
+        run: Rscript scripts/obis_download.R > scripts/output_make_obis.log
+        
+#      - name: make_sites
+#        run: Rscript scripts/make_sites.R > scripts/output_make_sites.log
+        
+      - name: if failure
+        if: failure()
+        run: tail -n40 scripts/output_make_obis.log
+      - name: commit changes
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}          
+          git add -A
+          git commit -a -m "changes from workflow **${{ github.workflow }}** [ci skip]"
+          git push
