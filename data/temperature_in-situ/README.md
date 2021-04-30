@@ -1,8 +1,6 @@
 *In situ* Temperature Files
 ================
 
-## Temperature, *In situ*
-
 These files (*.csv, *.yml) were generated from MARINe and Pole to Pole
 data using code found in the Github repository
 [intertidal-temps](https://github.com/marinebon/intertidal-temps), and

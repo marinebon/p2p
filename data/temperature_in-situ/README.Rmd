@@ -3,8 +3,6 @@ title: '_In situ_ Temperature Files'
 output: github_document
 ---
 
-## Temperature, _In situ_
-
 These files (*.csv, *.yml) were generated from MARINe and Pole to Pole data using code found in the Github repository [intertidal-temps](https://github.com/marinebon/intertidal-temps), and more specifically [ingest.Rmd](https://github.com/marinebon/intertidal-temps/blob/main/ingest.Rmd) by Cristina Dobbelaere <CristinaDobbelaere@gmail.com> and Ben Best <ben@ecoquants.com>.
 
 **NOTE**: The sites that are not MARINe and in the P2P Google Drive folder still need to get checked and probably reproduced since the temperature values are oddly flat.
