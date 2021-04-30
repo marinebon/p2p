@@ -1,0 +1,11 @@
+id: usa-pbl
+name: Piedras Blancas
+file: usa-pbl.csv
+site: USCAPD
+location: Piedras
+region: California
+country: USA
+org: '[MARINe](https://marine.ucsc.edu/sitepages/piedrasblancas.html)'
+num_loggers: 19.0
+lat: 35.6649284
+lon: -121.28699

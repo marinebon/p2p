@@ -1,0 +1,11 @@
+id: usa-rmr
+name: Rancho Marino
+file: usa-rmr.csv
+site: USCACA
+location: Cambria
+region: California
+country: USA
+org: '[MARINe](https://marine.ucsc.edu/sitepages/cambria.html)'
+num_loggers: 9.0
+lat: 35.5224419
+lon: -121.073

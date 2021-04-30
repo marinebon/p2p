@@ -1,0 +1,11 @@
+id: usa-bml
+name: Bodega
+file: usa-bml.csv
+site: USCABD
+location: Bodega Reserve
+region: California
+country: USA
+org: '[MARINe](https://marine.ucsc.edu/sitepages/bodega.html)'
+num_loggers: 13.0
+lat: 38.3181992
+lon: -123.07365

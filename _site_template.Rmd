@@ -1,8 +1,8 @@
 ---
 title: 'Site: `r params$site_name`'
 params:
-  site_id: arg-mardelplata-faro
-  site_name: Mar del Plata - Faro
+  site_id: usa-fkc
+  site_name: "False Klamath Cove"
 editor_options:
   chunk_output_type: console
 ---
@@ -177,7 +177,7 @@ Read more about seascapes [here](https://coastwatch.noaa.gov/cw/satellite-data-p
 
 ## Timeseries {.tabset}
 
-### Temperature
+### Temperature, Satellite
 
 ```{r}
 csv <- here(glue("data/sst/sst_{site$id}.csv"))
@@ -194,6 +194,24 @@ Download data: [`r basename(csv)`](https://raw.githubusercontent.com/marinebon/p
 #    https://raw.githubusercontent.com/marinebon/p2p/master/data/sst/sst_wi-maracas.csv
 csv = str(r.csv).replace("/marinebon/p2p/data/", "/marinebon/p2p/master/data/")
 csv_link = "https://raw.githubusercontent.com/" + csv.split("/marinebon/p2p/")[1]
+```
+
+```{r, results='asis'}
+source(here::here("scripts/functions.R"))
+
+if (!exists("params")) 
+  params <- list(
+    site_name = "Test",
+    site_id   = "usa-bml")
+
+temp_csv <- here(glue("data/temperature_in-situ/{params$site_id}.csv"))
+meta_yml <- here(glue("data/temperature_in-situ/{params$site_id}_meta.yml"))
+site_url <- glue("https://raw.githubusercontent.com/marinebon/p2p/master/data/temperature_in-situ/{basename(temp_csv)}")
+
+has_temp_insitu <- all(file.exists(c(temp_csv, meta_yml)))
+```
+
+```{r, child=if (has_temp_insitu) '_temperature_in-situ.Rmd'}
 ```
 
 ### Chlorophyll

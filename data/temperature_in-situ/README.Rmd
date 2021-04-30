@@ -1,0 +1,30 @@
+---
+title: '_In situ_ Temperature Files'
+output: github_document
+---
+
+## Temperature, _In situ_
+
+These files (*.csv, *.yml) were generated from MARINe and Pole to Pole data using code found in the Github repository [intertidal-temps](https://github.com/marinebon/intertidal-temps), and more specifically [ingest.Rmd](https://github.com/marinebon/intertidal-temps/blob/main/ingest.Rmd) by Cristina Dobbelaere <CristinaDobbelaere@gmail.com> and Ben Best <ben@ecoquants.com>.
+
+**NOTE**: The sites that are not MARINe and in the P2P Google Drive folder still need to get checked and probably reproduced since the temperature values are oddly flat.
+
+```{r, results='asis', echo=F, message=F, warning=F}
+librarian::shelf(
+  dplyr, fs, glue, here, purrr, yaml)
+
+tibble(
+  csv = list.files(here("data/temperature_in-situ"), "csv$"),
+  id  = path_ext_remove(csv),
+  yml = here(glue("data/temperature_in-situ/{id}_meta.yml")),
+  org = map_chr(
+    yml, function(y){
+      #browser()
+      read_yaml(y) %>% 
+        .$org }),
+  md = glue("- {org}: [{id}](https://marinebon.org/p2p/z_{id}.html)")) %>% 
+  arrange(org, id) %>% 
+  pull(md) %>% 
+  paste(collapse="\n") %>% 
+  cat()
+```

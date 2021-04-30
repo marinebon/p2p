@@ -1,0 +1,9 @@
+id: usa-fknms
+name: '[South Florida Program](https://www.aoml.noaa.gov/iea/)'
+file: usa-fknms.csv
+country: usa
+org: '[S. Florida MBON](https://marinebon.org/pages/sfmbon/)'
+number_of_samples: 672.0
+num_loggers: 2.0
+lat_site: 24.5
+lon_site: -81.0

@@ -1,0 +1,9 @@
+id: arg-puertomadryn3
+name: '[Punta Loma](http://www.northeastern.edu/helmuthlab/Research/gigapan/argentina.html#_ga=2.176170668.804414391.1602182240-113605171.1602182239)'
+file: arg-puertomadryn3.csv
+country: arg
+org: '[IBIOMAR/CONICET](https://www.larbim.com.ar/)'
+number_of_samples: 14851.0
+num_loggers: 2.0
+lat_site: -42.8112
+lon_site: -64.9017

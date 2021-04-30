@@ -1,0 +1,9 @@
+id: bra-costadasalgas-gramute
+name: Costa das Algas - Gramute
+file: bra-costadasalgas-gramute.csv
+country: bra
+org: '[Bentos - UFES](http://bentos.ufes.br/)'
+number_of_samples: 1366.0
+num_loggers: 2.0
+lat_site: -19.9663
+lon_site: -40.134

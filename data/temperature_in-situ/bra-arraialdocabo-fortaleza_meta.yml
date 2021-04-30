@@ -1,0 +1,9 @@
+id: bra-arraialdocabo-fortaleza
+name: Arraial do Cabo - Fortaleza
+file: bra-arraialdocabo-fortaleza.csv
+country: bra
+org: '[LECAR - UFF](http://www.lecar.uff.br/index.html)'
+number_of_samples: 1153.0
+num_loggers: 2.0
+lat_site: -22.9687
+lon_site: -42.015
