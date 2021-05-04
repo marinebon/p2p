@@ -5,6 +5,7 @@ on:
     branches: [ master ]
     paths:
       - '**.Rmd'
+      - '!_*.Rmd'
       - '_site.yml'
       - '_includes/**'
   workflow_dispatch:
