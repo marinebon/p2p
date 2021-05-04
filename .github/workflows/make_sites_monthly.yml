@@ -3,9 +3,9 @@ name: make_sites_monthly
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   schedule:
-    # 0 min, 1st hr, 7th day of month, any month, any day of week; see https://crontab.guru/every-month
+    # 0 min, 12th hr, 7th day of month, any month, any day of week; see https://crontab.guru/every-month
     # 1 hour after running make_obis_monthly.yml
-    - cron:  '0 1 7 * *'
+    - cron:  '0 12 7 * *'
   #push:
   #  branches: [ master ]
 
