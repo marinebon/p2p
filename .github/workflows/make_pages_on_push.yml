@@ -3,6 +3,10 @@ name: make_pages_on_push
 on:
   push:
     branches: [ master ]
+    paths:
+      - '**.Rmd'
+      - '_site.yml'
+      - '_includes/**'
   workflow_dispatch:
 
 jobs:    
