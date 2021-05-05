@@ -123,29 +123,30 @@ get_xts <- function(path) {
   return(x_smoothed)
 }
 
-get_dygraph <- function(xts) {
+plot_dygraph <- function(x, main = "Daily Temperature", ylab="ºC", ...) {
+  stopifnot("xts" %in% class(x))
   
   # map color palette to zone names
-  pal  <- c("#3D2C9A", "#3E98C5", "#4A9A78", "#F7BD33", "#D74B00")
-  zone_colors <- setNames(pal, names(xts)) 
+  pal         <- c("#3D2C9A", "#3E98C5", "#4A9A78", "#F7BD33", "#D74B00")
+  zone_colors <- setNames(pal, names(x)) 
   
   # plot
-  dygraph <- dygraph(xts, main = "Daily Temperature") %>%
+  x %>% 
+    dygraph(
+      main = main, 
+      ylab = ylab, ...) %>%
     dyHighlight(
       highlightCircleSize = 5, 
       highlightSeriesBackgroundAlpha = 0.2,
       hideOnMouseOut = TRUE) %>%
     dyOptions(
-      # use only colors corresponding to zones that 
-      # exist in the site's xts data
-      colors = as.character(
-        zone_colors[names(xts)]),
+      colors                 = as.character(zone_colors[names(x)]),
       connectSeparatedPoints = FALSE) %>% 
     dyOptions(
-      fillGraph = FALSE, fillAlpha = 0.4) %>%
+      fillGraph = FALSE, 
+      fillAlpha = 0.4) %>%
     dyRangeSelector()
-  
-  dygraph
+
 }
 
 get_box <- function(lon, lat, cells_wide){

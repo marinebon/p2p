@@ -197,6 +197,12 @@ csv_link = "https://raw.githubusercontent.com/" + csv.split("/marinebon/p2p/")[1
 ```
 
 ```{r, results='asis'}
+# source("scripts/functions.R")
+if (!exists("params")) 
+  params <- list(
+  site_name = "Arraial do Cabo - Fortaleza",
+  site_id   = "bra-arraialdocabo-fortaleza")
+
 temp_csv <- here(glue("data/temperature_in-situ/{params$site_id}.csv"))
 meta_yml <- here(glue("data/temperature_in-situ/{params$site_id}_meta.yml"))
 site_url <- glue("https://raw.githubusercontent.com/marinebon/p2p/master/data/temperature_in-situ/{basename(temp_csv)}")

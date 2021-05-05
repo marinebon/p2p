@@ -31,11 +31,11 @@ make_site <- function(id, name, ...){
 # walk through all sites to render html
 sites %>% 
   # render only sites with in situ temperature # DEBUG
-  # inner_join(
-  #   tibble(
-  #     csv = list.files(here("data/temperature_in-situ"), "csv$"),
-  #     id = fs::path_ext_remove(csv)),
-  #   by = "id") %>% 
+  inner_join(
+    tibble(
+      csv = list.files(here("data/temperature_in-situ"), "csv$"),
+      id = fs::path_ext_remove(csv)),
+    by = "id") %>%
   # slice(134:nrow(sites)) %>% # DEBUG
   # slice(1:3) %>% # DEBUG
   # TODO: handle ERDDAP timeout
