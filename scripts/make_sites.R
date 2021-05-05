@@ -44,5 +44,9 @@ sites %>%
   # Quitting from lines 17-39 (site_template.Rmd) 
   # Error in curl::curl_fetch_memory(x$url$url, handle = x$url$handle) : 
   #   Timeout was reached: [upwell.pfeg.noaa.gov] Operation timed out after 10005 milliseconds with 0 out of 0 bytes received
+  # render only updated in situ temperature non-MARINe p2p sites # DEBUG
+  # filter(id %in% c(
+  #   "arg-puertomadryn3", "bra-arraialdocabo-fortaleza", 
+  #   "bra-costadasalgas-gramute","usa-fknms.csv")) %>% 
   select(id, name) %>% 
   pwalk(make_site)
