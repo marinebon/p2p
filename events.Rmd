@@ -12,6 +12,18 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Past
 
+-  2021 Cohort Capstone: An investigation into the role of herbivory on coral reef recovery in Puerto Rico and the US Virgin Island. Webinar presented on May 6, 2021.
+```{r, echo=FALSE, message=FALSE}
+if (!require(librarian)){
+  install.packages("librarian")
+  library(librarian)
+}
+shelf(vembedr)
+
+embed_youtube("T6bLoB6UrDk", width = 910, height = 910*360/640, frameborder = 0,
+  allowfullscreen = TRUE, query = NULL)
+```
+
 - Panel discussion: [MarineGEO Leaders in Networked Science panel](https://twitter.com/mbonpoletopole/status/1336203878069571586){target="_blank"} - December 17, 2020 (virtual). The recording of the webinar and panel is available [here](https://smithsonian.zoom.us/rec/play/LIKD8VJ-Djax3mHkHAEMaemExsjNLwvnoeTIaT-3ie_A7_Aai7kWbLLLXPbjSmzwLN4__GUmHnjyamNw.uZYRZQojZsDcUg7Y?startTime=1608235286000&_x_zm_rtaid=4JAWT5QLQWuiqgD4iC15-Q.1608656141942.9e489a094b50da6a9f35e1e4f43dd78b&_x_zm_rhtaid=750){target="_blank"}.
 
 - Webinar: [The Multi-Agency Rocky Intertidal Network (MARINe) Program](https://marine.ucsc.edu/){target="_blank"} - October 26, 2020, 4:00-5:10 pm EDT. The recording of the webinar is available [here](https://usf.box.com/s/9oc14djcak07sjh9hw4ekq7fxcp1b2og){target="_blank"}.

@@ -30,6 +30,12 @@ make_site <- function(id, name, ...){
 
 # walk through all sites to render html
 sites %>% 
+  # render only sites with in situ temperature # DEBUG
+  inner_join(
+    tibble(
+      csv = list.files(here("data/temperature_in-situ"), "csv$"),
+      id = fs::path_ext_remove(csv)),
+    by = "id") %>%
   # slice(134:nrow(sites)) %>% # DEBUG
   # slice(1:3) %>% # DEBUG
   # TODO: handle ERDDAP timeout
@@ -38,5 +44,9 @@ sites %>%
   # Quitting from lines 17-39 (site_template.Rmd) 
   # Error in curl::curl_fetch_memory(x$url$url, handle = x$url$handle) : 
   #   Timeout was reached: [upwell.pfeg.noaa.gov] Operation timed out after 10005 milliseconds with 0 out of 0 bytes received
+  # render only updated in situ temperature non-MARINe p2p sites # DEBUG
+  # filter(id %in% c(
+  #   "arg-puertomadryn3", "bra-arraialdocabo-fortaleza", 
+  #   "bra-costadasalgas-gramute","usa-fknms.csv")) %>% 
   select(id, name) %>% 
   pwalk(make_site)

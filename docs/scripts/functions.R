@@ -1,7 +1,15 @@
+# libraries ----
 if (!require(librarian)){
   install.packages("librarian")
   library(librarian)
 }
+shelf(
+  # time-series
+  caTools, tools, dygraphs, xts,
+  #spatial
+  sf, leaflet,
+  # tidyverse
+  fs, glue, here, lubridate, stringr, tidyverse, purrr, yaml)
 shelf(
   bsplus, dygraphs, glue, here, iobis/robis, knitr, leafem, leaflet, mapview, raster, rerddap, tidyverse, xts)
 
@@ -46,33 +54,6 @@ get_dates <- function(info){
     as.numeric() %>%
     as.POSIXct(origin = "1970-01-01", tz = "GMT")
 }
-
-# libraries ----
-if (!require(librarian)){
-  install.packages("librarian")
-  library(librarian)
-}
-librarian::shelf(
-  # time-series
-  caTools, tools, dygraphs, xts,
-  #spatial
-  sf, leaflet,
-  # tidyverse
-  fs, glue, here, lubridate, stringr, tidyverse, purrr, yaml)
-
-# paths & variables ----
-user <- Sys.info()[["user"]]
-
-# set dir_gdata as filepath for robomussels data on Google Drive 
-dir_gdata <- case_when(
-  #user == "bbest"       ~ "/Users/bbest/Downloads/robomusseldata20201030",
-  user == "bbest"       ~ "/Volumes/GoogleDrive/My Drive/projects/mbon-p2p/data/rocky/MARINe/robomusseldata20201030",
-  user == "cdobbelaere" ~ "/Users/cdobbelaere/Documents/robomussels/robomusseldata20201030")
-dir_avg <- file.path(dirname(dir_gdata), "robomusseldata20201030_avg")
-stopifnot(any(dir.exists(c(dir_gdata, dir_avg))))
-
-
-# define functions ----
 
 # convert sf to st_point; add sf geometry list column & coord ref sys
 xy2pt <- function(x, y){
@@ -142,29 +123,30 @@ get_xts <- function(path) {
   return(x_smoothed)
 }
 
-get_dygraph <- function(xts) {
+plot_dygraph <- function(x, main = "Daily Temperature", ylab="ºC", ...) {
+  stopifnot("xts" %in% class(x))
   
   # map color palette to zone names
-  pal  <- c("#3D2C9A", "#3E98C5", "#4A9A78", "#F7BD33", "#D74B00")
-  zone_colors <- setNames(pal, names(xts)) 
+  pal         <- c("#3D2C9A", "#3E98C5", "#4A9A78", "#F7BD33", "#D74B00")
+  zone_colors <- setNames(pal, names(x)) 
   
   # plot
-  dygraph <- dygraph(xts, main = "Daily Temperature") %>%
+  x %>% 
+    dygraph(
+      main = main, 
+      ylab = ylab, ...) %>%
     dyHighlight(
       highlightCircleSize = 5, 
       highlightSeriesBackgroundAlpha = 0.2,
       hideOnMouseOut = TRUE) %>%
     dyOptions(
-      # use only colors corresponding to zones that 
-      # exist in the site's xts data
-      colors = as.character(
-        zone_colors[names(xts)]),
+      colors                 = as.character(zone_colors[names(x)]),
       connectSeparatedPoints = FALSE) %>% 
     dyOptions(
-      fillGraph = FALSE, fillAlpha = 0.4) %>%
+      fillGraph = FALSE, 
+      fillAlpha = 0.4) %>%
     dyRangeSelector()
-  
-  dygraph
+
 }
 
 get_box <- function(lon, lat, cells_wide){
