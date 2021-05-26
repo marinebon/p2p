@@ -123,30 +123,86 @@ get_xts <- function(path) {
   return(x_smoothed)
 }
 
-plot_dygraph <- function(x, main = "Daily Temperature", ylab="ºC", ...) {
-  stopifnot("xts" %in% class(x))
+plot_insitutemp <- function(temp_csv, meta_yml, main = "Daily Temperature", ylab="ºC", ...) {
+  # TODO: consider colors for non-MARINe zones in dygraph plot
   
-  # map color palette to zone names
-  pal         <- c("#3D2C9A", "#3E98C5", "#4A9A78", "#F7BD33", "#D74B00")
-  zone_colors <- setNames(pal, names(x)) 
+  # MARINe:
+  #   temp_csv <- "/Users/bbest/github/p2p/data/temperature_in-situ/usa-bml.csv"
+  #   meta_yml <- "/Users/bbest/github/p2p/data/temperature_in-situ/usa-bml_meta.yml"
+  # non-MARINe, wierd zones:
+  #   temp_csv <- "/Users/bbest/github/p2p/data/temperature_in-situ/arg-puertomadryn3.csv"
+  #   meta_yml <- "/Users/bbest/github/p2p/data/temperature_in-situ/arg-puertomadryn3_meta.yml"
+  # non-MARINe:
+  #   temp_csv <- "/Users/bbest/github/p2p/data/temperature_in-situ/bra-arraialdocabo-fortaleza.csv"
+  #   meta_yml <- "/Users/bbest/github/p2p/data/temperature_in-situ/bra-arraialdocabo-fortaleza_meta.yml"
+  # main = "Daily Temperature"; ylab="ºC"
   
-  # plot
-  x %>% 
-    dygraph(
-      main = main, 
-      ylab = ylab, ...) %>%
-    dyHighlight(
-      highlightCircleSize = 5, 
-      highlightSeriesBackgroundAlpha = 0.2,
-      hideOnMouseOut = TRUE) %>%
-    dyOptions(
-      colors                 = as.character(zone_colors[names(x)]),
-      connectSeparatedPoints = FALSE) %>% 
-    dyOptions(
-      fillGraph = FALSE, 
-      fillAlpha = 0.4) %>%
-    dyRangeSelector()
+  m <- read_yaml(meta_yml)
+  d <- read_csv(temp_csv, col_types = cols())
+  x <- xts(select(d, -day), order.by = d$day)
 
+  is_MARINe <- str_detect(m$org, "MARINe")
+  
+  if (is_MARINe){
+    zones <- setdiff(names(d), "day") 
+    pal   <- c("#3D2C9A", "#3E98C5", "#4A9A78", "#F7BD33", "#D74B00")
+  } else {
+    zones <- setdiff(names(d), "day") %>% 
+      str_replace_all(c("temp_c_avg_","temp_c_min_","temp_c_max_"), "") %>% 
+      unique()
+    mins  <- glue("temp_c_min_{zones}")
+    avgs  <- glue("temp_c_avg_{zones}")
+    maxes <- glue("temp_c_max_{zones}")
+  }
+
+  # MARINE: no min/max ribbon
+  if (is_MARINe) {
+    zone_colors <- setNames(pal, zones) 
+    
+    # plot
+    p <- x %>% 
+      dygraph(
+        main = main, 
+        ylab = ylab, ...) %>%
+      dyHighlight(
+        highlightCircleSize = 5, 
+        highlightSeriesBackgroundAlpha = 0.2,
+        hideOnMouseOut = TRUE) %>%
+      dyOptions(
+        colors                 = as.character(zone_colors[names(x)]),
+        connectSeparatedPoints = FALSE) %>% 
+      dyOptions(
+        fillGraph = FALSE, 
+        fillAlpha = 0.4) %>%
+      dyRangeSelector()
+    
+  } else {
+    p <- x %>% 
+      dygraph(
+        main = main, 
+        #ylab = ylab, ...) %>%
+        ylab = ylab) %>%
+      dySeries(
+        c(mins[1], avgs[1], maxes[1]), 
+        label = glue("{zones[1]}")) %>% 
+      dySeries(
+        c(mins[2], avgs[2], maxes[2]),
+        label = glue("{zones[2]}")) %>% 
+      dyHighlight(
+        highlightCircleSize = 5,
+        highlightSeriesBackgroundAlpha = 0.2,
+        hideOnMouseOut = TRUE) %>%
+      dyOptions(
+        connectSeparatedPoints = FALSE) %>% 
+      dyOptions(
+        fillGraph = FALSE, fillAlpha = 0.4) %>%
+      dyRangeSelector()
+  }
+  m$day_min <- min(d$day)
+  m$day_max <- max(d$day)
+  m$zones   <- zones
+  attr(p, "meta") <- m
+  p
 }
 
 get_box <- function(lon, lat, cells_wide){

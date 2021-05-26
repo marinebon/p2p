@@ -1,0 +1,9 @@
+id: col-islagorgona-laventana
+name: Isla Gorgona - La Ventana
+file: col-islagorgona-laventana.csv
+country: col
+org: '[U. del Valle](https://lithos.correounivalle.edu.co/)'
+number_of_samples: 11136.0
+num_loggers: 2.0
+lat_site: 2.9341
+lon_site: -78.2017

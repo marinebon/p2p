@@ -1,0 +1,5 @@
+id,name,file,site,location,region,country,org,num_loggers,lat,lon
+usa-bml,Bodega,usa-bml.csv,USCABD,Bodega Reserve,California,USA,[MARINe](https://marine.ucsc.edu/sitepages/bodega.html),13,38.31819916,-123.07365
+usa-hop,Hopkins,usa-hop.csv,USCAHS,Hopkins,California,USA,[MARINe](https://marine.ucsc.edu/sitepages/hopkins.html),24,36.62120056,-121.9073
+usa-pbl,Piedras Blancas,usa-pbl.csv,USCAPD,Piedras,California,USA,[MARINe](https://marine.ucsc.edu/sitepages/piedrasblancas.html),19,35.66492844,-121.28699
+usa-rmr,Rancho Marino,usa-rmr.csv,USCACA,Cambria,California,USA,[MARINe](https://marine.ucsc.edu/sitepages/cambria.html),9,35.52244186,-121.073

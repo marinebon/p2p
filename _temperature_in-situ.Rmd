@@ -5,14 +5,12 @@ This child Rmarkdown is used by _site_template.Rmd
 ### Temperature, _In situ_
 
 ```{r, eval=has_temp_insitu}
-meta <- read_yaml(meta_yml)
-d    <- read_csv(temp_csv)
-x    <- xts(select(d, -day), order.by = d$day)
-
 # output timeseries plot
-plot_dygraph(x)
+p <- plot_insitutemp(temp_csv, meta_yml)
+m <- attr(p, "meta")
+p
 ```
 
-This timeseries was created using data collected by `r meta$num_loggers` biomimetic temperature loggers between `r min(d$day)` and `r max(d$day)`. Loggers were placed in the `r tolower(knitr::combine_words(names(x)))` zones of the intertidal ecosystem.
+This timeseries was created using data collected by `r m$num_loggers` biomimetic temperature loggers between `r m$day_min` and `r m$day_max`. Loggers were placed in the `r tolower(knitr::combine_words(m$zones))` zones of the intertidal ecosystem.
 
 Download data: [`r basename(site_url)`](`r site_url`) 
