@@ -1,7 +1,7 @@
 *In situ* Temperature Files
 ================
 
-These files (*.csv, *.yml) were generated from MARINe and Pole to Pole
+These files (*.csv, *.yml) were generated from MARINe and MBON Pole to Pole
 data using code found in the Github repository
 [intertidal-temps](https://github.com/marinebon/intertidal-temps), and
 more specifically
@@ -9,10 +9,11 @@ more specifically
 by Cristina Dobbelaere <CristinaDobbelaere@gmail.com> and Ben Best
 <ben@ecoquants.com>.
 
-**NOTE**: The sites that are not MARINe and in the P2P Google Drive
+**NOTE**: The sites that are not MARINe and in the MBON Pole to Pole Google Drive
 folder still need to get checked and probably reproduced since the
 temperature values are oddly flat.
 
+  - [Gorgona Island - U. Valle](https://marinebon.org/p2p/z_col-islagorgona-laventana.html)
   - [Bentos - UFES](http://bentos.ufes.br/):
     [bra-costadasalgas-gramute](https://marinebon.org/p2p/z_bra-costadasalgas-gramute.html)
   - [IBIOMAR/CONICET](https://www.larbim.com.ar/):
