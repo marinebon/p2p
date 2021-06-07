@@ -32,7 +32,7 @@ jobs:
           
       - name: Fix units R package install
         run: |
-          apt install libudunits2-dev
+          brew install udunits
           
       - name: Cache Renv packages
         uses: actions/cache@v2
