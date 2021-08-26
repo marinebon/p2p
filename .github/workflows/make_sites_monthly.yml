@@ -48,7 +48,8 @@ jobs:
 
       - name: Install packages
         run: |
-          R -e 'install.packages(c("units", "rgdal"), type = "mac.binary")' # see #27
+          brew install udunits # see #27
+          R -e 'install.packages(c("units", "sf"), type = "mac.binary")' # see #27
           R -e 'install.packages("renv")'
           R -e 'renv::restore()'
 
