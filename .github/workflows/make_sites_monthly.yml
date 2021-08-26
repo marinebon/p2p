@@ -48,8 +48,7 @@ jobs:
 
       - name: Install packages
         run: |
-          # brew install udunits # to fix #27
-          install.packages(c("units", "rgdal"), type = "mac.binary")
+          R -e 'install.packages(c("units", "rgdal"), type = "mac.binary")' # see #27
           R -e 'install.packages("renv")'
           R -e 'renv::restore()'
 
