@@ -3,5 +3,6 @@ Title: for renv::snapshot(type="explicit", prompt=F) Github Actions
 Version: 0.0.1
 Imports: bsplus, caTools, dplyr, dygraphs, fs, glue, here, robis, knitr, 
   leafem, leaflet, librarian, lubridate, mapview, plotly, purrr, 
-  raster, readr, rerddap, rgeos, rmarkdown, sf, stringr, tidyverse, tools, yaml, xts
+  raster, readr, rerddap, rgeos, rmapshaper, rmarkdown, sf, stringr, 
+  tictoc, tidyr, tidyverse, tools, yaml, xts
 Remotes: iobis/robis, ropensci/rerddap

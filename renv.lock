@@ -68,6 +68,13 @@
       "Repository": "CRAN",
       "Hash": "dab19adae4440ae55aa8a9d238b246bb"
     },
+    "V8": {
+      "Package": "V8",
+      "Version": "3.4.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "b181d4eb2904da0897a742a559964173"
+    },
     "askpass": {
       "Package": "askpass",
       "Version": "1.1",
@@ -348,6 +355,13 @@
       "Repository": "CRAN",
       "Hash": "81c3244cab67468aac4c60550832655d"
     },
+    "foreign": {
+      "Package": "foreign",
+      "Version": "0.8-81",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "74628ea7a3be5ee8a7b5bb0a8e84882e"
+    },
     "fs": {
       "Package": "fs",
       "Version": "1.5.0",
@@ -368,6 +382,27 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "4d243a9c10b00589889fe32314ffd902"
+    },
+    "geojson": {
+      "Package": "geojson",
+      "Version": "0.3.4",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "8d2107f1ebe9a75339e9fd130c07c1f6"
+    },
+    "geojsonio": {
+      "Package": "geojsonio",
+      "Version": "0.9.4",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "dd28191bf66c323c60d2c5352a0ca3ad"
+    },
+    "geojsonlint": {
+      "Package": "geojsonlint",
+      "Version": "0.4.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "60c515ce70b7db3a86e94ad9eed3ea8a"
     },
     "geojsonsf": {
       "Package": "geojsonsf",
@@ -516,6 +551,13 @@
       "Repository": "CRAN",
       "Hash": "7ab57a6de7f48a8dc84910d1eca42883"
     },
+    "jqr": {
+      "Package": "jqr",
+      "Version": "1.2.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "b8a2e63d67833aa65c6592cfc0fa8f65"
+    },
     "jquerylib": {
       "Package": "jquerylib",
       "Version": "0.1.4",
@@ -536,6 +578,13 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "98138e0994d41508c7a6b84a0600cfcb"
+    },
+    "jsonvalidate": {
+      "Package": "jsonvalidate",
+      "Version": "1.1.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "81054bf17db72db68871baefcfd209cf"
     },
     "knitr": {
       "Package": "knitr",
@@ -648,6 +697,13 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "398b8cbf8d03283f0a1015ff0a1b4a4d"
+    },
+    "maptools": {
+      "Package": "maptools",
+      "Version": "1.1-1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "beef5712326b384b1e87ba10c01e18f5"
     },
     "mapview": {
       "Package": "mapview",
@@ -782,6 +838,13 @@
       "Repository": "CRAN",
       "Hash": "4ab2c43adb4d4699cf3690acd378d75d"
     },
+    "protolite": {
+      "Package": "protolite",
+      "Version": "2.1.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "3244d497803a542148e5a622b87b5a63"
+    },
     "proxy": {
       "Package": "proxy",
       "Version": "0.4-26",
@@ -893,6 +956,13 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "515f341d3affe0de9e4a7f762efb0456"
+    },
+    "rmapshaper": {
+      "Package": "rmapshaper",
+      "Version": "0.4.5",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "e9b5ef157705c60c0fdb683570c082dd"
     },
     "rmarkdown": {
       "Package": "rmarkdown",
@@ -1052,6 +1122,13 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "038455513fde65e79c25e724e0c84ca2"
+    },
+    "tictoc": {
+      "Package": "tictoc",
+      "Version": "1.0.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "5acb66b0266ad1f0ebf7ffe1aa36ff4c"
     },
     "tidyr": {
       "Package": "tidyr",
