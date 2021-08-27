@@ -6,7 +6,7 @@ if (!require(librarian)){
 shelf(
   bsplus, caTools, dygraphs, fs, glue, here, iobis/robis, knitr, 
   leafem, leaflet, lubridate, mapview, 
-  raster, rerddap, sf, stringr, tidyverse, purrr, xts)
+  raster, rerddap, sf, stringr, tidyverse, purrr, yaml, xts)
 
 #library(plotdap)
 select <- dplyr::select
@@ -131,7 +131,7 @@ plot_insitutemp <- function(temp_csv, meta_yml, main = "Daily Temperature", ylab
   #   temp_csv <- "/Users/bbest/github/p2p/data/temperature_in-situ/bra-arraialdocabo-fortaleza.csv"
   #   meta_yml <- "/Users/bbest/github/p2p/data/temperature_in-situ/bra-arraialdocabo-fortaleza_meta.yml"
   # main = "Daily Temperature"; ylab="ºC"
-  
+
   m <- read_yaml(meta_yml)
   d <- read_csv(temp_csv, col_types = cols())
   x <- xts(select(d, -day), order.by = d$day)
