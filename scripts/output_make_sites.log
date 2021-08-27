@@ -4,7 +4,7 @@
   |                                                                              |....                                                                  |   5%
 label: setup (with options) 
 List of 1
- $ include: symbol F
+ $ include: logi FALSE
 
   |                                                                              |.....                                                                 |   8%
   ordinary text without R code
@@ -57,7 +57,7 @@ label: unnamed-chunk-9
   |                                                                              |.......................................                               |  56%
 label: unnamed-chunk-10 (with options) 
 List of 2
- $ eval  : symbol F
+ $ eval  : logi FALSE
  $ engine: chr "python"
 
   |                                                                              |.........................................                             |  59%
@@ -74,7 +74,7 @@ List of 1
   |                                                                              |...............................................                       |  67%
 label: unnamed-chunk-12 (with options) 
 List of 1
- $ child: language if (has_temp_insitu) "_temperature_in-situ.Rmd"
+ $ child: chr "_temperature_in-situ.Rmd"
 
   |                                                                              |                                                                      |   0%  |                                                                              |.......................                                               |  33%
   ordinary text without R code
@@ -82,7 +82,7 @@ List of 1
   |                                                                              |...............................................                       |  67%
 label: unnamed-chunk-19 (with options) 
 List of 1
- $ eval: symbol has_temp_insitu
+ $ eval: logi TRUE
 
   |                                                                              |......................................................................| 100%
    inline R code fragments
@@ -99,7 +99,7 @@ label: unnamed-chunk-13
   |                                                                              |......................................................                |  77%
 label: unnamed-chunk-14 (with options) 
 List of 1
- $ eval: symbol T
+ $ eval: logi TRUE
 
   |                                                                              |........................................................              |  79%
   ordinary text without R code
@@ -145,14 +145,14 @@ List of 3
   ordinary text without R code
 
 
-/usr/local/bin/pandoc +RTS -K512m -RTS _site_template.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output /Users/runner/work/p2p/p2p/docs/z_arg-puertomadryn3.html --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/latex-div.lua --variable bs3=TRUE --standalone --section-divs --template /Users/runner/work/_temp/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpizeJlO/rmarkdown-str6e8e6ef1b5f5.html --variable navbar=1 --variable theme=cosmo --include-in-header /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpizeJlO/rmarkdown-str6e8e3ee120ba.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
+/usr/local/bin/pandoc +RTS -K512m -RTS _site_template.knit.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output /Users/runner/work/p2p/p2p/docs/z_arg-puertomadryn3.html --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/latex-div.lua --variable bs3=TRUE --standalone --section-divs --template /Users/runner/work/_temp/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --include-before-body /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpS7gSkf/rmarkdown-str7adf6448ec4e.html --variable navbar=1 --variable theme=cosmo --css /Users/runner/work/p2p/p2p/styles.css --include-in-header /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpS7gSkf/rmarkdown-str7adf6f922851.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
   |                                                                              |                                                                      |   0%  |                                                                              |..                                                                    |   3%
    inline R code fragments
 
   |                                                                              |....                                                                  |   5%
 label: setup (with options) 
 List of 1
- $ include: symbol F
+ $ include: logi FALSE
 
   |                                                                              |.....                                                                 |   8%
   ordinary text without R code
@@ -205,7 +205,7 @@ label: unnamed-chunk-9
   |                                                                              |.......................................                               |  56%
 label: unnamed-chunk-10 (with options) 
 List of 2
- $ eval  : symbol F
+ $ eval  : logi FALSE
  $ engine: chr "python"
 
   |                                                                              |.........................................                             |  59%
@@ -222,7 +222,7 @@ List of 1
   |                                                                              |...............................................                       |  67%
 label: unnamed-chunk-12 (with options) 
 List of 1
- $ child: language if (has_temp_insitu) "_temperature_in-situ.Rmd"
+ $ child: chr "_temperature_in-situ.Rmd"
 
   |                                                                              |                                                                      |   0%  |                                                                              |.......................                                               |  33%
   ordinary text without R code
@@ -230,7 +230,7 @@ List of 1
   |                                                                              |...............................................                       |  67%
 label: unnamed-chunk-19 (with options) 
 List of 1
- $ eval: symbol has_temp_insitu
+ $ eval: logi TRUE
 
   |                                                                              |......................................................................| 100%
    inline R code fragments
@@ -247,7 +247,7 @@ label: unnamed-chunk-13
   |                                                                              |......................................................                |  77%
 label: unnamed-chunk-14 (with options) 
 List of 1
- $ eval: symbol T
+ $ eval: logi TRUE
 
   |                                                                              |........................................................              |  79%
   ordinary text without R code
@@ -293,14 +293,14 @@ List of 3
   ordinary text without R code
 
 
-/usr/local/bin/pandoc +RTS -K512m -RTS _site_template.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output /Users/runner/work/p2p/p2p/docs/z_bra-arraialdocabo-fortaleza.html --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/latex-div.lua --variable bs3=TRUE --standalone --section-divs --template /Users/runner/work/_temp/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpizeJlO/rmarkdown-str6e8e41b691c4.html --variable navbar=1 --variable theme=cosmo --include-in-header /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpizeJlO/rmarkdown-str6e8e391bfc90.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
+/usr/local/bin/pandoc +RTS -K512m -RTS _site_template.knit.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output /Users/runner/work/p2p/p2p/docs/z_bra-arraialdocabo-fortaleza.html --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/latex-div.lua --variable bs3=TRUE --standalone --section-divs --template /Users/runner/work/_temp/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --include-before-body /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpS7gSkf/rmarkdown-str7adf60260aa5.html --variable navbar=1 --variable theme=cosmo --css /Users/runner/work/p2p/p2p/styles.css --include-in-header /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpS7gSkf/rmarkdown-str7adf618507f3.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
   |                                                                              |                                                                      |   0%  |                                                                              |..                                                                    |   3%
    inline R code fragments
 
   |                                                                              |....                                                                  |   5%
 label: setup (with options) 
 List of 1
- $ include: symbol F
+ $ include: logi FALSE
 
   |                                                                              |.....                                                                 |   8%
   ordinary text without R code
@@ -353,7 +353,7 @@ label: unnamed-chunk-9
   |                                                                              |.......................................                               |  56%
 label: unnamed-chunk-10 (with options) 
 List of 2
- $ eval  : symbol F
+ $ eval  : logi FALSE
  $ engine: chr "python"
 
   |                                                                              |.........................................                             |  59%
@@ -370,7 +370,7 @@ List of 1
   |                                                                              |...............................................                       |  67%
 label: unnamed-chunk-12 (with options) 
 List of 1
- $ child: language if (has_temp_insitu) "_temperature_in-situ.Rmd"
+ $ child: chr "_temperature_in-situ.Rmd"
 
   |                                                                              |                                                                      |   0%  |                                                                              |.......................                                               |  33%
   ordinary text without R code
@@ -378,7 +378,7 @@ List of 1
   |                                                                              |...............................................                       |  67%
 label: unnamed-chunk-19 (with options) 
 List of 1
- $ eval: symbol has_temp_insitu
+ $ eval: logi TRUE
 
   |                                                                              |......................................................................| 100%
    inline R code fragments
@@ -395,7 +395,7 @@ label: unnamed-chunk-13
   |                                                                              |......................................................                |  77%
 label: unnamed-chunk-14 (with options) 
 List of 1
- $ eval: symbol T
+ $ eval: logi TRUE
 
   |                                                                              |........................................................              |  79%
   ordinary text without R code
@@ -441,14 +441,14 @@ List of 3
   ordinary text without R code
 
 
-/usr/local/bin/pandoc +RTS -K512m -RTS _site_template.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output /Users/runner/work/p2p/p2p/docs/z_bra-costadasalgas-gramute.html --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/latex-div.lua --variable bs3=TRUE --standalone --section-divs --template /Users/runner/work/_temp/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpizeJlO/rmarkdown-str6e8e6d3a99f2.html --variable navbar=1 --variable theme=cosmo --include-in-header /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpizeJlO/rmarkdown-str6e8e225116e4.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
+/usr/local/bin/pandoc +RTS -K512m -RTS _site_template.knit.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output /Users/runner/work/p2p/p2p/docs/z_bra-costadasalgas-gramute.html --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/latex-div.lua --variable bs3=TRUE --standalone --section-divs --template /Users/runner/work/_temp/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --include-before-body /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpS7gSkf/rmarkdown-str7adf316e78ff.html --variable navbar=1 --variable theme=cosmo --css /Users/runner/work/p2p/p2p/styles.css --include-in-header /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpS7gSkf/rmarkdown-str7adf4bc9c6b3.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
   |                                                                              |                                                                      |   0%  |                                                                              |..                                                                    |   3%
    inline R code fragments
 
   |                                                                              |....                                                                  |   5%
 label: setup (with options) 
 List of 1
- $ include: symbol F
+ $ include: logi FALSE
 
   |                                                                              |.....                                                                 |   8%
   ordinary text without R code
@@ -501,7 +501,7 @@ label: unnamed-chunk-9
   |                                                                              |.......................................                               |  56%
 label: unnamed-chunk-10 (with options) 
 List of 2
- $ eval  : symbol F
+ $ eval  : logi FALSE
  $ engine: chr "python"
 
   |                                                                              |.........................................                             |  59%
@@ -518,7 +518,7 @@ List of 1
   |                                                                              |...............................................                       |  67%
 label: unnamed-chunk-12 (with options) 
 List of 1
- $ child: language if (has_temp_insitu) "_temperature_in-situ.Rmd"
+ $ child: chr "_temperature_in-situ.Rmd"
 
   |                                                                              |                                                                      |   0%  |                                                                              |.......................                                               |  33%
   ordinary text without R code
@@ -526,7 +526,7 @@ List of 1
   |                                                                              |...............................................                       |  67%
 label: unnamed-chunk-19 (with options) 
 List of 1
- $ eval: symbol has_temp_insitu
+ $ eval: logi TRUE
 
   |                                                                              |......................................................................| 100%
    inline R code fragments
@@ -543,7 +543,7 @@ label: unnamed-chunk-13
   |                                                                              |......................................................                |  77%
 label: unnamed-chunk-14 (with options) 
 List of 1
- $ eval: symbol T
+ $ eval: logi TRUE
 
   |                                                                              |........................................................              |  79%
   ordinary text without R code
@@ -589,14 +589,14 @@ List of 3
   ordinary text without R code
 
 
-/usr/local/bin/pandoc +RTS -K512m -RTS _site_template.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output /Users/runner/work/p2p/p2p/docs/z_usa-bml.html --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/latex-div.lua --variable bs3=TRUE --standalone --section-divs --template /Users/runner/work/_temp/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpizeJlO/rmarkdown-str6e8e460cd478.html --variable navbar=1 --variable theme=cosmo --include-in-header /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpizeJlO/rmarkdown-str6e8e74513635.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
+/usr/local/bin/pandoc +RTS -K512m -RTS _site_template.knit.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output /Users/runner/work/p2p/p2p/docs/z_col-islagorgona-laventana.html --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/latex-div.lua --variable bs3=TRUE --standalone --section-divs --template /Users/runner/work/_temp/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --include-before-body /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpS7gSkf/rmarkdown-str7adf2620315f.html --variable navbar=1 --variable theme=cosmo --css /Users/runner/work/p2p/p2p/styles.css --include-in-header /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpS7gSkf/rmarkdown-str7adfb896787.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
   |                                                                              |                                                                      |   0%  |                                                                              |..                                                                    |   3%
    inline R code fragments
 
   |                                                                              |....                                                                  |   5%
 label: setup (with options) 
 List of 1
- $ include: symbol F
+ $ include: logi FALSE
 
   |                                                                              |.....                                                                 |   8%
   ordinary text without R code
@@ -649,7 +649,7 @@ label: unnamed-chunk-9
   |                                                                              |.......................................                               |  56%
 label: unnamed-chunk-10 (with options) 
 List of 2
- $ eval  : symbol F
+ $ eval  : logi FALSE
  $ engine: chr "python"
 
   |                                                                              |.........................................                             |  59%
@@ -666,7 +666,7 @@ List of 1
   |                                                                              |...............................................                       |  67%
 label: unnamed-chunk-12 (with options) 
 List of 1
- $ child: language if (has_temp_insitu) "_temperature_in-situ.Rmd"
+ $ child: chr "_temperature_in-situ.Rmd"
 
   |                                                                              |                                                                      |   0%  |                                                                              |.......................                                               |  33%
   ordinary text without R code
@@ -674,7 +674,7 @@ List of 1
   |                                                                              |...............................................                       |  67%
 label: unnamed-chunk-19 (with options) 
 List of 1
- $ eval: symbol has_temp_insitu
+ $ eval: logi TRUE
 
   |                                                                              |......................................................................| 100%
    inline R code fragments
@@ -691,7 +691,7 @@ label: unnamed-chunk-13
   |                                                                              |......................................................                |  77%
 label: unnamed-chunk-14 (with options) 
 List of 1
- $ eval: symbol T
+ $ eval: logi TRUE
 
   |                                                                              |........................................................              |  79%
   ordinary text without R code
@@ -737,14 +737,14 @@ List of 3
   ordinary text without R code
 
 
-/usr/local/bin/pandoc +RTS -K512m -RTS _site_template.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output /Users/runner/work/p2p/p2p/docs/z_usa-fknms.html --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/latex-div.lua --variable bs3=TRUE --standalone --section-divs --template /Users/runner/work/_temp/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpizeJlO/rmarkdown-str6e8e4a0aaa5c.html --variable navbar=1 --variable theme=cosmo --include-in-header /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpizeJlO/rmarkdown-str6e8e236a3fe.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
+/usr/local/bin/pandoc +RTS -K512m -RTS _site_template.knit.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output /Users/runner/work/p2p/p2p/docs/z_usa-bml.html --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/latex-div.lua --variable bs3=TRUE --standalone --section-divs --template /Users/runner/work/_temp/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --include-before-body /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpS7gSkf/rmarkdown-str7adf5549472d.html --variable navbar=1 --variable theme=cosmo --css /Users/runner/work/p2p/p2p/styles.css --include-in-header /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpS7gSkf/rmarkdown-str7adf3de00719.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
   |                                                                              |                                                                      |   0%  |                                                                              |..                                                                    |   3%
    inline R code fragments
 
   |                                                                              |....                                                                  |   5%
 label: setup (with options) 
 List of 1
- $ include: symbol F
+ $ include: logi FALSE
 
   |                                                                              |.....                                                                 |   8%
   ordinary text without R code
@@ -797,7 +797,7 @@ label: unnamed-chunk-9
   |                                                                              |.......................................                               |  56%
 label: unnamed-chunk-10 (with options) 
 List of 2
- $ eval  : symbol F
+ $ eval  : logi FALSE
  $ engine: chr "python"
 
   |                                                                              |.........................................                             |  59%
@@ -814,7 +814,7 @@ List of 1
   |                                                                              |...............................................                       |  67%
 label: unnamed-chunk-12 (with options) 
 List of 1
- $ child: language if (has_temp_insitu) "_temperature_in-situ.Rmd"
+ $ child: chr "_temperature_in-situ.Rmd"
 
   |                                                                              |                                                                      |   0%  |                                                                              |.......................                                               |  33%
   ordinary text without R code
@@ -822,7 +822,7 @@ List of 1
   |                                                                              |...............................................                       |  67%
 label: unnamed-chunk-19 (with options) 
 List of 1
- $ eval: symbol has_temp_insitu
+ $ eval: logi TRUE
 
   |                                                                              |......................................................................| 100%
    inline R code fragments
@@ -839,7 +839,7 @@ label: unnamed-chunk-13
   |                                                                              |......................................................                |  77%
 label: unnamed-chunk-14 (with options) 
 List of 1
- $ eval: symbol T
+ $ eval: logi TRUE
 
   |                                                                              |........................................................              |  79%
   ordinary text without R code
@@ -885,14 +885,14 @@ List of 3
   ordinary text without R code
 
 
-/usr/local/bin/pandoc +RTS -K512m -RTS _site_template.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output /Users/runner/work/p2p/p2p/docs/z_usa-hop.html --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/latex-div.lua --variable bs3=TRUE --standalone --section-divs --template /Users/runner/work/_temp/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpizeJlO/rmarkdown-str6e8e3e396498.html --variable navbar=1 --variable theme=cosmo --include-in-header /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpizeJlO/rmarkdown-str6e8e29fb5712.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
+/usr/local/bin/pandoc +RTS -K512m -RTS _site_template.knit.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output /Users/runner/work/p2p/p2p/docs/z_usa-fknms.html --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/latex-div.lua --variable bs3=TRUE --standalone --section-divs --template /Users/runner/work/_temp/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --include-before-body /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpS7gSkf/rmarkdown-str7adf5c24da4b.html --variable navbar=1 --variable theme=cosmo --css /Users/runner/work/p2p/p2p/styles.css --include-in-header /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpS7gSkf/rmarkdown-str7adf7777a12f.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
   |                                                                              |                                                                      |   0%  |                                                                              |..                                                                    |   3%
    inline R code fragments
 
   |                                                                              |....                                                                  |   5%
 label: setup (with options) 
 List of 1
- $ include: symbol F
+ $ include: logi FALSE
 
   |                                                                              |.....                                                                 |   8%
   ordinary text without R code
@@ -945,7 +945,7 @@ label: unnamed-chunk-9
   |                                                                              |.......................................                               |  56%
 label: unnamed-chunk-10 (with options) 
 List of 2
- $ eval  : symbol F
+ $ eval  : logi FALSE
  $ engine: chr "python"
 
   |                                                                              |.........................................                             |  59%
@@ -962,7 +962,7 @@ List of 1
   |                                                                              |...............................................                       |  67%
 label: unnamed-chunk-12 (with options) 
 List of 1
- $ child: language if (has_temp_insitu) "_temperature_in-situ.Rmd"
+ $ child: chr "_temperature_in-situ.Rmd"
 
   |                                                                              |                                                                      |   0%  |                                                                              |.......................                                               |  33%
   ordinary text without R code
@@ -970,7 +970,7 @@ List of 1
   |                                                                              |...............................................                       |  67%
 label: unnamed-chunk-19 (with options) 
 List of 1
- $ eval: symbol has_temp_insitu
+ $ eval: logi TRUE
 
   |                                                                              |......................................................................| 100%
    inline R code fragments
@@ -987,7 +987,7 @@ label: unnamed-chunk-13
   |                                                                              |......................................................                |  77%
 label: unnamed-chunk-14 (with options) 
 List of 1
- $ eval: symbol T
+ $ eval: logi TRUE
 
   |                                                                              |........................................................              |  79%
   ordinary text without R code
@@ -1033,14 +1033,14 @@ List of 3
   ordinary text without R code
 
 
-/usr/local/bin/pandoc +RTS -K512m -RTS _site_template.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output /Users/runner/work/p2p/p2p/docs/z_usa-pbl.html --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/latex-div.lua --variable bs3=TRUE --standalone --section-divs --template /Users/runner/work/_temp/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpizeJlO/rmarkdown-str6e8e30e2c8d5.html --variable navbar=1 --variable theme=cosmo --include-in-header /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpizeJlO/rmarkdown-str6e8e78ef3105.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
+/usr/local/bin/pandoc +RTS -K512m -RTS _site_template.knit.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output /Users/runner/work/p2p/p2p/docs/z_usa-hop.html --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/latex-div.lua --variable bs3=TRUE --standalone --section-divs --template /Users/runner/work/_temp/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --include-before-body /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpS7gSkf/rmarkdown-str7adf2e6acaf4.html --variable navbar=1 --variable theme=cosmo --css /Users/runner/work/p2p/p2p/styles.css --include-in-header /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpS7gSkf/rmarkdown-str7adf653270fa.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
   |                                                                              |                                                                      |   0%  |                                                                              |..                                                                    |   3%
    inline R code fragments
 
   |                                                                              |....                                                                  |   5%
 label: setup (with options) 
 List of 1
- $ include: symbol F
+ $ include: logi FALSE
 
   |                                                                              |.....                                                                 |   8%
   ordinary text without R code
@@ -1093,7 +1093,7 @@ label: unnamed-chunk-9
   |                                                                              |.......................................                               |  56%
 label: unnamed-chunk-10 (with options) 
 List of 2
- $ eval  : symbol F
+ $ eval  : logi FALSE
  $ engine: chr "python"
 
   |                                                                              |.........................................                             |  59%
@@ -1110,7 +1110,7 @@ List of 1
   |                                                                              |...............................................                       |  67%
 label: unnamed-chunk-12 (with options) 
 List of 1
- $ child: language if (has_temp_insitu) "_temperature_in-situ.Rmd"
+ $ child: chr "_temperature_in-situ.Rmd"
 
   |                                                                              |                                                                      |   0%  |                                                                              |.......................                                               |  33%
   ordinary text without R code
@@ -1118,7 +1118,7 @@ List of 1
   |                                                                              |...............................................                       |  67%
 label: unnamed-chunk-19 (with options) 
 List of 1
- $ eval: symbol has_temp_insitu
+ $ eval: logi TRUE
 
   |                                                                              |......................................................................| 100%
    inline R code fragments
@@ -1135,7 +1135,7 @@ label: unnamed-chunk-13
   |                                                                              |......................................................                |  77%
 label: unnamed-chunk-14 (with options) 
 List of 1
- $ eval: symbol T
+ $ eval: logi TRUE
 
   |                                                                              |........................................................              |  79%
   ordinary text without R code
@@ -1181,4 +1181,152 @@ List of 3
   ordinary text without R code
 
 
-/usr/local/bin/pandoc +RTS -K512m -RTS _site_template.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output /Users/runner/work/p2p/p2p/docs/z_usa-rmr.html --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/latex-div.lua --variable bs3=TRUE --standalone --section-divs --template /Users/runner/work/_temp/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpizeJlO/rmarkdown-str6e8e1bedc97d.html --variable navbar=1 --variable theme=cosmo --include-in-header /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpizeJlO/rmarkdown-str6e8e18473bde.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
+/usr/local/bin/pandoc +RTS -K512m -RTS _site_template.knit.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output /Users/runner/work/p2p/p2p/docs/z_usa-pbl.html --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/latex-div.lua --variable bs3=TRUE --standalone --section-divs --template /Users/runner/work/_temp/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --include-before-body /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpS7gSkf/rmarkdown-str7adf8ec3f49.html --variable navbar=1 --variable theme=cosmo --css /Users/runner/work/p2p/p2p/styles.css --include-in-header /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpS7gSkf/rmarkdown-str7adf4e2ed632.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
+  |                                                                              |                                                                      |   0%  |                                                                              |..                                                                    |   3%
+   inline R code fragments
+
+  |                                                                              |....                                                                  |   5%
+label: setup (with options) 
+List of 1
+ $ include: logi FALSE
+
+  |                                                                              |.....                                                                 |   8%
+  ordinary text without R code
+
+  |                                                                              |.......                                                               |  10%
+label: unnamed-chunk-1
+  |                                                                              |.........                                                             |  13%
+   inline R code fragments
+
+  |                                                                              |...........                                                           |  15%
+label: unnamed-chunk-2
+  |                                                                              |.............                                                         |  18%
+  ordinary text without R code
+
+  |                                                                              |..............                                                        |  21%
+label: unnamed-chunk-3
+  |                                                                              |................                                                      |  23%
+   inline R code fragments
+
+  |                                                                              |..................                                                    |  26%
+label: unnamed-chunk-4
+  |                                                                              |....................                                                  |  28%
+  ordinary text without R code
+
+  |                                                                              |......................                                                |  31%
+label: unnamed-chunk-5
+  |                                                                              |.......................                                               |  33%
+   inline R code fragments
+
+  |                                                                              |.........................                                             |  36%
+label: unnamed-chunk-6
+  |                                                                              |...........................                                           |  38%
+  ordinary text without R code
+
+  |                                                                              |.............................                                         |  41%
+label: unnamed-chunk-7
+  |                                                                              |...............................                                       |  44%
+   inline R code fragments
+
+  |                                                                              |................................                                      |  46%
+label: unnamed-chunk-8
+  |                                                                              |..................................                                    |  49%
+  ordinary text without R code
+
+  |                                                                              |....................................                                  |  51%
+label: unnamed-chunk-9
+  |                                                                              |......................................                                |  54%
+   inline R code fragments
+
+  |                                                                              |.......................................                               |  56%
+label: unnamed-chunk-10 (with options) 
+List of 2
+ $ eval  : logi FALSE
+ $ engine: chr "python"
+
+  |                                                                              |.........................................                             |  59%
+  ordinary text without R code
+
+  |                                                                              |...........................................                           |  62%
+label: unnamed-chunk-11 (with options) 
+List of 1
+ $ results: chr "asis"
+
+  |                                                                              |.............................................                         |  64%
+  ordinary text without R code
+
+  |                                                                              |...............................................                       |  67%
+label: unnamed-chunk-12 (with options) 
+List of 1
+ $ child: chr "_temperature_in-situ.Rmd"
+
+  |                                                                              |                                                                      |   0%  |                                                                              |.......................                                               |  33%
+  ordinary text without R code
+
+  |                                                                              |...............................................                       |  67%
+label: unnamed-chunk-19 (with options) 
+List of 1
+ $ eval: logi TRUE
+
+  |                                                                              |......................................................................| 100%
+   inline R code fragments
+
+
+  |                                                                              |................................................                      |  69%
+  ordinary text without R code
+
+  |                                                                              |..................................................                    |  72%
+label: unnamed-chunk-13
+  |                                                                              |....................................................                  |  74%
+   inline R code fragments
+
+  |                                                                              |......................................................                |  77%
+label: unnamed-chunk-14 (with options) 
+List of 1
+ $ eval: logi TRUE
+
+  |                                                                              |........................................................              |  79%
+  ordinary text without R code
+
+  |                                                                              |.........................................................             |  82%
+label: unnamed-chunk-15 (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+  |                                                                              |...........................................................           |  85%
+  ordinary text without R code
+
+  |                                                                              |.............................................................         |  87%
+label: unnamed-chunk-16 (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+  |                                                                              |...............................................................       |  90%
+  ordinary text without R code
+
+  |                                                                              |.................................................................     |  92%
+label: unnamed-chunk-17 (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+  |                                                                              |..................................................................    |  95%
+  ordinary text without R code
+
+  |                                                                              |....................................................................  |  97%
+label: unnamed-chunk-18 (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+  |                                                                              |......................................................................| 100%
+  ordinary text without R code
+
+
+/usr/local/bin/pandoc +RTS -K512m -RTS _site_template.knit.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output /Users/runner/work/p2p/p2p/docs/z_usa-rmr.html --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/latex-div.lua --variable bs3=TRUE --standalone --section-divs --template /Users/runner/work/_temp/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --include-before-body /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpS7gSkf/rmarkdown-str7adf10a5ddcf.html --variable navbar=1 --variable theme=cosmo --css /Users/runner/work/p2p/p2p/styles.css --include-in-header /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpS7gSkf/rmarkdown-str7adf79854992.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
