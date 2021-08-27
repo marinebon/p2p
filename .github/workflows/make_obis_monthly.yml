@@ -29,17 +29,7 @@ jobs:
       - name: Install pandoc
         run: |
           brew install pandoc
-          
-      - name: Fix units R package install
-        run: |
-          brew install udunits
-          
-      - name: Fix sf R package install
-        run: |
-          # conflicts with gfortran from r-lib/actions when linking gcc
-          rm '/usr/local/bin/gfortran'
-          brew install pkg-config gdal proj geos
-          
+                    
       - name: Cache Renv packages
         uses: actions/cache@v2
         with:
