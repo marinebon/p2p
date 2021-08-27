@@ -4,14 +4,9 @@ if (!require(librarian)){
   library(librarian)
 }
 shelf(
-  # time-series
-  caTools, tools, dygraphs, xts,
-  #spatial
-  sf, leaflet,
-  # tidyverse
-  fs, glue, here, lubridate, stringr, tidyverse, purrr, yaml)
-shelf(
-  bsplus, dygraphs, glue, here, iobis/robis, knitr, leafem, leaflet, mapview, raster, rerddap, tidyverse, xts)
+  bsplus, caTools, dygraphs, fs, glue, here, iobis/robis, knitr, 
+  leafem, leaflet, lubridate, mapview, 
+  raster, rerddap, sf, stringr, tidyverse, purrr, xts)
 
 #library(plotdap)
 select <- dplyr::select

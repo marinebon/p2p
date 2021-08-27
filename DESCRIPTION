@@ -1,9 +1,7 @@
 Package: placeholder
-Title: Does not matter.
+Title: for renv::snapshot(type="explicit", prompt=F) Github Actions
 Version: 0.0.1
-Imports: rmarkdown, tidyverse, stringr, dygraphs,
-  xts, lubridate, geojsonio, RColorBrewer, leaflet, crosstalk, servr,
-  roxygen2, futile.logger, pander, rnaturalearth, here,
-  knitr, bsplus, here, glue, raster, markdown, rerddap, ncdf4, mapview,
-  reticulate, robis
-Remotes: ropensci/rerddap, rstudio/reticulate
+Imports: bsplus, caTools, dplyr, dygraphs, fs, glue, here, robis, knitr, 
+  leafem, leaflet, librarian, lubridate, mapview, plotly, purrr, 
+  raster, readr, rerddap, rmarkdown, sf, stringr, tidyverse, tools, yaml, xts
+Remotes: iobis/robis, ropensci/rerddap
