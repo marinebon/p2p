@@ -31,7 +31,7 @@ make_site <- function(id, name, ...){
 # walk through all sites to render html
 sites %>% 
   # render only sites with in situ temperature # DEBUG
-  inner_join(
+  left_join(
     tibble(
       csv = list.files(here("data/temperature_in-situ"), "csv$"),
       id = fs::path_ext_remove(csv)),
