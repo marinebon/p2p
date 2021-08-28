@@ -3,7 +3,7 @@ title: "Data for Environmental, Remotely Sensed"
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = F, message = F, warning = F)
 ```
 
 TODO

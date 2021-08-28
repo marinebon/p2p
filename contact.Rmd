@@ -3,7 +3,7 @@ title: "Join the MBON Pole to Pole program!"
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = F, message = F, warning = F)
 ```
 
 We invite marine ecologists and biological oceanographers, resource managers, and conservation groups to contribute to the MBON Pole to Pole network. Groups and individuals conducting repeated sampling in one or more locations in their countries are encouraged and welcome to [join the program](https://forms.gle/44MVfe3x6pvoxHCY6){target="_blank"}. 

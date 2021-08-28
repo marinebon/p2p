@@ -3,7 +3,7 @@ title: "Data from Sandy Beaches"
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = F, message = F, warning = F)
 ```
 
 ## Biodiversity survey data are currently being collected and uploaded to [OBIS](https://obis.org/){target="_blank"} by network members. 

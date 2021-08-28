@@ -16,7 +16,7 @@ Seagrass = SG <br>
 Satellite data = SD <br>
 
 ```{r, include=FALSE}
-knitr::opts_chunk$set(echo = F)
+knitr::opts_chunk$set(echo = F, message = F, warning = F)
 library(tidyverse)
 library(readxl)
 library(knitr)
