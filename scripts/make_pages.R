@@ -1,7 +1,7 @@
 # PROBLEM: rmarkdown::render_site() deletes entire docs/ folder, so lose all the indiv site pages.
 # SOLUTION: copy *.Rmd into docs_pages/, render_site() there, copy into docs/
 
-if (! require(librarian)){
+if (!require(librarian)){
   install.packages("librarian")
   library(librarian)
 }
