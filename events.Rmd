@@ -12,7 +12,9 @@ knitr::opts_chunk$set(echo = F, message = F, warning = F)
 
 ## Past
 
--  2021 Cohort Capstone: An investigation into the role of herbivory on coral reef recovery in Puerto Rico and the US Virgin Island. Webinar presented on May 6, 2021.
+- [AmeriGEO Week 2021 - Day 2: Health & Biodiversity:](https://vimeo.com/591158593){target="_blank"} Detecting biogeographic shifts within marine ecoregions of the Americas using dynamic satellite seascapes. See [AmeriGEO Week 2021](https://amerigeo-week-2021-amerigeoss.hub.arcgis.com/) - August 24.
+
+- 2021 Cohort Capstone: An investigation into the role of herbivory on coral reef recovery in Puerto Rico and the US Virgin Island. Webinar presented on May 6, 2021.
 ```{r}
 if (!require(librarian)){
   install.packages("librarian")
