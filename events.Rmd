@@ -14,7 +14,19 @@ knitr::opts_chunk$set(echo = F, message = F, warning = F)
 
 - [AmeriGEO Week 2021 - Day 2: Health & Biodiversity:](https://vimeo.com/591158593){target="_blank"} Detecting biogeographic shifts within marine ecoregions of the Americas using dynamic satellite seascapes. See [AmeriGEO Week 2021](https://amerigeo-week-2021-amerigeoss.hub.arcgis.com/) - August 24.
 
-- 2021 Cohort Capstone: An investigation into the role of herbivory on coral reef recovery in Puerto Rico and the US Virgin Island. Webinar presented on May 6, 2021.
+- **Estimating marine biodiversity with passive acoustic monitoring**. Webinar presented by Dr. Peter Tyack of the [International Quiet Ocean Experiment (IQOE)](https://www.iqoe.org/) program. August 11, 2021.
+```{r, echo = F, message = F, warning = F}
+if (!require(librarian)){
+  install.packages("librarian")
+  library(librarian)
+}
+shelf(vembedr)
+
+embed_youtube("lbaVgatmEP0", width = 910, height = 910*360/640, frameborder = 0,
+  allowfullscreen = TRUE, query = NULL)
+```
+
+- **2021 Cohort Capstone: An investigation into the role of herbivory on coral reef recovery in Puerto Rico and the US Virgin Island**. Webinar presented on May 6, 2021.
 ```{r}
 if (!require(librarian)){
   install.packages("librarian")
