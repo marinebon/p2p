@@ -1,35 +1,35 @@
-                                            about.Rmd 
-                  "/__w/p2p/p2p/docs_pages/about.Rmd" 
-                                          contact.Rmd 
-                "/__w/p2p/p2p/docs_pages/contact.Rmd" 
-                                     data_in_situ.Rmd 
-           "/__w/p2p/p2p/docs_pages/data_in_situ.Rmd" 
-                                 data_rocky_shore.Rmd 
-       "/__w/p2p/p2p/docs_pages/data_rocky_shore.Rmd" 
-                                          data_rs.Rmd 
-                "/__w/p2p/p2p/docs_pages/data_rs.Rmd" 
-                                 data_sandy_beach.Rmd 
-       "/__w/p2p/p2p/docs_pages/data_sandy_beach.Rmd" 
-                                           events.Rmd 
-                 "/__w/p2p/p2p/docs_pages/events.Rmd" 
-                                            index.Rmd 
-                  "/__w/p2p/p2p/docs_pages/index.Rmd" 
-                                          members.Rmd 
-                "/__w/p2p/p2p/docs_pages/members.Rmd" 
-                             methods_data_science.Rmd 
-   "/__w/p2p/p2p/docs_pages/methods_data_science.Rmd" 
-                          methods_field_protocols.Rmd 
-"/__w/p2p/p2p/docs_pages/methods_field_protocols.Rmd" 
-                                            _site.yml 
-                  "/__w/p2p/p2p/docs_pages/_site.yml" 
-                                            _includes 
-                  "/__w/p2p/p2p/docs_pages/_includes" 
-                                                 data 
-                       "/__w/p2p/p2p/docs_pages/data" 
-                                               images 
-                     "/__w/p2p/p2p/docs_pages/images" 
-                                            protocols 
-                  "/__w/p2p/p2p/docs_pages/protocols" 
+                                                          about.Rmd 
+                  "/Users/runner/work/p2p/p2p/docs_pages/about.Rmd" 
+                                                        contact.Rmd 
+                "/Users/runner/work/p2p/p2p/docs_pages/contact.Rmd" 
+                                                   data_in_situ.Rmd 
+           "/Users/runner/work/p2p/p2p/docs_pages/data_in_situ.Rmd" 
+                                               data_rocky_shore.Rmd 
+       "/Users/runner/work/p2p/p2p/docs_pages/data_rocky_shore.Rmd" 
+                                                        data_rs.Rmd 
+                "/Users/runner/work/p2p/p2p/docs_pages/data_rs.Rmd" 
+                                               data_sandy_beach.Rmd 
+       "/Users/runner/work/p2p/p2p/docs_pages/data_sandy_beach.Rmd" 
+                                                         events.Rmd 
+                 "/Users/runner/work/p2p/p2p/docs_pages/events.Rmd" 
+                                                          index.Rmd 
+                  "/Users/runner/work/p2p/p2p/docs_pages/index.Rmd" 
+                                                        members.Rmd 
+                "/Users/runner/work/p2p/p2p/docs_pages/members.Rmd" 
+                                           methods_data_science.Rmd 
+   "/Users/runner/work/p2p/p2p/docs_pages/methods_data_science.Rmd" 
+                                        methods_field_protocols.Rmd 
+"/Users/runner/work/p2p/p2p/docs_pages/methods_field_protocols.Rmd" 
+                                                          _site.yml 
+                  "/Users/runner/work/p2p/p2p/docs_pages/_site.yml" 
+                                                          _includes 
+                  "/Users/runner/work/p2p/p2p/docs_pages/_includes" 
+                                                               data 
+                       "/Users/runner/work/p2p/p2p/docs_pages/data" 
+                                                             images 
+                     "/Users/runner/work/p2p/p2p/docs_pages/images" 
+                                                          protocols 
+                  "/Users/runner/work/p2p/p2p/docs_pages/protocols" 
   |                                                                              |                                                                      |   0%  |                                                                              |.......................                                               |  33%
   ordinary text without R code
 
@@ -42,7 +42,7 @@ List of 1
   ordinary text without R code
 
 
-/usr/local/bin/pandoc +RTS -K512m -RTS about.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash+smart --output about.html --email-obfuscation none --standalone --section-divs --template /usr/local/lib/R/site-library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/RtmpTpUuAc/rmarkdown-str1f71cb6589.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/RtmpTpUuAc/rmarkdown-str1f5df994a0.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/pagebreak.lua --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/latex-div.lua --include-after-body _includes/footer.html 
+/usr/local/bin/pandoc +RTS -K512m -RTS about.knit.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output about.html --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/latex-div.lua --variable bs3=TRUE --standalone --section-divs --template /Users/runner/work/_temp/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --include-before-body /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpB9dv40/rmarkdown-str774357318551.html --variable navbar=1 --variable theme=cosmo --css styles.css --include-in-header /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpB9dv40/rmarkdown-str77437427b58f.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
   |                                                                              |                                                                      |   0%  |                                                                              |.......................                                               |  33%
   ordinary text without R code
 
@@ -55,7 +55,7 @@ List of 1
   ordinary text without R code
 
 
-/usr/local/bin/pandoc +RTS -K512m -RTS contact.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash+smart --output contact.html --email-obfuscation none --standalone --section-divs --template /usr/local/lib/R/site-library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/RtmpTpUuAc/rmarkdown-str1f13193efe.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/RtmpTpUuAc/rmarkdown-str1f1339370b.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/pagebreak.lua --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/latex-div.lua --include-after-body _includes/footer.html 
+/usr/local/bin/pandoc +RTS -K512m -RTS contact.knit.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output contact.html --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/latex-div.lua --variable bs3=TRUE --standalone --section-divs --template /Users/runner/work/_temp/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --include-before-body /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpB9dv40/rmarkdown-str77431d55b031.html --variable navbar=1 --variable theme=cosmo --css styles.css --include-in-header /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpB9dv40/rmarkdown-str774364a27002.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
   |                                                                              |                                                                      |   0%  |                                                                              |.......................                                               |  33%
   ordinary text without R code
 
@@ -68,7 +68,7 @@ List of 1
   ordinary text without R code
 
 
-/usr/local/bin/pandoc +RTS -K512m -RTS data_in_situ.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash+smart --output data_in_situ.html --email-obfuscation none --standalone --section-divs --template /usr/local/lib/R/site-library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/RtmpTpUuAc/rmarkdown-str1f60d49186.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/RtmpTpUuAc/rmarkdown-str1f54c9513b.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/pagebreak.lua --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/latex-div.lua --include-after-body _includes/footer.html 
+/usr/local/bin/pandoc +RTS -K512m -RTS data_in_situ.knit.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output data_in_situ.html --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/latex-div.lua --variable bs3=TRUE --standalone --section-divs --template /Users/runner/work/_temp/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --include-before-body /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpB9dv40/rmarkdown-str77435934a1cc.html --variable navbar=1 --variable theme=cosmo --css styles.css --include-in-header /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpB9dv40/rmarkdown-str7743e6a85d5.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
   |                                                                              |                                                                      |   0%  |                                                                              |.......................                                               |  33%
   ordinary text without R code
 
@@ -81,7 +81,7 @@ List of 1
   ordinary text without R code
 
 
-/usr/local/bin/pandoc +RTS -K512m -RTS data_rocky_shore.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash+smart --output data_rocky_shore.html --email-obfuscation none --standalone --section-divs --template /usr/local/lib/R/site-library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/RtmpTpUuAc/rmarkdown-str1f1effd566.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/RtmpTpUuAc/rmarkdown-str1f3a5b3261.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/pagebreak.lua --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/latex-div.lua --include-after-body _includes/footer.html 
+/usr/local/bin/pandoc +RTS -K512m -RTS data_rocky_shore.knit.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output data_rocky_shore.html --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/latex-div.lua --variable bs3=TRUE --standalone --section-divs --template /Users/runner/work/_temp/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --include-before-body /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpB9dv40/rmarkdown-str7743668db0fa.html --variable navbar=1 --variable theme=cosmo --css styles.css --include-in-header /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpB9dv40/rmarkdown-str7743605e21af.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
   |                                                                              |                                                                      |   0%  |                                                                              |.......................                                               |  33%
   ordinary text without R code
 
@@ -94,7 +94,7 @@ List of 1
   ordinary text without R code
 
 
-/usr/local/bin/pandoc +RTS -K512m -RTS data_rs.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash+smart --output data_rs.html --email-obfuscation none --standalone --section-divs --template /usr/local/lib/R/site-library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/RtmpTpUuAc/rmarkdown-str1f36433a98.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/RtmpTpUuAc/rmarkdown-str1f7ec15da.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/pagebreak.lua --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/latex-div.lua --include-after-body _includes/footer.html 
+/usr/local/bin/pandoc +RTS -K512m -RTS data_rs.knit.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output data_rs.html --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/latex-div.lua --variable bs3=TRUE --standalone --section-divs --template /Users/runner/work/_temp/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --include-before-body /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpB9dv40/rmarkdown-str7743313669b5.html --variable navbar=1 --variable theme=cosmo --css styles.css --include-in-header /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpB9dv40/rmarkdown-str77436b560350.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
   |                                                                              |                                                                      |   0%  |                                                                              |.......................                                               |  33%
   ordinary text without R code
 
@@ -107,20 +107,35 @@ List of 1
   ordinary text without R code
 
 
-/usr/local/bin/pandoc +RTS -K512m -RTS data_sandy_beach.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash+smart --output data_sandy_beach.html --email-obfuscation none --standalone --section-divs --template /usr/local/lib/R/site-library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/RtmpTpUuAc/rmarkdown-str1f765dffea.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/RtmpTpUuAc/rmarkdown-str1f41e84bab.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/pagebreak.lua --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/latex-div.lua --include-after-body _includes/footer.html 
-  |                                                                              |                                                                      |   0%  |                                                                              |.......................                                               |  33%
+/usr/local/bin/pandoc +RTS -K512m -RTS data_sandy_beach.knit.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output data_sandy_beach.html --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/latex-div.lua --variable bs3=TRUE --standalone --section-divs --template /Users/runner/work/_temp/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --include-before-body /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpB9dv40/rmarkdown-str77435bb7a3f4.html --variable navbar=1 --variable theme=cosmo --css styles.css --include-in-header /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpB9dv40/rmarkdown-str7743756d1736.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
+  |                                                                              |                                                                      |   0%  |                                                                              |..........                                                            |  14%
   ordinary text without R code
 
-  |                                                                              |...............................................                       |  67%
+  |                                                                              |....................                                                  |  29%
 label: setup (with options) 
 List of 1
  $ include: logi FALSE
 
+  |                                                                              |..............................                                        |  43%
+  ordinary text without R code
+
+  |                                                                              |........................................                              |  57%
+label: unnamed-chunk-1 (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+  |                                                                              |..................................................                    |  71%
+  ordinary text without R code
+
+  |                                                                              |............................................................          |  86%
+label: unnamed-chunk-2
   |                                                                              |......................................................................| 100%
   ordinary text without R code
 
 
-/usr/local/bin/pandoc +RTS -K512m -RTS events.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash+smart --output events.html --email-obfuscation none --standalone --section-divs --template /usr/local/lib/R/site-library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/RtmpTpUuAc/rmarkdown-str1f7c5d619e.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/RtmpTpUuAc/rmarkdown-str1f1512eccf.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/pagebreak.lua --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/latex-div.lua --include-after-body _includes/footer.html 
+/usr/local/bin/pandoc +RTS -K512m -RTS events.knit.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output events.html --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/latex-div.lua --variable bs3=TRUE --standalone --section-divs --template /Users/runner/work/_temp/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --include-before-body /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpB9dv40/rmarkdown-str77433c05dccc.html --variable navbar=1 --variable theme=cosmo --css styles.css --include-in-header /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpB9dv40/rmarkdown-str774324e2f3dd.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
   |                                                                              |                                                                      |   0%  |                                                                              |........                                                              |  11%
   ordinary text without R code
 
@@ -148,7 +163,7 @@ label: unnamed-chunk-3
   ordinary text without R code
 
 
-/usr/local/bin/pandoc +RTS -K512m -RTS index.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash+smart --output index.html --email-obfuscation none --standalone --section-divs --template /usr/local/lib/R/site-library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/RtmpTpUuAc/rmarkdown-str1f40cd28b6.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/RtmpTpUuAc/rmarkdown-str1f5a042ca9.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/pagebreak.lua --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/latex-div.lua --include-after-body _includes/footer.html 
+/usr/local/bin/pandoc +RTS -K512m -RTS index.knit.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output index.html --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/latex-div.lua --variable bs3=TRUE --standalone --section-divs --template /Users/runner/work/_temp/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --include-before-body /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpB9dv40/rmarkdown-str774375cf95ed.html --variable navbar=1 --variable theme=cosmo --css styles.css --include-in-header /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpB9dv40/rmarkdown-str7743f7c3708.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
   |                                                                              |                                                                      |   0%  |                                                                              |............                                                          |  17%
   ordinary text without R code
 
@@ -168,7 +183,7 @@ label: unnamed-chunk-2
   |                                                                              |......................................................................| 100%
 label: unnamed-chunk-3
 
-/usr/local/bin/pandoc +RTS -K512m -RTS members.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash+smart --output members.html --email-obfuscation none --standalone --section-divs --template /usr/local/lib/R/site-library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/RtmpTpUuAc/rmarkdown-str1f1ee827eb.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/RtmpTpUuAc/rmarkdown-str1f755fc6bf.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/pagebreak.lua --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/latex-div.lua --include-after-body _includes/footer.html 
+/usr/local/bin/pandoc +RTS -K512m -RTS members.knit.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output members.html --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/latex-div.lua --variable bs3=TRUE --standalone --section-divs --template /Users/runner/work/_temp/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --include-before-body /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpB9dv40/rmarkdown-str77431cb7975e.html --variable navbar=1 --variable theme=cosmo --css styles.css --include-in-header /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpB9dv40/rmarkdown-str77435932ab0c.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
   |                                                                              |                                                                      |   0%  |                                                                              |..............                                                        |  20%
   ordinary text without R code
 
@@ -186,7 +201,7 @@ label: unnamed-chunk-1
   ordinary text without R code
 
 
-/usr/local/bin/pandoc +RTS -K512m -RTS methods_data_science.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash+smart --output methods_data_science.html --email-obfuscation none --standalone --section-divs --template /usr/local/lib/R/site-library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/RtmpTpUuAc/rmarkdown-str1f7746b8f7.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/RtmpTpUuAc/rmarkdown-str1f12b14e8d.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/pagebreak.lua --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/latex-div.lua --include-after-body _includes/footer.html 
+/usr/local/bin/pandoc +RTS -K512m -RTS methods_data_science.knit.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output methods_data_science.html --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/latex-div.lua --variable bs3=TRUE --standalone --section-divs --template /Users/runner/work/_temp/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --include-before-body /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpB9dv40/rmarkdown-str77432fd90c59.html --variable navbar=1 --variable theme=cosmo --css styles.css --include-in-header /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpB9dv40/rmarkdown-str774352b9bf99.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 
   |                                                                              |                                                                      |   0%  |                                                                              |.......................                                               |  33%
   ordinary text without R code
 
@@ -199,4 +214,4 @@ List of 1
   ordinary text without R code
 
 
-/usr/local/bin/pandoc +RTS -K512m -RTS methods_field_protocols.utf8.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash+smart --output methods_field_protocols.html --email-obfuscation none --standalone --section-divs --template /usr/local/lib/R/site-library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --css styles.css --include-before-body /tmp/RtmpTpUuAc/rmarkdown-str1f483933b.html --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable 'theme:cosmo' --include-in-header /tmp/RtmpTpUuAc/rmarkdown-str1f40d6c678.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/pagebreak.lua --lua-filter /usr/local/lib/R/site-library/rmarkdown/rmd/lua/latex-div.lua --include-after-body _includes/footer.html 
+/usr/local/bin/pandoc +RTS -K512m -RTS methods_field_protocols.knit.md --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output methods_field_protocols.html --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/pagebreak.lua --lua-filter /Users/runner/work/_temp/Library/rmarkdown/rmarkdown/lua/latex-div.lua --variable bs3=TRUE --standalone --section-divs --template /Users/runner/work/_temp/Library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --include-before-body /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpB9dv40/rmarkdown-str77433b0db5a0.html --variable navbar=1 --variable theme=cosmo --css styles.css --include-in-header /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpB9dv40/rmarkdown-str774310f39aa.html --mathjax --variable 'mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' --include-after-body _includes/footer.html 

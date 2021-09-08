@@ -1,9 +1,7 @@
 Package: placeholder
-Title: Does not matter.
+Title: for renv::snapshot(type="explicit", prompt=F) Github Actions after ensuring all R packages in Imports are locally installed using librarian::shelf()
 Version: 0.0.1
-Imports: rmarkdown, tidyverse, stringr, dygraphs,
-  xts, lubridate, geojsonio, RColorBrewer, leaflet, crosstalk, servr,
-  roxygen2, futile.logger, pander, rnaturalearth, here,
-  knitr, bsplus, here, glue, raster, markdown, rerddap, ncdf4, mapview,
-  reticulate, robis
-Remotes: ropensci/rerddap, rstudio/reticulate
+Imports: 
+  bsplus, caTools, dplyr, dygraphs, fs, glue, here, htmltools, knitr, leafem, leaflet, librarian, lubridate, mapview, markdown, plotly, purrr, raster, readr, readxl, rerddap, rgeos, rmapshaper, rmarkdown, rnaturalearth, robis, sf, stringr, tictoc, tidyr, tidyverse, tools, vembedr, yaml, xts
+Remotes: 
+  iobis/robis, ropensci/rerddap

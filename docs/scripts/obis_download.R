@@ -219,6 +219,7 @@ sites_plys <- tibble(
 # st_as_text(ply_b_bs$geom) %>% nchar() # 911
 
 # simplify polygons exceeding n_wkt_char_max
+
 sites_plys <- sites_plys %>% 
   filter(wkt_nchar <= n_wkt_char_max) %>% 
   rbind(
@@ -227,7 +228,7 @@ sites_plys <- sites_plys %>%
       st_buffer(0.1) %>% 
       ms_simplify(keep = 0.05, snap_interval = 0.01) %>% 
       mutate(
-        wkt = st_as_text(geom),
+        wkt       = st_as_text(geom),
         wkt_nchar = nchar(wkt))) %>% 
   arrange(desc(wkt_nchar))
 
@@ -236,13 +237,20 @@ unlink(list.files(here("data/obis"), "^obis_sites_plys_[0-9]+\\.csv$"))
 
 tic("iterate over sites_plys")
 for (i in 1:nrow(sites_plys)) { # i=1
-# for (i in 13:nrow(sites_plys)) { # i=12 # DEBUG
+# for (i in 13:nrow(sites_plys)) { # i=14 # DEBUG
   
   ply       <- sites_plys$wkt[i]
   wkt_nchar <- sites_plys$wkt_nchar[i]
   occs_csv  <- glue("{dir_obis}/obis_sites_plys_{sprintf('%02d', i)}.csv")
 
   tic(glue("\nsite {i} of {nrow(sites_plys)} sites_plys (nchar={wkt_nchar})"))
+  
+  # fix invalid geometry
+  # sf::st_as_sf(tibble(ply=ply), wkt="ply", crs=4326) %>% sf::st_is_valid()
+  ply <- sf::st_as_sf(tibble(ply=ply), wkt="ply", crs=4326) %>% sf::st_make_valid() %>% 
+    mutate(
+      wkt = st_as_text(ply)) %>% 
+    pull(wkt)
   
   occs <- try(occurrence(taxonid = c(51, 1806, 882, 3), geometry = ply, fields = obis_flds)) # 1st ply: 99.702 sec elapsed
   

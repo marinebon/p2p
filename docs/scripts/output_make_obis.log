@@ -1,53 +1,51 @@
-
-The downloaded binary packages are in
-	/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpgBhIpR/downloaded_packages
-fetch # of OBIS occurrences per 0.25 deg box for all sites: 816.51 sec elapsed
-fetch # of OBIS occurrences per 1 & 5 deg box for data poor sites: 50.932 sec elapsed
+fetch # of OBIS occurrences per 0.25 deg box for all sites: 559.675 sec elapsed
+fetch # of OBIS occurrences per 1 & 5 deg box for data poor sites: 34.752 sec elapsed
 Deleting source `/Users/runner/work/p2p/p2p/data/obis/obis_sites.geojson' using driver `GeoJSON'
-Writing layer `obis_sites' to data source `/Users/runner/work/p2p/p2p/data/obis/obis_sites.geojson' using driver `GeoJSON'
-Writing 190 features with 16 fields and geometry type Polygon.
-site 1 of 44 sites_plys (nchar=911): 46.491 sec elapsed
-site 2 of 44 sites_plys (nchar=651): 13.31 sec elapsed
-site 3 of 44 sites_plys (nchar=450): 7.253 sec elapsed
-site 4 of 44 sites_plys (nchar=382): 8.042 sec elapsed
-site 5 of 44 sites_plys (nchar=377): 13.481 sec elapsed
-site 6 of 44 sites_plys (nchar=275): 7.517 sec elapsed
-site 7 of 44 sites_plys (nchar=273): 6.948 sec elapsed
-site 8 of 44 sites_plys (nchar=263): 10.674 sec elapsed
-site 9 of 44 sites_plys (nchar=262): 6.51 sec elapsed
-site 10 of 44 sites_plys (nchar=258): 6.404 sec elapsed
-site 11 of 44 sites_plys (nchar=257): 7.257 sec elapsed
-site 12 of 44 sites_plys (nchar=249): 8.634 sec elapsed
-site 13 of 44 sites_plys (nchar=219): 12.097 sec elapsed
-site 14 of 44 sites_plys (nchar=214): 10.987 sec elapsed
-site 15 of 44 sites_plys (nchar=191): 6.836 sec elapsed
-site 16 of 44 sites_plys (nchar=190): 6.424 sec elapsed
-site 17 of 44 sites_plys (nchar=190): 8.208 sec elapsed
-site 18 of 44 sites_plys (nchar=190): 11.324 sec elapsed
-site 19 of 44 sites_plys (nchar=185): 6.815 sec elapsed
-site 20 of 44 sites_plys (nchar=185): 11.096 sec elapsed
-site 21 of 44 sites_plys (nchar=185): 12.83 sec elapsed
-site 22 of 44 sites_plys (nchar=181): 6.872 sec elapsed
-site 23 of 44 sites_plys (nchar=172): 6.632 sec elapsed
-site 24 of 44 sites_plys (nchar=167): 7.047 sec elapsed
-site 25 of 44 sites_plys (nchar=115): 6.748 sec elapsed
-site 26 of 44 sites_plys (nchar=110): 6.525 sec elapsed
-site 27 of 44 sites_plys (nchar=110): 7.34 sec elapsed
-site 28 of 44 sites_plys (nchar=110): 6.505 sec elapsed
-site 29 of 44 sites_plys (nchar=110): 6.441 sec elapsed
-site 30 of 44 sites_plys (nchar=110): 6.389 sec elapsed
-site 31 of 44 sites_plys (nchar=110): 7.169 sec elapsed
-site 32 of 44 sites_plys (nchar=105): 4.967 sec elapsed
-site 33 of 44 sites_plys (nchar=105): 4.339 sec elapsed
-site 34 of 44 sites_plys (nchar=105): 4.54 sec elapsed
-site 35 of 44 sites_plys (nchar=105): 7.472 sec elapsed
-site 36 of 44 sites_plys (nchar=105): 6.927 sec elapsed
-site 37 of 44 sites_plys (nchar=100): 4.511 sec elapsed
-site 38 of 44 sites_plys (nchar=100): 8.111 sec elapsed
-site 39 of 44 sites_plys (nchar=98): 5.115 sec elapsed
-site 40 of 44 sites_plys (nchar=97): 5.411 sec elapsed
-site 41 of 44 sites_plys (nchar=90): 4.821 sec elapsed
-site 42 of 44 sites_plys (nchar=85): 4.641 sec elapsed
-site 43 of 44 sites_plys (nchar=80): 6.008 sec elapsed
-site 44 of 44 sites_plys (nchar=80): 5.956 sec elapsed
-iterate over sites_plys: 371.152 sec elapsed
+Writing layer `obis_sites' to data source 
+  `/Users/runner/work/p2p/p2p/data/obis/obis_sites.geojson' using driver `GeoJSON'
+Writing 192 features with 16 fields and geometry type Polygon.
+site 1 of 44 sites_plys (nchar=661): 36.772 sec elapsed
+site 2 of 44 sites_plys (nchar=659): 11.187 sec elapsed
+site 3 of 44 sites_plys (nchar=456): 6.993 sec elapsed
+site 4 of 44 sites_plys (nchar=402): 5.985 sec elapsed
+site 5 of 44 sites_plys (nchar=378): 10.87 sec elapsed
+site 6 of 44 sites_plys (nchar=351): 5.428 sec elapsed
+site 7 of 44 sites_plys (nchar=285): 11.614 sec elapsed
+site 8 of 44 sites_plys (nchar=273): 4.898 sec elapsed
+site 9 of 44 sites_plys (nchar=264): 4.776 sec elapsed
+site 10 of 44 sites_plys (nchar=261): 7.688 sec elapsed
+site 11 of 44 sites_plys (nchar=259): 5.201 sec elapsed
+site 12 of 44 sites_plys (nchar=252): 6.614 sec elapsed
+site 13 of 44 sites_plys (nchar=223): 13.767 sec elapsed
+site 14 of 44 sites_plys (nchar=218): 8.117 sec elapsed
+site 15 of 44 sites_plys (nchar=192): 4.907 sec elapsed
+site 16 of 44 sites_plys (nchar=191): 4.349 sec elapsed
+site 17 of 44 sites_plys (nchar=190): 6.56 sec elapsed
+site 18 of 44 sites_plys (nchar=190): 9.282 sec elapsed
+site 19 of 44 sites_plys (nchar=190): 6.252 sec elapsed
+site 20 of 44 sites_plys (nchar=186): 10.085 sec elapsed
+site 21 of 44 sites_plys (nchar=186): 4.897 sec elapsed
+site 22 of 44 sites_plys (nchar=185): 8.56 sec elapsed
+site 23 of 44 sites_plys (nchar=183): 5.305 sec elapsed
+site 24 of 44 sites_plys (nchar=176): 4.489 sec elapsed
+site 25 of 44 sites_plys (nchar=170): 5.266 sec elapsed
+site 26 of 44 sites_plys (nchar=115): 4.493 sec elapsed
+site 27 of 44 sites_plys (nchar=110): 4.635 sec elapsed
+site 28 of 44 sites_plys (nchar=110): 5.568 sec elapsed
+site 29 of 44 sites_plys (nchar=110): 4.368 sec elapsed
+site 30 of 44 sites_plys (nchar=110): 4.35 sec elapsed
+site 31 of 44 sites_plys (nchar=110): 4.55 sec elapsed
+site 32 of 44 sites_plys (nchar=110): 5.099 sec elapsed
+site 33 of 44 sites_plys (nchar=105): 4.483 sec elapsed
+site 34 of 44 sites_plys (nchar=105): 4.848 sec elapsed
+site 35 of 44 sites_plys (nchar=105): 4.354 sec elapsed
+site 36 of 44 sites_plys (nchar=105): 5.068 sec elapsed
+site 37 of 44 sites_plys (nchar=105): 4.875 sec elapsed
+site 38 of 44 sites_plys (nchar=100): 4.706 sec elapsed
+site 39 of 44 sites_plys (nchar=98): 5.082 sec elapsed
+site 40 of 44 sites_plys (nchar=97): 5.676 sec elapsed
+site 41 of 44 sites_plys (nchar=90): 4.782 sec elapsed
+site 42 of 44 sites_plys (nchar=85): 4.58 sec elapsed
+site 43 of 44 sites_plys (nchar=80): 5.8 sec elapsed
+site 44 of 44 sites_plys (nchar=80): 6.085 sec elapsed
+iterate over sites_plys: 305.398 sec elapsed
