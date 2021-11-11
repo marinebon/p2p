@@ -28,7 +28,7 @@ Imports:
   rmarkdown, 
   rnaturalearth, 
   robis, 
-  sf (== 1.0-2), 
+  sf (== 1.0-3), 
   stringr, 
   tictoc, 
   tidyr, 
