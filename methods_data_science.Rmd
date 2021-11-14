@@ -54,3 +54,10 @@ embed_youtube("teJhfsSWonE", width = 910, height = 910*360/640, frameborder = 0,
 ## Extract satellite data:
 
 -   [**R script**](https://rpubs.com/eqmh/sat-data-plotter-mapper){target="_blank"} **to extract sea surface temperature (SST) and chlorophyll-a (CHL) from [ERDDAP](https://coastwatch.pfeg.noaa.gov/erddap/index.html){target="_blank"} servers for selected locations, create time series plots of [SST](https://rpubs.com/eqmh/sst_ts_Patag){target="_blank"} and [CHL](https://rpubs.com/eqmh/chla_ts_Patag_v2){target="_blank"} and their [climatologies](https://rpubs.com/eqmh/sst_climatology_plot){target="_blank"}, and generate a map with the latest satellite data.** <img src="images/ts_plots_and_maps.jpg" width="1000px"/>
+
+<br>
+<br>
+
+## Access the Marine-Coastal Information and Analysis System (SIMAR):
+
+-   [Visit SIMAR](https://simar.conabio.gob.mx/){target="_blank"} of [CONABIO](https://www.gob.mx/conabio){target="_blank"} **to visualize and analyze satellite products for the Caribbean Sea, Gulf of Mexico and the Mexican and Central America Pacific.** <img src="images/simar.jpg" width="1000px"/>

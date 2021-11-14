@@ -1053,13 +1053,6 @@
       "Repository": "CRAN",
       "Hash": "75a40cd4f8503fe175be6b213009767f"
     },
-    "sf": {
-      "Package": "sf",
-      "Version": "1.0-2",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "464dca3e4f0bb13cf202630bfed2753a"
-    },
     "sfheaders": {
       "Package": "sfheaders",
       "Version": "0.4.0",

@@ -6,18 +6,24 @@ title: "Methods for Field Protocols"
 knitr::opts_chunk$set(echo = F, message = F, warning = F)
 ```
 # Use standardized field protocols below to collect biodiversity observations in rocky intertidal areas and sandy beaches:<br> 
-- [Rocky Shore](https://repository.oceanbestpractices.org/handle/11329/1143){target="_blank"}  Included on the [OBPS](https://search.oceanbestpractices.org/){target="_blank"} 
+- [Rocky Shore](https://repository.oceanbestpractices.org/handle/11329/1143){target="_blank"}  **included on the** [OBPS](https://search.oceanbestpractices.org/){target="_blank"} 
 <br>
 <br>
 <img width="1000px" src="images/rs_manual.png"/>
 <br>
 <br>
 <br>
-- [Sandy Beach](https://repository.oceanbestpractices.org/handle/11329/1145){target="_blank"} Included on the [OBPS](https://search.oceanbestpractices.org/){target="_blank"}
+- [Sandy Beach](https://repository.oceanbestpractices.org/handle/11329/1145){target="_blank"} **included on the** [OBPS](https://search.oceanbestpractices.org/){target="_blank"}
 <br>
 <br>
 <img width="1000px" src="images/sb_manual.png"/>
 
 # Use the template below to register observations collected in sandy beach surveys:
 - [Sandy Beach Field Logsheet](protocols/FieldForm_SandyBeach.xlsx) NEW!
-
+<br>
+<br>
+<br>
+- [CONABIO](https://www.gob.mx/conabio) [Biodiversity Monitoring Protocols](https://repository.oceanbestpractices.org/handle/11329/1145){target="_blank"} **included on the** [OBPS](https://repository.oceanbestpractices.org/handle/11329/1409){target="_blank"}
+<br>
+<br>
+<img width="1000px" src="images/protocols_conabio.jpg"/>
