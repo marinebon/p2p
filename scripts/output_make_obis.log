@@ -1,52 +1,52 @@
-fetch # of OBIS occurrences per 0.25 deg box for all sites: 600.212 sec elapsed
-fetch # of OBIS occurrences per 1 & 5 deg box for data poor sites: 24.636 sec elapsed
+fetch # of OBIS occurrences per 0.25 deg box for all sites: 616.574 sec elapsed
+fetch # of OBIS occurrences per 1 & 5 deg box for data poor sites: 25.585 sec elapsed
 Deleting source `/Users/runner/work/p2p/p2p/data/obis/obis_sites.geojson' using driver `GeoJSON'
 Writing layer `obis_sites' to data source 
   `/Users/runner/work/p2p/p2p/data/obis/obis_sites.geojson' using driver `GeoJSON'
 Writing 192 features with 16 fields and geometry type Polygon.
-site 1 of 45 sites_plys (nchar=661): 55.062 sec elapsed
-site 2 of 45 sites_plys (nchar=659): 10.139 sec elapsed
-site 3 of 45 sites_plys (nchar=456): 5.583 sec elapsed
-site 4 of 45 sites_plys (nchar=402): 5.718 sec elapsed
-site 5 of 45 sites_plys (nchar=378): 10.191 sec elapsed
-site 6 of 45 sites_plys (nchar=285): 10.576 sec elapsed
-site 7 of 45 sites_plys (nchar=273): 5.119 sec elapsed
-site 8 of 45 sites_plys (nchar=264): 4.85 sec elapsed
-site 9 of 45 sites_plys (nchar=261): 7.6 sec elapsed
-site 10 of 45 sites_plys (nchar=261): 5.508 sec elapsed
-site 11 of 45 sites_plys (nchar=261): 5.555 sec elapsed
-site 12 of 45 sites_plys (nchar=259): 5.433 sec elapsed
-site 13 of 45 sites_plys (nchar=252): 6.536 sec elapsed
-site 14 of 45 sites_plys (nchar=223): 12.652 sec elapsed
-site 15 of 45 sites_plys (nchar=218): 8.361 sec elapsed
-site 16 of 45 sites_plys (nchar=192): 5.031 sec elapsed
-site 17 of 45 sites_plys (nchar=191): 4.633 sec elapsed
-site 18 of 45 sites_plys (nchar=190): 6.906 sec elapsed
-site 19 of 45 sites_plys (nchar=190): 9.155 sec elapsed
-site 20 of 45 sites_plys (nchar=190): 6.193 sec elapsed
-site 21 of 45 sites_plys (nchar=186): 10.174 sec elapsed
-site 22 of 45 sites_plys (nchar=186): 5.022 sec elapsed
-site 23 of 45 sites_plys (nchar=185): 9.127 sec elapsed
-site 24 of 45 sites_plys (nchar=183): 5.188 sec elapsed
-site 25 of 45 sites_plys (nchar=176): 4.734 sec elapsed
-site 26 of 45 sites_plys (nchar=170): 5.35 sec elapsed
-site 27 of 45 sites_plys (nchar=115): 4.672 sec elapsed
-site 28 of 45 sites_plys (nchar=110): 5.535 sec elapsed
-site 29 of 45 sites_plys (nchar=110): 5.22 sec elapsed
-site 30 of 45 sites_plys (nchar=110): 5.091 sec elapsed
-site 31 of 45 sites_plys (nchar=110): 4.991 sec elapsed
-site 32 of 45 sites_plys (nchar=110): 5.292 sec elapsed
-site 33 of 45 sites_plys (nchar=110): 5.479 sec elapsed
-site 34 of 45 sites_plys (nchar=105): 4.776 sec elapsed
-site 35 of 45 sites_plys (nchar=105): 5.098 sec elapsed
-site 36 of 45 sites_plys (nchar=105): 4.711 sec elapsed
-site 37 of 45 sites_plys (nchar=105): 5.336 sec elapsed
-site 38 of 45 sites_plys (nchar=105): 5.189 sec elapsed
-site 39 of 45 sites_plys (nchar=100): 4.94 sec elapsed
-site 40 of 45 sites_plys (nchar=98): 5.485 sec elapsed
-site 41 of 45 sites_plys (nchar=97): 5.516 sec elapsed
-site 42 of 45 sites_plys (nchar=90): 4.964 sec elapsed
-site 43 of 45 sites_plys (nchar=85): 4.798 sec elapsed
-site 44 of 45 sites_plys (nchar=80): 6.057 sec elapsed
-site 45 of 45 sites_plys (nchar=80): 5.83 sec elapsed
-iterate over sites_plys: 330.271 sec elapsed
+site 1 of 45 sites_plys (nchar=661): 55.569 sec elapsed
+site 2 of 45 sites_plys (nchar=659): 10.48 sec elapsed
+site 3 of 45 sites_plys (nchar=456): 5.668 sec elapsed
+site 4 of 45 sites_plys (nchar=402): 5.835 sec elapsed
+site 5 of 45 sites_plys (nchar=378): 10.7 sec elapsed
+site 6 of 45 sites_plys (nchar=285): 10.802 sec elapsed
+site 7 of 45 sites_plys (nchar=273): 5.186 sec elapsed
+site 8 of 45 sites_plys (nchar=264): 5.103 sec elapsed
+site 9 of 45 sites_plys (nchar=261): 7.773 sec elapsed
+site 10 of 45 sites_plys (nchar=261): 5.723 sec elapsed
+site 11 of 45 sites_plys (nchar=261): 5.762 sec elapsed
+site 12 of 45 sites_plys (nchar=259): 5.235 sec elapsed
+site 13 of 45 sites_plys (nchar=252): 6.731 sec elapsed
+site 14 of 45 sites_plys (nchar=223): 13.027 sec elapsed
+site 15 of 45 sites_plys (nchar=218): 9.008 sec elapsed
+site 16 of 45 sites_plys (nchar=192): 5.167 sec elapsed
+site 17 of 45 sites_plys (nchar=191): 4.907 sec elapsed
+site 18 of 45 sites_plys (nchar=190): 7.278 sec elapsed
+site 19 of 45 sites_plys (nchar=190): 9.825 sec elapsed
+site 20 of 45 sites_plys (nchar=190): 6.396 sec elapsed
+site 21 of 45 sites_plys (nchar=186): 10.36 sec elapsed
+site 22 of 45 sites_plys (nchar=186): 5.051 sec elapsed
+site 23 of 45 sites_plys (nchar=185): 9.444 sec elapsed
+site 24 of 45 sites_plys (nchar=183): 5.49 sec elapsed
+site 25 of 45 sites_plys (nchar=176): 4.761 sec elapsed
+site 26 of 45 sites_plys (nchar=170): 5.592 sec elapsed
+site 27 of 45 sites_plys (nchar=115): 4.747 sec elapsed
+site 28 of 45 sites_plys (nchar=110): 5.661 sec elapsed
+site 29 of 45 sites_plys (nchar=110): 5.402 sec elapsed
+site 30 of 45 sites_plys (nchar=110): 5.184 sec elapsed
+site 31 of 45 sites_plys (nchar=110): 4.932 sec elapsed
+site 32 of 45 sites_plys (nchar=110): 5.38 sec elapsed
+site 33 of 45 sites_plys (nchar=110): 5.495 sec elapsed
+site 34 of 45 sites_plys (nchar=105): 4.696 sec elapsed
+site 35 of 45 sites_plys (nchar=105): 5.144 sec elapsed
+site 36 of 45 sites_plys (nchar=105): 4.739 sec elapsed
+site 37 of 45 sites_plys (nchar=105): 5.324 sec elapsed
+site 38 of 45 sites_plys (nchar=105): 5.491 sec elapsed
+site 39 of 45 sites_plys (nchar=100): 4.821 sec elapsed
+site 40 of 45 sites_plys (nchar=98): 5.74 sec elapsed
+site 41 of 45 sites_plys (nchar=97): 5.523 sec elapsed
+site 42 of 45 sites_plys (nchar=90): 5.115 sec elapsed
+site 43 of 45 sites_plys (nchar=85): 4.839 sec elapsed
+site 44 of 45 sites_plys (nchar=80): 6.106 sec elapsed
+site 45 of 45 sites_plys (nchar=80): 5.793 sec elapsed
+iterate over sites_plys: 338.206 sec elapsed
