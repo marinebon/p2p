@@ -12,6 +12,12 @@ knitr::opts_chunk$set(echo = F, message = F, warning = F)
 
 ## Past
 
+- [Marine Biological Data Mobilization Workshop](https://ioos.github.io/bio_mobilization_workshop/) for publishing marine biological observation datasets to the [Ocean Biodiversity Information System - OBIS](https://obis.org/)). March 14-15, 2022.
+
+- [From microbes to mammals: Merging in situ and spaceborne observations for monitoring life in the sea](https://bluejeans.com/s/nyhjZww92vs/). Webinar presented by Dr. Enrique Montes of [UM/CIMAS](https://cimas.rsmas.miami.edu/) for [CICESE-ULP](https://ulp.cicese.mx/en/). March 10, 2022.
+
+- [La Red de Monitoreo de Biodiversidad Marina Polo a Polo de las Américas en apoyo a la conservación y uso sostenible de recursos marinos vivos](https://www.youtube.com/watch?v=HeqRIeB-v9o). Webinar presented by Dr. Enrique Montes of [UM/CIMAS](https://cimas.rsmas.miami.edu/) for [FIMCM ESPOL](http://www.fimcm.espol.edu.ec/). November 9, 2021.
+
 - [AmeriGEO Week 2021 - Day 2: Health & Biodiversity:](https://vimeo.com/591158593){target="_blank"} Detecting biogeographic shifts within marine ecoregions of the Americas using dynamic satellite seascapes. See [AmeriGEO Week 2021](https://amerigeo-week-2021-amerigeoss.hub.arcgis.com/) - August 24.
 
 - **Estimating marine biodiversity with passive acoustic monitoring**. Webinar presented by Dr. Peter Tyack of the [International Quiet Ocean Experiment (IQOE)](https://www.iqoe.org/) program. August 11, 2021.
