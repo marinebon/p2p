@@ -29,6 +29,8 @@ jobs:
       - name: Install Homebrew dependencies
         run: |
           brew install udunits
+          brew install pkg-config 
+          brew install gdal
 
       - name: Install pandoc
         run: |
