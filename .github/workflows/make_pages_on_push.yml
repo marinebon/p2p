@@ -26,6 +26,10 @@ jobs:
       - name: Setup R
         uses: r-lib/actions/setup-r@v1
 
+      - name: Install Homebrew dependencies
+        run: |
+          brew install udunits
+
       - name: Install pandoc
         run: |
           brew install pandoc
