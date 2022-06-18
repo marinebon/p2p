@@ -8,6 +8,8 @@ knitr::opts_chunk$set(echo = F, message = F, warning = F)
 
 ## Upcoming
 
+- [Ocean Data Bootcamp - Gestão de dados de monitoramento costeiro](https://eqmh.github.io/Ocean_Data_Bootcamp/){target="_blank"} - July 11-14, 2022, Vitória, Brazil. 
+
 - [3rd Marine Biodiversity Workshop: from the Sea to the Cloud](http://marinebon.org/p2p-colombia-workshop/){target="_blank"} - May 4-8, 2020, Santa Marta, Colombia. THIS EVENT IS POSTPONED DUE TO THE COVID-19 OUTBREAK AND DATES ARE TBD
 
 ## Past
