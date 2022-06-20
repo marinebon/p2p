@@ -14,17 +14,7 @@ knitr::opts_chunk$set(echo = F, message = F, warning = F)
 
 ## Past
 
-- [MBON Side-event of the All-Atlantic Ocean Research Alliance 2022 Forum](https://www.aircentre.org/side-event-of-the-all-atlantic-ocean-research-alliance-2022-forum/) titled "**Coordinating marine life observations to support conservation, restoration, and equitable sustainable development**". Brasília, Brazil, June 3rd, 2022. Organizer: [Air Centre](https://www.aircentre.org/about-us/).
-```{r, echo = F, message = F, warning = F}
-if (!require(librarian)){
-  install.packages("librarian")
-  library(librarian)
-}
-shelf(vembedr)
-
-embed_youtube("PQyE9kS3OLU&t=3s", width = 910, height = 910*360/640, frameborder = 0,
-  allowfullscreen = TRUE, query = NULL)
-```
+- [MBON Side-event of the All-Atlantic Ocean Research Alliance 2022 Forum](https://www.aircentre.org/side-event-of-the-all-atlantic-ocean-research-alliance-2022-forum/) titled "**Coordinating marine life observations to support conservation, restoration, and equitable sustainable development**". Brasília, Brazil, June 3rd, 2022. Presentations  and panel discussion are available [here](https://www.youtube.com/watch?v=PQyE9kS3OLU&t=3s).  Organizer: [Air Centre](https://www.aircentre.org/about-us/).
 
 - [Marine Biological Data Mobilization Workshop](https://ioos.github.io/bio_mobilization_workshop/) for publishing marine biological observation datasets to the [Ocean Biodiversity Information System - OBIS](https://obis.org/)). March 14-15, 2022.
 
