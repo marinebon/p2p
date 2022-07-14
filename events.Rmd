@@ -8,11 +8,22 @@ knitr::opts_chunk$set(echo = F, message = F, warning = F)
 
 ## Upcoming
 
-- [Ocean Data Bootcamp - Gestão de dados de monitoramento costeiro](https://eqmh.github.io/Ocean_Data_Bootcamp/){target="_blank"} - July 11-14, 2022, Vitória, Brazil. 
-
 - [3rd Marine Biodiversity Workshop: from the Sea to the Cloud](http://marinebon.org/p2p-colombia-workshop/){target="_blank"} - May 4-8, 2020, Santa Marta, Colombia. THIS EVENT IS POSTPONED DUE TO THE COVID-19 OUTBREAK AND DATES ARE TBD
 
 ## Past
+
+- [Ocean Data Bootcamp - Gestão de dados de monitoramento costeiro](https://eqmh.github.io/Ocean_Data_Bootcamp/){target="_blank"} - July 11-14, 2022, Vitória, Brazil. 
+
+- **Ecosystem and climate indicators for science-based decision making**. Kelly Montenero and Will Klajbor of the U. Miami CIMAS and NOAA's Atlantic Oceanographic and Meteorological Laboratory (AOML) present ecosystem and climate indicators in support of management and decision-making of marine natural resources at the [Ocean Data Bootcamp workshop](https://eqmh.github.io/Ocean_Data_Bootcamp/index.html) in Vitória, Brazil, on July 13 of 2022.
+```{r, echo = F, message = F, warning = F}
+if (!require(librarian)){
+  install.packages("librarian")
+  library(librarian)
+}
+shelf(vembedr)
+embed_youtube("uKz60V0RGXo", width = 910, height = 910*360/640, frameborder = 0,
+  allowfullscreen = TRUE, query = NULL)
+```
 
 - [MBON Side-event of the All-Atlantic Ocean Research Alliance 2022 Forum](https://www.aircentre.org/side-event-of-the-all-atlantic-ocean-research-alliance-2022-forum/) titled "**Coordinating marine life observations to support conservation, restoration, and equitable sustainable development**". Brasília, Brazil, June 3rd, 2022. Presentations  and panel discussion are available [here](https://www.youtube.com/watch?v=PQyE9kS3OLU&t=3s).  Organizer: [Air Centre](https://www.aircentre.org/about-us/).
 
