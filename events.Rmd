@@ -8,6 +8,8 @@ knitr::opts_chunk$set(echo = F, message = F, warning = F)
 
 ## Upcoming
 
+- **SIMA-NOAA Workshop: Integrating water quality and biodiversity surveys in support of management decisions** - November 29th - December 2nd, 2022. This event will be hosted by the US Consulate General in Sao Paulo, Brazil.<img src="images/sima-noaa_flyer.jpg" width="1000px"/>
+
 - [3rd Marine Biodiversity Workshop: from the Sea to the Cloud](http://marinebon.org/p2p-colombia-workshop/){target="_blank"} - May 4-8, 2020, Santa Marta, Colombia. THIS EVENT IS POSTPONED DUE TO THE COVID-19 OUTBREAK AND DATES ARE TBD
 
 ## Past
