@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = F, message = F, warning = F)
 
 ## Past
 
-- **SIMA-NOAA Workshop: Integrating water quality and biodiversity surveys in support of management decisions** - November 29th - December 2nd, 2022. This event will be hosted by the US Consulate General in Sao Paulo, Brazil.<img src="images/sima-noaa_flyer.jpg" width="1000px"/>
+- **SIMA-NOAA Workshop: Integrating water quality and biodiversity surveys in support of management decisions** - November 29th - December 2nd, 2022. This event was hosted by the US Consulate General in Sao Paulo, Brazil.<img src="images/sima-noaa_flyer.jpg" width="1000px"/>
 
 - [Ocean Data Bootcamp - Gestão de dados de monitoramento costeiro](https://eqmh.github.io/Ocean_Data_Bootcamp/){target="_blank"} - July 11-14, 2022, Vitória, Brazil. 
 
