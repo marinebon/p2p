@@ -8,7 +8,9 @@ knitr::opts_chunk$set(echo = F, message = F, warning = F)
 
 ## Upcoming
 
-- [3rd Marine Biodiversity Workshop: from the Sea to the Cloud](http://marinebon.org/p2p-colombia-workshop/){target="_blank"} - May 4-8, 2020, Santa Marta, Colombia. THIS EVENT IS POSTPONED DUE TO THE COVID-19 OUTBREAK AND DATES ARE TBD
+- [**MBON Pole to Pole Workshop: Implementing biodiversity monitoring of rocky shores using photo-quadrats and Artificial Intelligence**](https://eqmh.github.io/p2p-argentina-workshop){target="_blank"} - March 27-31, 2023, Camarones, Chubut, Argentina.<img src="images/casadegas.jpg" width="1000px"/>
+<br>
+<br>
 
 ## Past
 
