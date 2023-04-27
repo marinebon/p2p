@@ -13,8 +13,8 @@
 
 <title>About MBON Pole to Pole</title>
 
-<script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.18/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -58,6 +58,7 @@ if (window.hljs) {
 
 
 
+
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
 
@@ -82,6 +83,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -139,11 +143,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -172,8 +180,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -181,16 +189,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -234,7 +235,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -257,7 +258,7 @@ $(document).ready(function () {
   </a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     <span class="ion ion-stats-bars"></span>
      
     Data
@@ -281,7 +282,7 @@ $(document).ready(function () {
   </a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     <span class="ion ion-clipboard"></span>
      
     Methods
@@ -321,11 +322,53 @@ $(document).ready(function () {
 </div>
 
 
-<p><br> <br> <font size="5"> The Marine Biodiversity Observation Network Pole to Pole of the Americas - MBON Pole to Pole - is a <strong>Knowledge Sharing Network</strong> dedicated to the collection, use and sharing of marine biodiversity data in a coordinated, standardized manner leveraging on existing infrastructure managed by the Global Ocean Observing System (<a href="http://www.goosocean.org/" target="_blank">GOOS</a>; IOC-UNESCO), the GEO Biodiversity Observation Network (<a href="https://geobon.org/" target="_blank">GEO BON</a>), and the Ocean Biodiversity Information System (<a href="http://iobis.org/" target="_blank">OBIS</a>).</p>
-<p>The MBON Pole to Pole aims to become a key resource for decision-making and management of living resources across countries in the Americas and support their reporting requirements of the Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services (<a href="https://www.ipbes.net/" target="_blank">IPBES</a>), the <a href="https://www.cbd.int/conferences/post2020" target="_blank">Post-2020 Global Biodiversity Framework</a> of the Convention of Biological Diversity (<a href="https://www.cbd.int/" target="_blank">CBD</a>), and the UN 2030 Agenda for Sustainable Development Goals (<a href="https://www.un.org/sustainabledevelopment/development-agenda/" target="_blank">SDGs</a>). </font> <br> <br></p>
+<p><br> <br> <font size="5"> The Marine Biodiversity Observation Network
+Pole to Pole of the Americas - MBON Pole to Pole - is a
+<strong>Knowledge Sharing Network</strong> dedicated to the collection,
+use and sharing of marine biodiversity data in a coordinated,
+standardized manner leveraging on existing infrastructure managed by the
+Global Ocean Observing System (<a href="http://www.goosocean.org/"
+target="_blank">GOOS</a>; IOC-UNESCO), the GEO Biodiversity Observation
+Network (<a href="https://geobon.org/" target="_blank">GEO BON</a>), and
+the Ocean Biodiversity Information System (<a href="http://iobis.org/"
+target="_blank">OBIS</a>).</p>
+<p>The MBON Pole to Pole aims to become a key resource for
+decision-making and management of living resources across countries in
+the Americas and support their reporting requirements of the
+Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem
+Services (<a href="https://www.ipbes.net/" target="_blank">IPBES</a>),
+the <a href="https://www.cbd.int/conferences/post2020"
+target="_blank">Post-2020 Global Biodiversity Framework</a> of the
+Convention of Biological Diversity (<a href="https://www.cbd.int/"
+target="_blank">CBD</a>), and the UN 2030 Agenda for Sustainable
+Development Goals (<a
+href="https://www.un.org/sustainabledevelopment/development-agenda/"
+target="_blank">SDGs</a>). </font> <br> <br></p>
 <div id="people" class="section level2">
 <h2><strong>People</strong></h2>
-<p><img width="1000px" src="images/P2P_group%20CebiMar.JPG"/> <br> <br> The MBON Pole to Pole team at the <a href="https://marinebon.github.io/p2p-brazil-workshop/" target="_blank"><strong>Marine Biodiversity Workshop: from the Sea to the Cloud</strong></a>, in São Sebastião, Brazil, 2018-08-06. <br> <br> <br> <br> <img width="1000px" src="images/P2P_group%20Puerto%20Morelos.JPG"/> <br> <br> The MBON Pole to Pole team at the <a href="https://marinebon.github.io/p2p-mexico-workshop/" target="_blank"><strong>2nd Marine Biodiversity Workshop: from the Sea to the Cloud</strong></a>, in Puerto Morelos, Mexico, 2019-04-05. <br> <br> <br> <br></p>
+<p><img width="1000px" src="images/workshop_patagonia.png"/> <br> <br>
+The MBON Pole to Pole workshop <a
+href="https://eqmh.github.io/p2p-argentina-workshop/"
+target="_blank"><strong>Implementing biodiversity monitoring of rocky
+shores using photo-quadrats and Artificial Intelligence</strong></a>, at
+Camarones, Chubut, Argentina, on March 27-31, 2023 <br> <br> <br> <br>
+<img width="1000px" src="images/ocean_data_bootcamp.jpeg"/> <br> <br>
+The MBON Pole to Pole workshop <a
+href="https://eqmh.github.io/Ocean_Data_Bootcamp/index.html"
+target="_blank"><strong>Ocean Data Bootcamp - Gestão de dados de
+monitoramento costeiro</strong></a>, at Vitória, Espiritu Santo, Brazil,
+on July 11-14, 2022 <br> <br> <br> <br>
+<img width="1000px" src="images/P2P_group%20Puerto%20Morelos.JPG"/> <br>
+<br> The MBON Pole to Pole team at the <a
+href="https://marinebon.github.io/p2p-mexico-workshop/"
+target="_blank"><strong>2nd Marine Biodiversity Workshop: from the Sea
+to the Cloud</strong></a>, in Puerto Morelos, Mexico, 2019-04-05. <br>
+<br> <br> <br> <img width="1000px" src="images/P2P_group%20CebiMar.JPG"/>
+<br> <br> The MBON Pole to Pole team at the <a
+href="https://marinebon.github.io/p2p-brazil-workshop/"
+target="_blank"><strong>Marine Biodiversity Workshop: from the Sea to
+the Cloud</strong></a>, in São Sebastião, Brazil, 2018-08-06. <br> <br>
+<br> <br></p>
 </div>
 <div id="partner-organizations" class="section level2">
 <h2><strong>Partner Organizations</strong></h2>

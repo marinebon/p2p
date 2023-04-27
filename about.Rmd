@@ -15,10 +15,18 @@ knitr::opts_chunk$set(echo = F, message = F, warning = F)
 ```
 ## **People**
 
-<img width="1000px" src="images/P2P_group CebiMar.JPG"/>
+<img width="1000px" src="images/workshop_patagonia.png"/>
 <br>
 <br>
-The MBON Pole to Pole team at the [**Marine Biodiversity Workshop: from the Sea to the Cloud**](https://marinebon.github.io/p2p-brazil-workshop/){target="_blank"}, in São Sebastião, Brazil, 2018-08-06.
+The MBON Pole to Pole workshop [**Implementing biodiversity monitoring of rocky shores using photo-quadrats and Artificial Intelligence**](https://eqmh.github.io/p2p-argentina-workshop/){target="_blank"}, at Camarones, Chubut, Argentina, on March 27-31, 2023
+<br>
+<br>
+<br>
+<br>
+<img width="1000px" src="images/ocean_data_bootcamp.jpeg"/>
+<br>
+<br>
+The MBON Pole to Pole workshop [**Ocean Data Bootcamp - Gestão de dados de monitoramento costeiro**](https://eqmh.github.io/Ocean_Data_Bootcamp/index.html){target="_blank"}, at Vitória, Espiritu Santo, Brazil, on July 11-14, 2022
 <br>
 <br>
 <br>
@@ -31,6 +39,15 @@ The MBON Pole to Pole team at the [**2nd Marine Biodiversity Workshop: from the 
 <br>
 <br>
 <br>
+<img width="1000px" src="images/P2P_group CebiMar.JPG"/>
+<br>
+<br>
+The MBON Pole to Pole team at the [**Marine Biodiversity Workshop: from the Sea to the Cloud**](https://marinebon.github.io/p2p-brazil-workshop/){target="_blank"}, in São Sebastião, Brazil, 2018-08-06.
+<br>
+<br>
+<br>
+<br>
+
 
 ## **Partner Organizations**
 ![](images/partner_orgs.jpg) 
