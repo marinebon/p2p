@@ -15,14 +15,14 @@ knitr::opts_chunk$set(echo = F, message = F, warning = F)
 -[Monitoring of rocky intertidal communities using photo-quadrats - ENGLISH](protocols/Protocol MBON & AMPs.pdf){target="_blank"}
 <br>
 <div style="text-align: center;">
-<img width="500px" src="images/photo_quadrat_protocol.jpg"/>
+<img width="1000px" src="images/photo_quadrat_protocol.jpg"/>
 </div>
 <br>
 
 -[Monitoring of rocky intertidal communities using photo-quadrats - SPANISH](protocols/Protocolo MBON & AMPs.pdf){target="_blank"}
 <br>
 <div style="text-align: center;">
-<img width="500px" src="images/photo_quadrat_protocol2.jpg"/>
+<img width="1000px" src="images/photo_quadrat_protocol2.jpg"/>
 </div>
 <br>
 <br>
