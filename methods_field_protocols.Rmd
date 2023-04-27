@@ -1,23 +1,47 @@
 ---
 title: "Methods for Field Protocols"
+output:
+  html_document:
+    css: styles.css
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = F, message = F, warning = F)
 ```
-# Use standardized field protocols below to collect biodiversity observations in rocky intertidal areas and sandy beaches:<br> 
+# Use standardized field protocols below to collect biodiversity observations in rocky intertidal areas and sandy beaches:
+<br> 
+<br>
+<div style="font-size: 20pt;">
+-[Monitoring of rocky intertidal communities using photo-quadrats - ENGLISH](protocols/Protocol MBON & AMPs.pdf){target="_blank"}
+<br>
+<div style="text-align: center;">
+<img width="500px" src="images/photo_quadrat_protocol.jpg"/>
+</div>
+<br>
+
+-[Monitoring of rocky intertidal communities using photo-quadrats - SPANISH](protocols/Protocolo MBON & AMPs.pdf){target="_blank"}
+<br>
+<div style="text-align: center;">
+<img width="500px" src="images/photo_quadrat_protocol2.jpg"/>
+</div>
+<br>
+<br>
+<br>
 - [Rocky Shore](https://repository.oceanbestpractices.org/handle/11329/1143){target="_blank"}  **included on the** [OBPS](https://search.oceanbestpractices.org/){target="_blank"} 
 <br>
 <br>
+<div style="text-align: center;">
 <img width="1000px" src="images/rs_manual.png"/>
+</div>
 <br>
 <br>
 <br>
 - [Sandy Beach](https://repository.oceanbestpractices.org/handle/11329/1145){target="_blank"} **included on the** [OBPS](https://search.oceanbestpractices.org/){target="_blank"}
 <br>
 <br>
+<div style="text-align: center;">
 <img width="1000px" src="images/sb_manual.png"/>
-
+</div>
 # Use the template below to register observations collected in sandy beach surveys:
 - [Sandy Beach Field Logsheet](protocols/FieldForm_SandyBeach.xlsx) NEW!
 <br>
@@ -26,4 +50,7 @@ knitr::opts_chunk$set(echo = F, message = F, warning = F)
 - [CONABIO](https://www.gob.mx/conabio) [Biodiversity Monitoring Protocols](https://repository.oceanbestpractices.org/handle/11329/1145){target="_blank"} **included on the** [OBPS](https://repository.oceanbestpractices.org/handle/11329/1409){target="_blank"}
 <br>
 <br>
+<div style="text-align: center;">
 <img width="1000px" src="images/protocols_conabio.jpg"/>
+</div>
+</div>
