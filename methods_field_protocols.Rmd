@@ -11,6 +11,18 @@ knitr::opts_chunk$set(echo = F, message = F, warning = F)
 # Use standardized field protocols below to collect biodiversity observations in rocky intertidal areas and sandy beaches:
 <br> 
 <br>
+```{r, echo = F, message = F, warning = F}
+if (!require(librarian)){
+  install.packages("librarian")
+  library(librarian)
+}
+shelf(vembedr)
+
+embed_youtube("SuhvInzXVlU", width = 910, height = 910*360/640, frameborder = 0,
+  allowfullscreen = TRUE, query = NULL)
+```
+<br> 
+<br>
 <div style="font-size: 20pt;">
 -[Monitoring of rocky intertidal communities using photo-quadrats - ENGLISH](protocols/Protocol MBON & AMPs.pdf){target="_blank"}
 <br>
