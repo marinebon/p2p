@@ -11,6 +11,9 @@ knitr::opts_chunk$set(echo = F, message = F, warning = F)
 # Use standardized field protocols below to collect biodiversity observations in rocky intertidal areas and sandy beaches:
 <br> 
 <br>
+<div style="font-size: 20pt;">
+-Training of park rangers for biodiversity monitoring in the Argentinian Patagonia during the [MBON Pole to Pole workshop in Camarones, Province of Chubut](https://eqmh.github.io/p2p-argentina-workshop/){target="_blank"}
+<div style="text-align: center;">
 ```{r, echo = F, message = F, warning = F}
 if (!require(librarian)){
   install.packages("librarian")
