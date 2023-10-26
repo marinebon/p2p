@@ -8,7 +8,7 @@ knitr::opts_chunk$set(echo = F, message = F, warning = F)
 
 ## Use the templates below to enter your survey data:
 
--   [**Rocky Shore Data Template -- NEW!**](https://github.com/diodon/P2P-templates/blob/main/RS_DataSheet_longformat_v1.3.xlsx){target="_blank"}
+-   [**Rocky Shore Data Template -- NEW!**](https://github.com/diodon/P2P-templates/blob/main/RS_DataSheet_longformat_v1.4.xlsx){target="_blank"}
 -   [**Sandy Beach Data Template -- NEW!**](https://github.com/diodon/P2P-templates/blob/main/SB_DataSheet_longformat_v1.3.xlsx){target="_blank"}
 
 ## Check your list of species with [WoRMS](http://www.marinespecies.org/aphia.php?p=webservice){target="_blank"} for taxonomy quality control:
