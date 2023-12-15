@@ -8,9 +8,13 @@ knitr::opts_chunk$set(echo = F, message = F, warning = F)
 
 ## Upcoming
 
-- TBD
+- [**2nd MBON Pole to Pole Workshop: Implementing biodiversity monitoring of rocky shores using photo-quadrats and Artificial Intelligence**](https://eqmh.github.io/p2p-tierradelfuego-workshop){target="_blank"} - January 22-26, 2024, Ushuaia, Tierra del Fuego, Argentina.
 <br>
 <br>
+<img src="images/announcement.jpg" width="1000px"/>
+<br>
+<br>
+
 
 ## Past
 
