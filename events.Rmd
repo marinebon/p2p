@@ -18,6 +18,25 @@ knitr::opts_chunk$set(echo = F, message = F, warning = F)
 
 ## Past
 
+- [Biodiversidad Marina Polo a Polo de las Américas](https://www.youtube.com/live/4AOs_F682Q4?si=tFgDAMxH5lYF4PlJ). Keynote presentation by Dr. Enrique Montes of [UM/CIMAS](https://cimas.rsmas.miami.edu/) for [XII FIRMA](https://firmaonline.org/xiifirma/). November 28, 2023.
+<br>
+<br>
+<img src="images/xii_firma_2023.jpg" width="1000px"/>
+<br>
+<br>
+
+```{r, echo = F, message = F, warning = F}
+if (!require(librarian)){
+  install.packages("librarian")
+  library(librarian)
+}
+shelf(vembedr)
+embed_youtube("tFgDAMxH5lYF4PlJ", width = 910, height = 910*360/640, frameborder = 0,
+  allowfullscreen = TRUE, query = NULL)
+```
+<br>
+<br>
+
 - [**MBON Pole to Pole Workshop: Implementing biodiversity monitoring of rocky shores using photo-quadrats and Artificial Intelligence**](https://eqmh.github.io/p2p-argentina-workshop){target="_blank"} - March 27-31, 2023, Camarones, Chubut, Argentina.<img src="images/casadegas.jpg" width="1000px"/>
 
 - **SIMA-NOAA Workshop: Integrating water quality and biodiversity surveys in support of management decisions** - November 29th - December 2nd, 2022. This event was hosted by the US Consulate General in Sao Paulo, Brazil.<img src="images/sima-noaa_flyer.jpg" width="1000px"/>
