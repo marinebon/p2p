@@ -31,7 +31,7 @@ if (!require(librarian)){
   library(librarian)
 }
 shelf(vembedr)
-embed_youtube("tFgDAMxH5lYF4PlJ", width = 910, height = 910*360/640, frameborder = 0,
+embed_youtube("4AOs_F682Q4", width = 910, height = 910*360/640, frameborder = 0,
   allowfullscreen = TRUE, query = NULL)
 ```
 <br>
