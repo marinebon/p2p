@@ -38,12 +38,21 @@ jobs:
         run: |
           brew install pandoc
           
-      - name: Cache Renv packages
-        uses: actions/cache@v2
+      # - name: Cache Renv packages
+      #   uses: actions/cache@v2
+      #   with:
+      #     path: $HOME/.local/share/renv
+      #     key: r-${{ hashFiles('renv.lock') }}
+      #     restore-keys: r- 
+
+        # UPDATE: Changed actions/cache@v2 to @v4
+      - name: Cache R Packages
+        uses: actions/cache@v4
         with:
-          path: $HOME/.local/share/renv
-          key: r-${{ hashFiles('renv.lock') }}
-          restore-keys: r- 
+          path: ${{ env.R_LIBS_USER }}
+          key: ${{ runner.os }}-r-${{ hashFiles('**/lockfile') }}
+          restore-keys: |
+            ${{ runner.os }}-r-
           
       - name: Install packages
         run: |
