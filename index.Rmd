@@ -32,7 +32,9 @@ countries <- ne_countries(
 
 sites_csv <- here("data/sites.csv")
 
-sites <- read_csv(sites_csv, col_types=cols()) %>%
+sites <- read_csv(sites_csv, col_types=cols(lon = col_double(),
+lat = col_double(),
+.default = col_guess())) %>%
   st_as_sf(coords = c("lon", "lat"), crs = 4326)
 
 b <- sf::st_bbox(sites)

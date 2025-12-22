@@ -1,193 +1,205 @@
 id,org,name,country,lat,lon,gmapurl,area_code
-arg-mardelplata-faro,[MACN](https://www.macnconicet.gob.ar/investigacion/ecologia/),Mar del Plata - Faro,arg,-38.0939222,-57.541275,"http://maps.google.com/maps?q=-38.0939222,-57.541275&ll=-38.0939222,-57.541275&z=6",-9999
-arg-mardelplata-playachica,[MACN](https://www.macnconicet.gob.ar/investigacion/ecologia/),Mar del Plata - Playa Chica ,arg,-38.0203,-57.5653,"http://maps.google.com/maps?q=-38.0203,-57.5653&ll=-38.0203,-57.5653&z=6",-9999
-arg-puertomadryn1,[IBIOMAR/CONICET](https://www.larbim.com.ar/),[Punta Este](http://www.northeastern.edu/helmuthlab/Research/gigapan/argentina.html#_ga=2.176170668.804414391.1602182240-113605171.1602182239),arg,-42.78511,-64.95264,"http://maps.google.com/maps?q=-42.78511,-64.95264&ll=-42.78511,-64.95264&z=6",-9999
-arg-puertomadryn2,[IBIOMAR/CONICET](https://www.larbim.com.ar/),Punta Cuevas,arg,-42.77986,-65.00171,"http://maps.google.com/maps?q=-42.77986,-65.00171&ll=-42.77986,-65.00171&z=6",-9999
-arg-puertomadryn3,[IBIOMAR/CONICET](https://www.larbim.com.ar/),[Punta Loma](http://www.northeastern.edu/helmuthlab/Research/gigapan/argentina.html#_ga=2.176170668.804414391.1602182240-113605171.1602182239),arg,-42.8112,-64.9017,"http://maps.google.com/maps?q=-42.8112,-64.9017&ll=-42.8112,-64.9017&z=7",-9999
-ata-antarctica-site1,[U. Concepcion](https://www.algalab.com/index2.html),Antarctica - Site 1 ,ata,-62.1989,-58.9494,"http://maps.google.com/maps?q=-62.1989,-58.9494&ll=-62.1989,-58.9494&z=6",40061
-ata-antarctica-site2,[U. Concepcion](https://www.algalab.com/index2.html),Antarctica - Site 2 ,ata,-62.1858,-58.8732,"http://maps.google.com/maps?q=-62.1858,-58.8732&ll=-62.1858,-58.8732&z=6",40061
-bra-arraialdocabo-atalaia,[LECAR - UFF](http://www.lecar.uff.br/index.html),Arraial do Cabo - Atalaia ,bra,-22.9863,-42.01,"http://maps.google.com/maps?q=-22.9863,-42.01&ll=-22.9863,-42.01&z=6",40015
-bra-arraialdocabo-fortaleza,[LECAR - UFF](http://www.lecar.uff.br/index.html),Arraial do Cabo - Fortaleza ,bra,-22.9687,-42.015,"http://maps.google.com/maps?q=-22.9687,-42.015&ll=-22.9687,-42.015&z=6",40015
-bra-arraialdocabo-prainha,[LECAR - UFF](http://www.lecar.uff.br/index.html),Arraial do Cabo - Prainha ,bra,-22.9602,-42.0193,"http://maps.google.com/maps?q=-22.9602,-42.0193&ll=-22.9602,-42.0193&z=6",40015
+arg-mardelplata-faro,[MACN](https://www.macnconicet.gob.ar/investigacion/ecologia/),Mar del Plata - Faro,arg,-38.094,-57.541,"http://maps.google.com/maps?q=-38.0939222,-57.541275&ll=-38.0939222,-57.541275&z=6",-9999
+arg-mardelplata-playachica,[MACN](https://www.macnconicet.gob.ar/investigacion/ecologia/),Mar del Plata - Playa Chica ,arg,-38.020,-57.565,"http://maps.google.com/maps?q=-38.0203,-57.5653&ll=-38.0203,-57.5653&z=6",-9999
+arg-puertomadryn1,[IBIOMAR/CONICET](https://www.larbim.com.ar/),[Punta Este](http://www.northeastern.edu/helmuthlab/Research/gigapan/argentina.html#_ga=2.176170668.804414391.1602182240-113605171.1602182239),arg,-42.785,-64.953,"http://maps.google.com/maps?q=-42.78511,-64.95264&ll=-42.78511,-64.95264&z=6",-9999
+arg-puertomadryn2,[IBIOMAR/CONICET](https://www.larbim.com.ar/),Punta Cuevas,arg,-42.780,-65.002,"http://maps.google.com/maps?q=-42.77986,-65.00171&ll=-42.77986,-65.00171&z=6",-9999
+arg-puertomadryn3,[IBIOMAR/CONICET](https://www.larbim.com.ar/),[Punta Loma](http://www.northeastern.edu/helmuthlab/Research/gigapan/argentina.html#_ga=2.176170668.804414391.1602182240-113605171.1602182239),arg,-42.811,-64.902,"http://maps.google.com/maps?q=-42.8112,-64.9017&ll=-42.8112,-64.9017&z=7",-9999
+ata-antarctica-site1,[U. Concepcion](https://www.algalab.com/index2.html),Antarctica - Site 1 ,ata,-62.199,-58.949,"http://maps.google.com/maps?q=-62.1989,-58.9494&ll=-62.1989,-58.9494&z=6",40061
+ata-antarctica-site2,[U. Concepcion](https://www.algalab.com/index2.html),Antarctica - Site 2 ,ata,-62.186,-58.873,"http://maps.google.com/maps?q=-62.1858,-58.8732&ll=-62.1858,-58.8732&z=6",40061
+bra-arraialdocabo-atalaia,[LECAR - UFF](http://www.lecar.uff.br/index.html),Arraial do Cabo - Atalaia ,bra,-22.986,-42.010,"http://maps.google.com/maps?q=-22.9863,-42.01&ll=-22.9863,-42.01&z=6",40015
+bra-arraialdocabo-fortaleza,[LECAR - UFF](http://www.lecar.uff.br/index.html),Arraial do Cabo - Fortaleza ,bra,-22.969,-42.015,"http://maps.google.com/maps?q=-22.9687,-42.015&ll=-22.9687,-42.015&z=6",40015
+bra-arraialdocabo-prainha,[LECAR - UFF](http://www.lecar.uff.br/index.html),Arraial do Cabo - Prainha ,bra,-22.960,-42.019,"http://maps.google.com/maps?q=-22.9602,-42.0193&ll=-22.9602,-42.0193&z=6",40015
 bra-arraialdocabo-praiagrande,[NUPEM - UFRJ](https://www.macae.ufrj.br/nupem/index.php),Arraial do Cabo - Praia Grande ,bra,-22.964,-42.042,"http://maps.google.com/maps?q=-22.964,-42.042&ll=-22.964,-42.042&z=6",40015
-bra-encantadasnorth,[PGSISCO - UFPR](https://www.facebook.com/PGSISCO/),Encantadas North ,bra,-25.573,-48.3098,"http://maps.google.com/maps?q=-25.573,-48.3098&ll=-25.573,-48.3098&z=6",40015
-bra-encantadassouth,[PGSISCO - UFPR](http://www.cem.ufpr.br/portal/pgsisco/selecao-discente/),Encantadas South ,bra,-25.5735,-48.3107,"http://maps.google.com/maps?q=-25.5735,-48.3107&ll=-25.5735,-48.3107&z=6",40015
-bra-atami,[PGSISCO - UFPR](http://www.cem.ufpr.br/portal/pgsisco/selecao-discente/),Atami,bra,-25.59734,-48.380914,"http://maps.google.com/maps?q=-25.59734,-48.380914&ll=-25.59734,-48.380914&z=6",40015
-bra-costadasalgas-enseadadasgarcas,[Bentos - UFES](http://bentos.ufes.br/),Costa das Algas - Enseada das Garcas ,bra,-20.0369,-40.164,"http://maps.google.com/maps?q=-20.0369,-40.164&ll=-20.0369,-40.164&z=6",40016
-bra-costadasalgas-gramute,[Bentos - UFES](http://bentos.ufes.br/),Costa das Algas - Gramute,bra,-19.9663,-40.134,"http://maps.google.com/maps?q=-19.9663,-40.134&ll=-19.9663,-40.134&z=6",40016
-bra-costadasalgas-costabela,[Bentos - UFES](http://bentos.ufes.br/),Costa das Algas - Costa Bela,bra,-20.0726,-40.1752,"http://maps.google.com/maps?q=-20.072603,-40.175153&ll=-20.072603,-40.175153&z=6",40016
-bra-fernandodenoronha-boldro,[LECAR - UFF](http://www.lecar.uff.br/index.html),Fernando de Noronha - Boldro ,bra,-3.8505,-32.4238,"http://maps.google.com/maps?q=-3.8505,-32.4238&ll=-3.8505,-32.4238&z=6",21000
-bra-saintpeterandsaintpaularchipelago-enseada,[LECAR - UFF](http://www.lecar.uff.br/index.html),Saint Peter and Saint Paul Archipelago - Enseada ,bra,-0.9169,-29.3458,"http://maps.google.com/maps?q=-0.9169,-29.3458&ll=-0.9169,-29.3458&z=6",21000
-bra-jurubatibanationalpark,[NUPEM - UFRJ](https://www.macae.ufrj.br/nupem/index.php),Jurubatiba National Park ,bra,-22.29,-41.67,"http://maps.google.com/maps?q=-22.29,-41.67&ll=-22.29,-41.67&z=6",40016
-bra-saosebastiao-baleeirohead,[CEBIMAR - USP](http://npbiomar.cebimar.usp.br/en/),Sao Sebastiao - Baleeiro Head ,bra,-23.8292,-45.4237,"http://maps.google.com/maps?q=-23.8292,-45.4237&ll=-23.8292,-45.4237&z=6",40015
-bra-saosebastiao-feiticeira,[CEBIMAR - USP](http://npbiomar.cebimar.usp.br/en/),Sao Sebastiao - Feiticeira ,bra,-23.8436,-45.4076,"http://maps.google.com/maps?q=-23.8436,-45.4076&ll=-23.8436,-45.4076&z=6",40015
-bra-saosebastiao-itassuceisland,[CEBIMAR - USP](http://npbiomar.cebimar.usp.br/en/),Sao Sebastiao - Itassuce Island ,bra,-23.8319,-45.4436,"http://maps.google.com/maps?q=-23.8319,-45.4436&ll=-23.8319,-45.4436&z=6",40015
-bra-lagoadospatos-estuario,[PELD - FURG](https://peld.furg.br/),Lagoa dos Patos - Estuario,bra,-31.945397,-52.068477,"http://maps.google.com/maps?q=-31.945397,-52.068477&ll=-31.945397,-52.068477&z=6",40015
-bra-lagoadospatos-costamarinha,[PELD - FURG](https://peld.furg.br/),Lagoa dos Patos - Costa Marinha,bra,-32.224484,-52.0936,"http://maps.google.com/maps?q=-32.224484,-52.0936&ll=-32.224484,-52.0936&z=6",40015
-chl-bahiadevalparaiso-montemar,[U. Valparaiso](https://cienciasdelmar.uv.cl/index.php),Bahia de Valparariso - Montemar ,chl,-32.9587,-71.5492,"http://maps.google.com/maps?q=-32.9587,-71.5492&ll=-32.9587,-71.5492&z=6",37
-chl-concepcion-cocholguenorte,[U. Concepcion](https://www.algalab.com/index2.html),Concepcion - Cocholgue Norte ,chl,-36.5941,-72.9786,"http://maps.google.com/maps?q=-36.5941,-72.9786&ll=-36.5941,-72.9786&z=6",37
-chl-concepcion-cocholguesur,[U. Concepcion](https://www.algalab.com/index2.html),Concepcion - Cocholgue Sur ,chl,-36.6091,-72.9805,"http://maps.google.com/maps?q=-36.6091,-72.9805&ll=-36.6091,-72.9805&z=6",37
-chl-concepcion-dichato-coliumo,[U. Concepcion](https://www.algalab.com/index2.html),Concepcion - Dichato / Coliumo ,chl,-36.5408,-72.9346,"http://maps.google.com/maps?q=-36.5408,-72.9346&ll=-36.5408,-72.9346&z=6",37
-chl-puntaarenas-bahiamansa,[U. Concepcion](https://www.algalab.com/index2.html),Punta Arenas - Bahpa Mansa ,chl,-53.6125,-70.9284,"http://maps.google.com/maps?q=-53.6125,-70.9284&ll=-53.6125,-70.9284&z=6",37
-col-islagorgona-lamancora,[U. del Valle](https://lithos.correounivalle.edu.co/),Isla Gorgona - La Mancora ,col,2.9591,-78.1979,"http://maps.google.com/maps?q=2.9591,-78.1979&ll=2.9591,-78.1979&z=6",41
-col-islagorgona-laventana,[U. del Valle](https://lithos.correounivalle.edu.co/),Isla Gorgona - La Ventana ,col,2.9341,-78.2017,"http://maps.google.com/maps?q=2.9341,-78.2017&ll=2.9341,-78.2017&z=6",41
-col-islagorgona-playaverde,[U. del Valle](https://lithos.correounivalle.edu.co/),Isla Gorgona - Playa Verde ,col,2.9472,-78.1979,"http://maps.google.com/maps?q=2.9472,-78.1979&ll=2.9472,-78.1979&z=6",41
-cri-esmeralda,[CIMAR](http://www.cimar.ucr.ac.cr/index.php),Esmeralda ,cri,10.5916,-85.6637,"http://maps.google.com/maps?q=10.5916,-85.6637&ll=10.5916,-85.6637&z=6",45
-cri-puntamona,[CIMAR](http://www.cimar.ucr.ac.cr/index.php),Punta Mona ,cri,9.6399,-82.6481,"http://maps.google.com/maps?q=9.6399,-82.6481&ll=9.6399,-82.6481&z=6",44
-cri-sanmiguel,[CIMAR](http://www.cimar.ucr.ac.cr/index.php),San Miguel ,cri,9.5787,-85.1375,"http://maps.google.com/maps?q=9.5787,-85.1375&ll=9.5787,-85.1375&z=6",45
-ecu-angermeyerpoint-galapagos,[Charles Darwin F.](https://www.darwinfoundation.org/en/),Angermeyer Point - Galapagos Islands ,ecu,-0.752,-90.3094,"http://maps.google.com/maps?q=-0.752,-90.3094&ll=-0.752,-90.3094&z=6",20001
-ecu-laratonera-galapagos,[Charles Darwin F.](https://www.darwinfoundation.org/en/),La Ratonera - Galapagos Islands ,ecu,-0.7434,-90.3037,"http://maps.google.com/maps?q=-0.7434,-90.3037&ll=-0.7434,-90.3037&z=6",20001
-ecu-playaalemanes-galapagos,[Charles Darwin F.](https://www.darwinfoundation.org/en/),Playa Alemanes - Galapagos Island ,ecu,-0.7529,-90.3113,"http://maps.google.com/maps?q=-0.7529,-90.3113&ll=-0.7529,-90.3113&z=6",20001
-ecu-playabrava-galapagos,[Charles Darwin F.](https://www.darwinfoundation.org/en/),Playa Brava - Galapagos Islands ,ecu,-0.7614,-90.335,"http://maps.google.com/maps?q=-0.7614,-90.335&ll=-0.7614,-90.335&z=6",20001
-ecu-playamansa-galapagos,[Charles Darwin F.](https://www.darwinfoundation.org/en/),Playa Mansa - Galapagos Islands ,ecu,-0.7634,-90.3404,"http://maps.google.com/maps?q=-0.7634,-90.3404&ll=-0.7634,-90.3404&z=6",20001
-ecu-tortugabay-galapagos,[Charles Darwin F.](https://www.darwinfoundation.org/en/),Tortuga Bay - Galapagos Islands ,ecu,-0.7619,-90.3304,"http://maps.google.com/maps?q=-0.7619,-90.3304&ll=-0.7619,-90.3304&z=6",20001
-ecu-ballenita-elfaro,[RIEAE - U. Guayaquil](https://www.facebook.com/RED-RIEAE-107397151044316),Ballenita - El Faro,ecu,-2.2061,-80.8831,"http://maps.google.com/maps?q=-2.206081413,-80.88314924&ll=-2.206081413,-80.88314924&z=6",58
-ecu-ballenita-labarca,[RIEAE - U. Guayaquil](https://www.facebook.com/RED-RIEAE-107397151044316),Ballenita - La Barca,ecu,-2.1995,-80.8721,"http://maps.google.com/maps?q=-2.199512262,-80.87207899&ll=-2.199512262,-80.87207899&z=6",58
-mex-yucatan-marinadeyucalpeten,[UNAM](https://www.bdmy.org.mx/),Yucatan - Marina de Yucalpeten ,mex,21.2803,-89.7006,"http://maps.google.com/maps?q=21.2803,-89.7006&ll=21.2803,-89.7006&z=6",147
-per-chimbote,[IMARPE](http://www.imarpe.gob.pe/imarpe/),Bahia de Chimbote,per,-9.128611,-78.596388,"http://maps.google.com/maps?q=-9.128611,-78.596388&ll=-9.128611,-78.596388z=6",190
-ury-barradelchuy,[UNDECIMAR](http://undecimar.fcien.edu.uy/es_ES/),Barra del Chuy ,ury,-33.8109,-53.4461,"http://maps.google.com/maps?q=-33.8109,-53.4461&ll=-33.8109,-53.4461&z=6",278
+bra-encantadasnorth,[PGSISCO - UFPR](https://www.facebook.com/PGSISCO/),Encantadas North ,bra,-25.573,-48.310,"http://maps.google.com/maps?q=-25.573,-48.3098&ll=-25.573,-48.3098&z=6",40015
+bra-encantadassouth,[PGSISCO - UFPR](http://www.cem.ufpr.br/portal/pgsisco/selecao-discente/),Encantadas South ,bra,-25.574,-48.311,"http://maps.google.com/maps?q=-25.5735,-48.3107&ll=-25.5735,-48.3107&z=6",40015
+bra-atami,[PGSISCO - UFPR](http://www.cem.ufpr.br/portal/pgsisco/selecao-discente/),Atami,bra,-25.597,-48.381,"http://maps.google.com/maps?q=-25.59734,-48.380914&ll=-25.59734,-48.380914&z=6",40015
+bra-costadasalgas-enseadadasgarcas,[Bentos - UFES](http://bentos.ufes.br/),Costa das Algas - Enseada das Garcas ,bra,-20.037,-40.164,"http://maps.google.com/maps?q=-20.0369,-40.164&ll=-20.0369,-40.164&z=6",40016
+bra-costadasalgas-gramute,[Bentos - UFES](http://bentos.ufes.br/),Costa das Algas - Gramute,bra,-19.966,-40.134,"http://maps.google.com/maps?q=-19.9663,-40.134&ll=-19.9663,-40.134&z=6",40016
+bra-costadasalgas-costabela,[Bentos - UFES](http://bentos.ufes.br/),Costa das Algas - Costa Bela,bra,-20.073,-40.175,"http://maps.google.com/maps?q=-20.072603,-40.175153&ll=-20.072603,-40.175153&z=6",40016
+bra-fernandodenoronha-boldro,[LECAR - UFF](http://www.lecar.uff.br/index.html),Fernando de Noronha - Boldro ,bra,-3.851,-32.424,"http://maps.google.com/maps?q=-3.8505,-32.4238&ll=-3.8505,-32.4238&z=6",21000
+bra-saintpeterandsaintpaularchipelago-enseada,[LECAR - UFF](http://www.lecar.uff.br/index.html),Saint Peter and Saint Paul Archipelago - Enseada ,bra,-0.917,-29.346,"http://maps.google.com/maps?q=-0.9169,-29.3458&ll=-0.9169,-29.3458&z=6",21000
+bra-jurubatibanationalpark,[NUPEM - UFRJ](https://www.macae.ufrj.br/nupem/index.php),Jurubatiba National Park ,bra,-22.290,-41.670,"http://maps.google.com/maps?q=-22.29,-41.67&ll=-22.29,-41.67&z=6",40016
+bra-saosebastiao-baleeirohead,[CEBIMAR - USP](http://npbiomar.cebimar.usp.br/en/),Sao Sebastiao - Baleeiro Head ,bra,-23.829,-45.424,"http://maps.google.com/maps?q=-23.8292,-45.4237&ll=-23.8292,-45.4237&z=6",40015
+bra-saosebastiao-feiticeira,[CEBIMAR - USP](http://npbiomar.cebimar.usp.br/en/),Sao Sebastiao - Feiticeira ,bra,-23.844,-45.408,"http://maps.google.com/maps?q=-23.8436,-45.4076&ll=-23.8436,-45.4076&z=6",40015
+bra-saosebastiao-itassuceisland,[CEBIMAR - USP](http://npbiomar.cebimar.usp.br/en/),Sao Sebastiao - Itassuce Island ,bra,-23.832,-45.444,"http://maps.google.com/maps?q=-23.8319,-45.4436&ll=-23.8319,-45.4436&z=6",40015
+bra-lagoadospatos-estuario,[PELD - FURG](https://peld.furg.br/),Lagoa dos Patos - Estuario,bra,-31.945,-52.068,"http://maps.google.com/maps?q=-31.945397,-52.068477&ll=-31.945397,-52.068477&z=6",40015
+bra-lagoadospatos-costamarinha,[PELD - FURG](https://peld.furg.br/),Lagoa dos Patos - Costa Marinha,bra,-32.224,-52.094,"http://maps.google.com/maps?q=-32.224484,-52.0936&ll=-32.224484,-52.0936&z=6",40015
+chl-bahiadevalparaiso-montemar,[U. Valparaiso](https://cienciasdelmar.uv.cl/index.php),Bahia de Valparariso - Montemar ,chl,-32.959,-71.549,"http://maps.google.com/maps?q=-32.9587,-71.5492&ll=-32.9587,-71.5492&z=6",37
+chl-concepcion-cocholguenorte,[U. Concepcion](https://www.algalab.com/index2.html),Concepcion - Cocholgue Norte ,chl,-36.594,-72.979,"http://maps.google.com/maps?q=-36.5941,-72.9786&ll=-36.5941,-72.9786&z=6",37
+chl-concepcion-cocholguesur,[U. Concepcion](https://www.algalab.com/index2.html),Concepcion - Cocholgue Sur ,chl,-36.609,-72.981,"http://maps.google.com/maps?q=-36.6091,-72.9805&ll=-36.6091,-72.9805&z=6",37
+chl-concepcion-dichato-coliumo,[U. Concepcion](https://www.algalab.com/index2.html),Concepcion - Dichato / Coliumo ,chl,-36.541,-72.935,"http://maps.google.com/maps?q=-36.5408,-72.9346&ll=-36.5408,-72.9346&z=6",37
+chl-puntaarenas-bahiamansa,[U. Concepcion](https://www.algalab.com/index2.html),Punta Arenas - Bahpa Mansa ,chl,-53.613,-70.928,"http://maps.google.com/maps?q=-53.6125,-70.9284&ll=-53.6125,-70.9284&z=6",37
+col-islagorgona-lamancora,[U. del Valle](https://lithos.correounivalle.edu.co/),Isla Gorgona - La Mancora ,col,2.959,-78.198,"http://maps.google.com/maps?q=2.9591,-78.1979&ll=2.9591,-78.1979&z=6",41
+col-islagorgona-laventana,[U. del Valle](https://lithos.correounivalle.edu.co/),Isla Gorgona - La Ventana ,col,2.934,-78.202,"http://maps.google.com/maps?q=2.9341,-78.2017&ll=2.9341,-78.2017&z=6",41
+col-islagorgona-playaverde,[U. del Valle](https://lithos.correounivalle.edu.co/),Isla Gorgona - Playa Verde ,col,2.947,-78.198,"http://maps.google.com/maps?q=2.9472,-78.1979&ll=2.9472,-78.1979&z=6",41
+cri-esmeralda,[CIMAR](http://www.cimar.ucr.ac.cr/index.php),Esmeralda ,cri,10.592,-85.664,"http://maps.google.com/maps?q=10.5916,-85.6637&ll=10.5916,-85.6637&z=6",45
+cri-puntamona,[CIMAR](http://www.cimar.ucr.ac.cr/index.php),Punta Mona ,cri,9.640,-82.648,"http://maps.google.com/maps?q=9.6399,-82.6481&ll=9.6399,-82.6481&z=6",44
+cri-sanmiguel,[CIMAR](http://www.cimar.ucr.ac.cr/index.php),San Miguel ,cri,9.579,-85.138,"http://maps.google.com/maps?q=9.5787,-85.1375&ll=9.5787,-85.1375&z=6",45
+ecu-angermeyerpoint-galapagos,[Charles Darwin F.](https://www.darwinfoundation.org/en/),Angermeyer Point - Galapagos Islands ,ecu,-0.752,-90.309,"http://maps.google.com/maps?q=-0.752,-90.3094&ll=-0.752,-90.3094&z=6",20001
+ecu-laratonera-galapagos,[Charles Darwin F.](https://www.darwinfoundation.org/en/),La Ratonera - Galapagos Islands ,ecu,-0.743,-90.304,"http://maps.google.com/maps?q=-0.7434,-90.3037&ll=-0.7434,-90.3037&z=6",20001
+ecu-playaalemanes-galapagos,[Charles Darwin F.](https://www.darwinfoundation.org/en/),Playa Alemanes - Galapagos Island ,ecu,-0.753,-90.311,"http://maps.google.com/maps?q=-0.7529,-90.3113&ll=-0.7529,-90.3113&z=6",20001
+ecu-playabrava-galapagos,[Charles Darwin F.](https://www.darwinfoundation.org/en/),Playa Brava - Galapagos Islands ,ecu,-0.761,-90.335,"http://maps.google.com/maps?q=-0.7614,-90.335&ll=-0.7614,-90.335&z=6",20001
+ecu-playamansa-galapagos,[Charles Darwin F.](https://www.darwinfoundation.org/en/),Playa Mansa - Galapagos Islands ,ecu,-0.763,-90.340,"http://maps.google.com/maps?q=-0.7634,-90.3404&ll=-0.7634,-90.3404&z=6",20001
+ecu-tortugabay-galapagos,[Charles Darwin F.](https://www.darwinfoundation.org/en/),Tortuga Bay - Galapagos Islands ,ecu,-0.762,-90.330,"http://maps.google.com/maps?q=-0.7619,-90.3304&ll=-0.7619,-90.3304&z=6",20001
+ecu-ballenita-elfaro,[RIEAE - U. Guayaquil](https://www.facebook.com/RED-RIEAE-107397151044316),Ballenita - El Faro,ecu,-2.206,-80.883,"http://maps.google.com/maps?q=-2.206081413,-80.88314924&ll=-2.206081413,-80.88314924&z=6",58
+ecu-ballenita-labarca,[RIEAE - U. Guayaquil](https://www.facebook.com/RED-RIEAE-107397151044316),Ballenita - La Barca,ecu,-2.200,-80.872,"http://maps.google.com/maps?q=-2.199512262,-80.87207899&ll=-2.199512262,-80.87207899&z=6",58
+mex-yucatan-marinadeyucalpeten,[UNAM](https://www.bdmy.org.mx/),Yucatan - Marina de Yucalpeten ,mex,21.280,-89.701,"http://maps.google.com/maps?q=21.2803,-89.7006&ll=21.2803,-89.7006&z=6",147
+per-chimbote,[IMARPE](http://www.imarpe.gob.pe/imarpe/),Bahia de Chimbote,per,-9.129,-78.596,"http://maps.google.com/maps?q=-9.128611,-78.596388&ll=-9.128611,-78.596388z=6",190
+ury-barradelchuy,[UNDECIMAR](http://undecimar.fcien.edu.uy/es_ES/),Barra del Chuy ,ury,-33.811,-53.446,"http://maps.google.com/maps?q=-33.8109,-53.4461&ll=-33.8109,-53.4461&z=6",278
 ve-laboca-ocumare,[U. Simon Bolivar](https://www.ea.usb.ve/inicio),La Boca - Ocumare,ve,10.498,-67.768,"http://maps.google.com/maps?q=10.498,-67.768&ll=10.498,-67.768z=6",280
-vir-usvi,[CMES - UVI](https://www.uvi.edu/research/center-for-marine-environmental-studies/about-cmes/default.aspx),USVI,vir,18.39,-64.93,"http://maps.google.com/maps?q=18.39,-64.93&ll=18.39,-64.93&z=6",276
-wi-blanchiseusse-bay,[U. West Indies](https://sta.uwi.edu/fst/lifesciences/),Blanchiseusse Bay,wi,10.79936,-61.31513,"http://maps.google.com/maps?q=10.79936,-61.31513&ll=10.79936,-61.31513&z=6",241
-wi-las-cuevas,[U. West Indies](https://sta.uwi.edu/fst/lifesciences/),Las Cuevas,wi,10.78416,-61.39261,"http://maps.google.com/maps?q=10.78416,-61.39261&ll=10.78416,-61.39261&z=6",241
-wi-maracas,[U. West Indies](https://sta.uwi.edu/fst/lifesciences/),Maracas,wi,10.75813,-61.43537,"http://maps.google.com/maps?q=10.75813,-61.43537&ll=10.75813,-61.43537&z=6",241
-wi-salybia,[U. West Indies](https://sta.uwi.edu/fst/lifesciences/),Salybia,wi,10.83559,-60.92015,"http://maps.google.com/maps?q=10.83559,-60.92015&ll=10.83559,-60.92015&z=6",241
-wi-toco,[U. West Indies](https://sta.uwi.edu/fst/lifesciences/),Toco,wi,10.83379,-60.94739,"http://maps.google.com/maps?q=10.83379,-60.94739&ll=10.83379,-60.94739z=6",241
-usa-fknms,[S. Florida MBON](https://marinebon.org/pages/sfmbon/),[South Florida Program](https://www.aoml.noaa.gov/iea/),usa,24.5,-81,"http://maps.google.com/maps?q=24.5,-81&ll=24.5,-81&z=6",20076
-usa-chukchi-sea,[Arctic MBON](https://marinebon.org/pages/ambon/),Arctic MBON - Chukchi Sea,usa,66.9412,-168.63774,"http://maps.google.com/maps?q=66.9412,-168.63774&ll=66.9412,-168.63774&z=6",40054
-usa-biddeford-biddefordme,[NEU - Helmuth Lab](https://helmuthlab.cos.northeastern.edu/),Biddeford - Biddeford ME ,usa,43.439808,-70.343454,"http://maps.google.com/maps?q=43.439808,-70.343454&ll=43.439808,-70.343454&z=6",-9999
-usa-chamberlain-chamberlainme,[NEU - Helmuth Lab](https://helmuthlab.cos.northeastern.edu/),[Chamberlain](http://www.northeastern.edu/helmuthlab/Research/gigapan/USME/USME.html#_ga=2.114804366.804414391.1602182240-113605171.1602182239),usa,43.884304,-69.47609,"http://maps.google.com/maps?q=43.884304,-69.47609&ll=43.884304,-69.47609&z=6",-9999
-usa-giantstairs-harpswellme,[NEU - Helmuth Lab](https://helmuthlab.cos.northeastern.edu/),Giant Stairs - Harpswell ME ,usa,43.725666,-69.992283,"http://maps.google.com/maps?q=43.725666,-69.992283&ll=43.725666,-69.992283&z=6",-9999
-usa-grindstone-winterharborme,[NEU - Helmuth Lab](https://helmuthlab.cos.northeastern.edu/),[Grindstone](http://www.northeastern.edu/helmuthlab/Research/gigapan/USME/USME.html#_ga=2.114804366.804414391.1602182240-113605171.1602182239),usa,44.371365,-68.091242,"http://maps.google.com/maps?q=44.371365,-68.091242&ll=44.371365,-68.091242&z=6",-9999
-usa-hamiltoncove-lubecme,[NEU - Helmuth Lab](https://helmuthlab.cos.northeastern.edu/),Hamilton Cove - Lubec ME ,usa,44.788076,-67.010388,"http://maps.google.com/maps?q=44.788076,-67.010388&ll=44.788076,-67.010388&z=6",-9999
-usa-marblehead-marbleheadma,[NEU - Helmuth Lab](https://helmuthlab.cos.northeastern.edu/),Marblehead - Marblehead MA ,usa,42.507375,-70.843271,"http://maps.google.com/maps?q=42.507375,-70.843271&ll=42.507375,-70.843271&z=6",-9999
-usa-moosecove-lubecme,[NEU - Helmuth Lab](https://helmuthlab.cos.northeastern.edu/),Moose Cove - Lubec ME ,usa,44.731602,-67.098585,"http://maps.google.com/maps?q=44.731602,-67.098585&ll=44.731602,-67.098585&z=6",-9999
-usa-pumphouse-nahantma,[NEU - Helmuth Lab](https://helmuthlab.cos.northeastern.edu/),Pumphouse - Nahant MA ,usa,42.416788,-70.906496,"http://maps.google.com/maps?q=42.416788,-70.906496&ll=42.416788,-70.906496&z=6",-9999
-usa-kay,[MARINe](https://marine.ucsc.edu/sitepages/kayakisland.html),Kayak Island,usa,57.02249908,-135.35387,"http://maps.google.com/maps?q=57.02249908,-135.35387&ll=57.02249908,-135.35387z=6",40002
-usa-pira,[MARINe](https://marine.ucsc.edu/sitepages/piratescove.html),Pirates Cove,usa,56.98661041,-135.37755,"http://maps.google.com/maps?q=56.98661041,-135.37755&ll=56.98661041,-135.37755z=6",40002
-usa-sage,[MARINe](https://marine.ucsc.edu/sitepages/sagerock.html),Sage Rock,usa,57.04869843,-135.32314,"http://maps.google.com/maps?q=57.04869843,-135.32314&ll=57.04869843,-135.32314z=6",40002
-usa-alc,[MARINe](https://marine.ucsc.edu/sitepages/alcatrazisland.html),Alcatraz,usa,37.82500076,-122.42194,"http://maps.google.com/maps?q=37.82500076,-122.42194&ll=37.82500076,-122.42194z=6",-9999
-usa-aleg,[MARINe](https://marine.ucsc.edu/sitepages/alegria.html),Alegria,usa,34.4671402,-120.27738,"http://maps.google.com/maps?q=34.4671402,-120.27738&ll=34.4671402,-120.27738z=6",-9999
-usa-amn,[MARINe](https://marine.ucsc.edu/sitepages/americancamp.html),American Camp,usa,48.45730972,-123.02222,"http://maps.google.com/maps?q=48.45730972,-123.02222&ll=48.45730972,-123.02222z=6",-9999
-usa-ancr,[MARINe](https://marine.ucsc.edu/sitepages/catrock.html),Cat Rock,usa,34.00556946,-119.41925,"http://maps.google.com/maps?q=34.00556946,-119.41925&ll=34.00556946,-119.41925z=6",-9999
-usa-anmw,[MARINe](https://marine.ucsc.edu/sitepages/middlewest.html),Middle West,usa,34.00590134,-119.39649,"http://maps.google.com/maps?q=34.00590134,-119.39649&ll=34.00590134,-119.39649z=6",-9999
-usa-ansfc,[MARINe](https://marine.ucsc.edu/sitepages/sfrenchyscove.html),S Frenchys Cove,usa,34.00659943,-119.41077,"http://maps.google.com/maps?q=34.00659943,-119.41077&ll=34.00659943,-119.41077z=6",-9999
-usa-arg,[MARINe](https://marine.ucsc.edu/sitepages/capearago.html),Cape Arago,usa,43.30894089,-124.40077,"http://maps.google.com/maps?q=43.30894089,-124.40077&ll=43.30894089,-124.40077z=6",-9999
-usa-arho,[MARINe](https://marine.ucsc.edu/sitepages/arroyohondo.html),Arroyo Hondo,usa,34.47343826,-120.1454,"http://maps.google.com/maps?q=34.47343826,-120.1454&ll=34.47343826,-120.1454z=6",-9999
-usa-asi,[MARINe](https://marine.ucsc.edu/sitepages/asilomar.html),Asilomar,usa,36.6222496,-121.94161,"http://maps.google.com/maps?q=36.6222496,-121.94161&ll=36.6222496,-121.94161z=6",-9999
-usa-bloh,[MARINe](https://marine.ucsc.edu/sitepages/blowhole.html),Blowhole,usa,37.7011795,-123.00383,"http://maps.google.com/maps?q=37.7011795,-123.00383&ll=37.7011795,-123.00383z=6",-9999
-usa-bml,[MARINe](https://marine.ucsc.edu/sitepages/bodega.html),Bodega,usa,38.31819916,-123.07365,"http://maps.google.com/maps?q=38.31819916,-123.07365&ll=38.31819916,-123.07365z=6",-9999
-usa-boa,[MARINe](https://marine.ucsc.edu/sitepages/boathouse.html),Boat House,usa,34.55387878,-120.61167,"http://maps.google.com/maps?q=34.55387878,-120.61167&ll=34.55387878,-120.61167z=6",-9999
-usa-bob,[MARINe](https://marine.ucsc.edu/sitepages/bobcreek.html),Bob Creek,usa,44.24456024,-124.11443,"http://maps.google.com/maps?q=44.24456024,-124.11443&ll=44.24456024,-124.11443z=6",-9999
-usa-bol,[MARINe](https://marine.ucsc.edu/sitepages/bolinaspoint.html),Bolinas Point,usa,37.90354156,-122.72721,"http://maps.google.com/maps?q=37.90354156,-122.72721&ll=37.90354156,-122.72721z=6",-9999
-usa-brn,[MARINe](https://marine.ucsc.edu/sitepages/burnthill.html),Burnt Hill,usa,42.22814178,-124.38786,"http://maps.google.com/maps?q=42.22814178,-124.38786&ll=42.22814178,-124.38786z=6",-9999
-usa-cab1,[MARINe](https://marine.ucsc.edu/sitepages/cabrillo1.html),Cabrillo I,usa,32.66947174,-117.2455,"http://maps.google.com/maps?q=32.66947174,-117.2455&ll=32.66947174,-117.2455z=6",-9999
-usa-cab2,[MARINe](https://marine.ucsc.edu/sitepages/cabrillo2.html),Cabrillo II,usa,32.66765976,-117.24526,"http://maps.google.com/maps?q=32.66765976,-117.24526&ll=32.66765976,-117.24526z=6",-9999
-usa-cab3,[MARINe](https://marine.ucsc.edu/sitepages/cabrillo3.html),Cabrillo III,usa,32.6658287,-117.24417,"http://maps.google.com/maps?q=32.6658287,-117.24417&ll=32.6658287,-117.24417z=6",-9999
-usa-car,[MARINe](https://marine.ucsc.edu/sitepages/carmelpoint.html),Carmel Point,usa,36.54375839,-121.93412,"http://maps.google.com/maps?q=36.54375839,-121.93412&ll=36.54375839,-121.93412z=6",-9999
-usa-care,[MARINe](https://marine.ucsc.edu/sitepages/cardiffreef.html),Cardiff Reef,usa,32.99983978,-117.27867,"http://maps.google.com/maps?q=32.99983978,-117.27867&ll=32.99983978,-117.27867z=6",-9999
-usa-carp,[MARINe](https://marine.ucsc.edu/sitepages/carpinteria.html),Carpinteria,usa,34.38703156,-119.51407,"http://maps.google.com/maps?q=34.38703156,-119.51407&ll=34.38703156,-119.51407z=6",-9999
-usa-cay,[MARINe](https://marine.ucsc.edu/sitepages/cayucos.html),Cayucos,usa,35.44739151,-120.94982,"http://maps.google.com/maps?q=35.44739151,-120.94982&ll=35.44739151,-120.94982z=6",-9999
-usa-chi,[MARINe](https://marine.ucsc.edu/sitepages/chinarocks.html),China Rocks,usa,36.60615921,-121.95939,"http://maps.google.com/maps?q=36.60615921,-121.95939&ll=36.60615921,-121.95939z=6",-9999
-usa-clbs,[MARINe](https://marine.ucsc.edu/sitepages/boyscoutcamp.html),Boy Scout Camp,usa,33.00112152,-118.54832,"http://maps.google.com/maps?q=33.00112152,-118.54832&ll=33.00112152,-118.54832z=6",-9999
-usa-clep,[MARINe](https://marine.ucsc.edu/sitepages/eelpoint.html),Eel Point,usa,32.91801071,-118.54668,"http://maps.google.com/maps?q=32.91801071,-118.54668&ll=32.91801071,-118.54668z=6",-9999
-usa-clhbc,[MARINe](https://marine.ucsc.edu/sitepages/horsebeachcove.html),Horse Beach Cove,usa,32.8030014,-118.42431,"http://maps.google.com/maps?q=32.8030014,-118.42431&ll=32.8030014,-118.42431z=6",-9999
-usa-clwc,[MARINe](https://marine.ucsc.edu/sitepages/westcove.html),West Cove,usa,33.01477051,-118.60613,"http://maps.google.com/maps?q=33.01477051,-118.60613&ll=33.01477051,-118.60613z=6",-9999
-usa-copt,[MARINe](https://marine.ucsc.edu/sitepages/coaloilpoint.html),Coal Oil Point,usa,34.40692902,-119.87804,"http://maps.google.com/maps?q=34.40692902,-119.87804&ll=34.40692902,-119.87804z=6",-9999
-usa-crco,[MARINe](https://marine.ucsc.edu/sitepages/crystalcove.html),Crystal Cove,usa,33.57078171,-117.83773,"http://maps.google.com/maps?q=33.57078171,-117.83773&ll=33.57078171,-117.83773z=6",-9999
-usa-ctbr,[MARINe](https://marine.ucsc.edu/sitepages/birdrock.html),Bird Rock,usa,33.45145035,-118.48763,"http://maps.google.com/maps?q=33.45145035,-118.48763&ll=33.45145035,-118.48763z=6",-9999
-usa-ctlh,[MARINe](https://marine.ucsc.edu/sitepages/littleharbor.html),Little Harbor,usa,33.38499069,-118.4752,"http://maps.google.com/maps?q=33.38499069,-118.4752&ll=33.38499069,-118.4752z=6",-9999
-usa-dapt,[MARINe](https://marine.ucsc.edu/sitepages/danapoint.html),Dana Point,usa,33.4598999,-117.71475,"http://maps.google.com/maps?q=33.4598999,-117.71475&ll=33.4598999,-117.71475z=6",-9999
-usa-dmn,[MARINe](https://marine.ucsc.edu/sitepages/damnation.html),Damnation Creek,usa,41.65248871,-124.12784,"http://maps.google.com/maps?q=41.65248871,-124.12784&ll=41.65248871,-124.12784z=6",-9999
-usa-dslf,[MARINe](https://marine.ucsc.edu/sitepages/deadsealion.html),Dead Sea Lion Flat,usa,37.69809341,-122.99984,"http://maps.google.com/maps?q=37.69809341,-122.99984&ll=37.69809341,-122.99984z=6",-9999
-usa-end,[MARINe](https://marine.ucsc.edu/sitepages/enderts.html),Enderts,usa,41.68999863,-124.14257,"http://maps.google.com/maps?q=41.68999863,-124.14257&ll=41.68999863,-124.14257z=6",-9999
-usa-eng,[MARINe](https://marine.ucsc.edu/sitepages/englishcamp.html),English Camp,usa,48.59344101,-123.1555,"http://maps.google.com/maps?q=48.59344101,-123.1555&ll=48.59344101,-123.1555z=6",-9999
-usa-esp,[MARINe](https://marine.ucsc.edu/sitepages/ecola.html),Ecola,usa,45.91809082,-123.98031,"http://maps.google.com/maps?q=45.91809082,-123.98031&ll=45.91809082,-123.98031z=6",-9999
-usa-fkc,[MARINe](https://marine.ucsc.edu/sitepages/falseklamath.html),False Klamath Cove,usa,41.59476089,-124.10643,"http://maps.google.com/maps?q=41.59476089,-124.10643&ll=41.59476089,-124.10643z=6",-9999
-usa-fog,[MARINe](https://marine.ucsc.edu/sitepages/fogartycreek.html),Fogarty Creek,usa,44.83863831,-124.05875,"http://maps.google.com/maps?q=44.83863831,-124.05875&ll=44.83863831,-124.05875z=6",-9999
-usa-fra,[MARINe](https://marine.ucsc.edu/sitepages/franklinpoint.html),Franklin Point,usa,37.1495018,-122.36101,"http://maps.google.com/maps?q=37.1495018,-122.36101&ll=37.1495018,-122.36101z=6",-9999
-usa-fre,[MARINe](https://marine.ucsc.edu/sitepages/freshwater.html),Freshwater Bay,usa,48.15049362,-123.63699,"http://maps.google.com/maps?q=48.15049362,-123.63699&ll=48.15049362,-123.63699z=6",-9999
-usa-fridayharbor,[SI - MarineGEO](https://marinegeo.si.edu/friday-harbor),Friday Harbor,usa,48.546024,-123.012987,"http://maps.google.com/maps?q=48.546024,-123.012987&ll=48.546024,-123.012987&z=6",-9999
-usa-gar,[MARINe](https://marine.ucsc.edu/sitepages/garrapata.html),Garrapata,usa,36.46903992,-121.93444,"http://maps.google.com/maps?q=36.46903992,-121.93444&ll=36.46903992,-121.93444z=6",-9999
-usa-gpt,[MARINe](https://marine.ucsc.edu/sitepages/government.html),Government Point,usa,34.4433403,-120.45655,"http://maps.google.com/maps?q=34.4433403,-120.45655&ll=34.4433403,-120.45655z=6",-9999
-usa-gren,[MARINe](https://marine.ucsc.edu/sitepages/pointgrenville.html),Point Grenville,usa,47.30255127,-124.27531,"http://maps.google.com/maps?q=47.30255127,-124.27531&ll=47.30255127,-124.27531z=6",-9999
-usa-hate,[MARINe](https://marine.ucsc.edu/sitepages/hatislandeast.html),Hat Island East,usa,48.52220917,-122.54353,"http://maps.google.com/maps?q=48.52220917,-122.54353&ll=48.52220917,-122.54353z=6",-9999
-usa-hatw,[MARINe](https://marine.ucsc.edu/sitepages/hatislandwest.html),Hat Island West,usa,48.52352905,-122.55222,"http://maps.google.com/maps?q=48.52352905,-122.55222&ll=48.52352905,-122.55222z=6",-9999
-usa-haz,[MARINe](https://marine.ucsc.edu/sitepages/hazards.html),Hazards,usa,35.28966141,-120.88325,"http://maps.google.com/maps?q=35.28966141,-120.88325&ll=35.28966141,-120.88325z=6",-9999
-usa-hoo,[MARINe](https://marine.ucsc.edu/sitepages/mcdonaldcove.html),McDonald Cove,usa,47.62841797,-122.95034,"http://maps.google.com/maps?q=47.62841797,-122.95034&ll=47.62841797,-122.95034z=6",-9999
-usa-hop,[MARINe](https://marine.ucsc.edu/sitepages/hopkins.html),Hopkins,usa,36.62120056,-121.9073,"http://maps.google.com/maps?q=36.62120056,-121.9073&ll=36.62120056,-121.9073z=6",-9999
-usa-kib,[MARINe](https://marine.ucsc.edu/sitepages/kibesillah.html),Kibesillah Hill,usa,39.60411835,-123.78887,"http://maps.google.com/maps?q=39.60411835,-123.78887&ll=39.60411835,-123.78887z=6",-9999
-usa-kydi,[MARINe](https://marine.ucsc.edu/sitepages/kydikabbitpoint.html),Kydikabbit Point,usa,48.39147186,-124.65372,"http://maps.google.com/maps?q=48.39147186,-124.65372&ll=48.39147186,-124.65372z=6",-9999
-usa-man,[MARINe](https://marine.ucsc.edu/sitepages/manchester.html),Manchester State Park,usa,47.57688141,-122.54411,"http://maps.google.com/maps?q=47.57688141,-122.54411&ll=47.57688141,-122.54411z=6",-9999
-usa-mbnms,[CeNCOOS](https://marinebon.org/pages/ccmbon/),[Monterey Bay Time Series](https://www.mbari.org/products/what-is-happening-in-monterey-bay-today/),usa,36.5,-122,"http://maps.google.com/maps?q=36.5,-122&ll=36.5,-122&z=6",-9999
-usa-mcr,[MARINe](https://marine.ucsc.edu/sitepages/millcreek.html),Mill Creek,usa,35.97964859,-121.49034,"http://maps.google.com/maps?q=35.97964859,-121.49034&ll=35.97964859,-121.49034z=6",-9999
-usa-men,[MARINe](https://marine.ucsc.edu/sitepages/capemendocino.html),Cape Mendocino,usa,40.3409996,-124.36317,"http://maps.google.com/maps?q=40.3409996,-124.36317&ll=40.3409996,-124.36317z=6",-9999
-usa-mfl,[MARINe](https://marine.ucsc.edu/sitepages/musselflat.html),Mussel Flat Farallones,usa,37.69589996,-123.0029,"http://maps.google.com/maps?q=37.69589996,-123.0029&ll=37.69589996,-123.0029z=6",-9999
-usa-mol,[MARINe](https://marine.ucsc.edu/sitepages/andrewmolera.html),Andrew Molera,usa,36.28060913,-121.86317,"http://maps.google.com/maps?q=36.28060913,-121.86317&ll=36.28060913,-121.86317z=6",-9999
-usa-mush,[MARINe](https://marine.ucsc.edu/sitepages/musselshoals.html),Mussel Shoals,usa,34.35548019,-119.44073,"http://maps.google.com/maps?q=34.35548019,-119.44073&ll=34.35548019,-119.44073z=6",-9999
-usa-nano,[MARINe](https://marine.ucsc.edu/sitepages/navynorth.html),Navy North,usa,32.69260025,-117.25327,"http://maps.google.com/maps?q=32.69260025,-117.25327&ll=32.69260025,-117.25327z=6",-9999
-usa-naso,[MARINe](https://marine.ucsc.edu/sitepages/navysouth.html),Navy South,usa,32.6828804,-117.24956,"http://maps.google.com/maps?q=32.6828804,-117.24956&ll=32.6828804,-117.24956z=6",-9999
-usa-occ,[MARINe](https://marine.ucsc.edu/sitepages/occulto.html),Occulto,usa,34.88122177,-120.63954,"http://maps.google.com/maps?q=34.88122177,-120.63954&ll=34.88122177,-120.63954z=6",-9999
-usa-olds,[MARINe](https://marine.ucsc.edu/sitepages/oldstairs.html),Old Stairs,usa,34.06612015,-118.99779,"http://maps.google.com/maps?q=34.06612015,-118.99779&ll=34.06612015,-118.99779z=6",-9999
-usa-par,[MARINe](https://marine.ucsc.edu/sitepages/partington.html),Partington Cove,usa,36.17375946,-121.69653,"http://maps.google.com/maps?q=36.17375946,-121.69653&ll=36.17375946,-121.69653z=6",-9999
-usa-pbl,[MARINe](https://marine.ucsc.edu/sitepages/piedrasblancas.html),Piedras Blancas,usa,35.66492844,-121.28699,"http://maps.google.com/maps?q=35.66492844,-121.28699&ll=35.66492844,-121.28699z=6",-9999
-usa-pcov,[MARINe](https://marine.ucsc.edu/sitepages/paradisecove.html),Paradise Cove,usa,34.01200867,-118.79225,"http://maps.google.com/maps?q=34.01200867,-118.79225&ll=34.01200867,-118.79225z=6",-9999
-usa-peb,[MARINe](https://marine.ucsc.edu/sitepages/pebblebeach.html),Pebble Beach,usa,37.23263168,-122.41607,"http://maps.google.com/maps?q=37.23263168,-122.41607&ll=37.23263168,-122.41607z=6",-9999
-usa-pes,[MARINe](https://marine.ucsc.edu/sitepages/pescadero.html),Pescadero Point,usa,36.56108856,-121.95436,"http://maps.google.com/maps?q=36.56108856,-121.95436&ll=36.56108856,-121.95436z=6",-9999
-usa-pin,[MARINe](https://marine.ucsc.edu/sitepages/pointpinos.html),Point Pinos,usa,36.63795853,-121.93758,"http://maps.google.com/maps?q=36.63795853,-121.93758&ll=36.63795853,-121.93758z=6",-9999
-usa-poa,[MARINe](https://marine.ucsc.edu/sitepages/pointofarches.html),Point of the Arches,usa,48.24200058,-124.70779,"http://maps.google.com/maps?q=48.24200058,-124.70779&ll=48.24200058,-124.70779z=6",-9999
-usa-pop,[MARINe](https://marine.ucsc.edu/sitepages/postpoint.html),Post Point,usa,48.7120018,-122.51913,"http://maps.google.com/maps?q=48.7120018,-122.51913&ll=48.7120018,-122.51913z=6",-9999
-usa-ppt,[MARINe](https://marine.ucsc.edu/sitepages/pigeonpoint.html),Pigeon Point,usa,37.18360901,-122.39529,"http://maps.google.com/maps?q=37.18360901,-122.39529&ll=37.18360901,-122.39529z=6",-9999
-usa-psn,[MARINe](https://marine.ucsc.edu/sitepages/pointsierra.html),Point Sierra Nevada,usa,35.72882843,-121.31866,"http://maps.google.com/maps?q=35.72882843,-121.31866&ll=35.72882843,-121.31866z=6",-9999
-usa-ptb,[MARINe](https://marine.ucsc.edu/sitepages/pointbonita.html),Point Bonita,usa,37.81911087,-122.52935,"http://maps.google.com/maps?q=37.81911087,-122.52935&ll=37.81911087,-122.52935z=6",-9999
-usa-ptfm,[MARINe](https://marine.ucsc.edu/sitepages/pointfermin.html),Point Fermin,usa,33.70679092,-118.28599,"http://maps.google.com/maps?q=33.70679092,-118.28599&ll=33.70679092,-118.28599z=6",-9999
-usa-ptl,[MARINe](https://marine.ucsc.edu/sitepages/pointlobos.html),Point Lobos,usa,36.51366043,-121.94688,"http://maps.google.com/maps?q=36.51366043,-121.94688&ll=36.51366043,-121.94688z=6",-9999
-usa-pur,[MARINe](https://marine.ucsc.edu/sitepages/purisima.html),Purisima,usa,34.75559998,-120.64076,"http://maps.google.com/maps?q=34.75559998,-120.64076&ll=34.75559998,-120.64076z=6",-9999
-usa-pva,[MARINe](https://marine.ucsc.edu/sitepages/pacificvalley.html),Pacific Valley,usa,35.94704819,-121.48053,"http://maps.google.com/maps?q=35.94704819,-121.48053&ll=35.94704819,-121.48053z=6",-9999
-usa-rmr,[MARINe](https://marine.ucsc.edu/sitepages/cambria.html),Rancho Marino,usa,35.52244186,-121.073,"http://maps.google.com/maps?q=35.52244186,-121.073&ll=35.52244186,-121.073z=6",-9999
-usa-sad,[MARINe](https://marine.ucsc.edu/sitepages/sandhillbluff.html),Sandhill Bluff,usa,36.9801712,-122.15503,"http://maps.google.com/maps?q=36.9801712,-122.15503&ll=36.9801712,-122.15503z=6",-9999
-usa-sblc,[MARINe](https://marine.ucsc.edu/sitepages/landingcove.html),Landing Cove,usa,33.48157883,-119.02958,"http://maps.google.com/maps?q=33.48157883,-119.02958&ll=33.48157883,-119.02958z=6",-9999
-usa-sbnc,[MARINe](https://marine.ucsc.edu/sitepages/saddlebagnorth.html),Saddlebag North Cove,usa,48.53710175,-122.5547,"http://maps.google.com/maps?q=48.53710175,-122.5547&ll=48.53710175,-122.5547z=6",-9999
-usa-sbse,[MARINe](https://marine.ucsc.edu/sitepages/saddlebagsouth.html),Saddlebag South East,usa,48.53430176,-122.5549,"http://maps.google.com/maps?q=48.53430176,-122.5549&ll=48.53430176,-122.5549z=6",-9999
-usa-sbslr,[MARINe](https://marine.ucsc.edu/sitepages/sealionrookery.html),Sea Lion Rookery,usa,33.47201157,-119.03066,"http://maps.google.com/maps?q=33.47201157,-119.03066&ll=33.47201157,-119.03066z=6",-9999
-usa-scfc,[MARINe](https://marine.ucsc.edu/sitepages/frasercove.html),Fraser Cove,usa,34.06264877,-119.91915,"http://maps.google.com/maps?q=34.06264877,-119.91915&ll=34.06264877,-119.91915z=6",-9999
-usa-scoc,[MARINe](https://marine.ucsc.edu/sitepages/orizabacove.html),Orizaba Cove,usa,34.04507828,-119.72188,"http://maps.google.com/maps?q=34.04507828,-119.72188&ll=34.04507828,-119.72188z=6",-9999
-usa-scph,[MARINe](https://marine.ucsc.edu/sitepages/prisonersharbor.html),Prisoners Harbor,usa,34.02037811,-119.6867,"http://maps.google.com/maps?q=34.02037811,-119.6867&ll=34.02037811,-119.6867z=6",-9999
-usa-scre,[MARINe](https://marine.ucsc.edu/sitepages/scripps.html),Scripps Reef,usa,32.8716507,-117.25328,"http://maps.google.com/maps?q=32.8716507,-117.25328&ll=32.8716507,-117.25328z=6",-9999
-usa-scsr,[MARINe](https://marine.ucsc.edu/sitepages/scorpionrock.html),Scorpion Rock,usa,34.04552078,-119.54685,"http://maps.google.com/maps?q=34.04552078,-119.54685&ll=34.04552078,-119.54685z=6",-9999
-usa-sct,[MARINe](https://marine.ucsc.edu/sitepages/scottcreek.html),Scott Creek,usa,37.04425049,-122.23493,"http://maps.google.com/maps?q=37.04425049,-122.23493&ll=37.04425049,-122.23493z=6",-9999
-usa-sctr,[MARINe](https://marine.ucsc.edu/sitepages/trailer.html),Trailer,usa,34.05186844,-119.9032,"http://maps.google.com/maps?q=34.05186844,-119.9032&ll=34.05186844,-119.9032z=6",-9999
-usa-scwa,[MARINe](https://marine.ucsc.edu/sitepages/willows.html),Willows Anchorage,usa,33.96183014,-119.75495,"http://maps.google.com/maps?q=33.96183014,-119.75495&ll=33.96183014,-119.75495z=6",-9999
-usa-sea,[MARINe](https://marine.ucsc.edu/sitepages/searanch.html),Sea Ranch,usa,38.73049927,-123.48864,"http://maps.google.com/maps?q=38.73049927,-123.48864&ll=38.73049927,-123.48864z=6",-9999
-usa-sfp,[MARINe](https://marine.ucsc.edu/sitepages/starfishpoint.html),Starfish Point,usa,47.65269852,-124.3905,"http://maps.google.com/maps?q=47.65269852,-124.3905&ll=47.65269852,-124.3905z=6",-9999
-usa-shb,[MARINe](https://marine.ucsc.edu/sitepages/shellbeach.html),Shell Beach,usa,35.1688118,-120.69668,"http://maps.google.com/maps?q=35.1688118,-120.69668&ll=35.1688118,-120.69668z=6",-9999
-usa-shco,[MARINe](https://marine.ucsc.edu/sitepages/shawscove.html),Shaws Cove,usa,33.54476929,-117.79941,"http://maps.google.com/maps?q=33.54476929,-117.79941&ll=33.54476929,-117.79941z=6",-9999
-usa-sht,[MARINe](https://marine.ucsc.edu/sitepages/sheltercove.html),Shelter Cove,usa,40.02254105,-124.07366,"http://maps.google.com/maps?q=40.02254105,-124.07366&ll=40.02254105,-124.07366z=6",-9999
-usa-sim,[MARINe](https://marine.ucsc.edu/sitepages/vistadelmar.html),Vista del Mar,usa,35.60414124,-121.14232,"http://maps.google.com/maps?q=35.60414124,-121.14232&ll=35.60414124,-121.14232z=6",-9999
-usa-slr,[MARINe](https://marine.ucsc.edu/sitepages/slideranch.html),Slide Ranch,usa,37.87406158,-122.60094,"http://maps.google.com/maps?q=37.87406158,-122.60094&ll=37.87406158,-122.60094z=6",-9999
-usa-smc,[MARINe](https://marine.ucsc.edu/sitepages/santamariacreek.html),Santa Maria Creek,usa,38.01242828,-122.84915,"http://maps.google.com/maps?q=38.01242828,-122.84915&ll=38.01242828,-122.84915z=6",-9999
-usa-smch,[MARINe](https://marine.ucsc.edu/sitepages/cuylerharbor.html),Cuyler Harbor,usa,34.04854965,-120.33642,"http://maps.google.com/maps?q=34.04854965,-120.33642&ll=34.04854965,-120.33642z=6",-9999
-usa-smcp,[MARINe](https://marine.ucsc.edu/sitepages/crookpoint.html),Crook Point,usa,34.02159119,-120.37887,"http://maps.google.com/maps?q=34.02159119,-120.37887&ll=34.02159119,-120.37887z=6",-9999
-usa-smhp,[MARINe](https://marine.ucsc.edu/sitepages/harrispoint.html),Harris Point,usa,34.07337189,-120.36322,"http://maps.google.com/maps?q=34.07337189,-120.36322&ll=34.07337189,-120.36322z=6",-9999
-usa-smoh,[MARINe](https://marine.ucsc.edu/sitepages/otterharbor.html),Otter Harbor,usa,34.05202866,-120.40758,"http://maps.google.com/maps?q=34.05202866,-120.40758&ll=34.05202866,-120.40758z=6",-9999
-usa-snap,[MARINe](https://marine.ucsc.edu/sitepages/anchorpoint.html),Anchor Point,usa,33.26713562,-119.48723,"http://maps.google.com/maps?q=33.26713562,-119.48723&ll=33.26713562,-119.48723z=6",-9999
-usa-snco,[MARINe](https://marine.ucsc.edu/sitepages/cosign.html),Cosign,usa,33.27446365,-119.57676,"http://maps.google.com/maps?q=33.27446365,-119.57676&ll=33.27446365,-119.57676z=6",-9999
-usa-snmp,[MARINe](https://marine.ucsc.edu/sitepages/markerpoles.html),Marker Poles,usa,33.21868134,-119.49562,"http://maps.google.com/maps?q=33.21868134,-119.49562&ll=33.21868134,-119.49562z=6",-9999
-usa-snts,[MARINe](https://marine.ucsc.edu/sitepages/thousandsprings.html),Thousand Springs,usa,33.28504944,-119.52983,"http://maps.google.com/maps?q=33.28504944,-119.52983&ll=33.28504944,-119.52983z=6",-9999
-usa-sob,[MARINe](https://marine.ucsc.edu/sitepages/soberanes.html),Soberanes,usa,36.44786835,-121.92874,"http://maps.google.com/maps?q=36.44786835,-121.92874&ll=36.44786835,-121.92874z=6",-9999
-usa-sok,[MARINe](https://marine.ucsc.edu/sitepages/chileansokol.html),Sokol Point,usa,47.94709015,-124.66229,"http://maps.google.com/maps?q=47.94709015,-124.66229&ll=47.94709015,-124.66229z=6",-9999
-usa-srep,[MARINe](https://marine.ucsc.edu/sitepages/eastpoint.html),East Point,usa,33.94269943,-119.96797,"http://maps.google.com/maps?q=33.94269943,-119.96797&ll=33.94269943,-119.96797z=6",-9999
-usa-srfp,[MARINe](https://marine.ucsc.edu/sitepages/fordpoint.html),Ford Point,usa,33.91453171,-120.05024,"http://maps.google.com/maps?q=33.91453171,-120.05024&ll=33.91453171,-120.05024z=6",-9999
-usa-srfr,[MARINe](https://marine.ucsc.edu/sitepages/fossilreef.html),Fossil Reef,usa,33.9931488,-120.23758,"http://maps.google.com/maps?q=33.9931488,-120.23758&ll=33.9931488,-120.23758z=6",-9999
-usa-srjl,[MARINe](https://marine.ucsc.edu/sitepages/johnsonslee.html),Johnsons Lee,usa,33.90871811,-120.08629,"http://maps.google.com/maps?q=33.90871811,-120.08629&ll=33.90871811,-120.08629z=6",-9999
-usa-srnwt,[MARINe](https://marine.ucsc.edu/sitepages/nwtalcott.html),NW Talcott,usa,34.00957108,-120.2176,"http://maps.google.com/maps?q=34.00957108,-120.2176&ll=34.00957108,-120.2176z=6",-9999
-usa-sta,[MARINe](https://marine.ucsc.edu/sitepages/stairs.html),Stairs,usa,34.73038101,-120.61546,"http://maps.google.com/maps?q=34.73038101,-120.61546&ll=34.73038101,-120.61546z=6",-9999
-usa-sto,[MARINe](https://marine.ucsc.edu/sitepages/stornetta.html),Stornetta,usa,38.93787003,-123.7288,"http://maps.google.com/maps?q=38.93787003,-123.7288&ll=38.93787003,-123.7288z=6",-9999
-usa-swam,[MARINe](https://marine.ucsc.edu/sitepages/swamis.html),Swamis Beach,usa,33.03509903,-117.29425,"http://maps.google.com/maps?q=33.03509903,-117.29425&ll=33.03509903,-117.29425z=6",-9999
-usa-swc,[MARINe](https://marine.ucsc.edu/sitepages/stillwater.html),Stillwater,usa,36.56087112,-121.94053,"http://maps.google.com/maps?q=36.56087112,-121.94053&ll=36.56087112,-121.94053z=6",-9999
-usa-tay,[MARINe](https://marine.ucsc.edu/sitepages/taylorpoint.html),Taylor Point,usa,47.8660202,-124.57004,"http://maps.google.com/maps?q=47.8660202,-124.57004&ll=47.8660202,-124.57004z=6",-9999
-usa-tpt,[MARINe](https://marine.ucsc.edu/sitepages/terracepoint.html),Terrace Point,usa,36.94841003,-122.06457,"http://maps.google.com/maps?q=36.94841003,-122.06457&ll=36.94841003,-122.06457z=6",-9999
-usa-tris,[MARINe](https://marine.ucsc.edu/sitepages/treasureisland.html),Treasure Island,usa,33.51335144,-117.75793,"http://maps.google.com/maps?q=33.51335144,-117.75793&ll=33.51335144,-117.75793z=6",-9999
-usa-whpt,[MARINe](https://marine.ucsc.edu/sitepages/whitepoint.html),White Point,usa,33.71538925,-118.31961,"http://maps.google.com/maps?q=33.71538925,-118.31961&ll=33.71538925,-118.31961z=6",-9999
-ca-mspc,[Fisheries and Ocean Canada](https://www.mar.dfo-mpo.gc.ca/SABS/Home),Mispec Beach,ca,45.222418,-65.951475,"http://maps.google.com/maps?q=45.222418,-65.951475&ll=45.222418,-65.951475z=6",-9999
-ca-black,[Fisheries and Ocean Canada](https://www.mar.dfo-mpo.gc.ca/SABS/Home),Black Beach,ca,45.154808,-66.22843,"http://maps.google.com/maps?q=45.154808,-66.22843&ll=45.154808,-66.22843z=6",-9999
+vir-usvi,[CMES - UVI](https://www.uvi.edu/research/center-for-marine-environmental-studies/about-cmes/default.aspx),USVI,vir,18.390,-64.930,"http://maps.google.com/maps?q=18.39,-64.93&ll=18.39,-64.93&z=6",276
+wi-blanchiseusse-bay,[U. West Indies](https://sta.uwi.edu/fst/lifesciences/),Blanchiseusse Bay,wi,10.799,-61.315,"http://maps.google.com/maps?q=10.79936,-61.31513&ll=10.79936,-61.31513&z=6",241
+wi-las-cuevas,[U. West Indies](https://sta.uwi.edu/fst/lifesciences/),Las Cuevas,wi,10.784,-61.393,"http://maps.google.com/maps?q=10.78416,-61.39261&ll=10.78416,-61.39261&z=6",241
+wi-maracas,[U. West Indies](https://sta.uwi.edu/fst/lifesciences/),Maracas,wi,10.758,-61.435,"http://maps.google.com/maps?q=10.75813,-61.43537&ll=10.75813,-61.43537&z=6",241
+wi-salybia,[U. West Indies](https://sta.uwi.edu/fst/lifesciences/),Salybia,wi,10.836,-60.920,"http://maps.google.com/maps?q=10.83559,-60.92015&ll=10.83559,-60.92015&z=6",241
+wi-toco,[U. West Indies](https://sta.uwi.edu/fst/lifesciences/),Toco,wi,10.834,-60.947,"http://maps.google.com/maps?q=10.83379,-60.94739&ll=10.83379,-60.94739z=6",241
+usa-fknms,[S. Florida MBON](https://marinebon.org/pages/sfmbon/),[South Florida Program](https://www.aoml.noaa.gov/iea/),usa,24.500,-81.000,"http://maps.google.com/maps?q=24.5,-81&ll=24.5,-81&z=6",20076
+usa-chukchi-sea,[Arctic MBON](https://marinebon.org/pages/ambon/),Arctic MBON - Chukchi Sea,usa,66.941,-168.638,"http://maps.google.com/maps?q=66.9412,-168.63774&ll=66.9412,-168.63774&z=6",40054
+usa-biddeford-biddefordme,[NEU - Helmuth Lab](https://helmuthlab.cos.northeastern.edu/),Biddeford - Biddeford ME ,usa,43.440,-70.343,"http://maps.google.com/maps?q=43.439808,-70.343454&ll=43.439808,-70.343454&z=6",-9999
+usa-chamberlain-chamberlainme,[NEU - Helmuth Lab](https://helmuthlab.cos.northeastern.edu/),[Chamberlain](http://www.northeastern.edu/helmuthlab/Research/gigapan/USME/USME.html#_ga=2.114804366.804414391.1602182240-113605171.1602182239),usa,43.884,-69.476,"http://maps.google.com/maps?q=43.884304,-69.47609&ll=43.884304,-69.47609&z=6",-9999
+usa-giantstairs-harpswellme,[NEU - Helmuth Lab](https://helmuthlab.cos.northeastern.edu/),Giant Stairs - Harpswell ME ,usa,43.726,-69.992,"http://maps.google.com/maps?q=43.725666,-69.992283&ll=43.725666,-69.992283&z=6",-9999
+usa-grindstone-winterharborme,[NEU - Helmuth Lab](https://helmuthlab.cos.northeastern.edu/),[Grindstone](http://www.northeastern.edu/helmuthlab/Research/gigapan/USME/USME.html#_ga=2.114804366.804414391.1602182240-113605171.1602182239),usa,44.371,-68.091,"http://maps.google.com/maps?q=44.371365,-68.091242&ll=44.371365,-68.091242&z=6",-9999
+usa-hamiltoncove-lubecme,[NEU - Helmuth Lab](https://helmuthlab.cos.northeastern.edu/),Hamilton Cove - Lubec ME ,usa,44.788,-67.010,"http://maps.google.com/maps?q=44.788076,-67.010388&ll=44.788076,-67.010388&z=6",-9999
+usa-marblehead-marbleheadma,[NEU - Helmuth Lab](https://helmuthlab.cos.northeastern.edu/),Marblehead - Marblehead MA ,usa,42.507,-70.843,"http://maps.google.com/maps?q=42.507375,-70.843271&ll=42.507375,-70.843271&z=6",-9999
+usa-moosecove-lubecme,[NEU - Helmuth Lab](https://helmuthlab.cos.northeastern.edu/),Moose Cove - Lubec ME ,usa,44.732,-67.099,"http://maps.google.com/maps?q=44.731602,-67.098585&ll=44.731602,-67.098585&z=6",-9999
+usa-pumphouse-nahantma,[NEU - Helmuth Lab](https://helmuthlab.cos.northeastern.edu/),Pumphouse - Nahant MA ,usa,42.417,-70.906,"http://maps.google.com/maps?q=42.416788,-70.906496&ll=42.416788,-70.906496&z=6",-9999
+usa-kay,[MARINe](https://marine.ucsc.edu/sitepages/kayakisland.html),Kayak Island,usa,57.022,-135.354,"http://maps.google.com/maps?q=57.02249908,-135.35387&ll=57.02249908,-135.35387z=6",40002
+usa-pira,[MARINe](https://marine.ucsc.edu/sitepages/piratescove.html),Pirates Cove,usa,56.987,-135.378,"http://maps.google.com/maps?q=56.98661041,-135.37755&ll=56.98661041,-135.37755z=6",40002
+usa-sage,[MARINe](https://marine.ucsc.edu/sitepages/sagerock.html),Sage Rock,usa,57.049,-135.323,"http://maps.google.com/maps?q=57.04869843,-135.32314&ll=57.04869843,-135.32314z=6",40002
+usa-alc,[MARINe](https://marine.ucsc.edu/sitepages/alcatrazisland.html),Alcatraz,usa,37.825,-122.422,"http://maps.google.com/maps?q=37.82500076,-122.42194&ll=37.82500076,-122.42194z=6",-9999
+usa-aleg,[MARINe](https://marine.ucsc.edu/sitepages/alegria.html),Alegria,usa,34.467,-120.277,"http://maps.google.com/maps?q=34.4671402,-120.27738&ll=34.4671402,-120.27738z=6",-9999
+usa-amn,[MARINe](https://marine.ucsc.edu/sitepages/americancamp.html),American Camp,usa,48.457,-123.022,"http://maps.google.com/maps?q=48.45730972,-123.02222&ll=48.45730972,-123.02222z=6",-9999
+usa-ancr,[MARINe](https://marine.ucsc.edu/sitepages/catrock.html),Cat Rock,usa,34.006,-119.419,"http://maps.google.com/maps?q=34.00556946,-119.41925&ll=34.00556946,-119.41925z=6",-9999
+usa-anmw,[MARINe](https://marine.ucsc.edu/sitepages/middlewest.html),Middle West,usa,34.006,-119.396,"http://maps.google.com/maps?q=34.00590134,-119.39649&ll=34.00590134,-119.39649z=6",-9999
+usa-ansfc,[MARINe](https://marine.ucsc.edu/sitepages/sfrenchyscove.html),S Frenchys Cove,usa,34.007,-119.411,"http://maps.google.com/maps?q=34.00659943,-119.41077&ll=34.00659943,-119.41077z=6",-9999
+usa-arg,[MARINe](https://marine.ucsc.edu/sitepages/capearago.html),Cape Arago,usa,43.309,-124.401,"http://maps.google.com/maps?q=43.30894089,-124.40077&ll=43.30894089,-124.40077z=6",-9999
+usa-arho,[MARINe](https://marine.ucsc.edu/sitepages/arroyohondo.html),Arroyo Hondo,usa,34.473,-120.145,"http://maps.google.com/maps?q=34.47343826,-120.1454&ll=34.47343826,-120.1454z=6",-9999
+usa-asi,[MARINe](https://marine.ucsc.edu/sitepages/asilomar.html),Asilomar,usa,36.622,-121.942,"http://maps.google.com/maps?q=36.6222496,-121.94161&ll=36.6222496,-121.94161z=6",-9999
+usa-bloh,[MARINe](https://marine.ucsc.edu/sitepages/blowhole.html),Blowhole,usa,37.701,-123.004,"http://maps.google.com/maps?q=37.7011795,-123.00383&ll=37.7011795,-123.00383z=6",-9999
+usa-bml,[MARINe](https://marine.ucsc.edu/sitepages/bodega.html),Bodega,usa,38.318,-123.074,"http://maps.google.com/maps?q=38.31819916,-123.07365&ll=38.31819916,-123.07365z=6",-9999
+usa-boa,[MARINe](https://marine.ucsc.edu/sitepages/boathouse.html),Boat House,usa,34.554,-120.612,"http://maps.google.com/maps?q=34.55387878,-120.61167&ll=34.55387878,-120.61167z=6",-9999
+usa-bob,[MARINe](https://marine.ucsc.edu/sitepages/bobcreek.html),Bob Creek,usa,44.245,-124.114,"http://maps.google.com/maps?q=44.24456024,-124.11443&ll=44.24456024,-124.11443z=6",-9999
+usa-bol,[MARINe](https://marine.ucsc.edu/sitepages/bolinaspoint.html),Bolinas Point,usa,37.904,-122.727,"http://maps.google.com/maps?q=37.90354156,-122.72721&ll=37.90354156,-122.72721z=6",-9999
+usa-brn,[MARINe](https://marine.ucsc.edu/sitepages/burnthill.html),Burnt Hill,usa,42.228,-124.388,"http://maps.google.com/maps?q=42.22814178,-124.38786&ll=42.22814178,-124.38786z=6",-9999
+usa-cab1,[MARINe](https://marine.ucsc.edu/sitepages/cabrillo1.html),Cabrillo I,usa,32.669,-117.246,"http://maps.google.com/maps?q=32.66947174,-117.2455&ll=32.66947174,-117.2455z=6",-9999
+usa-cab2,[MARINe](https://marine.ucsc.edu/sitepages/cabrillo2.html),Cabrillo II,usa,32.668,-117.245,"http://maps.google.com/maps?q=32.66765976,-117.24526&ll=32.66765976,-117.24526z=6",-9999
+usa-cab3,[MARINe](https://marine.ucsc.edu/sitepages/cabrillo3.html),Cabrillo III,usa,32.666,-117.244,"http://maps.google.com/maps?q=32.6658287,-117.24417&ll=32.6658287,-117.24417z=6",-9999
+usa-car,[MARINe](https://marine.ucsc.edu/sitepages/carmelpoint.html),Carmel Point,usa,36.544,-121.934,"http://maps.google.com/maps?q=36.54375839,-121.93412&ll=36.54375839,-121.93412z=6",-9999
+usa-care,[MARINe](https://marine.ucsc.edu/sitepages/cardiffreef.html),Cardiff Reef,usa,33.000,-117.279,"http://maps.google.com/maps?q=32.99983978,-117.27867&ll=32.99983978,-117.27867z=6",-9999
+usa-carp,[MARINe](https://marine.ucsc.edu/sitepages/carpinteria.html),Carpinteria,usa,34.387,-119.514,"http://maps.google.com/maps?q=34.38703156,-119.51407&ll=34.38703156,-119.51407z=6",-9999
+usa-cay,[MARINe](https://marine.ucsc.edu/sitepages/cayucos.html),Cayucos,usa,35.447,-120.950,"http://maps.google.com/maps?q=35.44739151,-120.94982&ll=35.44739151,-120.94982z=6",-9999
+usa-chi,[MARINe](https://marine.ucsc.edu/sitepages/chinarocks.html),China Rocks,usa,36.606,-121.959,"http://maps.google.com/maps?q=36.60615921,-121.95939&ll=36.60615921,-121.95939z=6",-9999
+usa-clbs,[MARINe](https://marine.ucsc.edu/sitepages/boyscoutcamp.html),Boy Scout Camp,usa,33.001,-118.548,"http://maps.google.com/maps?q=33.00112152,-118.54832&ll=33.00112152,-118.54832z=6",-9999
+usa-clep,[MARINe](https://marine.ucsc.edu/sitepages/eelpoint.html),Eel Point,usa,32.918,-118.547,"http://maps.google.com/maps?q=32.91801071,-118.54668&ll=32.91801071,-118.54668z=6",-9999
+usa-clhbc,[MARINe](https://marine.ucsc.edu/sitepages/horsebeachcove.html),Horse Beach Cove,usa,32.803,-118.424,"http://maps.google.com/maps?q=32.8030014,-118.42431&ll=32.8030014,-118.42431z=6",-9999
+usa-clwc,[MARINe](https://marine.ucsc.edu/sitepages/westcove.html),West Cove,usa,33.015,-118.606,"http://maps.google.com/maps?q=33.01477051,-118.60613&ll=33.01477051,-118.60613z=6",-9999
+usa-copt,[MARINe](https://marine.ucsc.edu/sitepages/coaloilpoint.html),Coal Oil Point,usa,34.407,-119.878,"http://maps.google.com/maps?q=34.40692902,-119.87804&ll=34.40692902,-119.87804z=6",-9999
+usa-crco,[MARINe](https://marine.ucsc.edu/sitepages/crystalcove.html),Crystal Cove,usa,33.571,-117.838,"http://maps.google.com/maps?q=33.57078171,-117.83773&ll=33.57078171,-117.83773z=6",-9999
+usa-ctbr,[MARINe](https://marine.ucsc.edu/sitepages/birdrock.html),Bird Rock,usa,33.451,-118.488,"http://maps.google.com/maps?q=33.45145035,-118.48763&ll=33.45145035,-118.48763z=6",-9999
+usa-ctlh,[MARINe](https://marine.ucsc.edu/sitepages/littleharbor.html),Little Harbor,usa,33.385,-118.475,"http://maps.google.com/maps?q=33.38499069,-118.4752&ll=33.38499069,-118.4752z=6",-9999
+usa-dapt,[MARINe](https://marine.ucsc.edu/sitepages/danapoint.html),Dana Point,usa,33.460,-117.715,"http://maps.google.com/maps?q=33.4598999,-117.71475&ll=33.4598999,-117.71475z=6",-9999
+usa-dmn,[MARINe](https://marine.ucsc.edu/sitepages/damnation.html),Damnation Creek,usa,41.652,-124.128,"http://maps.google.com/maps?q=41.65248871,-124.12784&ll=41.65248871,-124.12784z=6",-9999
+usa-dslf,[MARINe](https://marine.ucsc.edu/sitepages/deadsealion.html),Dead Sea Lion Flat,usa,37.698,-123.000,"http://maps.google.com/maps?q=37.69809341,-122.99984&ll=37.69809341,-122.99984z=6",-9999
+usa-end,[MARINe](https://marine.ucsc.edu/sitepages/enderts.html),Enderts,usa,41.690,-124.143,"http://maps.google.com/maps?q=41.68999863,-124.14257&ll=41.68999863,-124.14257z=6",-9999
+usa-eng,[MARINe](https://marine.ucsc.edu/sitepages/englishcamp.html),English Camp,usa,48.593,-123.156,"http://maps.google.com/maps?q=48.59344101,-123.1555&ll=48.59344101,-123.1555z=6",-9999
+usa-esp,[MARINe](https://marine.ucsc.edu/sitepages/ecola.html),Ecola,usa,45.918,-123.980,"http://maps.google.com/maps?q=45.91809082,-123.98031&ll=45.91809082,-123.98031z=6",-9999
+usa-fkc,[MARINe](https://marine.ucsc.edu/sitepages/falseklamath.html),False Klamath Cove,usa,41.595,-124.106,"http://maps.google.com/maps?q=41.59476089,-124.10643&ll=41.59476089,-124.10643z=6",-9999
+usa-fog,[MARINe](https://marine.ucsc.edu/sitepages/fogartycreek.html),Fogarty Creek,usa,44.839,-124.059,"http://maps.google.com/maps?q=44.83863831,-124.05875&ll=44.83863831,-124.05875z=6",-9999
+usa-fra,[MARINe](https://marine.ucsc.edu/sitepages/franklinpoint.html),Franklin Point,usa,37.150,-122.361,"http://maps.google.com/maps?q=37.1495018,-122.36101&ll=37.1495018,-122.36101z=6",-9999
+usa-fre,[MARINe](https://marine.ucsc.edu/sitepages/freshwater.html),Freshwater Bay,usa,48.150,-123.637,"http://maps.google.com/maps?q=48.15049362,-123.63699&ll=48.15049362,-123.63699z=6",-9999
+usa-fridayharbor,[SI - MarineGEO](https://marinegeo.si.edu/friday-harbor),Friday Harbor,usa,48.546,-123.013,"http://maps.google.com/maps?q=48.546024,-123.012987&ll=48.546024,-123.012987&z=6",-9999
+usa-gar,[MARINe](https://marine.ucsc.edu/sitepages/garrapata.html),Garrapata,usa,36.469,-121.934,"http://maps.google.com/maps?q=36.46903992,-121.93444&ll=36.46903992,-121.93444z=6",-9999
+usa-gpt,[MARINe](https://marine.ucsc.edu/sitepages/government.html),Government Point,usa,34.443,-120.457,"http://maps.google.com/maps?q=34.4433403,-120.45655&ll=34.4433403,-120.45655z=6",-9999
+usa-gren,[MARINe](https://marine.ucsc.edu/sitepages/pointgrenville.html),Point Grenville,usa,47.303,-124.275,"http://maps.google.com/maps?q=47.30255127,-124.27531&ll=47.30255127,-124.27531z=6",-9999
+usa-hate,[MARINe](https://marine.ucsc.edu/sitepages/hatislandeast.html),Hat Island East,usa,48.522,-122.544,"http://maps.google.com/maps?q=48.52220917,-122.54353&ll=48.52220917,-122.54353z=6",-9999
+usa-hatw,[MARINe](https://marine.ucsc.edu/sitepages/hatislandwest.html),Hat Island West,usa,48.524,-122.552,"http://maps.google.com/maps?q=48.52352905,-122.55222&ll=48.52352905,-122.55222z=6",-9999
+usa-haz,[MARINe](https://marine.ucsc.edu/sitepages/hazards.html),Hazards,usa,35.290,-120.883,"http://maps.google.com/maps?q=35.28966141,-120.88325&ll=35.28966141,-120.88325z=6",-9999
+usa-hoo,[MARINe](https://marine.ucsc.edu/sitepages/mcdonaldcove.html),McDonald Cove,usa,47.628,-122.950,"http://maps.google.com/maps?q=47.62841797,-122.95034&ll=47.62841797,-122.95034z=6",-9999
+usa-hop,[MARINe](https://marine.ucsc.edu/sitepages/hopkins.html),Hopkins,usa,36.621,-121.907,"http://maps.google.com/maps?q=36.62120056,-121.9073&ll=36.62120056,-121.9073z=6",-9999
+usa-kib,[MARINe](https://marine.ucsc.edu/sitepages/kibesillah.html),Kibesillah Hill,usa,39.604,-123.789,"http://maps.google.com/maps?q=39.60411835,-123.78887&ll=39.60411835,-123.78887z=6",-9999
+usa-kydi,[MARINe](https://marine.ucsc.edu/sitepages/kydikabbitpoint.html),Kydikabbit Point,usa,48.391,-124.654,"http://maps.google.com/maps?q=48.39147186,-124.65372&ll=48.39147186,-124.65372z=6",-9999
+usa-man,[MARINe](https://marine.ucsc.edu/sitepages/manchester.html),Manchester State Park,usa,47.577,-122.544,"http://maps.google.com/maps?q=47.57688141,-122.54411&ll=47.57688141,-122.54411z=6",-9999
+usa-mbnms,[CeNCOOS](https://marinebon.org/pages/ccmbon/),[Monterey Bay Time Series](https://www.mbari.org/products/what-is-happening-in-monterey-bay-today/),usa,36.500,-122.000,"http://maps.google.com/maps?q=36.5,-122&ll=36.5,-122&z=6",-9999
+usa-mcr,[MARINe](https://marine.ucsc.edu/sitepages/millcreek.html),Mill Creek,usa,35.980,-121.490,"http://maps.google.com/maps?q=35.97964859,-121.49034&ll=35.97964859,-121.49034z=6",-9999
+usa-men,[MARINe](https://marine.ucsc.edu/sitepages/capemendocino.html),Cape Mendocino,usa,40.341,-124.363,"http://maps.google.com/maps?q=40.3409996,-124.36317&ll=40.3409996,-124.36317z=6",-9999
+usa-mfl,[MARINe](https://marine.ucsc.edu/sitepages/musselflat.html),Mussel Flat Farallones,usa,37.696,-123.003,"http://maps.google.com/maps?q=37.69589996,-123.0029&ll=37.69589996,-123.0029z=6",-9999
+usa-mol,[MARINe](https://marine.ucsc.edu/sitepages/andrewmolera.html),Andrew Molera,usa,36.281,-121.863,"http://maps.google.com/maps?q=36.28060913,-121.86317&ll=36.28060913,-121.86317z=6",-9999
+usa-mush,[MARINe](https://marine.ucsc.edu/sitepages/musselshoals.html),Mussel Shoals,usa,34.355,-119.441,"http://maps.google.com/maps?q=34.35548019,-119.44073&ll=34.35548019,-119.44073z=6",-9999
+usa-nano,[MARINe](https://marine.ucsc.edu/sitepages/navynorth.html),Navy North,usa,32.693,-117.253,"http://maps.google.com/maps?q=32.69260025,-117.25327&ll=32.69260025,-117.25327z=6",-9999
+usa-naso,[MARINe](https://marine.ucsc.edu/sitepages/navysouth.html),Navy South,usa,32.683,-117.250,"http://maps.google.com/maps?q=32.6828804,-117.24956&ll=32.6828804,-117.24956z=6",-9999
+usa-occ,[MARINe](https://marine.ucsc.edu/sitepages/occulto.html),Occulto,usa,34.881,-120.640,"http://maps.google.com/maps?q=34.88122177,-120.63954&ll=34.88122177,-120.63954z=6",-9999
+usa-olds,[MARINe](https://marine.ucsc.edu/sitepages/oldstairs.html),Old Stairs,usa,34.066,-118.998,"http://maps.google.com/maps?q=34.06612015,-118.99779&ll=34.06612015,-118.99779z=6",-9999
+usa-par,[MARINe](https://marine.ucsc.edu/sitepages/partington.html),Partington Cove,usa,36.174,-121.697,"http://maps.google.com/maps?q=36.17375946,-121.69653&ll=36.17375946,-121.69653z=6",-9999
+usa-pbl,[MARINe](https://marine.ucsc.edu/sitepages/piedrasblancas.html),Piedras Blancas,usa,35.665,-121.287,"http://maps.google.com/maps?q=35.66492844,-121.28699&ll=35.66492844,-121.28699z=6",-9999
+usa-pcov,[MARINe](https://marine.ucsc.edu/sitepages/paradisecove.html),Paradise Cove,usa,34.012,-118.792,"http://maps.google.com/maps?q=34.01200867,-118.79225&ll=34.01200867,-118.79225z=6",-9999
+usa-peb,[MARINe](https://marine.ucsc.edu/sitepages/pebblebeach.html),Pebble Beach,usa,37.233,-122.416,"http://maps.google.com/maps?q=37.23263168,-122.41607&ll=37.23263168,-122.41607z=6",-9999
+usa-pes,[MARINe](https://marine.ucsc.edu/sitepages/pescadero.html),Pescadero Point,usa,36.561,-121.954,"http://maps.google.com/maps?q=36.56108856,-121.95436&ll=36.56108856,-121.95436z=6",-9999
+usa-pin,[MARINe](https://marine.ucsc.edu/sitepages/pointpinos.html),Point Pinos,usa,36.638,-121.938,"http://maps.google.com/maps?q=36.63795853,-121.93758&ll=36.63795853,-121.93758z=6",-9999
+usa-poa,[MARINe](https://marine.ucsc.edu/sitepages/pointofarches.html),Point of the Arches,usa,48.242,-124.708,"http://maps.google.com/maps?q=48.24200058,-124.70779&ll=48.24200058,-124.70779z=6",-9999
+usa-pop,[MARINe](https://marine.ucsc.edu/sitepages/postpoint.html),Post Point,usa,48.712,-122.519,"http://maps.google.com/maps?q=48.7120018,-122.51913&ll=48.7120018,-122.51913z=6",-9999
+usa-ppt,[MARINe](https://marine.ucsc.edu/sitepages/pigeonpoint.html),Pigeon Point,usa,37.184,-122.395,"http://maps.google.com/maps?q=37.18360901,-122.39529&ll=37.18360901,-122.39529z=6",-9999
+usa-psn,[MARINe](https://marine.ucsc.edu/sitepages/pointsierra.html),Point Sierra Nevada,usa,35.729,-121.319,"http://maps.google.com/maps?q=35.72882843,-121.31866&ll=35.72882843,-121.31866z=6",-9999
+usa-ptb,[MARINe](https://marine.ucsc.edu/sitepages/pointbonita.html),Point Bonita,usa,37.819,-122.529,"http://maps.google.com/maps?q=37.81911087,-122.52935&ll=37.81911087,-122.52935z=6",-9999
+usa-ptfm,[MARINe](https://marine.ucsc.edu/sitepages/pointfermin.html),Point Fermin,usa,33.707,-118.286,"http://maps.google.com/maps?q=33.70679092,-118.28599&ll=33.70679092,-118.28599z=6",-9999
+usa-ptl,[MARINe](https://marine.ucsc.edu/sitepages/pointlobos.html),Point Lobos,usa,36.514,-121.947,"http://maps.google.com/maps?q=36.51366043,-121.94688&ll=36.51366043,-121.94688z=6",-9999
+usa-pur,[MARINe](https://marine.ucsc.edu/sitepages/purisima.html),Purisima,usa,34.756,-120.641,"http://maps.google.com/maps?q=34.75559998,-120.64076&ll=34.75559998,-120.64076z=6",-9999
+usa-pva,[MARINe](https://marine.ucsc.edu/sitepages/pacificvalley.html),Pacific Valley,usa,35.947,-121.481,"http://maps.google.com/maps?q=35.94704819,-121.48053&ll=35.94704819,-121.48053z=6",-9999
+usa-rmr,[MARINe](https://marine.ucsc.edu/sitepages/cambria.html),Rancho Marino,usa,35.522,-121.073,"http://maps.google.com/maps?q=35.52244186,-121.073&ll=35.52244186,-121.073z=6",-9999
+usa-sad,[MARINe](https://marine.ucsc.edu/sitepages/sandhillbluff.html),Sandhill Bluff,usa,36.980,-122.155,"http://maps.google.com/maps?q=36.9801712,-122.15503&ll=36.9801712,-122.15503z=6",-9999
+usa-sblc,[MARINe](https://marine.ucsc.edu/sitepages/landingcove.html),Landing Cove,usa,33.482,-119.030,"http://maps.google.com/maps?q=33.48157883,-119.02958&ll=33.48157883,-119.02958z=6",-9999
+usa-sbnc,[MARINe](https://marine.ucsc.edu/sitepages/saddlebagnorth.html),Saddlebag North Cove,usa,48.537,-122.555,"http://maps.google.com/maps?q=48.53710175,-122.5547&ll=48.53710175,-122.5547z=6",-9999
+usa-sbse,[MARINe](https://marine.ucsc.edu/sitepages/saddlebagsouth.html),Saddlebag South East,usa,48.534,-122.555,"http://maps.google.com/maps?q=48.53430176,-122.5549&ll=48.53430176,-122.5549z=6",-9999
+usa-sbslr,[MARINe](https://marine.ucsc.edu/sitepages/sealionrookery.html),Sea Lion Rookery,usa,33.472,-119.031,"http://maps.google.com/maps?q=33.47201157,-119.03066&ll=33.47201157,-119.03066z=6",-9999
+usa-scfc,[MARINe](https://marine.ucsc.edu/sitepages/frasercove.html),Fraser Cove,usa,34.063,-119.919,"http://maps.google.com/maps?q=34.06264877,-119.91915&ll=34.06264877,-119.91915z=6",-9999
+usa-scoc,[MARINe](https://marine.ucsc.edu/sitepages/orizabacove.html),Orizaba Cove,usa,34.045,-119.722,"http://maps.google.com/maps?q=34.04507828,-119.72188&ll=34.04507828,-119.72188z=6",-9999
+usa-scph,[MARINe](https://marine.ucsc.edu/sitepages/prisonersharbor.html),Prisoners Harbor,usa,34.020,-119.687,"http://maps.google.com/maps?q=34.02037811,-119.6867&ll=34.02037811,-119.6867z=6",-9999
+usa-scre,[MARINe](https://marine.ucsc.edu/sitepages/scripps.html),Scripps Reef,usa,32.872,-117.253,"http://maps.google.com/maps?q=32.8716507,-117.25328&ll=32.8716507,-117.25328z=6",-9999
+usa-scsr,[MARINe](https://marine.ucsc.edu/sitepages/scorpionrock.html),Scorpion Rock,usa,34.046,-119.547,"http://maps.google.com/maps?q=34.04552078,-119.54685&ll=34.04552078,-119.54685z=6",-9999
+usa-sct,[MARINe](https://marine.ucsc.edu/sitepages/scottcreek.html),Scott Creek,usa,37.044,-122.235,"http://maps.google.com/maps?q=37.04425049,-122.23493&ll=37.04425049,-122.23493z=6",-9999
+usa-sctr,[MARINe](https://marine.ucsc.edu/sitepages/trailer.html),Trailer,usa,34.052,-119.903,"http://maps.google.com/maps?q=34.05186844,-119.9032&ll=34.05186844,-119.9032z=6",-9999
+usa-scwa,[MARINe](https://marine.ucsc.edu/sitepages/willows.html),Willows Anchorage,usa,33.962,-119.755,"http://maps.google.com/maps?q=33.96183014,-119.75495&ll=33.96183014,-119.75495z=6",-9999
+usa-sea,[MARINe](https://marine.ucsc.edu/sitepages/searanch.html),Sea Ranch,usa,38.730,-123.489,"http://maps.google.com/maps?q=38.73049927,-123.48864&ll=38.73049927,-123.48864z=6",-9999
+usa-sfp,[MARINe](https://marine.ucsc.edu/sitepages/starfishpoint.html),Starfish Point,usa,47.653,-124.391,"http://maps.google.com/maps?q=47.65269852,-124.3905&ll=47.65269852,-124.3905z=6",-9999
+usa-shb,[MARINe](https://marine.ucsc.edu/sitepages/shellbeach.html),Shell Beach,usa,35.169,-120.697,"http://maps.google.com/maps?q=35.1688118,-120.69668&ll=35.1688118,-120.69668z=6",-9999
+usa-shco,[MARINe](https://marine.ucsc.edu/sitepages/shawscove.html),Shaws Cove,usa,33.545,-117.799,"http://maps.google.com/maps?q=33.54476929,-117.79941&ll=33.54476929,-117.79941z=6",-9999
+usa-sht,[MARINe](https://marine.ucsc.edu/sitepages/sheltercove.html),Shelter Cove,usa,40.023,-124.074,"http://maps.google.com/maps?q=40.02254105,-124.07366&ll=40.02254105,-124.07366z=6",-9999
+usa-sim,[MARINe](https://marine.ucsc.edu/sitepages/vistadelmar.html),Vista del Mar,usa,35.604,-121.142,"http://maps.google.com/maps?q=35.60414124,-121.14232&ll=35.60414124,-121.14232z=6",-9999
+usa-slr,[MARINe](https://marine.ucsc.edu/sitepages/slideranch.html),Slide Ranch,usa,37.874,-122.601,"http://maps.google.com/maps?q=37.87406158,-122.60094&ll=37.87406158,-122.60094z=6",-9999
+usa-smc,[MARINe](https://marine.ucsc.edu/sitepages/santamariacreek.html),Santa Maria Creek,usa,38.012,-122.849,"http://maps.google.com/maps?q=38.01242828,-122.84915&ll=38.01242828,-122.84915z=6",-9999
+usa-smch,[MARINe](https://marine.ucsc.edu/sitepages/cuylerharbor.html),Cuyler Harbor,usa,34.049,-120.336,"http://maps.google.com/maps?q=34.04854965,-120.33642&ll=34.04854965,-120.33642z=6",-9999
+usa-smcp,[MARINe](https://marine.ucsc.edu/sitepages/crookpoint.html),Crook Point,usa,34.022,-120.379,"http://maps.google.com/maps?q=34.02159119,-120.37887&ll=34.02159119,-120.37887z=6",-9999
+usa-smhp,[MARINe](https://marine.ucsc.edu/sitepages/harrispoint.html),Harris Point,usa,34.073,-120.363,"http://maps.google.com/maps?q=34.07337189,-120.36322&ll=34.07337189,-120.36322z=6",-9999
+usa-smoh,[MARINe](https://marine.ucsc.edu/sitepages/otterharbor.html),Otter Harbor,usa,34.052,-120.408,"http://maps.google.com/maps?q=34.05202866,-120.40758&ll=34.05202866,-120.40758z=6",-9999
+usa-snap,[MARINe](https://marine.ucsc.edu/sitepages/anchorpoint.html),Anchor Point,usa,33.267,-119.487,"http://maps.google.com/maps?q=33.26713562,-119.48723&ll=33.26713562,-119.48723z=6",-9999
+usa-snco,[MARINe](https://marine.ucsc.edu/sitepages/cosign.html),Cosign,usa,33.274,-119.577,"http://maps.google.com/maps?q=33.27446365,-119.57676&ll=33.27446365,-119.57676z=6",-9999
+usa-snmp,[MARINe](https://marine.ucsc.edu/sitepages/markerpoles.html),Marker Poles,usa,33.219,-119.496,"http://maps.google.com/maps?q=33.21868134,-119.49562&ll=33.21868134,-119.49562z=6",-9999
+usa-snts,[MARINe](https://marine.ucsc.edu/sitepages/thousandsprings.html),Thousand Springs,usa,33.285,-119.530,"http://maps.google.com/maps?q=33.28504944,-119.52983&ll=33.28504944,-119.52983z=6",-9999
+usa-sob,[MARINe](https://marine.ucsc.edu/sitepages/soberanes.html),Soberanes,usa,36.448,-121.929,"http://maps.google.com/maps?q=36.44786835,-121.92874&ll=36.44786835,-121.92874z=6",-9999
+usa-sok,[MARINe](https://marine.ucsc.edu/sitepages/chileansokol.html),Sokol Point,usa,47.947,-124.662,"http://maps.google.com/maps?q=47.94709015,-124.66229&ll=47.94709015,-124.66229z=6",-9999
+usa-srep,[MARINe](https://marine.ucsc.edu/sitepages/eastpoint.html),East Point,usa,33.943,-119.968,"http://maps.google.com/maps?q=33.94269943,-119.96797&ll=33.94269943,-119.96797z=6",-9999
+usa-srfp,[MARINe](https://marine.ucsc.edu/sitepages/fordpoint.html),Ford Point,usa,33.915,-120.050,"http://maps.google.com/maps?q=33.91453171,-120.05024&ll=33.91453171,-120.05024z=6",-9999
+usa-srfr,[MARINe](https://marine.ucsc.edu/sitepages/fossilreef.html),Fossil Reef,usa,33.993,-120.238,"http://maps.google.com/maps?q=33.9931488,-120.23758&ll=33.9931488,-120.23758z=6",-9999
+usa-srjl,[MARINe](https://marine.ucsc.edu/sitepages/johnsonslee.html),Johnsons Lee,usa,33.909,-120.086,"http://maps.google.com/maps?q=33.90871811,-120.08629&ll=33.90871811,-120.08629z=6",-9999
+usa-srnwt,[MARINe](https://marine.ucsc.edu/sitepages/nwtalcott.html),NW Talcott,usa,34.010,-120.218,"http://maps.google.com/maps?q=34.00957108,-120.2176&ll=34.00957108,-120.2176z=6",-9999
+usa-sta,[MARINe](https://marine.ucsc.edu/sitepages/stairs.html),Stairs,usa,34.730,-120.615,"http://maps.google.com/maps?q=34.73038101,-120.61546&ll=34.73038101,-120.61546z=6",-9999
+usa-sto,[MARINe](https://marine.ucsc.edu/sitepages/stornetta.html),Stornetta,usa,38.938,-123.729,"http://maps.google.com/maps?q=38.93787003,-123.7288&ll=38.93787003,-123.7288z=6",-9999
+usa-swam,[MARINe](https://marine.ucsc.edu/sitepages/swamis.html),Swamis Beach,usa,33.035,-117.294,"http://maps.google.com/maps?q=33.03509903,-117.29425&ll=33.03509903,-117.29425z=6",-9999
+usa-swc,[MARINe](https://marine.ucsc.edu/sitepages/stillwater.html),Stillwater,usa,36.561,-121.941,"http://maps.google.com/maps?q=36.56087112,-121.94053&ll=36.56087112,-121.94053z=6",-9999
+usa-tay,[MARINe](https://marine.ucsc.edu/sitepages/taylorpoint.html),Taylor Point,usa,47.866,-124.570,"http://maps.google.com/maps?q=47.8660202,-124.57004&ll=47.8660202,-124.57004z=6",-9999
+usa-tpt,[MARINe](https://marine.ucsc.edu/sitepages/terracepoint.html),Terrace Point,usa,36.948,-122.065,"http://maps.google.com/maps?q=36.94841003,-122.06457&ll=36.94841003,-122.06457z=6",-9999
+usa-tris,[MARINe](https://marine.ucsc.edu/sitepages/treasureisland.html),Treasure Island,usa,33.513,-117.758,"http://maps.google.com/maps?q=33.51335144,-117.75793&ll=33.51335144,-117.75793z=6",-9999
+usa-whpt,[MARINe](https://marine.ucsc.edu/sitepages/whitepoint.html),White Point,usa,33.715,-118.320,"http://maps.google.com/maps?q=33.71538925,-118.31961&ll=33.71538925,-118.31961z=6",-9999
+ca-mspc,[Fisheries and Ocean Canada](https://www.mar.dfo-mpo.gc.ca/SABS/Home),Mispec Beach,ca,45.222,-65.951,"http://maps.google.com/maps?q=45.222418,-65.951475&ll=45.222418,-65.951475z=6",-9999
+ca-black,[Fisheries and Ocean Canada](https://www.mar.dfo-mpo.gc.ca/SABS/Home),Black Beach,ca,45.155,-66.228,"http://maps.google.com/maps?q=45.154808,-66.22843&ll=45.154808,-66.22843z=6",-9999
+mex-lapaz,[UABC](http://fcm.ens.uabc.mx/),Punta Roca Caimancito,mex,24.207,-110.300,"http://maps.google.com/maps?q=24.207000,-110.3000&ll=24.207000,-110.3000z=6",-9999
+mex-ptalob,[UABC](http://fcm.ens.uabc.mx/),Punta Lobos,mex,24.459,-110.293,"http://maps.google.com/maps?q=24.459,-110.293&ll=24.459,-110.293z=6",-9999
+mex-icayo,[UABC](http://fcm.ens.uabc.mx/),Isla Cayo,mex,24.876,-110.604,"http://maps.google.com/maps?q=24.876,-110.604&ll=24.876,-110.604z=6",-9999
+mex-sjose,[UABC](http://fcm.ens.uabc.mx/),Isla San Jose,mex,24.885,-110.573,"http://maps.google.com/maps?q=24.885,-110.573&ll=24.885,-110.573z=6",-9999
+mex-agver,[UABC](http://fcm.ens.uabc.mx/),Agua Verde,mex,25.505,-111.014,"http://maps.google.com/maps?q=25.505,-111.014&ll=25.505,-111.014z=6",-9999
+mex-pesci,[UABC](http://fcm.ens.uabc.mx/),Puerto Escondido - Inner Bay,mex,25.825,-111.315,"http://maps.google.com/maps?q=25.825,-111.315&ll=25.825,-110.315z=6",-9999
+mex-pesco,[UABC](http://fcm.ens.uabc.mx/),Puerto Escondido - Outer Bay,mex,25.813,-111.306,"http://maps.google.com/maps?q=25.813,-111.306&ll=25.813,-110.306z=6",-9999
+mex-lore,[UABC](http://fcm.ens.uabc.mx/),Loreto,mex,26.011,-111.339,"http://maps.google.com/maps?q=26.011,-111.339&ll=26.011,-111.339z=6",-9999
+mex-coro,[UABC](http://fcm.ens.uabc.mx/),Isla Coronado,mex,26.110,-111.281,"http://maps.google.com/maps?q=26.11,-111.281&ll=26.11,-111.281z=6",-9999
+mex-cncp,[UABC](http://fcm.ens.uabc.mx/),Bahia Concepcion,mex,26.700,-111.800,"http://maps.google.com/maps?q=26.7,-111.8&ll=26.7,-111.8z=6",-9999
+mex-sluc,[UABC](http://fcm.ens.uabc.mx/),Cabo San Lucas,mex,22.880,-109.903,"http://maps.google.com/maps?q=22.88,-109.903.8&ll=22.88,-109.903z=6",-9999
+mex-pulm,[UABC](http://fcm.ens.uabc.mx/),Cabo Pulmo,mex,23.435,-109.425,"http://maps.google.com/maps?q=23.435,-109.425.8&ll=23.435,-109.425z=6",-9999
