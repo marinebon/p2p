@@ -1,61 +1,66 @@
 name: make_obis_monthly
 
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch
   schedule:
-    # 0 min, 0 hr, 7th day of month, any month, any day of week; see https://crontab.guru/every-month
-    - cron:  '0 0 7 * *'
-  #push:
-  #  branches: [ master ]
-
-  # Allows you to run this workflow manually from the Actions tab
+    # 0 min, 0 hr, 7th day of month, any month, any day of week
+    - cron: '0 0 7 * *'
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:    
   build:
-    runs-on: macOS-latest
+    # Use Ubuntu for stable binary support and lower cost
+    runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      # CRITICAL: Prevent renv from trying to compile broken old source versions of core packages
+      RENV_CONFIG_IGNORE_RECOMMENDED_PACKAGES: "true"
+      RENV_CONFIG_REPOS_OVERRIDE: https://packagemanager.posit.co/cran/__linux__/noble/latest
+      RENV_CONFIG_SANDBOX_ENABLED: "false"
     if: "!contains(github.event.head_commit.message, 'ci skip')"
+    
     steps:
-      - name: clone repo
-        # get a shallow copy (depth 1) so only getting the latest version of files, not whole history
-        run: git clone --depth 1 https://github.com/${{ github.repository }}.git .; ls
+      - name: Checkout repo
+        uses: actions/checkout@v4
         
       - name: Setup R
-        uses: r-lib/actions/setup-r@v1
-
-      - name: Install pandoc
-        run: |
-          brew install pandoc
-                    
-      - name: Cache Renv packages
-        uses: actions/cache@v2
+        uses: r-lib/actions/setup-r@v2
         with:
-          path: $HOME/.local/share/renv
-          key: r-${{ hashFiles('renv.lock') }}
-          restore-keys: r-      
- 
+          r-version: '4.4.2'
+          use-public-rspm: true
+
+      - name: Install System Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libudunits2-dev libgdal-dev libgeos-dev libproj-dev pandoc libcurl4-openssl-dev
+
+      - name: Cache R Packages
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.R_LIBS_USER }}
+          key: ${{ runner.os }}-r-obis-${{ hashFiles('renv.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-r-obis-
+          
       - name: Install packages
         run: |
+          # Remove local profile to avoid renv hijacking the session before we are ready
+          rm -f .Rprofile
           R -e 'install.packages("renv")'
-          R -e 'renv::restore()'
+          # Explicitly exclude packages that should stay at system-level to avoid MASS compilation error
+          R -e 'renv::restore(exclude = c("MASS", "Matrix", "KernSmooth", "mgcv", "nlme", "class", "cluster", "codetools", "foreign", "lattice", "nnet", "rpart", "spatial", "survival", "boot"))'
 
       - name: obis_download
         run: Rscript scripts/obis_download.R > scripts/output_make_obis.log
         
-#      - name: make_sites
-#        run: Rscript scripts/make_sites.R > scripts/output_make_sites.log
-        
       - name: if failure
         if: failure()
-        run: tail -n40 scripts/output_make_obis.log
+        run: tail -n 40 scripts/output_make_obis.log
+        
       - name: commit changes
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}          
           git add -A
-          git commit -a -m "changes from workflow **${{ github.workflow }}** [ci skip]"
+          git diff --quiet && git diff --staged --quiet || git commit -a -m "changes from workflow **${{ github.workflow }}** [ci skip]"
           git push
