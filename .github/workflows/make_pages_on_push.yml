@@ -12,31 +12,47 @@ on:
 
 jobs:    
   build:
-    runs-on: macOS-latest
+    # runs-on: macOS-latest
+    # env:
+    #   GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+    # if: "!contains(github.event.head_commit.message, 'ci skip')"
+    # #container: bdbest/cinms:1.0 # docker image
+
+    # Use Ubuntu for faster binary package support (prevents compilation errors like MASS/Sint)
+    runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     if: "!contains(github.event.head_commit.message, 'ci skip')"
-    #container: bdbest/cinms:1.0 # docker image
-    steps:
     
-      - name: clone repo
-        # get a shallow copy (depth 1) so only getting the latest version of files, not whole history
-        run: git clone --depth 1 https://github.com/${{ github.repository }}.git .; ls
+    steps:
+      # - name: clone repo
+      #   # get a shallow copy (depth 1) so only getting the latest version of files, not whole history
+      #   run: git clone --depth 1 https://github.com/${{ github.repository }}.git .; ls
+
+      - name: Checkout repo
+        uses: actions/checkout@v4
         
       - name: Setup R
         uses: r-lib/actions/setup-r@v2
         with:
+          # Use a stable R version; 4.5.2 is too new for many binary mirrors
+          r-version: '4.4.2'
           use-public-rspm: true
 
-      - name: Install Homebrew dependencies
-        run: |
-          brew install udunits
-          brew install pkg-config 
-          brew install gdal
+      # - name: Install Homebrew dependencies
+      #   run: |
+      #     brew install udunits
+      #     brew install pkg-config 
+      #     brew install gdal
 
-      - name: Install pandoc
+      # - name: Install pandoc
+      #   run: |
+      #     brew install pandoc
+
+      - name: Install System Dependencies
         run: |
-          brew install pandoc
+          sudo apt-get update
+          sudo apt-get install -y libudunits2-dev libgdal-dev libgeos-dev libproj-dev pandoc libcurl4-openssl-dev
           
       # - name: Cache Renv packages
       #   uses: actions/cache@v2
@@ -54,7 +70,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-r-
           
-      - name: Install packages
+      - name: Install renv and Restore
         run: |
           R -e 'install.packages("renv")'
           R -e 'renv::restore()'
