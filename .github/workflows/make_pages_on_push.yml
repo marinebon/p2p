@@ -75,7 +75,11 @@ jobs:
       - name: Install renv and Restore
         run: |
           R -e 'install.packages("renv")'
-          R -e 'renv::restore()'
+          # EXCLUSION STRATEGY: 
+          # We exclude "Recommended" packages (MASS, Matrix, etc.) because renv 
+          # tries to downgrade them to incompatible source versions. 
+          # R 4.4.2 already has working versions of these in the system library.
+          R -e 'renv::restore(exclude = c("MASS", "Matrix", "KernSmooth", "mgcv", "nlme", "class", "cluster", "codetools", "foreign", "lattice", "nnet", "rpart", "spatial", "survival", "boot"))'
           
       - name: make_pages
         run: Rscript scripts/make_pages.R > scripts/output_render.log
