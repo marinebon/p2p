@@ -2,7 +2,7 @@ name: make_obis_monthly
 
 on:
   schedule:
-    # 0 min, 0 hr, 7th day of month, any month, any day of week
+    # Runs at 00:00 on the 7th day of every month
     - cron: '0 0 7 * *'
   workflow_dispatch:
 
@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
-      # Deactivate renv to avoid MASS compilation errors and use librarian binaries
+      # Deactivate renv to force the use of pre-compiled binaries via librarian
       RENV_CONFIG_ACTIVATED: "false"
       RENV_CONFIG_REPOS_OVERRIDE: https://packagemanager.posit.co/cran/__linux__/noble/latest
     if: "!contains(github.event.head_commit.message, 'ci skip')"
@@ -20,7 +20,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
-          # Fetch all history so rebase can work correctly
+          # Full history is required for the rebase retry logic
           fetch-depth: 0
         
       - name: Setup R
@@ -30,6 +30,7 @@ jobs:
           use-public-rspm: true
 
       - name: Install System Dependencies
+        # Essential for spatial packages like sf and rmapshaper
         run: |
           sudo apt-get update
           sudo apt-get install -y libudunits2-dev libgdal-dev libgeos-dev libproj-dev pandoc libcurl4-openssl-dev gzip
@@ -46,15 +47,16 @@ jobs:
         run: R -e 'install.packages("librarian")'
           
       - name: obis_download
+        # Executes the R script to fetch and process OBIS records
         run: Rscript scripts/obis_download.R > scripts/output_make_obis.log
 
       - name: Compress Large Data
         run: |
-          # Check if the file exists and is larger than 50MB
+          # Compress the large CSV to stay under the 100MB GitHub push limit
           if [ -f data/obis/obis_data.csv ]; then
-            echo "Compressing obis_data.csv to bypass GitHub 100MB limit..."
+            echo "Compressing obis_data.csv..."
             gzip -9 -f data/obis/obis_data.csv
-            # This creates data/obis/obis_data.csv.gz and removes the .csv
+            # Creates obis_data.csv.gz and removes the original
           fi
         
       - name: if failure
@@ -69,18 +71,17 @@ jobs:
           
           git add -A
           
-          # Only proceed if there are actual changes
+          # Proceed only if changes exist
           if ! git diff --quiet || ! git diff --staged --quiet; then
             git commit -m "Monthly OBIS data update (compressed) [ci skip]"
             
-            # Robust Retry Logic for Push
-            # This handles cases where other workflows push changes during the long OBIS download
+            # Retry loop to handle concurrent pushes from other workflows
             n=0
             until [ "$n" -ge 5 ]
             do
               git pull --rebase origin master && git push origin master && break
               n=$((n+1))
-              echo "Push failed (likely due to concurrent updates). Retrying in 5s... (Attempt $n/5)"
+              echo "Push failed (concurrent update). Retrying in 5s... (Attempt $n/5)"
               sleep 5
             done
           else
