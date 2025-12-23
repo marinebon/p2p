@@ -22,7 +22,9 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
-      # Force renv to use the Posit Package Manager binaries for Ubuntu 24.04 (noble)
+      # CRITICAL: Tell renv NOT to try and manage 'Recommended' packages (MASS, Matrix, etc.)
+      # This forces it to use the stable versions already provided by the R installation.
+      RENV_CONFIG_IGNORE_RECOMMENDED_PACKAGES: "true"
       RENV_CONFIG_REPOS_OVERRIDE: https://packagemanager.posit.co/cran/__linux__/noble/latest
     if: "!contains(github.event.head_commit.message, 'ci skip')"
     
