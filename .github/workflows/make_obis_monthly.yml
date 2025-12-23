@@ -20,7 +20,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
-          # Fetch all history so rebase can work correctly if needed
+          # Fetch all history so rebase can work correctly
           fetch-depth: 0
         
       - name: Setup R
@@ -69,12 +69,20 @@ jobs:
           
           git add -A
           
-          # Check for changes and handle potential race conditions with other workflows
+          # Only proceed if there are actual changes
           if ! git diff --quiet || ! git diff --staged --quiet; then
             git commit -m "Monthly OBIS data update (compressed) [ci skip]"
-            # Pull latest changes from remote and rebase our new commit on top to avoid (fetch first) errors
-            git pull --rebase origin master
-            git push origin master
+            
+            # Robust Retry Logic for Push
+            # This handles cases where other workflows push changes during the long OBIS download
+            n=0
+            until [ "$n" -ge 5 ]
+            do
+              git pull --rebase origin master && git push origin master && break
+              n=$((n+1))
+              echo "Push failed (likely due to concurrent updates). Retrying in 5s... (Attempt $n/5)"
+              sleep 5
+            done
           else
             echo "No changes to commit."
           fi
