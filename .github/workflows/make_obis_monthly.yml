@@ -11,8 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
-      # CRITICAL: Deactivate renv for the CI run to avoid the MASS compilation error.
-      # librarian will instead fetch modern pre-compiled binaries for Ubuntu.
+      # Deactivate renv to avoid MASS compilation errors and use librarian binaries
       RENV_CONFIG_ACTIVATED: "false"
       RENV_CONFIG_REPOS_OVERRIDE: https://packagemanager.posit.co/cran/__linux__/noble/latest
     if: "!contains(github.event.head_commit.message, 'ci skip')"
@@ -28,28 +27,32 @@ jobs:
           use-public-rspm: true
 
       - name: Install System Dependencies
-        # Required for spatial packages used in obis_download.R (sf, rmapshaper)
         run: |
           sudo apt-get update
-          sudo apt-get install -y libudunits2-dev libgdal-dev libgeos-dev libproj-dev pandoc libcurl4-openssl-dev
+          sudo apt-get install -y libudunits2-dev libgdal-dev libgeos-dev libproj-dev pandoc libcurl4-openssl-dev gzip
 
       - name: Cache R Packages
         uses: actions/cache@v4
         with:
           path: ${{ env.R_LIBS_USER }}
-          # Use a key based on the download script to keep cache relevant
           key: ${{ runner.os }}-r-obis-${{ hashFiles('scripts/obis_download.R') }}
           restore-keys: |
             ${{ runner.os }}-r-obis-
           
       - name: Install Librarian
-        run: |
-          # librarian handles all other dependencies inside the R script
-          R -e 'install.packages("librarian")'
+        run: R -e 'install.packages("librarian")'
           
       - name: obis_download
-        # Runs your obis_download.R script to fetch latest OBIS data
         run: Rscript scripts/obis_download.R > scripts/output_make_obis.log
+
+      - name: Compress Large Data
+        run: |
+          # Check if the file exists and is larger than 50MB
+          if [ -f data/obis/obis_data.csv ]; then
+            echo "Compressing obis_data.csv to bypass GitHub 100MB limit..."
+            gzip -9 -f data/obis/obis_data.csv
+            # This creates data/obis/obis_data.csv.gz and removes the .csv
+          fi
         
       - name: if failure
         if: failure()
@@ -61,6 +64,6 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}          
           git add -A
-          # Only commit if data was actually changed to avoid unnecessary runs
-          git diff --quiet && git diff --staged --quiet || git commit -a -m "Monthly OBIS data update [ci skip]"
+          # Check for changes and prevent push errors if no data was updated
+          git diff --quiet && git diff --staged --quiet || git commit -a -m "Monthly OBIS data update (compressed) [ci skip]"
           git push
