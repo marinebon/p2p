@@ -8,6 +8,8 @@ on:
       - '!_*.Rmd'
       - '_site.yml'
       - '_includes/**'
+      - 'data/**'
+      - 'scripts/make_pages.R'
   workflow_dispatch:
 
 jobs:    
@@ -15,10 +17,9 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
-      # CRITICAL: Tell renv to ignore packages that come with R (MASS, Matrix, etc.)
-      # This prevents it from trying to compile broken old source versions.
-      RENV_CONFIG_IGNORE_RECOMMENDED_PACKAGES: "true"
-      # Force R to use the Posit Binary mirror for Ubuntu 24.04 (noble)
+      # CRITICAL: Deactivate renv for the CI run to avoid the MASS compilation error.
+      # librarian will instead fetch modern pre-compiled binaries for Ubuntu.
+      RENV_CONFIG_ACTIVATED: "false"
       RENV_CONFIG_REPOS_OVERRIDE: https://packagemanager.posit.co/cran/__linux__/noble/latest
     if: "!contains(github.event.head_commit.message, 'ci skip')"
     
@@ -33,6 +34,7 @@ jobs:
           use-public-rspm: true
 
       - name: Install System Dependencies
+        # These are required for spatial packages (sf, leaflet) and rendering
         run: |
           sudo apt-get update
           sudo apt-get install -y libudunits2-dev libgdal-dev libgeos-dev libproj-dev pandoc libcurl4-openssl-dev
@@ -41,26 +43,18 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ${{ env.R_LIBS_USER }}
-          key: ${{ runner.os }}-r-binary-v1-${{ hashFiles('scripts/make_pages.R') }}
+          key: ${{ runner.os }}-r-pages-${{ hashFiles('scripts/make_pages.R') }}
           restore-keys: |
-            ${{ runner.os }}-r-binary-v1-
+            ${{ runner.os }}-r-pages-
           
-      - name: Restore Packages
+      - name: Install Librarian
         run: |
-          # 1. Remove renv interference from the local environment
-          rm -f .Rprofile
+          # librarian handles all other dependencies inside the R script
+          R -e 'install.packages("librarian")'
           
-          # 2. Install librarian first using the binary mirror
-          R -e 'options(repos = c(CRAN = "https://packagemanager.posit.co/cran/__linux__/noble/latest"), pkgType = "binary"); install.packages("librarian")'
-          
-          # 3. Restore other packages but EXPLICITLY exclude the broken ones.
-          # We use the 'binary' pkgType to ensure no compilation is attempted.
-          R -e 'options(pkgType = "binary"); renv::restore(exclude = c("MASS", "Matrix", "KernSmooth", "mgcv", "nlme", "class", "cluster", "codetools", "foreign", "lattice", "nnet", "rpart", "spatial", "survival", "boot"))'
-          
-      - name: make_pages
-        # Ensure the rendering process also respects the binary-only rule
-        run: |
-          Rscript -e 'options(repos = c(CRAN = "https://packagemanager.posit.co/cran/__linux__/noble/latest"), pkgType = "binary"); source("scripts/make_pages.R")' > scripts/output_render.log
+      - name: Render Website
+        # This runs your make_pages.R script which stages files and renders the site
+        run: Rscript scripts/make_pages.R > scripts/output_render.log
         
       - name: if failure
         if: failure()
@@ -72,5 +66,6 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}          
           git add -A
-          git diff --quiet && git diff --staged --quiet || git commit -m "changes from workflow **${{ github.workflow }}** [ci skip]"
+          # Check for changes before committing to avoid empty commit errors
+          git diff --quiet && git diff --staged --quiet || git commit -a -m "Automatically render site pages [ci skip]"
           git push
