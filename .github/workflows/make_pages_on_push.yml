@@ -15,8 +15,11 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
-      # Force R to prefer binaries over source for everything
-      R_REMOTES_NO_ERRORS_FROM_WARNINGS: "true"
+      # CRITICAL: Tell renv to ignore packages that come with R (MASS, Matrix, etc.)
+      # This prevents it from trying to compile broken old source versions.
+      RENV_CONFIG_IGNORE_RECOMMENDED_PACKAGES: "true"
+      # Force R to use the Posit Binary mirror for Ubuntu 24.04 (noble)
+      RENV_CONFIG_REPOS_OVERRIDE: https://packagemanager.posit.co/cran/__linux__/noble/latest
     if: "!contains(github.event.head_commit.message, 'ci skip')"
     
     steps:
@@ -38,21 +41,24 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ${{ env.R_LIBS_USER }}
-          key: ${{ runner.os }}-r-binary-deps-${{ hashFiles('scripts/make_pages.R') }}
+          key: ${{ runner.os }}-r-binary-v1-${{ hashFiles('scripts/make_pages.R') }}
           restore-keys: |
-            ${{ runner.os }}-r-binary-deps-
+            ${{ runner.os }}-r-binary-v1-
           
-      - name: Force Binary Package Installation
+      - name: Restore Packages
         run: |
-          # 1. Eliminate renv interference
-          rm -f renv.lock .Rprofile
+          # 1. Remove renv interference from the local environment
+          rm -f .Rprofile
           
-          # 2. Force R to use the Posit Binary mirror for Ubuntu 24.04 (noble)
-          # pkgType = "binary" is the critical flag here.
+          # 2. Install librarian first using the binary mirror
           R -e 'options(repos = c(CRAN = "https://packagemanager.posit.co/cran/__linux__/noble/latest"), pkgType = "binary"); install.packages("librarian")'
           
+          # 3. Restore other packages but EXPLICITLY exclude the broken ones.
+          # We use the 'binary' pkgType to ensure no compilation is attempted.
+          R -e 'options(pkgType = "binary"); renv::restore(exclude = c("MASS", "Matrix", "KernSmooth", "mgcv", "nlme", "class", "cluster", "codetools", "foreign", "lattice", "nnet", "rpart", "spatial", "survival", "boot"))'
+          
       - name: make_pages
-        # We wrap the Rscript call to ensure it also inherits the binary options
+        # Ensure the rendering process also respects the binary-only rule
         run: |
           Rscript -e 'options(repos = c(CRAN = "https://packagemanager.posit.co/cran/__linux__/noble/latest"), pkgType = "binary"); source("scripts/make_pages.R")' > scripts/output_render.log
         
