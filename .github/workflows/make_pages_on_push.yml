@@ -15,9 +15,12 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      # CRITICAL: Deactivate renv for the CI run.
+      # This prevents renv from attempting to "downgrade" packages to 
+      # broken versions found in the lockfile.
+      RENV_CONFIG_ACTIVATED: "false"
       # Use the Posit Package Manager binaries for Ubuntu 24.04 (noble)
       RENV_CONFIG_REPOS_OVERRIDE: https://packagemanager.posit.co/cran/__linux__/noble/latest
-      RENV_CONFIG_SANDBOX_ENABLED: "false"
     if: "!contains(github.event.head_commit.message, 'ci skip')"
     
     steps:
@@ -39,29 +42,20 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ${{ env.R_LIBS_USER }}
-          key: ${{ runner.os }}-r-${{ hashFiles('renv.lock') }}
+          # We use a more general key since we aren't strictly following the lockfile
+          key: ${{ runner.os }}-r-deps-${{ hashFiles('scripts/make_pages.R') }}
           restore-keys: |
-            ${{ runner.os }}-r-
+            ${{ runner.os }}-r-deps-
           
-      - name: Patch Lockfile and Restore
+      - name: Install Librarian
         run: |
-          # The "Nuclear Option": 
-          # Remove MASS and Matrix from the renv.lock file dynamically during the CI run.
-          # This prevents renv from ever seeing the old, broken versions.
-          # It will instead use the modern, pre-installed versions that come with R 4.4.2.
-          R -e 'install.packages("jsonlite")'
-          R -e '
-            lock <- jsonlite::read_json("renv.lock");
-            lock$Packages$MASS <- NULL;
-            lock$Packages$Matrix <- NULL;
-            jsonlite::write_json(lock, "renv.lock", auto_unbox = TRUE, pretty = TRUE)
-          '
-          
-          R -e 'install.packages("renv")'
-          # Use the patched lockfile to restore the rest of your packages
-          R -e 'renv::restore()'
+          # We only install librarian here. 
+          # The make_pages.R script uses librarian::shelf() to handle everything else.
+          R -e 'install.packages("librarian")'
           
       - name: make_pages
+        # librarian inside this script will automatically install missing packages 
+        # as binaries, avoiding the MASS compilation error entirely.
         run: Rscript scripts/make_pages.R > scripts/output_render.log
         
       - name: if failure
@@ -74,6 +68,5 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}          
           git add -A
-          # Only commit if there are actual changes
           git diff --quiet && git diff --staged --quiet || git commit -m "changes from workflow **${{ github.workflow }}** [ci skip]"
           git push
