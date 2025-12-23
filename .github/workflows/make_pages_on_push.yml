@@ -15,11 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
-      # CRITICAL: Deactivate renv for the CI run.
-      # This prevents renv from attempting to "downgrade" packages to 
-      # broken versions found in the lockfile.
-      RENV_CONFIG_ACTIVATED: "false"
       # Use the Posit Package Manager binaries for Ubuntu 24.04 (noble)
+      # This ensures librarian pulls pre-compiled .deb files, avoiding MASS/Matrix source builds.
       RENV_CONFIG_REPOS_OVERRIDE: https://packagemanager.posit.co/cran/__linux__/noble/latest
     if: "!contains(github.event.head_commit.message, 'ci skip')"
     
@@ -42,20 +39,24 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ${{ env.R_LIBS_USER }}
-          # We use a more general key since we aren't strictly following the lockfile
+          # Use a key based on the render script to keep cache relevant
           key: ${{ runner.os }}-r-deps-${{ hashFiles('scripts/make_pages.R') }}
           restore-keys: |
             ${{ runner.os }}-r-deps-
           
-      - name: Install Librarian
+      - name: Prepare Environment and Install Dependencies
         run: |
-          # We only install librarian here. 
-          # The make_pages.R script uses librarian::shelf() to handle everything else.
+          # 1. DELETE the renv.lock and .Rprofile to prevent R from trying 
+          # to use the broken environment configuration.
+          rm -f renv.lock .Rprofile
+          
+          # 2. Install librarian to handle all further package management.
           R -e 'install.packages("librarian")'
           
       - name: make_pages
-        # librarian inside this script will automatically install missing packages 
-        # as binaries, avoiding the MASS compilation error entirely.
+        # librarian inside this script will now be the sole package manager.
+        # It will fetch binary versions of MASS/Matrix/sf etc. from RSPM,
+        # which will work perfectly without compilation.
         run: Rscript scripts/make_pages.R > scripts/output_render.log
         
       - name: if failure
@@ -68,5 +69,6 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}          
           git add -A
+          # Prevent failing if there are no changes to commit
           git diff --quiet && git diff --staged --quiet || git commit -m "changes from workflow **${{ github.workflow }}** [ci skip]"
           git push
