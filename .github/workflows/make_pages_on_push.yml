@@ -17,7 +17,6 @@ jobs:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
       # Use the Posit Package Manager binaries for Ubuntu 24.04 (noble)
       RENV_CONFIG_REPOS_OVERRIDE: https://packagemanager.posit.co/cran/__linux__/noble/latest
-      # Disable sandbox so we can use system/pre-installed binaries
       RENV_CONFIG_SANDBOX_ENABLED: "false"
     if: "!contains(github.event.head_commit.message, 'ci skip')"
     
@@ -44,19 +43,23 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-r-
           
-      - name: Install renv and Restore
+      - name: Patch Lockfile and Restore
         run: |
+          # The "Nuclear Option": 
+          # Remove MASS and Matrix from the renv.lock file dynamically during the CI run.
+          # This prevents renv from ever seeing the old, broken versions.
+          # It will instead use the modern, pre-installed versions that come with R 4.4.2.
+          R -e 'install.packages("jsonlite")'
+          R -e '
+            lock <- jsonlite::read_json("renv.lock");
+            lock$Packages$MASS <- NULL;
+            lock$Packages$Matrix <- NULL;
+            jsonlite::write_json(lock, "renv.lock", auto_unbox = TRUE, pretty = TRUE)
+          '
+          
           R -e 'install.packages("renv")'
-          
-          # PRE-INSTALL STRATEGY:
-          # Using the '>' YAML operator to safely handle the complex R command string
-          # and prevent "bad indentation of a mapping entry" errors.
-          R -e >
-            options(repos = c(CRAN = "https://packagemanager.posit.co/cran/__linux__/noble/latest")); 
-            install.packages(c("MASS", "Matrix"))
-          
-          # Run restore, excluding the pre-installed packages to keep the working versions
-          R -e 'renv::restore(exclude = c("MASS", "Matrix", "KernSmooth", "mgcv", "nlme", "class", "cluster", "codetools", "foreign", "lattice", "nnet", "rpart", "spatial", "survival", "boot"))'
+          # Use the patched lockfile to restore the rest of your packages
+          R -e 'renv::restore()'
           
       - name: make_pages
         run: Rscript scripts/make_pages.R > scripts/output_render.log
@@ -71,6 +74,6 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}          
           git add -A
-          # Only commit if there are actual changes to avoid workflow loops
+          # Only commit if there are actual changes
           git diff --quiet && git diff --staged --quiet || git commit -m "changes from workflow **${{ github.workflow }}** [ci skip]"
           git push
