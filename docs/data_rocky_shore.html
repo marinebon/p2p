@@ -13,8 +13,8 @@
 
 <title>Data from Rocky Intertidal Zones</title>
 
-<script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.30/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -58,6 +58,7 @@ if (window.hljs) {
 
 
 
+
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
 
@@ -82,6 +83,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -139,11 +143,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -172,8 +180,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -181,16 +189,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -234,7 +235,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -257,7 +258,7 @@ $(document).ready(function () {
   </a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     <span class="ion ion-stats-bars"></span>
      
     Data
@@ -281,7 +282,7 @@ $(document).ready(function () {
   </a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     <span class="ion ion-clipboard"></span>
      
     Methods
@@ -321,23 +322,53 @@ $(document).ready(function () {
 </div>
 
 
-<div id="biodiversity-survey-data-are-currently-being-collected-and-uploaded-to-obis-by-network-members." class="section level2">
-<h2>Biodiversity survey data are currently being collected and uploaded to <a href="https://obis.org/" target="_blank">OBIS</a> by network members.</h2>
+<div
+id="biodiversity-survey-data-are-currently-being-collected-and-uploaded-to-obis-by-network-members."
+class="section level2">
+<h2>Biodiversity survey data are currently being collected and uploaded
+to <a href="https://obis.org/" target="_blank">OBIS</a> by network
+members.</h2>
 <p>You can access available datasets for the following locations:</p>
 <ul>
-<li><a href="https://obis.org/dataset/5e009291-b1ce-454f-bbcf-d98142eaeda9" target="_blank">Montemar - Chile</a></li>
-<li><a href="https://obis.org/dataset/871e92ab-2a00-4851-b948-cb6dda862f9c" target="_blank">Gorgona Island - Colombia</a></li>
-<li><a href="https://obis.org/dataset/1d8fb994-64af-4a57-abe2-19573cc91f85" target="_blank">Puerto Madryn - Argentina</a></li>
-<li><a href="https://obis.org/dataset/e4a2fe06-f082-4f36-9165-73263a121508" target="_blank">Concepcion - Chile</a></li>
-<li><a href="https://obis.org/dataset/7ece3f71-6bae-4cc4-8619-d560a564f187" target="_blank">Arraial do Cabo - Brazil</a></li>
-<li><a href="https://obis.org/dataset/dae283ff-1835-465c-b058-fa6417d0ff2d" target="_blank">Fernando de Noronha - Brazil</a></li>
-<li><a href="https://obis.org/dataset/29059698-61ea-4882-9e1f-fca042056ddf" target="_blank">Costa das Algas - Brazil</a></li>
-<li><a href="https://obis.org/dataset/952c1493-9265-440d-8f6c-882ae12bf33b" target="_blank">Massachusetts - USA</a></li>
-<li><a href="https://obis.org/dataset/86ed1f5d-e911-4423-b965-8349248dfee2" target="_blank">Biddeford, Maine - USA</a></li>
-<li><a href="https://obis.org/dataset/2c4e7f5f-50a4-4a6d-a92b-8382a92617f4" target="_blank">Chamberlain, Maine - USA</a></li>
-<li><a href="https://obis.org/dataset/3efdd6d8-7dd3-427c-ac08-ecdc94c15919" target="_blank">Lubec, Maine - USA</a></li>
-<li><a href="https://www.gbif.org/dataset/11aec408-f323-454a-8057-9f9fc3552064" target="_blank">Giant Stairs, Maine - USA</a></li>
-<li><a href="https://obis.org/dataset/3cdb3dca-4df4-4931-9155-b41da2ce4075" target="_blank">Galapagos Islands - Ecuador</a></li>
+<li><a
+href="https://obis.org/dataset/5e009291-b1ce-454f-bbcf-d98142eaeda9"
+target="_blank">Montemar - Chile</a></li>
+<li><a
+href="https://obis.org/dataset/871e92ab-2a00-4851-b948-cb6dda862f9c"
+target="_blank">Gorgona Island - Colombia</a></li>
+<li><a
+href="https://obis.org/dataset/1d8fb994-64af-4a57-abe2-19573cc91f85"
+target="_blank">Puerto Madryn - Argentina</a></li>
+<li><a
+href="https://obis.org/dataset/e4a2fe06-f082-4f36-9165-73263a121508"
+target="_blank">Concepcion - Chile</a></li>
+<li><a
+href="https://obis.org/dataset/7ece3f71-6bae-4cc4-8619-d560a564f187"
+target="_blank">Arraial do Cabo - Brazil</a></li>
+<li><a
+href="https://obis.org/dataset/dae283ff-1835-465c-b058-fa6417d0ff2d"
+target="_blank">Fernando de Noronha - Brazil</a></li>
+<li><a
+href="https://obis.org/dataset/29059698-61ea-4882-9e1f-fca042056ddf"
+target="_blank">Costa das Algas - Brazil</a></li>
+<li><a
+href="https://obis.org/dataset/952c1493-9265-440d-8f6c-882ae12bf33b"
+target="_blank">Massachusetts - USA</a></li>
+<li><a
+href="https://obis.org/dataset/86ed1f5d-e911-4423-b965-8349248dfee2"
+target="_blank">Biddeford, Maine - USA</a></li>
+<li><a
+href="https://obis.org/dataset/2c4e7f5f-50a4-4a6d-a92b-8382a92617f4"
+target="_blank">Chamberlain, Maine - USA</a></li>
+<li><a
+href="https://obis.org/dataset/3efdd6d8-7dd3-427c-ac08-ecdc94c15919"
+target="_blank">Lubec, Maine - USA</a></li>
+<li><a
+href="https://www.gbif.org/dataset/11aec408-f323-454a-8057-9f9fc3552064"
+target="_blank">Giant Stairs, Maine - USA</a></li>
+<li><a
+href="https://obis.org/dataset/3cdb3dca-4df4-4931-9155-b41da2ce4075"
+target="_blank">Galapagos Islands - Ecuador</a></li>
 </ul>
 <p>More data will become available soon!</p>
 </div>
