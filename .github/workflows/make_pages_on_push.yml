@@ -15,9 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
-      # Use the Posit Package Manager binaries for Ubuntu 24.04 (noble)
-      # This ensures librarian pulls pre-compiled .deb files, avoiding MASS/Matrix source builds.
-      RENV_CONFIG_REPOS_OVERRIDE: https://packagemanager.posit.co/cran/__linux__/noble/latest
+      # Force R to prefer binaries over source for everything
+      R_REMOTES_NO_ERRORS_FROM_WARNINGS: "true"
     if: "!contains(github.event.head_commit.message, 'ci skip')"
     
     steps:
@@ -39,25 +38,23 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ${{ env.R_LIBS_USER }}
-          # Use a key based on the render script to keep cache relevant
-          key: ${{ runner.os }}-r-deps-${{ hashFiles('scripts/make_pages.R') }}
+          key: ${{ runner.os }}-r-binary-deps-${{ hashFiles('scripts/make_pages.R') }}
           restore-keys: |
-            ${{ runner.os }}-r-deps-
+            ${{ runner.os }}-r-binary-deps-
           
-      - name: Prepare Environment and Install Dependencies
+      - name: Force Binary Package Installation
         run: |
-          # 1. DELETE the renv.lock and .Rprofile to prevent R from trying 
-          # to use the broken environment configuration.
+          # 1. Eliminate renv interference
           rm -f renv.lock .Rprofile
           
-          # 2. Install librarian to handle all further package management.
-          R -e 'install.packages("librarian")'
+          # 2. Force R to use the Posit Binary mirror for Ubuntu 24.04 (noble)
+          # pkgType = "binary" is the critical flag here.
+          R -e 'options(repos = c(CRAN = "https://packagemanager.posit.co/cran/__linux__/noble/latest"), pkgType = "binary"); install.packages("librarian")'
           
       - name: make_pages
-        # librarian inside this script will now be the sole package manager.
-        # It will fetch binary versions of MASS/Matrix/sf etc. from RSPM,
-        # which will work perfectly without compilation.
-        run: Rscript scripts/make_pages.R > scripts/output_render.log
+        # We wrap the Rscript call to ensure it also inherits the binary options
+        run: |
+          Rscript -e 'options(repos = c(CRAN = "https://packagemanager.posit.co/cran/__linux__/noble/latest"), pkgType = "binary"); source("scripts/make_pages.R")' > scripts/output_render.log
         
       - name: if failure
         if: failure()
@@ -69,6 +66,5 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}          
           git add -A
-          # Prevent failing if there are no changes to commit
           git diff --quiet && git diff --staged --quiet || git commit -m "changes from workflow **${{ github.workflow }}** [ci skip]"
           git push
