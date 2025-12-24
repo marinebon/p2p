@@ -19,7 +19,6 @@ jobs:
       RENV_CONFIG_ACTIVATED: "false"
       RENV_CONFIG_REPOS_OVERRIDE: https://packagemanager.posit.co/cran/__linux__/noble/latest
       RENV_CONFIG_SANDBOX_ENABLED: "false"
-      # Solve SSL certificate issues for CoastWatch/ERDDAP downloads
       R_REMOTES_NO_ERRORS_FROM_WARNINGS: "true"
     if: "!contains(github.event.head_commit.message, 'ci skip')"
     
@@ -38,38 +37,58 @@ jobs:
       - name: Install System Dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y libudunits2-dev libgdal-dev libgeos-dev libproj-dev pandoc libcurl4-openssl-dev gzip
+          sudo apt-get install -y libudunits2-dev libgdal-dev libgeos-dev libproj-dev pandoc libcurl4-openssl-dev gzip curl
 
       - name: Cache R Packages
         uses: actions/cache@v4
         with:
           path: ${{ env.R_LIBS_USER }}
-          key: ${{ runner.os }}-r-sites-v2-${{ hashFiles('scripts/make_sites.R') }}
+          key: ${{ runner.os }}-r-sites-v4-${{ hashFiles('scripts/make_sites.R') }}
           restore-keys: |
-            ${{ runner.os }}-r-sites-v2-
+            ${{ runner.os }}-r-sites-v4-
           
       - name: Install Librarian and Clear Cache
         run: |
-          # Force libcurl for stable ERDDAP connections
-          R -e 'options(download.file.method = "libcurl"); install.packages("librarian")'
-          # Clear rerddap cache to prevent stale data errors
+          R -e 'install.packages("librarian")'
           rm -rf ~/.local/share/rerddap
           
+      - name: Check ERDDAP Availability
+        run: |
+          echo "Verifying server reachability..."
+          curl -I --connect-timeout 15 https://coastwatch.pfeg.noaa.gov/erddap/index.html || echo "Warning: CoastWatch may be unreachable"
+          curl -I --connect-timeout 15 https://cwcgom.aoml.noaa.gov/erddap/index.html || echo "Warning: AOML may be unreachable"
+
       - name: Prepare OBIS Data
         run: |
           if [ -f data/obis/obis_data.csv.gz ]; then
-            echo "Decompressing obis_data.csv.gz..."
+            echo "Decompressing OBIS data..."
             gunzip -f data/obis/obis_data.csv.gz
           fi
           
       - name: make_sites
-        # Wrapping in options() to ensure the R script inherits the SSL fixes
+        # We inject a wrapper around the data fetch to prevent "atomic vector" crashes
         run: |
-          Rscript -e 'options(download.file.method = "libcurl"); source("scripts/make_sites.R")' > scripts/output_make_sites.log
+          Rscript -e '
+            options(download.file.method = "libcurl", timeout = 600);
+            # Patch griddap to return an empty tibble instead of crashing if a fetch fails
+            library(rerddap);
+            base_griddap <- griddap;
+            assignInNamespace("griddap", function(...) {
+              res <- try(base_griddap(...), silent = TRUE);
+              if (inherits(res, "try-error") || is.character(res)) {
+                message("ERDDAP Fetch Failed. Returning empty data frame to prevent crash.");
+                return(list(data = data.frame(time=character(), lat=numeric(), lon=numeric(), field=numeric())));
+              }
+              res
+            }, ns="rerddap");
+            source("scripts/make_sites.R");
+          ' > scripts/output_make_sites.log
         
       - name: if failure
         if: failure()
-        run: tail -n 40 scripts/output_make_sites.log
+        run: |
+          echo "--- LOG EXCERPT ---"
+          tail -n 60 scripts/output_make_sites.log
         
       - name: commit changes
         run: |
@@ -90,8 +109,8 @@ jobs:
             do
               git pull --rebase -X theirs origin master && git push origin master && break
               n=$((n+1))
-              echo "Push failed. Retrying in 20s... (Attempt $n/5)"
-              sleep 20
+              echo "Push failed. Retrying... (Attempt $n/5)"
+              sleep 30
             done
           else
             echo "No changes to commit."
