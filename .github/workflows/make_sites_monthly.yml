@@ -44,59 +44,68 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ${{ env.R_LIBS_USER }}
-          key: ${{ runner.os }}-r-sites-v5-${{ hashFiles('scripts/make_sites.R', 'scripts/functions.R') }}
+          key: ${{ runner.os }}-r-sites-v7-${{ hashFiles('scripts/make_sites.R', 'scripts/functions.R') }}
           restore-keys: |
-            ${{ runner.os }}-r-sites-v5-
+            ${{ runner.os }}-r-sites-v7-
           
       - name: Install Librarian and Clear Cache
         run: |
           R -e 'install.packages("librarian")'
           rm -rf ~/.local/share/rerddap
           
-      - name: Check ERDDAP Availability
-        run: |
-          echo "Verifying server reachability..."
-          curl -I --connect-timeout 15 https://coastwatch.pfeg.noaa.gov/erddap/index.html || echo "Warning: CoastWatch may be unreachable"
-          curl -I --connect-timeout 15 https://cwcgom.aoml.noaa.gov/erddap/index.html || echo "Warning: AOML may be unreachable"
-
       - name: Prepare OBIS Data
         run: |
           if [ -f data/obis/obis_data.csv.gz ]; then
-            echo "Decompressing OBIS data for rendering..."
+            echo "Decompressing OBIS data..."
             gunzip -f data/obis/obis_data.csv.gz
           fi
           
       - name: make_sites
-        # We hot-patch get_timeseries in functions.R to handle atomic vector errors
+        # We use a Deep Patch to overwrite get_timeseries in memory
         run: |
           Rscript -e '
             options(download.file.method = "libcurl", timeout = 600);
             source("scripts/functions.R");
             
-            # Patch get_timeseries to handle server errors gracefully
-            base_get_timeseries <- get_timeseries;
-            assignInNamespace("get_timeseries", function(info, lon, lat, csv, field="sst") {
-              v <- try(griddap(info, longitude = c(lon, lon), latitude = c(lat, lat), 
-                               time = c(Sys.Date()-30, Sys.Date()), fields = field), silent = TRUE);
-              
-              if (inherits(v, "try-error") || is.character(v)) {
-                message(paste("Skipping timeseries for", csv, "- Server returned error."));
-                return(data.frame()); 
-              }
-              
-              # Proceed with original logic only if v is a valid list
-              d_now <- v$data %>% tibble::as_tibble() %>%
-                dplyr::mutate(date = lubridate::as_date(time, format = "%Y-%m-%dT00:00:00Z")) %>%
-                dplyr::select(date, field) %>% dplyr::arrange(date)
-              
+            # The "Safe-Fail" version of your function
+            patched_get_timeseries <- function(info, lon, lat, csv, field="sst") {
+              dates <- try(get_dates(info), silent=TRUE)
+              if (inherits(dates, "try-error")) dates <- c(Sys.Date()-365, Sys.Date())
+
               if (file.exists(csv)) {
                 d_prev <- readr::read_csv(csv, col_types=readr::cols())
-                d <- dplyr::bind_rows(d_prev, d_now) %>% dplyr::filter(!duplicated(date))
-              } else { d <- d_now }
+                start_date <- as.POSIXct(tail(d_prev$date, 1))
+              } else {
+                start_date <- dates[1]
+                d_prev <- data.frame()
+              }
+
+              message(paste("Fetching data for", csv, "..."))
+              v <- tryCatch({
+                rerddap::griddap(info, longitude = c(lon, lon), latitude = c(lat, lat), 
+                                 time = c(start_date, dates[2]), fields = field)
+              }, error = function(e) return(NULL))
+
+              # CHECK: Handle the atomic vector/null crash before accessing $data
+              if (is.null(v) || is.character(v) || !("data" %in% names(v))) {
+                message("Server error or timeout. Skipping fetch for this site.");
+                return(if(nrow(d_prev) > 0) d_prev else data.frame(date=as.Date(character()), field=numeric()))
+              }
+              
+              d_now <- v$data %>% tibble::as_tibble() %>%
+                dplyr::mutate(date = lubridate::as_date(time, format = "%Y-%m-%dT00:00:00Z")) %>%
+                dplyr::select(date, field)
+              
+              d <- dplyr::bind_rows(d_prev, d_now) %>% 
+                   dplyr::arrange(date) %>% 
+                   dplyr::distinct(date, .keep_all = TRUE)
               
               readr::write_csv(d, csv)
               return(d)
-            }, ns=".GlobalEnv");
+            }
+            
+            # DEEP PATCH: Force the override into the Global Environment
+            assign("get_timeseries", patched_get_timeseries, envir = .GlobalEnv);
             
             source("scripts/make_sites.R");
           ' > scripts/output_make_sites.log
@@ -104,8 +113,8 @@ jobs:
       - name: if failure
         if: failure()
         run: |
-          echo "--- LOG EXCERPT ---"
-          tail -n 60 scripts/output_make_sites.log
+          echo "--- ERROR CONTEXT ---"
+          tail -n 100 scripts/output_make_sites.log
         
       - name: commit changes
         run: |
@@ -120,13 +129,13 @@ jobs:
           git add -A
           
           if ! git diff --quiet || ! git diff --staged --quiet; then
-            git commit -m "Monthly sites update [ci skip]"
+            git commit -m "Monthly sites update (Resilient Build) [ci skip]"
             n=0
             until [ "$n" -ge 5 ]
             do
               git pull --rebase -X theirs origin master && git push origin master && break
               n=$((n+1))
-              echo "Push failed. Retrying... (Attempt $n/5)"
+              echo "Race condition detected. Retrying push... (Attempt $n/5)"
               sleep 30
             done
           else
