@@ -16,6 +16,7 @@ jobs:
       # Deactivate renv for the CI run to avoid lockfile-driven compilation failures
       RENV_CONFIG_ACTIVATED: "false"
       RENV_CONFIG_REPOS_OVERRIDE: https://packagemanager.posit.co/cran/__linux__/noble/latest
+      RENV_CONFIG_SANDBOX_ENABLED: "false"
     if: "!contains(github.event.head_commit.message, 'ci skip')"
     
     steps:
@@ -34,19 +35,27 @@ jobs:
       - name: Install System Dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y libudunits2-dev libgdal-dev libgeos-dev libproj-dev pandoc libcurl4-openssl-dev
+          sudo apt-get install -y libudunits2-dev libgdal-dev libgeos-dev libproj-dev pandoc libcurl4-openssl-dev gzip
 
       - name: Cache R Packages
-        # Updated to v4 to resolve the deprecation failure
         uses: actions/cache@v4
         with:
           path: ${{ env.R_LIBS_USER }}
-          key: ${{ runner.os }}-r-sites-${{ hashFiles('scripts/make_sites.R') }}
+          key: ${{ runner.os }}-r-sites-v1-${{ hashFiles('scripts/make_sites.R') }}
           restore-keys: |
-            ${{ runner.os }}-r-sites-
+            ${{ runner.os }}-r-sites-v1-
           
       - name: Install Librarian
         run: R -e 'install.packages("librarian")'
+
+      - name: Prepare OBIS Data
+        run: |
+          # CRITICAL: The OBIS job compresses data to bypass the 100MB limit.
+          # We decompress it here so the R scripts (expecting .csv) function correctly.
+          if [ -f data/obis/obis_data.csv.gz ]; then
+            echo "Decompressing obis_data.csv.gz for rendering..."
+            gunzip -f data/obis/obis_data.csv.gz
+          fi
           
       - name: make_sites
         # Executes the R script to generate site-specific data/pages
@@ -62,9 +71,13 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}          
           
+          # We re-compress the file before pushing to maintain the <100MB state
+          if [ -f data/obis/obis_data.csv ]; then
+            gzip -9 -f data/obis/obis_data.csv
+          fi
+
           git add -A
           
-          # Proceed only if changes exist to avoid empty commit errors
           if ! git diff --quiet || ! git diff --staged --quiet; then
             git commit -m "Monthly sites update [ci skip]"
             
@@ -75,8 +88,8 @@ jobs:
               echo "Attempting push (Attempt $((n+1))/5)..."
               git pull --rebase -X theirs origin master && git push origin master && break
               n=$((n+1))
-              echo "Push failed. Waiting 10s before next attempt..."
-              sleep 10
+              echo "Push failed. Waiting 15s before next attempt..."
+              sleep 15
             done
           else
             echo "No changes to commit."
