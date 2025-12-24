@@ -3,27 +3,30 @@ name: make_sites_monthly
 on:
   schedule:
     # Runs at 12:00 on the 7th day of every month
-    # This is timed to run 12 hours after make_obis_monthly.yml
     - cron: '0 12 7 * *'
+  push:
+    branches: [ master ]
+    paths:
+      - 'scripts/make_sites.R'
+      - 'data/obis/obis_data.csv.gz'
   workflow_dispatch:
 
 jobs:    
   build:
-    # Switched to Ubuntu for stable binary support and to bypass MASS compilation errors
     runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
-      # Deactivate renv for the CI run to avoid lockfile-driven compilation failures
       RENV_CONFIG_ACTIVATED: "false"
       RENV_CONFIG_REPOS_OVERRIDE: https://packagemanager.posit.co/cran/__linux__/noble/latest
       RENV_CONFIG_SANDBOX_ENABLED: "false"
+      # Solve SSL certificate issues for CoastWatch/ERDDAP downloads
+      R_REMOTES_NO_ERRORS_FROM_WARNINGS: "true"
     if: "!contains(github.event.head_commit.message, 'ci skip')"
     
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
-          # Fetch all history so the rebase/retry logic works correctly
           fetch-depth: 0
         
       - name: Setup R
@@ -41,25 +44,28 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ${{ env.R_LIBS_USER }}
-          key: ${{ runner.os }}-r-sites-v1-${{ hashFiles('scripts/make_sites.R') }}
+          key: ${{ runner.os }}-r-sites-v2-${{ hashFiles('scripts/make_sites.R') }}
           restore-keys: |
-            ${{ runner.os }}-r-sites-v1-
+            ${{ runner.os }}-r-sites-v2-
           
-      - name: Install Librarian
-        run: R -e 'install.packages("librarian")'
-
+      - name: Install Librarian and Clear Cache
+        run: |
+          # Force libcurl for stable ERDDAP connections
+          R -e 'options(download.file.method = "libcurl"); install.packages("librarian")'
+          # Clear rerddap cache to prevent stale data errors
+          rm -rf ~/.local/share/rerddap
+          
       - name: Prepare OBIS Data
         run: |
-          # CRITICAL: The OBIS job compresses data to bypass the 100MB limit.
-          # We decompress it here so the R scripts (expecting .csv) function correctly.
           if [ -f data/obis/obis_data.csv.gz ]; then
-            echo "Decompressing obis_data.csv.gz for rendering..."
+            echo "Decompressing obis_data.csv.gz..."
             gunzip -f data/obis/obis_data.csv.gz
           fi
           
       - name: make_sites
-        # Executes the R script to generate site-specific data/pages
-        run: Rscript scripts/make_sites.R > scripts/output_make_sites.log
+        # Wrapping in options() to ensure the R script inherits the SSL fixes
+        run: |
+          Rscript -e 'options(download.file.method = "libcurl"); source("scripts/make_sites.R")' > scripts/output_make_sites.log
         
       - name: if failure
         if: failure()
@@ -71,7 +77,6 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}          
           
-          # We re-compress the file before pushing to maintain the <100MB state
           if [ -f data/obis/obis_data.csv ]; then
             gzip -9 -f data/obis/obis_data.csv
           fi
@@ -80,16 +85,13 @@ jobs:
           
           if ! git diff --quiet || ! git diff --staged --quiet; then
             git commit -m "Monthly sites update [ci skip]"
-            
-            # Robust Retry Loop to handle concurrent pushes from other monthly tasks
             n=0
             until [ "$n" -ge 5 ]
             do
-              echo "Attempting push (Attempt $((n+1))/5)..."
               git pull --rebase -X theirs origin master && git push origin master && break
               n=$((n+1))
-              echo "Push failed. Waiting 15s before next attempt..."
-              sleep 15
+              echo "Push failed. Retrying in 20s... (Attempt $n/5)"
+              sleep 20
             done
           else
             echo "No changes to commit."
