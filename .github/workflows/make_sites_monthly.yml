@@ -8,6 +8,7 @@ on:
     branches: [ master ]
     paths:
       - 'scripts/make_sites.R'
+      - 'scripts/functions.R'
       - 'data/obis/obis_data.csv.gz'
   workflow_dispatch:
 
@@ -43,9 +44,9 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ${{ env.R_LIBS_USER }}
-          key: ${{ runner.os }}-r-sites-v4-${{ hashFiles('scripts/make_sites.R') }}
+          key: ${{ runner.os }}-r-sites-v5-${{ hashFiles('scripts/make_sites.R', 'scripts/functions.R') }}
           restore-keys: |
-            ${{ runner.os }}-r-sites-v4-
+            ${{ runner.os }}-r-sites-v5-
           
       - name: Install Librarian and Clear Cache
         run: |
@@ -61,26 +62,42 @@ jobs:
       - name: Prepare OBIS Data
         run: |
           if [ -f data/obis/obis_data.csv.gz ]; then
-            echo "Decompressing OBIS data..."
+            echo "Decompressing OBIS data for rendering..."
             gunzip -f data/obis/obis_data.csv.gz
           fi
           
       - name: make_sites
-        # We inject a wrapper around the data fetch to prevent "atomic vector" crashes
+        # We hot-patch get_timeseries in functions.R to handle atomic vector errors
         run: |
           Rscript -e '
             options(download.file.method = "libcurl", timeout = 600);
-            # Patch griddap to return an empty tibble instead of crashing if a fetch fails
-            library(rerddap);
-            base_griddap <- griddap;
-            assignInNamespace("griddap", function(...) {
-              res <- try(base_griddap(...), silent = TRUE);
-              if (inherits(res, "try-error") || is.character(res)) {
-                message("ERDDAP Fetch Failed. Returning empty data frame to prevent crash.");
-                return(list(data = data.frame(time=character(), lat=numeric(), lon=numeric(), field=numeric())));
+            source("scripts/functions.R");
+            
+            # Patch get_timeseries to handle server errors gracefully
+            base_get_timeseries <- get_timeseries;
+            assignInNamespace("get_timeseries", function(info, lon, lat, csv, field="sst") {
+              v <- try(griddap(info, longitude = c(lon, lon), latitude = c(lat, lat), 
+                               time = c(Sys.Date()-30, Sys.Date()), fields = field), silent = TRUE);
+              
+              if (inherits(v, "try-error") || is.character(v)) {
+                message(paste("Skipping timeseries for", csv, "- Server returned error."));
+                return(data.frame()); 
               }
-              res
-            }, ns="rerddap");
+              
+              # Proceed with original logic only if v is a valid list
+              d_now <- v$data %>% tibble::as_tibble() %>%
+                dplyr::mutate(date = lubridate::as_date(time, format = "%Y-%m-%dT00:00:00Z")) %>%
+                dplyr::select(date, field) %>% dplyr::arrange(date)
+              
+              if (file.exists(csv)) {
+                d_prev <- readr::read_csv(csv, col_types=readr::cols())
+                d <- dplyr::bind_rows(d_prev, d_now) %>% dplyr::filter(!duplicated(date))
+              } else { d <- d_now }
+              
+              readr::write_csv(d, csv)
+              return(d)
+            }, ns=".GlobalEnv");
+            
             source("scripts/make_sites.R");
           ' > scripts/output_make_sites.log
         
