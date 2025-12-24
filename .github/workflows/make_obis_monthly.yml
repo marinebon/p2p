@@ -20,7 +20,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
-          # Full history is required for the rebase retry logic
+          # IMPORTANT: Fetch all history (depth 0) so the rebase/retry logic works
           fetch-depth: 0
         
       - name: Setup R
@@ -30,7 +30,6 @@ jobs:
           use-public-rspm: true
 
       - name: Install System Dependencies
-        # Essential for spatial packages like sf and rmapshaper
         run: |
           sudo apt-get update
           sudo apt-get install -y libudunits2-dev libgdal-dev libgeos-dev libproj-dev pandoc libcurl4-openssl-dev gzip
@@ -47,16 +46,13 @@ jobs:
         run: R -e 'install.packages("librarian")'
           
       - name: obis_download
-        # Executes the R script to fetch and process OBIS records
         run: Rscript scripts/obis_download.R > scripts/output_make_obis.log
 
       - name: Compress Large Data
         run: |
-          # Compress the large CSV to stay under the 100MB GitHub push limit
           if [ -f data/obis/obis_data.csv ]; then
             echo "Compressing obis_data.csv..."
             gzip -9 -f data/obis/obis_data.csv
-            # Creates obis_data.csv.gz and removes the original
           fi
         
       - name: if failure
@@ -71,18 +67,19 @@ jobs:
           
           git add -A
           
-          # Proceed only if changes exist
           if ! git diff --quiet || ! git diff --staged --quiet; then
             git commit -m "Monthly OBIS data update (compressed) [ci skip]"
             
-            # Retry loop to handle concurrent pushes from other workflows
+            # Refined Retry Loop
+            # We use -X theirs to resolve conflicts by favoring the runner's new data
             n=0
             until [ "$n" -ge 5 ]
             do
-              git pull --rebase origin master && git push origin master && break
+              echo "Attempting push (Attempt $((n+1))/5)..."
+              git pull --rebase -X theirs origin master && git push origin master && break
               n=$((n+1))
-              echo "Push failed (concurrent update). Retrying in 5s... (Attempt $n/5)"
-              sleep 5
+              echo "Push failed. Waiting 10s before next attempt..."
+              sleep 10
             done
           else
             echo "No changes to commit."
