@@ -1,0 +1,122 @@
+---
+title: 'Site: `r params$site_name`'
+params:
+  site_id: usa-fkc
+  site_name: "False Klamath Cove"
+editor_options:
+  chunk_output_type: console
+---
+
+```{r setup, include=F}
+knitr::opts_chunk$set(echo = F, message = F, warning = F, python.reticulate = F)
+```
+
+```{r}
+# Load necessary libraries for data processing and visualization
+library(readr)
+library(dplyr)
+library(sf)
+library(ggplot2)
+library(glue)
+library(plotly)
+library(leaflet)
+
+# Source common functions (needed for map_obis_pts and plot_obis_hist)
+source(here::here("scripts/functions.R"))
+
+# Default params for interactive testing
+if (!exists("params")) {
+  params <- list(
+    site_name = "False Klamath Cove",
+    site_id   = "usa-fkc"
+  )
+}
+
+# Load site metadata
+site_data <- read_csv(here::here("data/sites.csv"), col_types = cols()) %>%
+  filter(id == params$site_id)
+
+# Paths to OBIS data resources (handle both compressed and uncompressed)
+obis_data_csv    <- here::here("data/obis/obis_data.csv")
+obis_data_gz     <- here::here("data/obis/obis_data.csv.gz")
+obis_sites_geo   <- here::here("data/obis/obis_sites.geojson")
+
+# Determine which OBIS data file exists and read it
+if (file.exists(obis_data_gz)) {
+  obis_path <- obis_data_gz
+} else if (file.exists(obis_data_csv)) {
+  obis_path <- obis_data_csv
+} else {
+  stop("Error: OBIS data file (csv or csv.gz) not found in data/obis/")
+}
+
+# Load OBIS data and convert to spatial object
+obis_data <- read_csv(obis_path, col_types = cols()) %>% 
+  st_as_sf(
+    coords = c("decimalLongitude", "decimalLatitude"),
+    crs = 4326,
+    remove = FALSE)
+
+# Load OBIS site geometries
+obis_sites <- read_sf(obis_sites_geo)
+obis_site  <- obis_sites %>% filter(id == params$site_id)
+
+# Spatial join: Get OBIS records that intersect with the site bounding box
+d_obis_site <- obis_data[st_intersects(obis_data, obis_site, sparse = FALSE),] %>% 
+  mutate(
+    taxa = ifelse(
+      kingdom == "Plantae", 
+      "Kingdom:\n Plantae", 
+      glue("Phylum:\n  {phylum}", .trim = FALSE))) %>% 
+  rename(year = date_year)
+```
+
+- Country: **`r str_to_upper(site_data$country)`**
+- Organization: **`r site_data$org`**
+
+# Taxonomic records in OBIS
+## Time Series
+```{r}
+if (nrow(d_obis_site) > 0) {
+  # Generate the biodiversity histogram
+  g <- d_obis_site %>% 
+    st_drop_geometry() %>% 
+    plot_obis_hist(year, taxa)
+
+  # Render as an interactive plotly object
+  plotly::ggplotly(g)
+} else {
+  cat("No taxonomic records found for this site in the OBIS dataset.")
+}
+```
+
+## Mollusca
+```{r}
+d_obis_site %>% 
+  filter(phylum == "Mollusca") %>% 
+  map_obis_pts(obis_site)
+```
+
+## Echinodermata
+```{r}
+d_obis_site %>% 
+  filter(phylum == "Echinodermata") %>% 
+  map_obis_pts(obis_site)
+```
+
+## Annelida
+```{r}
+d_obis_site %>% 
+  filter(phylum == "Annelida") %>% 
+  map_obis_pts(obis_site)
+```
+
+## Plantae
+```{r}
+d_obis_site %>% 
+  filter(kingdom == "Plantae") %>% 
+  map_obis_pts(obis_site)
+```
+
+## Data source:
+Data shown here is extracted using the [occurrence](https://www.rdocumentation.org/packages/robis/versions/1.0.1/topics/occurrence){target="_blank"} function of the [robis](https://www.rdocumentation.org/packages/robis/versions/1.0.1){target="_blank"} package within a 0.25 x 0.25 degrees box centered at monitoring sites.
