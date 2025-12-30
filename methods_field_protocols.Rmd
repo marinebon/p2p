@@ -12,6 +12,22 @@ knitr::opts_chunk$set(echo = F, message = F, warning = F)
 <br> 
 <br>
 <div style="font-size: 20pt;">
+<div style="font-size: 20pt;">
+-[Monitoring of rocky intertidal communities using photo-quadrats - ENGLISH](protocols/Protocol MBON & AMPs_V3_2025.pdf){target="_blank"}
+<br>
+<div style="text-align: center;">
+<img width="1000px" src="images/photo_quadrat_protocol.jpg"/>
+</div>
+<br>
+
+-[Monitoring of rocky intertidal communities using photo-quadrats - SPANISH](protocols/Protocolo MBON & AMPs_V2.pdf){target="_blank"}
+<br>
+<div style="text-align: center;">
+<img width="1000px" src="images/photo_quadrat_protocol2.jpg"/>
+</div>
+<br>
+<br>
+<br>
 -Training of park rangers for biodiversity monitoring in the Argentinian Patagonia during the [MBON Pole to Pole workshop in Camarones, Province of Chubut](https://eqmh.github.io/p2p-argentina-workshop/){target="_blank"}
 <div style="text-align: center;">
 ```{r, echo = F, message = F, warning = F}
@@ -24,21 +40,6 @@ shelf(vembedr)
 embed_youtube("SuhvInzXVlU", width = 910, height = 910*360/640, frameborder = 0,
   allowfullscreen = TRUE, query = NULL)
 ```
-<br> 
-<br>
-<div style="font-size: 20pt;">
--[Monitoring of rocky intertidal communities using photo-quadrats - ENGLISH](protocols/Protocol MBON & AMPs.pdf){target="_blank"}
-<br>
-<div style="text-align: center;">
-<img width="1000px" src="images/photo_quadrat_protocol.jpg"/>
-</div>
-<br>
-
--[Monitoring of rocky intertidal communities using photo-quadrats - SPANISH](protocols/Protocolo MBON & AMPs.pdf){target="_blank"}
-<br>
-<div style="text-align: center;">
-<img width="1000px" src="images/photo_quadrat_protocol2.jpg"/>
-</div>
 <br>
 <br>
 <br>
