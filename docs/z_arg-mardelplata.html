@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Site: Mar del Plata</title>
+
+<script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="site_libs/plotly-binding-4.10.4/plotly.js"></script>
+<script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet" />
+<script src="site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+<link href="site_libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="site_libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+<link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="site_libs/proj4-2.6.2/proj4.min.js"></script>
+<script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="site_libs/leaflet-binding-2.2.2/leaflet.js"></script>
+<script src="site_libs/leaflet-providers-2.0.0/leaflet-providers_2.0.0.js"></script>
+<script src="site_libs/leaflet-providers-plugin-2.2.2/leaflet-providers-plugin.js"></script>
+<link href="site_libs/leaflet-markercluster-1.0.5/MarkerCluster.css" rel="stylesheet" />
+<link href="site_libs/leaflet-markercluster-1.0.5/MarkerCluster.Default.css" rel="stylesheet" />
+<script src="site_libs/leaflet-markercluster-1.0.5/leaflet.markercluster.js"></script>
+<script src="site_libs/leaflet-markercluster-1.0.5/leaflet.markercluster.freezable.js"></script>
+<script src="site_libs/leaflet-markercluster-1.0.5/leaflet.markercluster.layersupport.js"></script>
+<link href="site_libs/ionicons-2.0.1/css/ionicons.min.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">MBON Pole to Pole Americas</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+<li>
+  <a href="members.html">
+    <span class="ion ion-person-stalker"></span>
+     
+    Members
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <span class="ion ion-stats-bars"></span>
+     
+    Data
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="data_rocky_shore.html">Rocky Shore</a>
+    </li>
+    <li>
+      <a href="data_sandy_beach.html">Sandy Beach</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="events.html">
+    <span class="ion ion-calendar"></span>
+     
+    Events
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <span class="ion ion-clipboard"></span>
+     
+    Methods
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="methods_field_protocols.html">Field Protocols</a>
+    </li>
+    <li>
+      <a href="methods_data_science.html">Data Science</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="contact.html">
+    <span class="ion ion-email"></span>
+     
+    Join us!
+  </a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Site: Mar del Plata</h1>
+
+</div>
+
+
+<ul>
+<li>Country: <strong>ARG</strong></li>
+<li>Organization: <strong><a
+href="https://www.larbim.com.ar/">IBIOMAR/CONICET</a></strong></li>
+</ul>
+<div id="taxonomic-records-in-obis" class="section level1">
+<h1>Taxonomic records in OBIS</h1>
+<div id="time-series" class="section level2">
+<h2>Time Series</h2>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-2cb7c40907082a857ac7" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-2cb7c40907082a857ac7">{"x":{"data":[{"orientation":"v","width":[3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3],"base":[1,0,0,2,0,0,0,2,4,0,1,1,0,0,3,6,2,10,7,5,1,1,0,1,0,0,1,7,4,1,179,177],"x":[1917,1920,1923,1926,1929,1932,1935,1938,1941,1944,1947,1950,1953,1956,1959,1962,1965,1968,1971,1974,1977,1980,1983,1986,1989,1992,1995,1998,2001,2004,2007,2010],"y":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,96,217],"text":["count:   0<br />year: 1917<br />taxa: Kingdom:<br /> Plantae","count:   0<br />year: 1920<br />taxa: Kingdom:<br /> Plantae","count:   0<br />year: 1923<br />taxa: Kingdom:<br /> Plantae","count:   0<br />year: 1926<br />taxa: Kingdom:<br /> Plantae","count:   0<br />year: 1929<br />taxa: Kingdom:<br /> Plantae","count:   0<br />year: 1932<br />taxa: Kingdom:<br /> Plantae","count:   0<br />year: 1935<br />taxa: Kingdom:<br /> Plantae","count:   0<br />year: 1938<br />taxa: Kingdom:<br /> Plantae","count:   0<br />year: 1941<br />taxa: Kingdom:<br /> Plantae","count:   0<br />year: 1944<br />taxa: Kingdom:<br /> Plantae","count:   0<br />year: 1947<br />taxa: Kingdom:<br /> Plantae","count:   0<br />year: 1950<br />taxa: Kingdom:<br /> Plantae","count:   0<br />year: 1953<br />taxa: Kingdom:<br /> Plantae","count:   0<br />year: 1956<br />taxa: Kingdom:<br /> Plantae","count:   0<br />year: 1959<br />taxa: Kingdom:<br /> Plantae","count:   0<br />year: 1962<br />taxa: Kingdom:<br /> Plantae","count:   0<br />year: 1965<br />taxa: Kingdom:<br /> Plantae","count:   0<br />year: 1968<br />taxa: Kingdom:<br /> Plantae","count:   0<br />year: 1971<br />taxa: Kingdom:<br /> Plantae","count:   0<br />year: 1974<br />taxa: Kingdom:<br /> Plantae","count:   0<br />year: 1977<br />taxa: Kingdom:<br /> Plantae","count:   0<br />year: 1980<br />taxa: Kingdom:<br /> Plantae","count:   0<br />year: 1983<br />taxa: Kingdom:<br /> Plantae","count:   0<br />year: 1986<br />taxa: Kingdom:<br /> Plantae","count:   0<br />year: 1989<br />taxa: Kingdom:<br /> Plantae","count:   0<br />year: 1992<br />taxa: Kingdom:<br /> Plantae","count:   0<br />year: 1995<br />taxa: Kingdom:<br /> Plantae","count:   0<br />year: 1998<br />taxa: Kingdom:<br /> Plantae","count:   0<br />year: 2001<br />taxa: Kingdom:<br /> Plantae","count:   0<br />year: 2004<br />taxa: Kingdom:<br /> Plantae","count:  96<br />year: 2007<br />taxa: Kingdom:<br /> Plantae","count: 217<br />year: 2010<br />taxa: Kingdom:<br /> Plantae"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(215,25,28,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Kingdom:<br /> Plantae","legendgroup":"Kingdom:<br /> Plantae","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3],"base":[1,0,0,2,0,0,0,2,4,0,1,1,0,0,3,5,2,10,6,4,1,1,0,1,0,0,1,2,4,1,114,142],"x":[1917,1920,1923,1926,1929,1932,1935,1938,1941,1944,1947,1950,1953,1956,1959,1962,1965,1968,1971,1974,1977,1980,1983,1986,1989,1992,1995,1998,2001,2004,2007,2010],"y":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1,0,0,0,0,0,0,0,5,0,0,65,35],"text":["count:   0<br />year: 1917<br />taxa: Phylum:<br />  Annelida","count:   0<br />year: 1920<br />taxa: Phylum:<br />  Annelida","count:   0<br />year: 1923<br />taxa: Phylum:<br />  Annelida","count:   0<br />year: 1926<br />taxa: Phylum:<br />  Annelida","count:   0<br />year: 1929<br />taxa: Phylum:<br />  Annelida","count:   0<br />year: 1932<br />taxa: Phylum:<br />  Annelida","count:   0<br />year: 1935<br />taxa: Phylum:<br />  Annelida","count:   0<br />year: 1938<br />taxa: Phylum:<br />  Annelida","count:   0<br />year: 1941<br />taxa: Phylum:<br />  Annelida","count:   0<br />year: 1944<br />taxa: Phylum:<br />  Annelida","count:   0<br />year: 1947<br />taxa: Phylum:<br />  Annelida","count:   0<br />year: 1950<br />taxa: Phylum:<br />  Annelida","count:   0<br />year: 1953<br />taxa: Phylum:<br />  Annelida","count:   0<br />year: 1956<br />taxa: Phylum:<br />  Annelida","count:   0<br />year: 1959<br />taxa: Phylum:<br />  Annelida","count:   1<br />year: 1962<br />taxa: Phylum:<br />  Annelida","count:   0<br />year: 1965<br />taxa: Phylum:<br />  Annelida","count:   0<br />year: 1968<br />taxa: Phylum:<br />  Annelida","count:   1<br />year: 1971<br />taxa: Phylum:<br />  Annelida","count:   1<br />year: 1974<br />taxa: Phylum:<br />  Annelida","count:   0<br />year: 1977<br />taxa: Phylum:<br />  Annelida","count:   0<br />year: 1980<br />taxa: Phylum:<br />  Annelida","count:   0<br />year: 1983<br />taxa: Phylum:<br />  Annelida","count:   0<br />year: 1986<br />taxa: Phylum:<br />  Annelida","count:   0<br />year: 1989<br />taxa: Phylum:<br />  Annelida","count:   0<br />year: 1992<br />taxa: Phylum:<br />  Annelida","count:   0<br />year: 1995<br />taxa: Phylum:<br />  Annelida","count:   5<br />year: 1998<br />taxa: Phylum:<br />  Annelida","count:   0<br />year: 2001<br />taxa: Phylum:<br />  Annelida","count:   0<br />year: 2004<br />taxa: Phylum:<br />  Annelida","count:  65<br />year: 2007<br />taxa: Phylum:<br />  Annelida","count:  35<br />year: 2010<br />taxa: Phylum:<br />  Annelida"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(253,174,97,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Phylum:<br />  Annelida","legendgroup":"Phylum:<br />  Annelida","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3],"base":[1,0,0,0,0,0,0,2,3,0,1,1,0,0,3,4,1,10,6,4,1,1,0,1,0,0,1,2,4,1,113,142],"x":[1917,1920,1923,1926,1929,1932,1935,1938,1941,1944,1947,1950,1953,1956,1959,1962,1965,1968,1971,1974,1977,1980,1983,1986,1989,1992,1995,1998,2001,2004,2007,2010],"y":[0,0,0,2,0,0,0,0,1,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0],"text":["count:   0<br />year: 1917<br />taxa: Phylum:<br />  Echinodermata","count:   0<br />year: 1920<br />taxa: Phylum:<br />  Echinodermata","count:   0<br />year: 1923<br />taxa: Phylum:<br />  Echinodermata","count:   2<br />year: 1926<br />taxa: Phylum:<br />  Echinodermata","count:   0<br />year: 1929<br />taxa: Phylum:<br />  Echinodermata","count:   0<br />year: 1932<br />taxa: Phylum:<br />  Echinodermata","count:   0<br />year: 1935<br />taxa: Phylum:<br />  Echinodermata","count:   0<br />year: 1938<br />taxa: Phylum:<br />  Echinodermata","count:   1<br />year: 1941<br />taxa: Phylum:<br />  Echinodermata","count:   0<br />year: 1944<br />taxa: Phylum:<br />  Echinodermata","count:   0<br />year: 1947<br />taxa: Phylum:<br />  Echinodermata","count:   0<br />year: 1950<br />taxa: Phylum:<br />  Echinodermata","count:   0<br />year: 1953<br />taxa: Phylum:<br />  Echinodermata","count:   0<br />year: 1956<br />taxa: Phylum:<br />  Echinodermata","count:   0<br />year: 1959<br />taxa: Phylum:<br />  Echinodermata","count:   1<br />year: 1962<br />taxa: Phylum:<br />  Echinodermata","count:   1<br />year: 1965<br />taxa: Phylum:<br />  Echinodermata","count:   0<br />year: 1968<br />taxa: Phylum:<br />  Echinodermata","count:   0<br />year: 1971<br />taxa: Phylum:<br />  Echinodermata","count:   0<br />year: 1974<br />taxa: Phylum:<br />  Echinodermata","count:   0<br />year: 1977<br />taxa: Phylum:<br />  Echinodermata","count:   0<br />year: 1980<br />taxa: Phylum:<br />  Echinodermata","count:   0<br />year: 1983<br />taxa: Phylum:<br />  Echinodermata","count:   0<br />year: 1986<br />taxa: Phylum:<br />  Echinodermata","count:   0<br />year: 1989<br />taxa: Phylum:<br />  Echinodermata","count:   0<br />year: 1992<br />taxa: Phylum:<br />  Echinodermata","count:   0<br />year: 1995<br />taxa: Phylum:<br />  Echinodermata","count:   0<br />year: 1998<br />taxa: Phylum:<br />  Echinodermata","count:   0<br />year: 2001<br />taxa: Phylum:<br />  Echinodermata","count:   0<br />year: 2004<br />taxa: Phylum:<br />  Echinodermata","count:   1<br />year: 2007<br />taxa: Phylum:<br />  Echinodermata","count:   0<br />year: 2010<br />taxa: Phylum:<br />  Echinodermata"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(171,221,164,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Phylum:<br />  Echinodermata","legendgroup":"Phylum:<br />  Echinodermata","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3],"base":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"x":[1917,1920,1923,1926,1929,1932,1935,1938,1941,1944,1947,1950,1953,1956,1959,1962,1965,1968,1971,1974,1977,1980,1983,1986,1989,1992,1995,1998,2001,2004,2007,2010],"y":[1,0,0,0,0,0,0,2,3,0,1,1,0,0,3,4,1,10,6,4,1,1,0,1,0,0,1,2,4,1,113,142],"text":["count:   1<br />year: 1917<br />taxa: Phylum:<br />  Mollusca","count:   0<br />year: 1920<br />taxa: Phylum:<br />  Mollusca","count:   0<br />year: 1923<br />taxa: Phylum:<br />  Mollusca","count:   0<br />year: 1926<br />taxa: Phylum:<br />  Mollusca","count:   0<br />year: 1929<br />taxa: Phylum:<br />  Mollusca","count:   0<br />year: 1932<br />taxa: Phylum:<br />  Mollusca","count:   0<br />year: 1935<br />taxa: Phylum:<br />  Mollusca","count:   2<br />year: 1938<br />taxa: Phylum:<br />  Mollusca","count:   3<br />year: 1941<br />taxa: Phylum:<br />  Mollusca","count:   0<br />year: 1944<br />taxa: Phylum:<br />  Mollusca","count:   1<br />year: 1947<br />taxa: Phylum:<br />  Mollusca","count:   1<br />year: 1950<br />taxa: Phylum:<br />  Mollusca","count:   0<br />year: 1953<br />taxa: Phylum:<br />  Mollusca","count:   0<br />year: 1956<br />taxa: Phylum:<br />  Mollusca","count:   3<br />year: 1959<br />taxa: Phylum:<br />  Mollusca","count:   4<br />year: 1962<br />taxa: Phylum:<br />  Mollusca","count:   1<br />year: 1965<br />taxa: Phylum:<br />  Mollusca","count:  10<br />year: 1968<br />taxa: Phylum:<br />  Mollusca","count:   6<br />year: 1971<br />taxa: Phylum:<br />  Mollusca","count:   4<br />year: 1974<br />taxa: Phylum:<br />  Mollusca","count:   1<br />year: 1977<br />taxa: Phylum:<br />  Mollusca","count:   1<br />year: 1980<br />taxa: Phylum:<br />  Mollusca","count:   0<br />year: 1983<br />taxa: Phylum:<br />  Mollusca","count:   1<br />year: 1986<br />taxa: Phylum:<br />  Mollusca","count:   0<br />year: 1989<br />taxa: Phylum:<br />  Mollusca","count:   0<br />year: 1992<br />taxa: Phylum:<br />  Mollusca","count:   1<br />year: 1995<br />taxa: Phylum:<br />  Mollusca","count:   2<br />year: 1998<br />taxa: Phylum:<br />  Mollusca","count:   4<br />year: 2001<br />taxa: Phylum:<br />  Mollusca","count:   1<br />year: 2004<br />taxa: Phylum:<br />  Mollusca","count: 113<br />year: 2007<br />taxa: Phylum:<br />  Mollusca","count: 142<br />year: 2010<br />taxa: Phylum:<br />  Mollusca"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(43,131,186,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Phylum:<br />  Mollusca","legendgroup":"Phylum:<br />  Mollusca","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":26.228310502283108,"r":7.3059360730593621,"b":51.075134910751345,"l":57.451224574512253},"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[1910.7,2016.3],"tickmode":"array","ticktext":["1920","1940","1960","1980","2000"],"tickvals":[1920,1940,1960,1980,2000],"categoryorder":"array","categoryarray":["1920","1940","1960","1980","2000"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":18.596928185969279},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"<b> year <\/b>","font":{"color":"rgba(0,0,0,1)","family":"","size":18.596928185969279}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-19.700000000000003,413.69999999999999],"tickmode":"array","ticktext":["0","100","200","300","400"],"tickvals":[0,100,200,300,400],"categoryorder":"array","categoryarray":["0","100","200","300","400"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":18.596928185969286},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"<b> count <\/b>","font":{"color":"rgba(0,0,0,1)","family":"","size":18.596928185969279}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.68949771689498},"title":{"text":"taxa","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"a8871c790632":{"x":{},"fill":{},"type":"bar"}},"cur_data":"a8871c790632","visdat":{"a8871c790632":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="mollusca" class="section level2">
+<h2>Mollusca</h2>
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-1b458f0baa9ea7123e76" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-1b458f0baa9ea7123e76">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["Esri.WorldImagery",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addPolygons","args":[[[[{"lng":[-58.782,-58.782,-56.782,-56.782,-58.782],"lat":[-39.18,-37.18,-37.18,-39.18,-39.18]}]]],null,null,{"interactive":true,"className":"","stroke":true,"color":"blue","weight":5,"opacity":0.5,"fill":true,"fillColor":"blue","fillOpacity":0.2,"smoothFactor":1,"noClip":false},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addCircleMarkers","args":[[-38.021305,-37.994703,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.0213,-38.021305,-38.021305,-38.0213,-38.021305,-38.02466,-38.0213,-38.016998291,-38.021305,-38.0213,-38.021305,-38.044149,-38.021305,-38.0213,-38.021305,-38,-38.000384,-38.021305,-38.021305,-38.021305,-38.02466,-38.021305,-37.994703,-38.021305,-38.021305,-38.02466,-38.021305,-38.052801,-38.016998291,-38.0213,-38.021305,-38.021305,-38.021305,-38.02466,-38.02466,-38.000384,-38.021305,-38.021305,-38.01801,-38.02466,-38.021305,-38.03,-38.021305,-38.0213,-38.021305,-38.02466,-38.016998291,-38.03,-38.0213,-38.02466,-38,-38.021305,-38.021305,-38.08,-38.021305,-38,-38.021305,-38.02466,-38.03,-38.021305,-38.021305,-38.021305,-38.0213,-38.021305,-38.0213,-38,-38.021305,-38.02466,-38.021305,-38.021305,-38.0213,-38.02466,-38.021305,-38.021305,-38.021305,-38.021305,-38.02466,-38.0213,-38.021305,-38,-38,-38.016998291,-38.02466,-38.021305,-38.021305,-38.021305,-38.18,-38,-38.021305,-38.021305,-38.0213,-38.021305,-38.021305,-38.0213,-38.0213,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.0213,-38.021305,-38.0213,-38.021305,-38.021305,-38.021305,-38.021305,-38.02466,-38,-38.021305,-38.021305,-38.0213,-38.021305,-38,-38.021305,-37.994703,-38.021305,-38,-38.021305,-38.021305,-38,-38.021305,-38.021305,-38.013099,-38,-38.021305,-38.021305,-38.02466,-38.0213,-38.02466,-38.021305,-38.021305,-38.02466,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.0213,-38,-38.021305,-37.994703,-38.0213,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38,-38.18,-38.021305,-38.021305,-38,-38.021305,-38.02466,-38.021305,-38.021305,-38.021305,-38.021305,-37.875369,-38.021305,-38,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.0213,-38.021305,-38.021305,-38.0213,-38,-38.021305,-38.021305,-38.02466,-38.021305,-38.021305,-38.021305,-38.03,-38.021305,-38.0213,-38.021305,-38.021305,-38,-38.0213,-38.0213,-38.021305,-38.021305,-38,-38.02466,-38.021305,-38.021305,-38,-38.0213,-38.021305,-38.021305,-38.021305,-38.02466,-38.02466,-38.17,-38.021305,-38.0213,-38.02466,-38,-38.021305,-38,-38.021305,-38.0213,-38.021305,-38,-38.021305,-38.021305,-38.021305,-38.021305,-38.0213,-38.021305,-38,-38.02466,-38.021305,-38.021305,-38.021305,-38.021305,-38.0213,-38.021305,-38.03,-38.021305,-38.021305,-38.0213,-38.0213,-38.021305,-38.02466,-38.0213,-38.02466,-38.18,-38.021305,-38.0213,-38,-38.0213,-38.021305,-38.021305,-38,-38.021305,-38.021305,-38.021305,-38.021305,-38.0213,-38.021305,-38.02466,-38.021305,-38,-38.016148,-38.021305,-38.021305,-38.02466,-38.021305,-38.021305,-38.021305,-38.02466,-38,-38.021305,-38.021305,-38.021305,-38.021305,-38,-38,-38.021305,-38.000384,-38.021305,-38,-38.021305,-38,-38.021305,-38.021305,-38.013099,-38.021305,-38,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.02466,-38.021305,-38.02466,-38.021305,-38.021305,-38.0213,-38.02466,-38.021305,-38.021305,-38.02466,-38.021305,-38.021305,-38,-38.021305,-38.021305,-38.02466,-38,-38,-38.021305,-38.03,-38.021305,-38,-38.016998291,-38.021305,-38.5695,-38.009998,-37.67,-38.009998,-38.360001,-38.57,-37.25,-38.57,-39,-38.57,-38.360001,-38.6481,-38.009998,-38.009998,-38.5,-38.009998,-38,-38.360001,-39.1669998169,-38.009998,-38.52,-38.57,-38.009998,-38.5499992371,-38.1833333333,-38.009998,-38.52,-38.009998,-38.1156,-37.25,-38.009998,-38.360001,-38.009998,-38.57,-38.57,-38.57,-38.6944444,-38.360001,-38.01801,-38.009998,-38.009998,-38.57,-39.1667,-38.268756,-38.5833,-38.009998,-38.57,-38.009998,-38.57,-37.75,-38.705002,-38.1156,-38.55,-38.360001,-38.52,-38.009998,-37.439999],[-57.527444,-57.512907,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.5274,-57.527444,-57.527444,-57.5274,-57.527444,-57.52817,-57.5274,-57.5830001831,-57.527444,-57.5274,-57.527444,-57.53814,-57.527444,-57.5274,-57.527444,-57.53,-57.53797,-57.527444,-57.527444,-57.527444,-57.52817,-57.527444,-57.512907,-57.527444,-57.527444,-57.52817,-57.527444,-57.430336,-57.5830001831,-57.5274,-57.527444,-57.527444,-57.527444,-57.52817,-57.52817,-57.53797,-57.527444,-57.527444,-57.47455,-57.52817,-57.527444,-57.72,-57.527444,-57.5274,-57.527444,-57.52817,-57.5830001831,-57.72,-57.5274,-57.52817,-57.53,-57.527444,-57.527444,-57.53,-57.527444,-57.55,-57.527444,-57.52817,-57.72,-57.527444,-57.527444,-57.527444,-57.5274,-57.527444,-57.5274,-57.5499992371,-57.527444,-57.52817,-57.527444,-57.527444,-57.5274,-57.52817,-57.527444,-57.527444,-57.527444,-57.527444,-57.52817,-57.5274,-57.527444,-57.55,-57.55,-57.5830001831,-57.52817,-57.527444,-57.527444,-57.527444,-57.450001,-57.5,-57.527444,-57.527444,-57.5274,-57.527444,-57.527444,-57.5274,-57.5274,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.5274,-57.527444,-57.5274,-57.527444,-57.527444,-57.527444,-57.527444,-57.52817,-57.55,-57.527444,-57.527444,-57.5274,-57.527444,-57.5499992371,-57.527444,-57.512907,-57.527444,-57.5499992371,-57.527444,-57.527444,-57.55,-57.527444,-57.527444,-57.463469,-57.55,-57.527444,-57.527444,-57.52817,-57.5274,-57.52817,-57.527444,-57.527444,-57.52817,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.5274,-57.53,-57.527444,-57.512907,-57.5274,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.55,-57.450001,-57.527444,-57.527444,-57.55,-57.527444,-57.52817,-57.527444,-57.527444,-57.527444,-57.527444,-57.512645,-57.527444,-57.6667,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.5274,-57.527444,-57.527444,-57.5274,-57.55,-57.527444,-57.527444,-57.52817,-57.527444,-57.527444,-57.527444,-57.72,-57.527444,-57.5274,-57.527444,-57.527444,-57.55,-57.5274,-57.5274,-57.527444,-57.527444,-57.55,-57.52817,-57.527444,-57.527444,-57.55,-57.5274,-57.527444,-57.527444,-57.527444,-57.52817,-57.52817,-57.67,-57.527444,-57.5274,-57.52817,-57.53,-57.527444,-57.55,-57.527444,-57.5274,-57.527444,-57.55,-57.527444,-57.527444,-57.527444,-57.527444,-57.5274,-57.527444,-57.55,-57.52817,-57.527444,-57.527444,-57.527444,-57.527444,-57.5274,-57.527444,-57.72,-57.527444,-57.527444,-57.5274,-57.5274,-57.527444,-57.52817,-57.5274,-57.52817,-57.450001,-57.527444,-57.5274,-57.55,-57.5274,-57.527444,-57.527444,-57.55,-57.527444,-57.527444,-57.527444,-57.527444,-57.5274,-57.527444,-57.52817,-57.527444,-57.55,-57.596092,-57.527444,-57.527444,-57.52817,-57.527444,-57.527444,-57.527444,-57.52817,-57.55,-57.527444,-57.527444,-57.527444,-57.527444,-57.5499992371,-57.55,-57.527444,-57.53797,-57.527444,-57.55,-57.527444,-57.55,-57.527444,-57.527444,-57.463469,-57.527444,-57.55,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.52817,-57.527444,-57.52817,-57.527444,-57.527444,-57.5274,-57.52817,-57.527444,-57.527444,-57.52817,-57.527444,-57.527444,-57.55,-57.527444,-57.527444,-57.52817,-57.55,-57.5499992371,-57.527444,-57.72,-57.527444,-57.55,-57.5830001831,-57.527444,-58.6514,-57.080002,-57.08,-57.080002,-58.400002,-58.7,-58.419998,-58.7,-58,-58.7,-58.400002,-58.6837,-57.080002,-57.080002,-58.5,-57.080002,-57,-58.400002,-56.783000946,-57.080002,-58.77,-58.7,-57.080002,-58.75,-57.1833333333,-57.080002,-58.77,-57.080002,-57.0776,-58.775002,-57.080002,-58.400002,-57.080002,-58.7,-58.7,-58.7,-57.68333333,-58.400002,-57.47455,-57.080002,-57.080002,-58.7,-56.7833,-57.836692,-58.7,-57.080002,-58.7,-57.080002,-58.7,-58.775002,-58.220001,-57.0776,-58.75,-58.400002,-58.77,-57.080002,-57.200001],7,null,null,{"interactive":true,"className":"","stroke":false,"color":"yellow","weight":5,"opacity":0.5,"fill":true,"fillColor":"yellow","fillOpacity":0.7},{"showCoverageOnHover":true,"zoomToBoundsOnClick":true,"spiderfyOnMaxZoom":true,"removeOutsideVisibleBounds":true,"spiderLegPolylineOptions":{"weight":1.5,"color":"#222","opacity":0.5},"freezeAtZoom":false},null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-39.18,-37.18],"lng":[-58.782,-56.782]}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="echinodermata" class="section level2">
+<h2>Echinodermata</h2>
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-5021b912a390646a341e" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-5021b912a390646a341e">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["Esri.WorldImagery",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addPolygons","args":[[[[{"lng":[-58.782,-58.782,-56.782,-56.782,-58.782],"lat":[-39.18,-37.18,-37.18,-39.18,-39.18]}]]],null,null,{"interactive":true,"className":"","stroke":true,"color":"blue","weight":5,"opacity":0.5,"fill":true,"fillColor":"blue","fillOpacity":0.2,"smoothFactor":1,"noClip":false},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addCircleMarkers","args":[[-38.028,-38.028,-38.028,-38.028,-38.028,-38.17,-37.9972,-38.01667,-38.028,-38.17,-38.028,-38.028,-38.028,-38.12,-38.028,-38,-38.021305,-38.12,-38.13333333,-38.59,-39,-38.009998,-38.583,-37.63333333,-38.13333333,-39,-37.5,-39.02,-37.3,-38.68,-39,-38.587,-39,-38.833,-38.68,-38.601,-38.18333333,-38.918,-38.06666667,-39,-38.929,-38.55,-39.03,-39,-37.5,-39,-39,-37.3,-38.583,-38.133,-37.96666667,-38.95,-37.583,-39,-38.18333333,-39,-37.91666667,-38.7,-38.317,-38.929,-38.833,-38.317,-37.91666667,-38.95,-38.7,-39,-38.7,-38.13333333,-38.59,-39,-38.06666667,-38.918,-37.33333333,-39,-37.33333333,-38.133,-37.96666667,-39,-38.68,-39,-37.583,-38.7,-38.53333333,-38.68,-38.13333333,-39.02],[-57.461,-57.461,-57.461,-57.461,-57.461,-57.42,-57.5766,-57.416672,-57.461,-57.42,-57.461,-57.461,-57.461,-57.57,-57.461,-57.492,-57.527444,-57.57,-56.96666667,-58.68,-57.5,-57.080002,-57.15,-56.9,-56.96666667,-57.16666667,-57,-58.75,-56.817,-58.66,-57.16666667,-58.66,-57.5,-58.25,-58.66,-58.741,-56.96666667,-58.701,-57.2,-57.16666667,-58.714,-58.75,-57.03,-57.16666667,-57,-57.16666667,-57.16666667,-56.817,-57.15,-56.967,-57.15,-58.383,-57.1,-57.55,-56.96666667,-57,-56.78333333,-57.36666667,-57.05,-58.714,-58.25,-57.05,-56.78333333,-58.383,-57.367,-57,-57.36666667,-56.96666667,-58.68,-57.166668,-57.2,-58.701,-56.83333333,-57.1669998169,-56.83333333,-56.967,-57.15,-57.55,-58.66,-57.17,-57.1,-57.367,-58.66666667,-58.66,-56.96666667,-58.75],7,null,null,{"interactive":true,"className":"","stroke":false,"color":"yellow","weight":5,"opacity":0.5,"fill":true,"fillColor":"yellow","fillOpacity":0.7},{"showCoverageOnHover":true,"zoomToBoundsOnClick":true,"spiderfyOnMaxZoom":true,"removeOutsideVisibleBounds":true,"spiderLegPolylineOptions":{"weight":1.5,"color":"#222","opacity":0.5},"freezeAtZoom":false},null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-39.18,-37.18],"lng":[-58.782,-56.782]}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="annelida" class="section level2">
+<h2>Annelida</h2>
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-9aba42478ff23c36894c" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-9aba42478ff23c36894c">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["Esri.WorldImagery",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addPolygons","args":[[[[{"lng":[-58.782,-58.782,-56.782,-56.782,-58.782],"lat":[-39.18,-37.18,-37.18,-39.18,-39.18]}]]],null,null,{"interactive":true,"className":"","stroke":true,"color":"blue","weight":5,"opacity":0.5,"fill":true,"fillColor":"blue","fillOpacity":0.2,"smoothFactor":1,"noClip":false},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addCircleMarkers","args":[[-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.08833,-38.021305,-38.021305,-37.9599990845,-37.8474998474,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-37.9249992371,-38.021305,-38.021305,-38,-38.021305,-38.021305,-38.021305,-38,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.0583305359,-37.9433288574,-37.9500007629,-37.8474998474,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.016998291,-38.021305,-37.941166666667,-38.021305,-38.0207,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38,-38.021305,-38.021305,-38,-37.941166666667,-38.08833,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-37.9433288574,-38.021305,-38.021305,-37.9169998169,-38.021305,-38,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38,-38.16999,-38.021305,-38.021305,-38.021305,-38.021305,-38.016998291,-38.021305,-38.0017,-38.021305,-38.021305,-38.021305,-38.021305,-38,-38.021305,-38.021305,-38,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.009998,-37.439999,-37.439999,-37.439999,-37.439999,-37.8417,-37.439999,-37.439999],[-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.366,-57.527444,-57.527444,-57.4683303833,-57.5041694641,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.5272216797,-57.527444,-57.527444,-57.5,-57.527444,-57.527444,-57.527444,-57.4583282471,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.5149993896,-57.4683303833,-57.466999054,-57.5041694641,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.4449996948,-57.527444,-57.4875,-57.527444,-57.5262,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.5,-57.527444,-57.527444,-57.5,-57.4875,-57.36667,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.4683303833,-57.527444,-57.527444,-57.3330001831,-57.527444,-57.5,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.5,-57.57832,-57.527444,-57.527444,-57.527444,-57.527444,-57.4449996948,-57.527444,-57.534,-57.527444,-57.527444,-57.527444,-57.527444,-57.5,-57.527444,-57.527444,-57.55,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.080002,-57.200001,-57.200001,-57.200001,-57.200001,-57.1994,-57.200001,-57.200001],7,null,null,{"interactive":true,"className":"","stroke":false,"color":"yellow","weight":5,"opacity":0.5,"fill":true,"fillColor":"yellow","fillOpacity":0.7},{"showCoverageOnHover":true,"zoomToBoundsOnClick":true,"spiderfyOnMaxZoom":true,"removeOutsideVisibleBounds":true,"spiderLegPolylineOptions":{"weight":1.5,"color":"#222","opacity":0.5},"freezeAtZoom":false},null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-39.18,-37.18],"lng":[-58.782,-56.782]}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="plantae" class="section level2">
+<h2>Plantae</h2>
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-c151668469b03d467d09" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-c151668469b03d467d09">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["Esri.WorldImagery",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addPolygons","args":[[[[{"lng":[-58.782,-58.782,-56.782,-56.782,-58.782],"lat":[-39.18,-37.18,-37.18,-39.18,-39.18]}]]],null,null,{"interactive":true,"className":"","stroke":true,"color":"blue","weight":5,"opacity":0.5,"fill":true,"fillColor":"blue","fillOpacity":0.2,"smoothFactor":1,"noClip":false},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addCircleMarkers","args":[[-38.021305,-38.0213,-38.021305,-38.021305,-38.021305,-38.021305,-38.0213,-38.021305,-38.02466,-38.021305,-38.0213,-38.021305,-38.021305,-38.021305,-38.021305,-38.02466,-38.021305,-38.021305,-38.0213,-38.021305,-38.021305,-38.02466,-38.02466,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.02466,-38.021305,-38.02466,-38.021305,-38.021305,-38.02466,-38.021305,-38.02466,-38.021305,-38.02466,-38.021305,-38.021305,-38.0213,-38.02466,-38.021305,-38.021305,-38.021305,-38.02466,-38.021305,-38.0213,-38.02466,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.02466,-38.021305,-38.021305,-38.021305,-38.0213,-38.021305,-38.02466,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.0213,-38.021305,-38.021305,-38.02466,-38.0213,-38.021305,-38.0213,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.02466,-38.021305,-38.021305,-38.021305,-38.021305,-38.0213,-38.02466,-38.021305,-38.021305,-38.021305,-38.02466,-38.0213,-38.021305,-38.021305,-38.021305,-38.0213,-38.021305,-38.021305,-38.0213,-38.021305,-38.02466,-38.0213,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.02466,-38.021305,-38.02466,-38.021305,-38.021305,-38.021305,-38.021305,-38.0213,-38.021305,-38.021305,-38.02466,-38.02466,-38.02466,-38.021305,-38.02466,-38.02466,-38.0213,-38.021305,-38.021305,-38.02466,-38.021305,-38.021305,-38.021305,-38.02466,-38.021305,-38.02466,-38.021305,-38.021305,-38.021305,-38.021305,-38.0213,-38.02466,-38.02466,-38.021305,-38.021305,-38.021305,-38.0213,-38.0213,-38.021305,-38.021305,-38.02466,-38.0213,-38.0213,-38.0213,-38.0213,-38.0213,-38.02466,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.0213,-38.0213,-38.021305,-38.021305,-38.02466,-38.02466,-38.02466,-38.021305,-38.0213,-38.021305,-38.0213,-38.02466,-38.0213,-38.02466,-38.02466,-38.021305,-38.021305,-38.0213,-38.021305,-38.02466,-38.02466,-38.0213,-38.021305,-38.0213,-38.0213,-38.021305,-38.021305,-38.021305,-38.02466,-38.021305,-38.0213,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.02466,-38.02466,-38.021305,-38.02466,-38.021305,-38.021305,-38.0213,-38.021305,-38.021305,-38.0213,-38.0213,-38.021305,-38.02466,-38.021305,-38.021305,-38.021305,-38.02466,-38.021305,-38.02466,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.0213,-38.021305,-38.021305,-38.021305,-38.0213,-38.0213,-38.02466,-38.021305,-38.021305,-38.021305,-38.021305,-38.0213,-38.02466,-38.0213,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.02466,-38.0213,-38.021305,-38.02466,-38.0213,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.0213,-38.02466,-38.021305,-38.021305,-38.0213,-38.021305,-38.0213,-38.02466,-38.021305,-38.021305,-38.0213,-38.0213,-38.02466,-38.02466,-38.021305,-38.021305,-38.02466,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.021305,-38.02466,-38.0213,-38.021305,-38.0213,-38.0213,-38.021305,-38.021305,-38.021305,-38.02466,-38.021305,-38.021305,-38.021305,-38.0213,-38.0213,-38.021305,-38.021305,-38.021305,-38.021305,-38.200001,-38,-38.200001,-38.200001,-38,-38.200001,-38.200001],[-57.527444,-57.5274,-57.527444,-57.527444,-57.527444,-57.527444,-57.5274,-57.527444,-57.52817,-57.527444,-57.5274,-57.527444,-57.527444,-57.527444,-57.527444,-57.52817,-57.527444,-57.527444,-57.5274,-57.527444,-57.527444,-57.52817,-57.52817,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.52817,-57.527444,-57.52817,-57.527444,-57.527444,-57.52817,-57.527444,-57.52817,-57.527444,-57.52817,-57.527444,-57.527444,-57.5274,-57.52817,-57.527444,-57.527444,-57.527444,-57.52817,-57.527444,-57.5274,-57.52817,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.52817,-57.527444,-57.527444,-57.527444,-57.5274,-57.527444,-57.52817,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.5274,-57.527444,-57.527444,-57.52817,-57.5274,-57.527444,-57.5274,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.52817,-57.527444,-57.527444,-57.527444,-57.527444,-57.5274,-57.52817,-57.527444,-57.527444,-57.527444,-57.52817,-57.5274,-57.527444,-57.527444,-57.527444,-57.5274,-57.527444,-57.527444,-57.5274,-57.527444,-57.52817,-57.5274,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.52817,-57.527444,-57.52817,-57.527444,-57.527444,-57.527444,-57.527444,-57.5274,-57.527444,-57.527444,-57.52817,-57.52817,-57.52817,-57.527444,-57.52817,-57.52817,-57.5274,-57.527444,-57.527444,-57.52817,-57.527444,-57.527444,-57.527444,-57.52817,-57.527444,-57.52817,-57.527444,-57.527444,-57.527444,-57.527444,-57.5274,-57.52817,-57.52817,-57.527444,-57.527444,-57.527444,-57.5274,-57.5274,-57.527444,-57.527444,-57.52817,-57.5274,-57.5274,-57.5274,-57.5274,-57.5274,-57.52817,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.5274,-57.5274,-57.527444,-57.527444,-57.52817,-57.52817,-57.52817,-57.527444,-57.5274,-57.527444,-57.5274,-57.52817,-57.5274,-57.52817,-57.52817,-57.527444,-57.527444,-57.5274,-57.527444,-57.52817,-57.52817,-57.5274,-57.527444,-57.5274,-57.5274,-57.527444,-57.527444,-57.527444,-57.52817,-57.527444,-57.5274,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.52817,-57.52817,-57.527444,-57.52817,-57.527444,-57.527444,-57.5274,-57.527444,-57.527444,-57.5274,-57.5274,-57.527444,-57.52817,-57.527444,-57.527444,-57.527444,-57.52817,-57.527444,-57.52817,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.5274,-57.527444,-57.527444,-57.527444,-57.5274,-57.5274,-57.52817,-57.527444,-57.527444,-57.527444,-57.527444,-57.5274,-57.52817,-57.5274,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.52817,-57.5274,-57.527444,-57.52817,-57.5274,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.5274,-57.52817,-57.527444,-57.527444,-57.5274,-57.527444,-57.5274,-57.52817,-57.527444,-57.527444,-57.5274,-57.5274,-57.52817,-57.52817,-57.527444,-57.527444,-57.52817,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.527444,-57.52817,-57.5274,-57.527444,-57.5274,-57.5274,-57.527444,-57.527444,-57.527444,-57.52817,-57.527444,-57.527444,-57.527444,-57.5274,-57.5274,-57.527444,-57.527444,-57.527444,-57.527444,-58,-58,-58,-58,-58,-58,-58],7,null,null,{"interactive":true,"className":"","stroke":false,"color":"yellow","weight":5,"opacity":0.5,"fill":true,"fillColor":"yellow","fillOpacity":0.7},{"showCoverageOnHover":true,"zoomToBoundsOnClick":true,"spiderfyOnMaxZoom":true,"removeOutsideVisibleBounds":true,"spiderLegPolylineOptions":{"weight":1.5,"color":"#222","opacity":0.5},"freezeAtZoom":false},null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-39.18,-37.18],"lng":[-58.782,-56.782]}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="data-source" class="section level2">
+<h2>Data source:</h2>
+<p>Data shown here is extracted using the <a
+href="https://www.rdocumentation.org/packages/robis/versions/1.0.1/topics/occurrence"
+target="_blank">occurrence</a> function of the <a
+href="https://www.rdocumentation.org/packages/robis/versions/1.0.1"
+target="_blank">robis</a> package within a 0.25 x 0.25 degrees box
+centered at monitoring sites.</p>
+</div>
+</div>
+
+<div class="footer text-center">
+  © 2018 <img width="40px" src="/Users/enrique.montes/Documents/p2p/images/logo_NASA.svg"/>
+</div>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
