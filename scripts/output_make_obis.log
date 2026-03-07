@@ -1,59 +1,216 @@
-fetch # of OBIS occurrences per 0.25 deg box for all sites: 109.468 sec elapsed
-fetch # of OBIS occurrences per 1 & 5 deg box for data poor sites: 4.916 sec elapsed
+fastmap      (NA -> 1.2.0    ) [CRAN]
+xtable       (NA -> 1.8-8    ) [CRAN]
+sourcetools  (NA -> 0.1.7-1  ) [CRAN]
+promises     (NA -> 1.5.0    ) [CRAN]
+otel         (NA -> 0.2.0    ) [CRAN]
+later        (NA -> 1.4.8    ) [CRAN]
+httpuv       (NA -> 1.6.16   ) [CRAN]
+fontawesome  (NA -> 0.5.3    ) [CRAN]
+commonmark   (NA -> 2.0.0    ) [CRAN]
+rappdirs     (NA -> 0.3.4    ) [CRAN]
+fs           (NA -> 1.6.7    ) [CRAN]
+digest       (NA -> 0.6.39   ) [CRAN]
+mime         (NA -> 0.13     ) [CRAN]
+memoise      (NA -> 2.0.1    ) [CRAN]
+jquerylib    (NA -> 0.1.4    ) [CRAN]
+cachem       (NA -> 1.1.0    ) [CRAN]
+base64enc    (NA -> 0.1-6    ) [CRAN]
+htmltools    (NA -> 0.5.9    ) [CRAN]
+shiny        (NA -> 1.13.0   ) [CRAN]
+sass         (NA -> 0.4.10   ) [CRAN]
+bslib        (NA -> 0.10.0   ) [CRAN]
+abind        (NA -> 1.4-8    ) [CRAN]
+XML          (NA -> 3.99-0.22) [CRAN]
+stars        (NA -> 0.7-1    ) [CRAN]
+lwgeom       (NA -> 0.2-15   ) [CRAN]
+viridisLite  (NA -> 0.4.3    ) [CRAN]
+RColorBrewer (NA -> 1.1-3    ) [CRAN]
+labeling     (NA -> 0.4.3    ) [CRAN]
+farver       (NA -> 2.1.2    ) [CRAN]
+terra        (NA -> 1.8-93   ) [CRAN]
+textshaping  (NA -> 1.0.5    ) [CRAN]
+systemfonts  (NA -> 1.3.2    ) [CRAN]
+tinytex      (NA -> 0.58     ) [CRAN]
+highr        (NA -> 0.12     ) [CRAN]
+evaluate     (NA -> 1.0.5    ) [CRAN]
+lazyeval     (NA -> 0.2.2    ) [CRAN]
+plyr         (NA -> 1.8.9    ) [CRAN]
+uuid         (NA -> 1.2-2    ) [CRAN]
+svglite      (NA -> 2.2.2    ) [CRAN]
+brew         (NA -> 1.0-10   ) [CRAN]
+xfun         (NA -> 0.56     ) [CRAN]
+leaflet.p... (NA -> 2.0.0    ) [CRAN]
+crosstalk    (NA -> 1.2.2    ) [CRAN]
+yaml         (NA -> 2.3.12   ) [CRAN]
+rmarkdown    (NA -> 2.30     ) [CRAN]
+knitr        (NA -> 1.51     ) [CRAN]
+servr        (NA -> 0.32     ) [CRAN]
+scales       (NA -> 1.4.0    ) [CRAN]
+satellite    (NA -> 1.0.6    ) [CRAN]
+raster       (NA -> 3.6-32   ) [CRAN]
+png          (NA -> 0.1-8    ) [CRAN]
+leafpop      (NA -> 0.1.0    ) [CRAN]
+leaflet      (NA -> 2.2.3    ) [CRAN]
+leafem       (NA -> 0.2.5    ) [CRAN]
+htmlwidgets  (NA -> 1.6.4    ) [CRAN]
+sys          (NA -> 3.4.3    ) [CRAN]
+askpass      (NA -> 1.2.1    ) [CRAN]
+openssl      (NA -> 2.3.5    ) [CRAN]
+shinyWidgets (NA -> 0.9.0    ) [CRAN]
+tmaptools    (NA -> 3.3      ) [CRAN]
+rstudioapi   (NA -> 0.18.0   ) [CRAN]
+miniUI       (NA -> 0.1.2    ) [CRAN]
+mapview      (NA -> 2.11.4   ) [CRAN]
+leafpm       (NA -> 0.1.0    ) [CRAN]
+DT           (NA -> 0.34.0   ) [CRAN]
+assertthat   (NA -> 0.2.1    ) [CRAN]
+httr         (NA -> 1.4.8    ) [CRAN]
+S7           (NA -> 0.2.1    ) [CRAN]
+isoband      (NA -> 0.3.0    ) [CRAN]
+gtable       (NA -> 0.3.6    ) [CRAN]
+xml2         (NA -> 1.5.2    ) [CRAN]
+data.table   (NA -> 1.18.2.1 ) [CRAN]
+mapedit      (NA -> 0.8.0    ) [CRAN]
+httpcache    (NA -> 1.2.0    ) [CRAN]
+ggplot2      (NA -> 4.0.2    ) [CRAN]
+g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I./libuv-1.44.2/include -I. -pthread  -I/usr/local/include    -fpic  -g -O2   -c dir.cc -o dir.o
+g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I./libuv-1.44.2/include -I. -pthread  -I/usr/local/include    -fpic  -g -O2   -c error.cc -o error.o
+g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I./libuv-1.44.2/include -I. -pthread  -I/usr/local/include    -fpic  -g -O2   -c file.cc -o file.o
+g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I./libuv-1.44.2/include -I. -pthread  -I/usr/local/include    -fpic  -g -O2   -c fs.cc -o fs.o
+g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I./libuv-1.44.2/include -I. -pthread  -I/usr/local/include    -fpic  -g -O2   -c getmode.cc -o getmode.o
+g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I./libuv-1.44.2/include -I. -pthread  -I/usr/local/include    -fpic  -g -O2   -c id.cc -o id.o
+g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I./libuv-1.44.2/include -I. -pthread  -I/usr/local/include    -fpic  -g -O2   -c init.cc -o init.o
+g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I./libuv-1.44.2/include -I. -pthread  -I/usr/local/include    -fpic  -g -O2   -c link.cc -o link.o
+g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I./libuv-1.44.2/include -I. -pthread  -I/usr/local/include    -fpic  -g -O2   -c path.cc -o path.o
+g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I./libuv-1.44.2/include -I. -pthread  -I/usr/local/include    -fpic  -g -O2   -c utils.cc -o utils.o
+g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I./libuv-1.44.2/include -I. -pthread  -I/usr/local/include    -fpic  -g -O2   -c unix/getmode.cc -o unix/getmode.o
+gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I./libuv-1.44.2/include -I. -pthread  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c bsd/setmode.c -o bsd/setmode.o
+gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I./libuv-1.44.2/include -I. -pthread  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c bsd/strmode.c -o bsd/strmode.o
+gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I./libuv-1.44.2/include -I. -pthread  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c bsd/reallocarray.c -o bsd/reallocarray.o
+touch libuv-1.44.2/aclocal.m4 && touch libuv-1.44.2/configure && touch libuv-1.44.2/Makefile.in
+(cd libuv-1.44.2 \
+&& CC="gcc" CPPFLAGS="-I/usr/local/include" CFLAGS="-g -O2  -fpic -fvisibility=hidden -std=c99" AR="ar" RANLIB="ranlib" LDFLAGS="-L/usr/local/lib" LT_MULTI_MODULE=1 ./configure   --quiet)
+make --directory=libuv-1.44.2 \
+	HAVE_DTRACE=0
+make[1]: Entering directory '/tmp/RtmpLDHw2d/R.INSTALL20923262bd0d/fs/src/libuv-1.44.2'
+  CC       src/libuv_la-fs-poll.lo
+  CC       src/libuv_la-idna.lo
+  CC       src/libuv_la-inet.lo
+  CC       src/libuv_la-random.lo
+  CC       src/libuv_la-strscpy.lo
+  CC       src/libuv_la-threadpool.lo
+  CC       src/libuv_la-timer.lo
+  CC       src/libuv_la-uv-data-getter-setters.lo
+  CC       src/libuv_la-uv-common.lo
+  CC       src/libuv_la-version.lo
+  CC       src/libuv_la-strtok.lo
+  CC       src/unix/libuv_la-async.lo
+  CC       src/unix/libuv_la-core.lo
+  CC       src/unix/libuv_la-dl.lo
+  CC       src/unix/libuv_la-fs.lo
+  CC       src/unix/libuv_la-getaddrinfo.lo
+  CC       src/unix/libuv_la-getnameinfo.lo
+  CC       src/unix/libuv_la-loop-watcher.lo
+  CC       src/unix/libuv_la-loop.lo
+  CC       src/unix/libuv_la-pipe.lo
+  CC       src/unix/libuv_la-poll.lo
+  CC       src/unix/libuv_la-process.lo
+  CC       src/unix/libuv_la-random-devurandom.lo
+  CC       src/unix/libuv_la-signal.lo
+  CC       src/unix/libuv_la-stream.lo
+  CC       src/unix/libuv_la-tcp.lo
+  CC       src/unix/libuv_la-thread.lo
+  CC       src/unix/libuv_la-tty.lo
+  CC       src/unix/libuv_la-udp.lo
+  CC       src/unix/libuv_la-linux-core.lo
+  CC       src/unix/libuv_la-linux-inotify.lo
+  CC       src/unix/libuv_la-linux-syscalls.lo
+  CC       src/unix/libuv_la-procfs-exepath.lo
+  CC       src/unix/libuv_la-proctitle.lo
+  CC       src/unix/libuv_la-random-getrandom.lo
+  CC       src/unix/libuv_la-random-sysctl-linux.lo
+  CC       src/unix/libuv_la-epoll.lo
+  CCLD     libuv.la
+make[1]: Leaving directory '/tmp/RtmpLDHw2d/R.INSTALL20923262bd0d/fs/src/libuv-1.44.2'
+g++ -std=gnu++17 -shared -L/opt/R/4.4.2/lib/R/lib -L/usr/local/lib -o fs.so dir.o error.o file.o fs.o getmode.o id.o init.o link.o path.o utils.o unix/getmode.o bsd/setmode.o bsd/strmode.o bsd/reallocarray.o ./libuv-1.44.2/.libs/libuv.pa -pthread -L/opt/R/4.4.2/lib/R/lib -lR
+Using PKG_CFLAGS=-I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/glib-2.0 -I/usr/include/fribidi
+Using PKG_LIBS=-lfreetype -lharfbuzz -lfribidi -lpng
+--------------------------- [ANTICONF] --------------------------------
+Configuration failed to find the harfbuzz freetype2 fribidi library. Try installing:
+ * deb: libharfbuzz-dev libfribidi-dev (Debian, Ubuntu, etc)
+ * rpm: harfbuzz-devel fribidi-devel (Fedora, EPEL)
+ * apk: harfbuzz-dev fribidi-dev (Alpine)
+ * brew: harfbuzz fribidi (OSX)
+If harfbuzz freetype2 fribidi is already installed, check that 'pkg-config' is in your
+PATH and PKG_CONFIG_PATH contains a harfbuzz freetype2 fribidi.pc file. If pkg-config
+is unavailable you can set INCLUDE_DIR and LIB_DIR manually via:
+R CMD INSTALL --configure-vars='INCLUDE_DIR=... LIB_DIR=...'
+-------------------------- [ERROR MESSAGE] ---------------------------
+<stdin>:1:10: fatal error: hb-ft.h: No such file or directory
+compilation terminated.
+--------------------------------------------------------------------
+* checking for file ‘/tmp/RtmpcX1knv/remotes1b3253cfe00e/iobis-robis-1b328d9/DESCRIPTION’ ... OK
+* preparing ‘robis’:
+* checking DESCRIPTION meta-information ... OK
+* checking for LF line-endings in source and make files and shell scripts
+* checking for empty or unneeded directories
+* building ‘robis_2.11.3.tar.gz’
+fetch # of OBIS occurrences per 0.25 deg box for all sites: 121.008 sec elapsed
+fetch # of OBIS occurrences per 1 & 5 deg box for data poor sites: 6.808 sec elapsed
 Deleting source `/home/runner/work/p2p/p2p/data/obis/obis_sites.geojson' using driver `GeoJSON'
 Writing layer `obis_sites' to data source 
   `/home/runner/work/p2p/p2p/data/obis/obis_sites.geojson' using driver `GeoJSON'
 Writing 217 features with 16 fields and geometry type Polygon.
-site 1 of 52 sites_plys (nchar=662): 3050.573 sec elapsed
-site 2 of 52 sites_plys (nchar=590): 92.706 sec elapsed
-site 3 of 52 sites_plys (nchar=445): 29.713 sec elapsed
-site 4 of 52 sites_plys (nchar=414): 7.131 sec elapsed
-site 5 of 52 sites_plys (nchar=366): 5.83 sec elapsed
-site 6 of 52 sites_plys (nchar=357): 1.868 sec elapsed
-site 7 of 52 sites_plys (nchar=343): 23.572 sec elapsed
-site 8 of 52 sites_plys (nchar=310): 2.417 sec elapsed
-site 9 of 52 sites_plys (nchar=271): 7.917 sec elapsed
-site 10 of 52 sites_plys (nchar=269): 5.069 sec elapsed
-site 11 of 52 sites_plys (nchar=241): 23.625 sec elapsed
-site 12 of 52 sites_plys (nchar=239): 8.518 sec elapsed
-site 13 of 52 sites_plys (nchar=239): 4.042 sec elapsed
-site 14 of 52 sites_plys (nchar=238): 5.278 sec elapsed
-site 15 of 52 sites_plys (nchar=235): 3.172 sec elapsed
-site 16 of 52 sites_plys (nchar=229): 5.075 sec elapsed
-site 17 of 52 sites_plys (nchar=214): 13.531 sec elapsed
-site 18 of 52 sites_plys (nchar=205): 8.203 sec elapsed
-site 19 of 52 sites_plys (nchar=167): 3.841 sec elapsed
-site 20 of 52 sites_plys (nchar=167): 2.518 sec elapsed
-site 21 of 52 sites_plys (nchar=161): 13.891 sec elapsed
-site 22 of 52 sites_plys (nchar=158): 8.454 sec elapsed
-site 23 of 52 sites_plys (nchar=158): 9.498 sec elapsed
-site 24 of 52 sites_plys (nchar=156): 3.839 sec elapsed
-site 25 of 52 sites_plys (nchar=155): 10.691 sec elapsed
-site 26 of 52 sites_plys (nchar=154): 20.457 sec elapsed
-site 27 of 52 sites_plys (nchar=95): 1.205 sec elapsed
-site 28 of 52 sites_plys (nchar=95): 0.995 sec elapsed
-site 29 of 52 sites_plys (nchar=95): 1.802 sec elapsed
-site 30 of 52 sites_plys (nchar=95): 1.407 sec elapsed
-site 31 of 52 sites_plys (nchar=95): 5.4 sec elapsed
-site 32 of 52 sites_plys (nchar=95): 2.927 sec elapsed
-site 33 of 52 sites_plys (nchar=95): 4.57 sec elapsed
-site 34 of 52 sites_plys (nchar=95): 2.415 sec elapsed
-site 35 of 52 sites_plys (nchar=95): 2.915 sec elapsed
-site 36 of 52 sites_plys (nchar=95): 5.187 sec elapsed
-site 37 of 52 sites_plys (nchar=90): 3.507 sec elapsed
-site 38 of 52 sites_plys (nchar=90): 2.518 sec elapsed
-site 39 of 52 sites_plys (nchar=90): 1.279 sec elapsed
-site 40 of 52 sites_plys (nchar=90): 2.131 sec elapsed
-site 41 of 52 sites_plys (nchar=90): 4.298 sec elapsed
-site 42 of 52 sites_plys (nchar=90): 5.618 sec elapsed
-site 43 of 52 sites_plys (nchar=90): 6.126 sec elapsed
-site 44 of 52 sites_plys (nchar=90): 3.079 sec elapsed
-site 45 of 52 sites_plys (nchar=88): 10.805 sec elapsed
-site 46 of 52 sites_plys (nchar=85): 1.531 sec elapsed
-site 47 of 52 sites_plys (nchar=85): 1.69 sec elapsed
-site 48 of 52 sites_plys (nchar=85): 1.56 sec elapsed
-site 49 of 52 sites_plys (nchar=85): 1.151 sec elapsed
-site 50 of 52 sites_plys (nchar=80): 8.374 sec elapsed
-site 51 of 52 sites_plys (nchar=80): 1.351 sec elapsed
-site 52 of 52 sites_plys (nchar=80): 9.806 sec elapsed
-iterate over sites_plys: 3466.962 sec elapsed
+site 1 of 52 sites_plys (nchar=662): 2778.216 sec elapsed
+site 2 of 52 sites_plys (nchar=590): 71.519 sec elapsed
+site 3 of 52 sites_plys (nchar=445): 23.878 sec elapsed
+site 4 of 52 sites_plys (nchar=414): 6.994 sec elapsed
+site 5 of 52 sites_plys (nchar=366): 7.232 sec elapsed
+site 6 of 52 sites_plys (nchar=357): 1.703 sec elapsed
+site 7 of 52 sites_plys (nchar=343): 23.116 sec elapsed
+site 8 of 52 sites_plys (nchar=310): 5.64 sec elapsed
+site 9 of 52 sites_plys (nchar=271): 6.275 sec elapsed
+site 10 of 52 sites_plys (nchar=269): 4.26 sec elapsed
+site 11 of 52 sites_plys (nchar=241): 25.72 sec elapsed
+site 12 of 52 sites_plys (nchar=239): 6.568 sec elapsed
+site 13 of 52 sites_plys (nchar=239): 3.388 sec elapsed
+site 14 of 52 sites_plys (nchar=238): 5.696 sec elapsed
+site 15 of 52 sites_plys (nchar=235): 3.539 sec elapsed
+site 16 of 52 sites_plys (nchar=229): 6.128 sec elapsed
+site 17 of 52 sites_plys (nchar=214): 10.26 sec elapsed
+site 18 of 52 sites_plys (nchar=205): 7.485 sec elapsed
+site 19 of 52 sites_plys (nchar=167): 3.716 sec elapsed
+site 20 of 52 sites_plys (nchar=167): 2.586 sec elapsed
+site 21 of 52 sites_plys (nchar=161): 16.049 sec elapsed
+site 22 of 52 sites_plys (nchar=158): 11.962 sec elapsed
+site 23 of 52 sites_plys (nchar=158): 9.104 sec elapsed
+site 24 of 52 sites_plys (nchar=156): 2.55 sec elapsed
+site 25 of 52 sites_plys (nchar=155): 10.712 sec elapsed
+site 26 of 52 sites_plys (nchar=154): 18.981 sec elapsed
+site 27 of 52 sites_plys (nchar=95): 1.69 sec elapsed
+site 28 of 52 sites_plys (nchar=95): 1.099 sec elapsed
+site 29 of 52 sites_plys (nchar=95): 1.325 sec elapsed
+site 30 of 52 sites_plys (nchar=95): 1.163 sec elapsed
+site 31 of 52 sites_plys (nchar=95): 3.316 sec elapsed
+site 32 of 52 sites_plys (nchar=95): 2.084 sec elapsed
+site 33 of 52 sites_plys (nchar=95): 4.346 sec elapsed
+site 34 of 52 sites_plys (nchar=95): 2.075 sec elapsed
+site 35 of 52 sites_plys (nchar=95): 2.415 sec elapsed
+site 36 of 52 sites_plys (nchar=95): 4.826 sec elapsed
+site 37 of 52 sites_plys (nchar=90): 2.359 sec elapsed
+site 38 of 52 sites_plys (nchar=90): 1.719 sec elapsed
+site 39 of 52 sites_plys (nchar=90): 1.074 sec elapsed
+site 40 of 52 sites_plys (nchar=90): 2.844 sec elapsed
+site 41 of 52 sites_plys (nchar=90): 2.795 sec elapsed
+site 42 of 52 sites_plys (nchar=90): 5.932 sec elapsed
+site 43 of 52 sites_plys (nchar=90): 6.063 sec elapsed
+site 44 of 52 sites_plys (nchar=90): 2.442 sec elapsed
+site 45 of 52 sites_plys (nchar=88): 10.704 sec elapsed
+site 46 of 52 sites_plys (nchar=85): 1.652 sec elapsed
+site 47 of 52 sites_plys (nchar=85): 1.426 sec elapsed
+site 48 of 52 sites_plys (nchar=85): 1.29 sec elapsed
+site 49 of 52 sites_plys (nchar=85): 0.941 sec elapsed
+site 50 of 52 sites_plys (nchar=80): 10.735 sec elapsed
+site 51 of 52 sites_plys (nchar=80): 1.487 sec elapsed
+site 52 of 52 sites_plys (nchar=80): 7.467 sec elapsed
+iterate over sites_plys: 3160.916 sec elapsed
