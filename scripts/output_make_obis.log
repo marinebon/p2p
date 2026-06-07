@@ -1,78 +1,3 @@
-configure: CC: gcc
-configure: CXX: g++ -std=gnu++17
-checking for gdal-config... /usr/bin/gdal-config
-checking gdal-config usability... yes
-configure: GDAL: 3.8.4
-checking GDAL version >= 2.0.1... yes
-checking for gcc... gcc
-checking whether the C compiler works... yes
-checking for C compiler default output file name... a.out
-checking for suffix of executables... 
-checking whether we are cross compiling... no
-checking for suffix of object files... o
-checking whether the compiler supports GNU C... yes
-checking whether gcc accepts -g... yes
-checking for gcc option to enable C11 features... none needed
-checking for stdio.h... yes
-checking for stdlib.h... yes
-checking for string.h... yes
-checking for inttypes.h... yes
-checking for stdint.h... yes
-checking for strings.h... yes
-checking for sys/stat.h... yes
-checking for sys/types.h... yes
-checking for unistd.h... yes
-checking for gdal.h... yes
-checking GDAL: linking with --libs only... yes
-checking GDAL: /usr/share/gdal/pcs.csv readable... no
-checking GDAL: checking whether PROJ is available for linking:... yes
-checking GDAL: checking whether PROJ is available for running:... yes
-configure: GDAL: 3.8.4
-configure: pkg-config proj exists, will use it
-configure: using proj.h.
-configure: PROJ: 9.4.0
-checking PROJ: checking whether PROJ and sqlite3 are available for linking:... yes
-checking for geos-config... /usr/bin/geos-config
-checking geos-config usability... yes
-configure: GEOS: 3.12.1
-checking GEOS version >= 3.4.0... yes
-checking for geos_c.h... yes
-checking geos: linking with -L/usr/lib/x86_64-linux-gnu -lgeos_c... yes
-configure: Package CPP flags:  -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include
-configure: Package LIBS: -lproj    -L/usr/lib/x86_64-linux-gnu -lgdal -L/usr/lib/x86_64-linux-gnu -lgeos_c
-configure: creating ./config.status
-config.status: creating src/Makevars
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c RcppExports.cpp -o RcppExports.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c bbox.cpp -o bbox.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c gdal.cpp -o gdal.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c gdal_geom.cpp -o gdal_geom.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c gdal_read.cpp -o gdal_read.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c gdal_read_stream.cpp -o gdal_read_stream.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c gdal_utils.cpp -o gdal_utils.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c gdal_write.cpp -o gdal_write.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c geos.cpp -o geos.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c hex.cpp -o hex.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c mdim.cpp -o mdim.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c ops.cpp -o ops.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c polygonize.cpp -o polygonize.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c proj.cpp -o proj.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c proj_info.cpp -o proj_info.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c raster2sf.cpp -o raster2sf.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c sfc-sfg.cpp -o sfc-sfg.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c signed_area.cpp -o signed_area.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c stars.cpp -o stars.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c wkb.cpp -o wkb.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c zm_range.cpp -o zm_range.o
-g++ -std=gnu++17 -shared -L/opt/R/4.4.2/lib/R/lib -L/usr/local/lib -o sf.so RcppExports.o bbox.o gdal.o gdal_geom.o gdal_read.o gdal_read_stream.o gdal_utils.o gdal_write.o geos.o hex.o mdim.o ops.o polygonize.o proj.o proj_info.o raster2sf.o sfc-sfg.o signed_area.o stars.o wkb.o zm_range.o -lproj -L/usr/lib/x86_64-linux-gnu -lgdal -L/usr/lib/x86_64-linux-gnu -lgeos_c -L/opt/R/4.4.2/lib/R/lib -lR
-in method for ‘dbWriteTable’ with signature ‘"PostgreSQLConnection","character","sf"’: no definition for class “PostgreSQLConnection”
-in method for ‘dbDataType’ with signature ‘"PostgreSQLConnection","sf"’: no definition for class “PostgreSQLConnection”
-in method for ‘coerce’ with signature ‘"Spatial","sf"’: no definition for class “Spatial”
-in method for ‘coerce’ with signature ‘"Spatial","sfc"’: no definition for class “Spatial”
-in method for ‘coerce’ with signature ‘"sf","Spatial"’: no definition for class “Spatial”
-in method for ‘coerce’ with signature ‘"sfc","Spatial"’: no definition for class “Spatial”
-in method for ‘coerce’ with signature ‘"XY","Spatial"’: no definition for class “Spatial”
-in method for ‘coerce’ with signature ‘"crs","CRS"’: no definition for class “CRS”
-in method for ‘coerce’ with signature ‘"sgbp","sparseMatrix"’: no definition for class “sparseMatrix”
 fastmap      (NA -> 1.2.0    ) [CRAN]
 xtable       (NA -> 1.8-8    ) [CRAN]
 sourcetools  (NA -> 0.1.7-2  ) [CRAN]
@@ -93,7 +18,7 @@ base64enc    (NA -> 0.1-6    ) [CRAN]
 htmltools    (NA -> 0.5.9    ) [CRAN]
 shiny        (NA -> 1.13.0   ) [CRAN]
 sass         (NA -> 0.4.10   ) [CRAN]
-bslib        (NA -> 0.10.0   ) [CRAN]
+bslib        (NA -> 0.11.0   ) [CRAN]
 abind        (NA -> 1.4-8    ) [CRAN]
 XML          (NA -> 3.99-0.23) [CRAN]
 stars        (NA -> 0.7-2    ) [CRAN]
@@ -102,7 +27,7 @@ viridisLite  (NA -> 0.4.3    ) [CRAN]
 RColorBrewer (NA -> 1.1-3    ) [CRAN]
 labeling     (NA -> 0.4.3    ) [CRAN]
 farver       (NA -> 2.1.2    ) [CRAN]
-terra        (NA -> 1.9-25   ) [CRAN]
+terra        (NA -> 1.9-27   ) [CRAN]
 textshaping  (NA -> 1.0.5    ) [CRAN]
 systemfonts  (NA -> 1.3.2    ) [CRAN]
 tinytex      (NA -> 0.59     ) [CRAN]
@@ -113,7 +38,7 @@ plyr         (NA -> 1.8.9    ) [CRAN]
 uuid         (NA -> 1.2-2    ) [CRAN]
 svglite      (NA -> 2.2.2    ) [CRAN]
 brew         (NA -> 1.0-10   ) [CRAN]
-xfun         (NA -> 0.57     ) [CRAN]
+xfun         (NA -> 0.58     ) [CRAN]
 leaflet.p... (NA -> 3.0.0    ) [CRAN]
 crosstalk    (NA -> 1.2.2    ) [CRAN]
 yaml         (NA -> 2.3.12   ) [CRAN]
@@ -130,7 +55,7 @@ leafem       (NA -> 0.2.5    ) [CRAN]
 htmlwidgets  (NA -> 1.6.4    ) [CRAN]
 sys          (NA -> 3.4.3    ) [CRAN]
 askpass      (NA -> 1.2.1    ) [CRAN]
-openssl      (NA -> 2.4.0    ) [CRAN]
+openssl      (NA -> 2.4.1    ) [CRAN]
 shinyWidgets (NA -> 0.9.1    ) [CRAN]
 tmaptools    (NA -> 3.3      ) [CRAN]
 rstudioapi   (NA -> 0.18.0   ) [CRAN]
@@ -148,268 +73,68 @@ data.table   (NA -> 1.18.4   ) [CRAN]
 mapedit      (NA -> 0.8.0    ) [CRAN]
 httpcache    (NA -> 1.2.0    ) [CRAN]
 ggplot2      (NA -> 4.0.3    ) [CRAN]
-configure: CC: gcc
-configure: CXX: g++ -std=gnu++17
-checking for gdal-config... /usr/bin/gdal-config
-checking gdal-config usability... yes
-configure: GDAL: 3.8.4
-checking GDAL version >= 2.0.1... yes
-checking for gcc... gcc
-checking whether the C compiler works... yes
-checking for C compiler default output file name... a.out
-checking for suffix of executables... 
-checking whether we are cross compiling... no
-checking for suffix of object files... o
-checking whether the compiler supports GNU C... yes
-checking whether gcc accepts -g... yes
-checking for gcc option to enable C11 features... none needed
-checking for stdio.h... yes
-checking for stdlib.h... yes
-checking for string.h... yes
-checking for inttypes.h... yes
-checking for stdint.h... yes
-checking for strings.h... yes
-checking for sys/stat.h... yes
-checking for sys/types.h... yes
-checking for unistd.h... yes
-checking for gdal.h... yes
-checking GDAL: linking with --libs only... yes
-checking GDAL: /usr/share/gdal/pcs.csv readable... no
-checking GDAL: checking whether PROJ is available for linking:... yes
-checking GDAL: checking whether PROJ is available for running:... yes
-configure: GDAL: 3.8.4
-configure: pkg-config proj exists, will use it
-configure: using proj.h.
-configure: PROJ: 9.4.0
-checking PROJ: checking whether PROJ and sqlite3 are available for linking:... yes
-checking for geos-config... /usr/bin/geos-config
-checking geos-config usability... yes
-configure: GEOS: 3.12.1
-checking GEOS version >= 3.4.0... yes
-checking for geos_c.h... yes
-checking geos: linking with -L/usr/lib/x86_64-linux-gnu -lgeos_c... yes
-checking Intel TBB exists:... no
-configure: Package CPP flags:  -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include  
-configure: Package LIBS:  -lproj    -L/usr/lib/x86_64-linux-gnu -lgdal -L/usr/lib/x86_64-linux-gnu -lgeos_c
-configure: creating ./config.status
-config.status: creating src/Makevars
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c RcppExports.cpp -o RcppExports.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c RcppFunctions.cpp -o RcppFunctions.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c RcppModule.cpp -o RcppModule.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c arith.cpp -o arith.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c catchments.cpp -o catchments.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c costDistance.cpp -o costDistance.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c crs.cpp -o crs.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c distRaster.cpp -o distRaster.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c distValueRaster.cpp -o distValueRaster.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c distVector.cpp -o distVector.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c distance.cpp -o distance.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c extract.cpp -o extract.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c file_utils.cpp -o file_utils.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c focal.cpp -o focal.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c gdal_algs.cpp -o gdal_algs.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c gdal_multidimensional.cpp -o gdal_multidimensional.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c gdalio.cpp -o gdalio.o
-gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2  -c geodesic.c -o geodesic.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c geos_methods.cpp -o geos_methods.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c geosphere.cpp -o geosphere.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c math_utils.cpp -o math_utils.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c mediancut.cpp -o mediancut.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c memory.cpp -o memory.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c merge.cpp -o merge.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c ram.cpp -o ram.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c raster_methods.cpp -o raster_methods.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c raster_stats.cpp -o raster_stats.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c rasterize.cpp -o rasterize.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c read.cpp -o read.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c read_gdal.cpp -o read_gdal.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c read_ogr.cpp -o read_ogr.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c sample.cpp -o sample.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c show.cpp -o show.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c sort.cpp -o sort.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c spatBase.cpp -o spatBase.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c spatDataframe.cpp -o spatDataframe.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c spatFactor.cpp -o spatFactor.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c spatRaster.cpp -o spatRaster.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c spatRasterMultiple.cpp -o spatRasterMultiple.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c spatSources.cpp -o spatSources.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c spatTime.cpp -o spatTime.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c spatVector.cpp -o spatVector.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c string_utils.cpp -o string_utils.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c table_utils.cpp -o table_utils.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c tessellate.cpp -o tessellate.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c vecmath.cpp -o vecmath.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c vecmathse.cpp -o vecmathse.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c vector_methods.cpp -o vector_methods.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c write.cpp -o write.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c write_gdal.cpp -o write_gdal.o
-g++ -std=gnu++17 -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include   -I'/home/runner/work/_temp/Library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c write_ogr.cpp -o write_ogr.o
-g++ -std=gnu++17 -shared -L/opt/R/4.4.2/lib/R/lib -L/usr/local/lib -o terra.so RcppExports.o RcppFunctions.o RcppModule.o arith.o catchments.o costDistance.o crs.o distRaster.o distValueRaster.o distVector.o distance.o extract.o file_utils.o focal.o gdal_algs.o gdal_multidimensional.o gdalio.o geodesic.o geos_methods.o geosphere.o math_utils.o mediancut.o memory.o merge.o ram.o raster_methods.o raster_stats.o rasterize.o read.o read_gdal.o read_ogr.o sample.o show.o sort.o spatBase.o spatDataframe.o spatFactor.o spatRaster.o spatRasterMultiple.o spatSources.o spatTime.o spatVector.o string_utils.o table_utils.o tessellate.o vecmath.o vecmathse.o vector_methods.o write.o write_gdal.o write_ogr.o -lproj -L/usr/lib/x86_64-linux-gnu -lgdal -L/usr/lib/x86_64-linux-gnu -lgeos_c -L/opt/R/4.4.2/lib/R/lib -lR
-in method for ‘sds’ with signature ‘x="stars"’: no definition for class “stars”
-in method for ‘sds’ with signature ‘x="stars_proxy"’: no definition for class “stars_proxy”
-in method for ‘svc’ with signature ‘x="sf"’: no definition for class “sf”
-in method for ‘coerce’ with signature ‘"stars","SpatRasterDataset"’: no definition for class “stars”
-in method for ‘coerce’ with signature ‘"ggmap","SpatRaster"’: no definition for class “ggmap”
-in method for ‘coerce’ with signature ‘"sf","SpatRaster"’: no definition for class “sf”
-in method for ‘coerce’ with signature ‘"sf","SpatVector"’: no definition for class “sf”
-in method for ‘coerce’ with signature ‘"sfc","SpatVector"’: no definition for class “sfc”
-in method for ‘coerce’ with signature ‘"sfg","SpatVector"’: no definition for class “sfg”
-in method for ‘coerce’ with signature ‘"XY","SpatVector"’: no definition for class “XY”
-in method for ‘coerce’ with signature ‘"im","SpatRaster"’: no definition for class “im”
-in method for ‘coerce’ with signature ‘"SpatVector","Spatial"’: no definition for class “Spatial”
-in method for ‘coerce’ with signature ‘"Spatial","SpatVector"’: no definition for class “Spatial”
-in method for ‘coerce’ with signature ‘"SpatialGrid","SpatRaster"’: no definition for class “SpatialGrid”
-in method for ‘coerce’ with signature ‘"SpatialPixels","SpatRaster"’: no definition for class “SpatialPixels”
-in method for ‘crs’ with signature ‘"sf"’: no definition for class “sf”
-Creating a generic function for ‘ncol’ from package ‘base’ in package ‘terra’
-in method for ‘distance’ with signature ‘x="SpatRaster",y="sf"’: no definition for class “sf”
-in method for ‘ext’ with signature ‘x="sf"’: no definition for class “sf”
-in method for ‘ext’ with signature ‘x="bbox"’: no definition for class “bbox”
-in method for ‘ext’ with signature ‘x="Extent"’: no definition for class “Extent”
-in method for ‘ext’ with signature ‘x="Raster"’: no definition for class “Raster”
-in method for ‘ext’ with signature ‘x="Spatial"’: no definition for class “Spatial”
-in method for ‘extract’ with signature ‘x="SpatRaster",y="sf"’: no definition for class “sf”
-in method for ‘mask’ with signature ‘x="SpatRaster",mask="sf"’: no definition for class “sf”
-in method for ‘points’ with signature ‘x="sf"’: no definition for class “sf”
-in method for ‘lines’ with signature ‘x="sf"’: no definition for class “sf”
-in method for ‘polys’ with signature ‘x="sf"’: no definition for class “sf”
-in method for ‘polys’ with signature ‘x="leaflet"’: no definition for class “leaflet”
-in method for ‘lines’ with signature ‘x="leaflet"’: no definition for class “leaflet”
-in method for ‘points’ with signature ‘x="leaflet"’: no definition for class “leaflet”
-in method for ‘rast’ with signature ‘x="stars"’: no definition for class “stars”
-in method for ‘rast’ with signature ‘x="stars_proxy"’: no definition for class “stars_proxy”
-in method for ‘rasterize’ with signature ‘x="sf",y="SpatRaster"’: no definition for class “sf”
-Creating a generic function for ‘rowSums’ from package ‘base’ in package ‘terra’
-Creating a generic function for ‘colSums’ from package ‘base’ in package ‘terra’
-Creating a generic function for ‘rowMeans’ from package ‘base’ in package ‘terra’
-Creating a generic function for ‘colMeans’ from package ‘base’ in package ‘terra’
-in method for ‘show’ with signature ‘"Rcpp_SpatDataFrame"’: no definition for class “Rcpp_SpatDataFrame”
-in method for ‘show’ with signature ‘"Rcpp_SpatCategories"’: no definition for class “Rcpp_SpatCategories”
-in method for ‘geomtype’ with signature ‘x="Spatial"’: no definition for class “Spatial”
-Creating a generic function for ‘identical’ from package ‘base’ in package ‘terra’
-in method for ‘vect’ with signature ‘x="Spatial"’: no definition for class “Spatial”
-in method for ‘vect’ with signature ‘x="sf"’: no definition for class “sf”
-in method for ‘vect’ with signature ‘x="sfc"’: no definition for class “sfc”
-in method for ‘vect’ with signature ‘x="XY"’: no definition for class “XY”
-Creating a generic function for ‘unserialize’ from package ‘base’ in package ‘terra’
-Creating a generic function for ‘readRDS’ from package ‘base’ in package ‘terra’
-gcc 13.3.0
-zlib 1.3 is available ok
-* checking if R installation supports OpenMP without any extra hints... yes
-gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden  -fopenmp  -fpic  -g -O2  -c assign.c -o assign.o
-gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden  -fopenmp  -fpic  -g -O2  -c between.c -o between.o
-gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden  -fopenmp  -fpic  -g -O2  -c bmerge.c -o bmerge.o
-gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden  -fopenmp  -fpic  -g -O2  -c chmatch.c -o chmatch.o
-gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden  -fopenmp  -fpic  -g -O2  -c cj.c -o cj.o
-gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden  -fopenmp  -fpic  -g -O2  -c coalesce.c -o coalesce.o
-gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden  -fopenmp  -fpic  -g -O2  -c dogroups.c -o dogroups.o
-gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden  -fopenmp  -fpic  -g -O2  -c fastmean.c -o fastmean.o
-gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden  -fopenmp  -fpic  -g -O2  -c fcast.c -o fcast.o
-gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden  -fopenmp  -fpic  -g -O2  -c fifelse.c -o fifelse.o
-gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden  -fopenmp  -fpic  -g -O2  -c fmelt.c -o fmelt.o
-gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden  -fopenmp  -fpic  -g -O2  -c forder.c -o forder.o
-gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden  -fopenmp  -fpic  -g -O2  -c frank.c -o frank.o
-gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden  -fopenmp  -fpic  -g -O2  -c fread.c -o fread.o
-gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden  -fopenmp  -fpic  -g -O2  -c freadR.c -o freadR.o
-gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden  -fopenmp  -fpic  -g -O2  -c froll.c -o froll.o
-gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden  -fopenmp  -fpic  -g -O2  -c frollR.c -o frollR.o
-gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden  -fopenmp  -fpic  -g -O2  -c frolladaptive.c -o frolladaptive.o
-gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden  -fopenmp  -fpic  -g -O2  -c frollapply.c -o frollapply.o
-gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden  -fopenmp  -fpic  -g -O2  -c fsort.c -o fsort.o
-gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden  -fopenmp  -fpic  -g -O2  -c fwrite.c -o fwrite.o
-gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden  -fopenmp  -fpic  -g -O2  -c fwriteR.c -o fwriteR.o
-gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden  -fopenmp  -fpic  -g -O2  -c gsumm.c -o gsumm.o
-gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden  -fopenmp  -fpic  -g -O2  -c hash.c -o hash.o
-gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden  -fopenmp  -fpic  -g -O2  -c idatetime.c -o idatetime.o
-gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden  -fopenmp  -fpic  -g -O2  -c ijoin.c -o ijoin.o
-gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden  -fopenmp  -fpic  -g -O2  -c init.c -o init.o
-gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden  -fopenmp  -fpic  -g -O2  -c inrange.c -o inrange.o
-gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden  -fopenmp  -fpic  -g -O2  -c mergelist.c -o mergelist.o
-gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden  -fopenmp  -fpic  -g -O2  -c nafill.c -o nafill.o
-gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden  -fopenmp  -fpic  -g -O2  -c negate.c -o negate.o
-gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden  -fopenmp  -fpic  -g -O2  -c nqrecreateindices.c -o nqrecreateindices.o
-gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden  -fopenmp  -fpic  -g -O2  -c openmp-utils.c -o openmp-utils.o
-gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden  -fopenmp  -fpic  -g -O2  -c programming.c -o programming.o
-gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden  -fopenmp  -fpic  -g -O2  -c quickselect.c -o quickselect.o
-gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden  -fopenmp  -fpic  -g -O2  -c rbindlist.c -o rbindlist.o
-gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden  -fopenmp  -fpic  -g -O2  -c reorder.c -o reorder.o
-gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden  -fopenmp  -fpic  -g -O2  -c shellsort.c -o shellsort.o
-gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden  -fopenmp  -fpic  -g -O2  -c shift.c -o shift.o
-gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden  -fopenmp  -fpic  -g -O2  -c snprintf.c -o snprintf.o
-gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden  -fopenmp  -fpic  -g -O2  -c subset.c -o subset.o
-gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden  -fopenmp  -fpic  -g -O2  -c transpose.c -o transpose.o
-gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden  -fopenmp  -fpic  -g -O2  -c types.c -o types.o
-gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden  -fopenmp  -fpic  -g -O2  -c uniqlist.c -o uniqlist.o
-gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden  -fopenmp  -fpic  -g -O2  -c utils.c -o utils.o
-gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden  -fopenmp  -fpic  -g -O2  -c vecseq.c -o vecseq.o
-gcc -I"/opt/R/4.4.2/lib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden  -fopenmp  -fpic  -g -O2  -c wrappers.c -o wrappers.o
-gcc -shared -L/opt/R/4.4.2/lib/R/lib -L/usr/local/lib -o data.table.so assign.o between.o bmerge.o chmatch.o cj.o coalesce.o dogroups.o fastmean.o fcast.o fifelse.o fmelt.o forder.o frank.o fread.o freadR.o froll.o frollR.o frolladaptive.o frollapply.o fsort.o fwrite.o fwriteR.o gsumm.o hash.o idatetime.o ijoin.o init.o inrange.o mergelist.o nafill.o negate.o nqrecreateindices.o openmp-utils.o programming.o quickselect.o rbindlist.o reorder.o shellsort.o shift.o snprintf.o subset.o transpose.o types.o uniqlist.o utils.o vecseq.o wrappers.o -fvisibility=hidden -fopenmp -lz -L/opt/R/4.4.2/lib/R/lib -lR
-PKG_CFLAGS = -fvisibility=hidden -fopenmp
-PKG_LIBS = -fvisibility=hidden -fopenmp -lz
-if [ "data.table.so" != "data_table.so" ]; then mv data.table.so data_table.so; fi
-if [ "" != "Windows_NT" ] && [ `uname -s` = 'Darwin' ]; then install_name_tool -id data_table.so data_table.so; fi
-* checking for file ‘/tmp/RtmpB09VuS/remotes1b4161b3bbee/iobis-robis-1b328d9/DESCRIPTION’ ... OK
+* checking for file ‘/tmp/RtmpJ8czZF/remotes1bc575d6c33e/iobis-robis-1b328d9/DESCRIPTION’ ... OK
 * preparing ‘robis’:
 * checking DESCRIPTION meta-information ... OK
 * checking for LF line-endings in source and make files and shell scripts
 * checking for empty or unneeded directories
 * building ‘robis_2.11.3.tar.gz’
-fetch # of OBIS occurrences per 0.25 deg box for all sites: 65.543 sec elapsed
-fetch # of OBIS occurrences per 1 & 5 deg box for data poor sites: 3.763 sec elapsed
+fetch # of OBIS occurrences per 0.25 deg box for all sites: 85.714 sec elapsed
+fetch # of OBIS occurrences per 1 & 5 deg box for data poor sites: 4.779 sec elapsed
 Deleting source `/home/runner/work/p2p/p2p/data/obis/obis_sites.geojson' using driver `GeoJSON'
 Writing layer `obis_sites' to data source 
   `/home/runner/work/p2p/p2p/data/obis/obis_sites.geojson' using driver `GeoJSON'
 Writing 217 features with 16 fields and geometry type Polygon.
-site 1 of 52 sites_plys (nchar=662): 1805.016 sec elapsed
-site 2 of 52 sites_plys (nchar=590): 54.86 sec elapsed
-site 3 of 52 sites_plys (nchar=445): 78.348 sec elapsed
-site 4 of 52 sites_plys (nchar=414): 4.774 sec elapsed
-site 5 of 52 sites_plys (nchar=366): 4.234 sec elapsed
-site 6 of 52 sites_plys (nchar=357): 1.014 sec elapsed
-site 7 of 52 sites_plys (nchar=343): 20.584 sec elapsed
-site 8 of 52 sites_plys (nchar=310): 1.901 sec elapsed
-site 9 of 52 sites_plys (nchar=271): 4.067 sec elapsed
-site 10 of 52 sites_plys (nchar=269): 2.202 sec elapsed
-site 11 of 52 sites_plys (nchar=241): 13.437 sec elapsed
-site 12 of 52 sites_plys (nchar=239): 5.18 sec elapsed
-site 13 of 52 sites_plys (nchar=239): 2.871 sec elapsed
-site 14 of 52 sites_plys (nchar=238): 2.541 sec elapsed
-site 15 of 52 sites_plys (nchar=235): 2.336 sec elapsed
-site 16 of 52 sites_plys (nchar=229): 2.712 sec elapsed
-site 17 of 52 sites_plys (nchar=214): 8.895 sec elapsed
-site 18 of 52 sites_plys (nchar=205): 5.895 sec elapsed
-site 19 of 52 sites_plys (nchar=167): 3.894 sec elapsed
-site 20 of 52 sites_plys (nchar=167): 1.772 sec elapsed
-site 21 of 52 sites_plys (nchar=161): 9.002 sec elapsed
-site 22 of 52 sites_plys (nchar=158): 6.078 sec elapsed
-site 23 of 52 sites_plys (nchar=158): 8.056 sec elapsed
-site 24 of 52 sites_plys (nchar=156): 2.445 sec elapsed
-site 25 of 52 sites_plys (nchar=155): 7.84 sec elapsed
-site 26 of 52 sites_plys (nchar=154): 18.256 sec elapsed
-site 27 of 52 sites_plys (nchar=95): 1.141 sec elapsed
-site 28 of 52 sites_plys (nchar=95): 0.935 sec elapsed
-site 29 of 52 sites_plys (nchar=95): 2.241 sec elapsed
-site 30 of 52 sites_plys (nchar=95): 1.373 sec elapsed
-site 31 of 52 sites_plys (nchar=95): 3.389 sec elapsed
-site 32 of 52 sites_plys (nchar=95): 2.498 sec elapsed
-site 33 of 52 sites_plys (nchar=95): 3.595 sec elapsed
-site 34 of 52 sites_plys (nchar=95): 1.756 sec elapsed
-site 35 of 52 sites_plys (nchar=95): 2.018 sec elapsed
-site 36 of 52 sites_plys (nchar=95): 3.186 sec elapsed
-site 37 of 52 sites_plys (nchar=90): 1.778 sec elapsed
-site 38 of 52 sites_plys (nchar=90): 1.419 sec elapsed
-site 39 of 52 sites_plys (nchar=90): 0.823 sec elapsed
-site 40 of 52 sites_plys (nchar=90): 1.309 sec elapsed
-site 41 of 52 sites_plys (nchar=90): 1.142 sec elapsed
-site 42 of 52 sites_plys (nchar=90): 4.289 sec elapsed
-site 43 of 52 sites_plys (nchar=90): 3.689 sec elapsed
-site 44 of 52 sites_plys (nchar=90): 2.043 sec elapsed
-site 45 of 52 sites_plys (nchar=88): 7.147 sec elapsed
-site 46 of 52 sites_plys (nchar=85): 1.759 sec elapsed
-site 47 of 52 sites_plys (nchar=85): 1.077 sec elapsed
-site 48 of 52 sites_plys (nchar=85): 1.065 sec elapsed
-site 49 of 52 sites_plys (nchar=85): 0.768 sec elapsed
-site 50 of 52 sites_plys (nchar=80): 5.498 sec elapsed
-site 51 of 52 sites_plys (nchar=80): 1.222 sec elapsed
-site 52 of 52 sites_plys (nchar=80): 7.127 sec elapsed
-iterate over sites_plys: 2144.744 sec elapsed
+site 1 of 52 sites_plys (nchar=662): 1702.175 sec elapsed
+site 2 of 52 sites_plys (nchar=590): 94.654 sec elapsed
+site 3 of 52 sites_plys (nchar=445): 72.838 sec elapsed
+site 4 of 52 sites_plys (nchar=414): 5.432 sec elapsed
+site 5 of 52 sites_plys (nchar=366): 4.937 sec elapsed
+site 6 of 52 sites_plys (nchar=357): 1.718 sec elapsed
+site 7 of 52 sites_plys (nchar=343): 18.802 sec elapsed
+site 8 of 52 sites_plys (nchar=310): 1.993 sec elapsed
+site 9 of 52 sites_plys (nchar=271): 4.564 sec elapsed
+site 10 of 52 sites_plys (nchar=269): 3.191 sec elapsed
+site 11 of 52 sites_plys (nchar=241): 15.841 sec elapsed
+site 12 of 52 sites_plys (nchar=239): 4.808 sec elapsed
+site 13 of 52 sites_plys (nchar=239): 3.016 sec elapsed
+site 14 of 52 sites_plys (nchar=238): 2.82 sec elapsed
+site 15 of 52 sites_plys (nchar=235): 2.635 sec elapsed
+site 16 of 52 sites_plys (nchar=229): 3.145 sec elapsed
+site 17 of 52 sites_plys (nchar=214): 22.013 sec elapsed
+site 18 of 52 sites_plys (nchar=205): 19.265 sec elapsed
+site 19 of 52 sites_plys (nchar=167): 13.051 sec elapsed
+site 20 of 52 sites_plys (nchar=167): 2.116 sec elapsed
+site 21 of 52 sites_plys (nchar=161): 9.165 sec elapsed
+site 22 of 52 sites_plys (nchar=158): 7.576 sec elapsed
+site 23 of 52 sites_plys (nchar=158): 7.233 sec elapsed
+site 24 of 52 sites_plys (nchar=156): 1.911 sec elapsed
+site 25 of 52 sites_plys (nchar=155): 9.454 sec elapsed
+site 26 of 52 sites_plys (nchar=154): 19.639 sec elapsed
+site 27 of 52 sites_plys (nchar=95): 1.083 sec elapsed
+site 28 of 52 sites_plys (nchar=95): 0.91 sec elapsed
+site 29 of 52 sites_plys (nchar=95): 1.362 sec elapsed
+site 30 of 52 sites_plys (nchar=95): 0.994 sec elapsed
+site 31 of 52 sites_plys (nchar=95): 3.997 sec elapsed
+site 32 of 52 sites_plys (nchar=95): 2.154 sec elapsed
+site 33 of 52 sites_plys (nchar=95): 2.758 sec elapsed
+site 34 of 52 sites_plys (nchar=95): 2.254 sec elapsed
+site 35 of 52 sites_plys (nchar=95): 2.583 sec elapsed
+site 36 of 52 sites_plys (nchar=95): 3.595 sec elapsed
+site 37 of 52 sites_plys (nchar=90): 2.063 sec elapsed
+site 38 of 52 sites_plys (nchar=90): 1.526 sec elapsed
+site 39 of 52 sites_plys (nchar=90): 1.064 sec elapsed
+site 40 of 52 sites_plys (nchar=90): 1.71 sec elapsed
+site 41 of 52 sites_plys (nchar=90): 3.269 sec elapsed
+site 42 of 52 sites_plys (nchar=90): 6.883 sec elapsed
+site 43 of 52 sites_plys (nchar=90): 4.21 sec elapsed
+site 44 of 52 sites_plys (nchar=90): 1.971 sec elapsed
+site 45 of 52 sites_plys (nchar=88): 7.836 sec elapsed
+site 46 of 52 sites_plys (nchar=85): 1.413 sec elapsed
+site 47 of 52 sites_plys (nchar=85): 1.036 sec elapsed
+site 48 of 52 sites_plys (nchar=85): 1.037 sec elapsed
+site 49 of 52 sites_plys (nchar=85): 0.806 sec elapsed
+site 50 of 52 sites_plys (nchar=80): 6.313 sec elapsed
+site 51 of 52 sites_plys (nchar=80): 1.234 sec elapsed
+site 52 of 52 sites_plys (nchar=80): 7.599 sec elapsed
+iterate over sites_plys: 2127.88 sec elapsed
